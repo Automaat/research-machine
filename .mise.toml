@@ -1,0 +1,11 @@
+[tools]
+# Markdown linting
+"npm:markdownlint-cli2" = "latest"
+
+[tasks.lint]
+description = "Lint markdown files"
+run = "markdownlint-cli2 '**/*.md'"
+
+[tasks."lint:fix"]
+description = "Fix markdown lint issues"
+run = "markdownlint-cli2 --fix '**/*.md'"

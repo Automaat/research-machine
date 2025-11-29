@@ -1,0 +1,4 @@
+# mise
+.mise.lock
+.mise/
+node_modules/

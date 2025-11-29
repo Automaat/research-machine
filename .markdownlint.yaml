@@ -1,0 +1,43 @@
+# Markdown linting rules
+# https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md
+
+# Default state for all rules
+default: true
+
+# MD013 - Line length
+MD013:
+  # Allow long lines in tables and code blocks
+  line_length: 120
+  tables: false
+  code_blocks: false
+
+# MD024 - Multiple headings with same content
+MD024:
+  # Allow duplicate headings in different sections
+  siblings_only: true
+
+# MD033 - Inline HTML
+MD033:
+  # Allow specific HTML elements commonly used in docs
+  allowed_elements:
+    - br
+    - details
+    - summary
+
+# MD041 - First line in file should be top-level heading
+MD041: false
+
+# MD046 - Code block style
+MD046:
+  # Prefer fenced code blocks
+  style: fenced
+
+# MD049 - Emphasis style
+MD049:
+  # Prefer asterisks for emphasis
+  style: asterisk
+
+# MD050 - Strong style
+MD050:
+  # Prefer asterisks for strong
+  style: asterisk

@@ -26,6 +26,7 @@ src/
 ```
 
 **Config:** `~/.whisper-hotkey.toml`
+
 ```toml
 [hotkey]
 key = "V"
@@ -44,18 +45,21 @@ path = "/usr/local/share/whisper/ggml-base.en.bin"
 ## Development Workflow
 
 **Before coding:**
+
 1. Ask clarifying questions until 95% confident
 2. Search for existing patterns
 3. Create plan for threading/FFI changes
 4. Work incrementally (20-50 line changes for concurrent code)
 
 **Use Plan Mode (Shift+Tab twice) for:**
+
 - Threading changes (audio/transcription/main coordination)
 - FFI boundaries (CoreAudio, CGEvent)
 - Performance optimizations
 - Lock-free data structures
 
 **Testing (TDD preferred):**
+
 - Unit: `#[test]` for pure logic
 - Integration: `#[test] #[ignore]` for hardware (manual: `cargo test -- --ignored`)
 - Before commit: Test hotkey + 5s/10s/30s audio + insertion in 3 apps
@@ -67,6 +71,7 @@ path = "/usr/local/share/whisper/ggml-base.en.bin"
 **Style:** `cargo fmt`, `cargo clippy` (default), snake_case, 4 spaces, 100 char lines
 
 **Error Handling:**
+
 - Application code: `anyhow::Result` with `.context()`
 - Library modules: `thiserror` (audio::CaptureError, transcription::ModelError)
 - Early returns preferred
@@ -86,6 +91,7 @@ fn setup_audio() -> Result<AudioCapture> {
 ```
 
 **Unsafe Policy:**
+
 - ONLY for: FFI (CoreAudio, CGEvent), lock-free data structures, profiled hot paths
 - ALWAYS document safety invariants
 - Minimize unsafe scope
@@ -99,12 +105,14 @@ unsafe fn audio_callback(device_ptr: *mut AudioDevice) {
 ```
 
 **Async Boundaries:**
+
 - Main thread: tokio (event loop, hotkey)
 - Audio thread: OS real-time thread (NOT tokio, NO allocations/locks/syscalls)
 - Transcription: tokio blocking pool (Whisper is CPU-bound, NOT async)
 - Communication: `crossbeam::channel` or `tokio::sync::mpsc`
 
 **Concurrency:**
+
 - Audio thread: Lock-free only (ring buffer, atomics)
 - Main/transcription: Standard primitives OK (`Arc<Mutex<T>>`, channels)
 
@@ -113,6 +121,7 @@ unsafe fn audio_callback(device_ptr: *mut AudioDevice) {
 ## Simplicity Principles
 
 **❌ NEVER:**
+
 - Over-abstract threading (3 threads sufficient)
 - Trait hierarchies for single implementations
 - Async for CPU-bound work (Whisper)
@@ -124,6 +133,7 @@ unsafe fn audio_callback(device_ptr: *mut AudioDevice) {
 - Helper functions for one-time operations
 
 **✅ ALWAYS:**
+
 - Simplest solution first (direct FFI > abstraction layers)
 - Three similar lines > premature abstraction
 - Profile before optimizing (`cargo flamegraph`, `Instruments.app`)
@@ -132,12 +142,14 @@ unsafe fn audio_callback(device_ptr: *mut AudioDevice) {
 - Complete code (no placeholders)
 
 **Pattern Drift Threats:**
+
 - **Audio:** Don't add buffering layers (keep direct: CoreAudio → ring buffer → queue)
 - **Threading:** Don't async CPU-bound work (Whisper = blocking pool, audio = OS thread)
 - **Config:** Don't expose every constant (start minimal)
 - **Errors:** Don't wrap excessively (use `?`, sparse `.context()`)
 
 **Complexity Check (before implementing):**
+
 1. Can this be simpler?
 2. Abstractions needed NOW (not future)?
 3. Similar code exists?
@@ -155,6 +167,7 @@ If unsure: STOP, ask for approval.
 **NEVER:** Entire files at once, >100 lines/response, placeholders, optimize without profiling, async for CPU-bound, unsafe without justification
 
 **Incremental Process (threading/FFI):**
+
 1. Document design
 2. Define types/interfaces
 3. Implement one thread (minimal)
@@ -198,6 +211,7 @@ RUST_LOG=whisper_hotkey=trace cargo run
 ## macOS-Specific Patterns
 
 **CoreAudio (real-time thread constraints):**
+
 ```rust
 audio_unit.set_input_callback(move |args| {
     // CRITICAL: NO heap allocations, NO locks, NO syscalls
@@ -208,6 +222,7 @@ audio_unit.set_input_callback(move |args| {
 ```
 
 **CGEvent Text Insertion:**
+
 ```rust
 fn insert_text(text: &str) -> Result<()> {
     let event = unsafe { CGEvent::new_keyboard_event(None, 0, true)? };
@@ -220,6 +235,7 @@ fn insert_text(text: &str) -> Result<()> {
 ```
 
 **Permissions:**
+
 - Accessibility (CGEvent + hotkey), Microphone (CoreAudio)
 - NO sandboxing (incompatible)
 - Check at startup, clear error messages
@@ -229,26 +245,31 @@ fn insert_text(text: &str) -> Result<()> {
 ## Project-Specific Context
 
 **Whisper:**
+
 - GGML format (quantized CPU inference)
 - base.en = sweet spot (speed/accuracy)
 - Preload at startup (2-3s load = critical, NOT per-transcription)
 - Synchronous, thread-safe (`Arc`), NO async
 
 **Audio:**
+
 - CoreAudio callback: OS real-time thread, <10ms (prefer <1ms)
 - Violations = audio glitches
 - Ring buffer for cross-thread (lock-free)
 
 **Text Insertion:**
+
 - CGEvent simulates keyboard
 - Some apps block (Terminal secure input) - warn user, no fallback
 
 **Known Issues:**
+
 - Model must exist at config path (validate at startup)
 - App crashes if permissions denied (graceful handling needed)
 - Reset permissions: `tccutil reset Microphone`
 
 **Integration:**
+
 - whisper-rs: Blocking, thread-safe, run in blocking pool
 - global-hotkey: Event-based callback
 - cpal: Fallback if CoreAudio too complex (+10-20ms latency trade-off)
@@ -258,18 +279,21 @@ fn insert_text(text: &str) -> Result<()> {
 ## Performance Optimization
 
 **Profile FIRST:**
+
 1. `cargo flamegraph` (CPU bottlenecks)
 2. `Instruments.app` (memory allocations)
 3. `tracing` spans (latencies)
 4. Release build: `cargo build --release`
 
 **Known Opportunities:**
+
 - Ring buffer size: Balance latency/reliability (start 1s = 16000 samples)
 - Quantized models (GGML Q4/Q5)
 - Async text insertion (don't block transcription)
 - Background model preloading during startup
 
 **When NOT to optimize:**
+
 - Targets already met (<50ms audio, <2s transcription, <500MB memory)
 - No user-reported issues
 

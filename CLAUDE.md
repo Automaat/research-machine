@@ -27,6 +27,7 @@ Personal knowledge management using Obsidian with PARA organization. Technical a
 ## AI Assistance Goals
 
 **Primary functions:**
+
 - **Organizing:** Move from Inbox, suggest structure, identify connections, tag appropriately
 - **Summarizing:** Research papers, articles, meetings, technical docs
 - **Finding patterns:** Connect notes, spot themes, suggest MOCs, discover gaps
@@ -56,6 +57,7 @@ Personal knowledge management using Obsidian with PARA organization. Technical a
 ## Anti-Patterns
 
 **AVOID:**
+
 - Overcomplicating (keep simple and accessible)
 - Oversimplifying (maintain nuance when important)
 - Creating information from nothing (base on actual content)
@@ -176,6 +178,7 @@ Domain/theme description.
 **Vault:** `/Users/marcin.skalski@konghq.com/Library/Mobile Documents/iCloud~md~obsidian/Documents/second-brain/`
 
 **Operations:**
+
 - Read/write notes
 - Search vault
 - Move between folders
@@ -195,6 +198,7 @@ Domain/theme description.
 4. **Synthesize & save**: Comprehensive note with bullets, emojis, wikilinks
 
 **Output format:**
+
 ```markdown
 # [Research Topic]
 
@@ -246,6 +250,7 @@ Domain/theme description.
 ## Best Practices
 
 **Do:**
+
 - Use emojis in notes for scanning
 - Bullet points over paragraphs
 - Wikilink liberally
@@ -257,6 +262,7 @@ Domain/theme description.
 - Suggest tags consistently
 
 **Don't:**
+
 - Create complex hierarchies
 - Invent information
 - Ignore PARA structure

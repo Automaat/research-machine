@@ -125,6 +125,7 @@ Generated CLAUDE.md must:
 4. Validate result
 
 **Optional - provide upfront:**
+
 - Project type: [web app/CLI/library/etc.]
 - Language: [Go/TypeScript/Python/etc.]
 - Framework: [Next.js/Express/Django/etc.]
