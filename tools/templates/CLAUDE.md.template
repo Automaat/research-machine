@@ -82,6 +82,23 @@ Version control this file and share with your team.
 - **Indentation:** [spaces/tabs, size]
 - **Line length:** [max characters]
 
+### Linter Errors
+
+**ALWAYS:**
+- Attempt to fix linter errors properly
+- Research solutions online if unclear how to fix
+- Fix root cause, not symptoms
+
+**NEVER:**
+- Use skip/disable directives (e.g., `// eslint-disable`, `# noqa`, `//nolint`)
+- Ignore linter warnings
+- Work around linter errors
+
+**If stuck:**
+- Try fixing the error
+- Research online for proper solution
+- If still unclear after research, ASK what to do (don't skip/disable)
+
 ### [Language-Specific Patterns]
 
 <!-- For Go -->
