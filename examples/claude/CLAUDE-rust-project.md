@@ -9,7 +9,7 @@ macOS background app for system-wide voice-to-text via hotkey using local Whispe
 
 ## Project Structure
 
-```
+```text
 src/
 ├── main.rs              # Event loop, initialization
 ├── audio/
@@ -162,9 +162,11 @@ If unsure: STOP, ask for approval.
 
 ## Code Generation Rules
 
-**ALWAYS:** Incremental changes (20-50 lines), complete code, TDD when possible, profile before optimize, document unsafe, early returns
+**ALWAYS:** Incremental changes (20-50 lines), complete code, TDD when possible, profile before optimize,
+document unsafe, early returns
 
-**NEVER:** Entire files at once, >100 lines/response, placeholders, optimize without profiling, async for CPU-bound, unsafe without justification
+**NEVER:** Entire files at once, >100 lines/response, placeholders, optimize without profiling, async for
+CPU-bound, unsafe without justification
 
 **Incremental Process (threading/FFI):**
 

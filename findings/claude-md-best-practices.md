@@ -19,7 +19,7 @@ CLAUDE.md = persistent project context for Claude Code. Anthropic: **"single mos
 
 **Structure:**
 
-```
+```text
 ~/.claude/CLAUDE.md          # Global (personal)
 ./CLAUDE.md                  # Project (VERSION CONTROLLED)
 ./backend/CLAUDE.md          # Module-specific
@@ -27,7 +27,8 @@ CLAUDE.md = persistent project context for Claude Code. Anthropic: **"single mos
 
 **Resolution:** Home → Project → Subdirectory (most specific wins)
 
-**Size:** <500 lines optimal | 10k+ words degrades | Large codebases: split by module (47k → 9k words)
+**Size:** <500 lines optimal | 10k+ words degrades | Large codebases: split by module
+(47k → 9k words)
 
 ---
 
@@ -64,9 +65,11 @@ CLAUDE.md = persistent project context for Claude Code. Anthropic: **"single mos
 - Domain knowledge, known issues, integration points
 ```
 
-**DO Include:** Commands typed repeatedly | Architectural context (10+ min to explain) | Actual workflows | Specific anti-patterns | Pattern examples with file refs | Domain terminology
+**DO Include:** Commands typed repeatedly | Architectural context (10+ min to explain) | Actual workflows |
+Specific anti-patterns | Pattern examples with file refs | Domain terminology
 
-**DON'T Include:** Generic advice | Obvious info | Outdated patterns | Sensitive data | Duplicated info | Theoretical practices not followed
+**DON'T Include:** Generic advice | Obvious info | Outdated patterns | Sensitive data | Duplicated info |
+Theoretical practices not followed
 
 ---
 
@@ -221,7 +224,8 @@ Claude jumps to coding without: clarifying questions, understanding patterns, pl
 - Run after each change, green before next step
 ```
 
-**Session Hygiene:** Reset when goal changes | <500 lines CLAUDE.md | Subdirectory files for specific areas | One objective per session
+**Session Hygiene:** Reset when goal changes | <500 lines CLAUDE.md | Subdirectory files for specific areas |
+One objective per session
 
 ---
 
@@ -247,14 +251,16 @@ jobs:
 **Custom Slash Command** (`.claude/commands/pr-review.md`):
 
 ```markdown
-Review PR for: Code quality (conventions, error handling, no over-engineering) | Testing (exist, pass, coverage) | Security (validation, auth, no sensitive data) | Completeness (no placeholders)
+Review PR for: Code quality (conventions, error handling, no over-engineering) | Testing (exist, pass,
+coverage) | Security (validation, auth, no sensitive data) | Completeness (no placeholders)
 
 Commands: `gh pr view`, `git diff main...HEAD`
 
 Output: ✅ Good | ⚠️ Concerns | 🔧 Improvements
 ```
 
-**Team Pattern:** Dev uses `/pr-review` → Addresses → Creates PR → GHA security review → Team review → Capture patterns in CLAUDE.md
+**Team Pattern:** Dev uses `/pr-review` → Addresses → Creates PR → GHA security review → Team review →
+Capture patterns in CLAUDE.md
 
 **Improvement Loop:** PR reviews → identify patterns → update CLAUDE.md → better code
 
@@ -278,7 +284,8 @@ Output: ✅ Good | ⚠️ Concerns | 🔧 Improvements
 | Inconsistent AI style | Auto-enforced patterns |
 | Manual enforcement | Self-documenting |
 
-**Daily Workflow:** Start with goal → Claude reads CLAUDE.md → Plan Mode for complex → Questions before code → Review/approve → `/pr-review` → Reset when goal changes
+**Daily Workflow:** Start with goal → Claude reads CLAUDE.md → Plan Mode for complex → Questions before code →
+Review/approve → `/pr-review` → Reset when goal changes
 
 **Pattern Discovery:** Note manual additions → Monthly review → Create slash command if used 3+ times
 
@@ -345,7 +352,8 @@ black $FILE                 # Python
 
 **Windsurf Principles:** Simplicity First (SF) | Readability Priority (RP) | Dependency Minimalism (DM)
 
-**Convergence:** All tools agree: <500 lines | Version control | Explicit anti-patterns | Incremental dev | Project-specific context | Simplicity > complexity
+**Convergence:** All tools agree: <500 lines | Version control | Explicit anti-patterns | Incremental dev |
+Project-specific context | Simplicity > complexity
 
 ---
 
@@ -409,7 +417,10 @@ import { Button } from "@/components/ui/button"
 const { data } = useQuery({ queryKey: ['key'], queryFn: fetchData })
 ```
 
-**Community Resources:** [claude-md-examples](https://github.com/ArthurClune/claude-md-examples) | [awesome-claude-code](https://github.com/hesreallyhim/awesome-claude-code) | [awesome-cursorrules](https://github.com/PatrickJS/awesome-cursorrules) | [ai-prompts](https://github.com/instructa/ai-prompts)
+**Community Resources:** [claude-md-examples](https://github.com/ArthurClune/claude-md-examples) |
+[awesome-claude-code](https://github.com/hesreallyhim/awesome-claude-code) |
+[awesome-cursorrules](https://github.com/PatrickJS/awesome-cursorrules) |
+[ai-prompts](https://github.com/instructa/ai-prompts)
 
 ---
 
@@ -439,7 +450,8 @@ const { data } = useQuery({ queryKey: ['key'], queryFn: fetchData })
 4. **Commit** - `git add CLAUDE.md && git commit -m "Add CLAUDE.md" && git push`
 5. **Test** - New session, verify references CLAUDE.md, ask to summarize structure
 
-**Incremental:** Week 1: structure+commands | Week 2: anti-patterns+simplicity | Week 3: 2-3 slash commands | Week 4: MCP+refine | Ongoing: update from PR reviews
+**Incremental:** Week 1: structure+commands | Week 2: anti-patterns+simplicity | Week 3: 2-3 slash commands |
+Week 4: MCP+refine | Ongoing: update from PR reviews
 
 ---
 
@@ -460,7 +472,8 @@ const { data } = useQuery({ queryKey: ['key'], queryFn: fetchData })
 
 **Emerging:** Skills integration (reusable agents) | MCP ecosystem growth | Multi-agent orchestration | Context engineering
 
-**Research Gaps:** Optimal size by codebase | Quantitative productivity metrics | Multi-repo best practices | Cross-tool standardization
+**Research Gaps:** Optimal size by codebase | Quantitative productivity metrics | Multi-repo best practices |
+Cross-tool standardization
 
 ---
 
@@ -468,31 +481,51 @@ const { data } = useQuery({ queryKey: ['key'], queryFn: fetchData })
 
 ### Official
 
-- [Claude Code Best Practices](https://www.anthropic.com/engineering/claude-code-best-practices) | [Using CLAUDE.MD](https://www.claude.com/blog/using-claude-md-files) | [Slash Commands](https://docs.claude.com/en/docs/claude-code/slash-commands) | [MCP](https://docs.claude.com/en/docs/claude-code/mcp)
+- [Claude Code Best Practices](https://www.anthropic.com/engineering/claude-code-best-practices) |
+  [Using CLAUDE.MD](https://www.claude.com/blog/using-claude-md-files) |
+  [Slash Commands](https://docs.claude.com/en/docs/claude-code/slash-commands) |
+  [MCP](https://docs.claude.com/en/docs/claude-code/mcp)
 
 ### Best Practices
 
-- [Arize Best Practices](https://arize.com/blog/claude-md-best-practices-learned-from-optimizing-claude-code-with-prompt-learning/) | [What is CLAUDE.md](https://claudelog.com/faqs/what-is-claude-md/) | [Plan Mode](https://claudelog.com/mechanics/plan-mode/) | [Teaching Consistency](https://www.brandoncasci.com/2025/07/30/from-chaos-to-control-teaching-claude-code-consistency.html) | [Stop Overengineering](https://www.nathanonn.com/how-to-stop-claude-code-from-overengineering-everything/) | [Context Engineering](https://alabeduarte.com/context-engineering-with-claude-code-my-evolving-workflow/)
+- [Arize Best Practices](https://arize.com/blog/claude-md-best-practices-learned-from-optimizing-claude-code-with-prompt-learning/)
+- [What is CLAUDE.md](https://claudelog.com/faqs/what-is-claude-md/)
+- [Plan Mode](https://claudelog.com/mechanics/plan-mode/)
+- [Teaching Consistency](https://www.brandoncasci.com/2025/07/30/from-chaos-to-control-teaching-claude-code-consistency.html)
+- [Stop Overengineering](https://www.nathanonn.com/how-to-stop-claude-code-from-overengineering-everything/)
+- [Context Engineering](https://alabeduarte.com/context-engineering-with-claude-code-my-evolving-workflow/)
 
 ### Language-Specific
 
-- [Go Development](https://dshills.medium.com/effective-go-development-with-claude-best-practices-for-ai-pair-programming-83fba0247a4f) | [golang-standards/project-layout](https://github.com/golang-standards/project-layout) | [Go Structure Guidelines](https://dev.to/jinxankit/go-project-structure-and-guidelines-4ccm)
+- [Go Development](https://dshills.medium.com/effective-go-development-with-claude-best-practices-for-ai-pair-programming-83fba0247a4f)
+- [golang-standards/project-layout](https://github.com/golang-standards/project-layout)
+- [Go Structure Guidelines](https://dev.to/jinxankit/go-project-structure-and-guidelines-4ccm)
 
 ### Infrastructure
 
-- [DevOps](https://github.com/ruvnet/claude-flow/wiki/CLAUDE-MD-DevOps) | [Claude for DevOps](https://www.cloudnativedeepdive.com/using-claude-and-llms-as-your-devops-platform-engineering-assistant/) | [Terraform Workflow](https://medium.com/@balwant.matharu/how-claude-code-supercharged-my-terraform-workflow-0e0a53349251)
+- [DevOps](https://github.com/ruvnet/claude-flow/wiki/CLAUDE-MD-DevOps)
+- [Claude for DevOps](https://www.cloudnativedeepdive.com/using-claude-and-llms-as-your-devops-platform-engineering-assistant/)
+- [Terraform Workflow](https://medium.com/@balwant.matharu/how-claude-code-supercharged-my-terraform-workflow-0e0a53349251)
 
 ### Large Codebases
 
-- [Monorepo Organization](https://dev.to/anvodev/how-i-organized-my-claudemd-in-a-monorepo-with-too-many-contexts-37k7) | [Claude Context MCP](https://github.com/zilliztech/claude-context) | [Large Codebase Practices](https://skywork.ai/blog/claude-code-plugin-best-practices-large-codebases-2025/) | [Working with Large Codebases](https://medium.com/@tl_99311/claude-codes-memory-working-with-ai-in-large-codebases-a948f66c2d7e)
+- [Monorepo Organization](https://dev.to/anvodev/how-i-organized-my-claudemd-in-a-monorepo-with-too-many-contexts-37k7)
+- [Claude Context MCP](https://github.com/zilliztech/claude-context)
+- [Large Codebase Practices](https://skywork.ai/blog/claude-code-plugin-best-practices-large-codebases-2025/)
+- [Working with Large Codebases](https://medium.com/@tl_99311/claude-codes-memory-working-with-ai-in-large-codebases-a948f66c2d7e)
 
 ### Plan Mode
 
-- [Mastering Plan Mode](https://agiinprogress.substack.com/p/mastering-claude-code-plan-mode-the) | [Plan Mode Workflow](https://stevekinney.com/courses/ai-development/claude-code-plan-mode) | [Incremental Development](https://www.vibesparking.com/en/blog/ai/claude-code/2025-08-14-claude-code-save-money-right-model-lean-context-permissions/)
+- [Mastering Plan Mode](https://agiinprogress.substack.com/p/mastering-claude-code-plan-mode-the)
+- [Plan Mode Workflow](https://stevekinney.com/courses/ai-development/claude-code-plan-mode)
+- [Incremental Development](https://www.vibesparking.com/en/blog/ai/claude-code/2025-08-14-claude-code-save-money-right-model-lean-context-permissions/)
 
 ### PR Review
 
-- [PR Review Slash Command](https://nakamasato.medium.com/resolve-github-pr-reviews-consistently-and-rapidly-with-custom-claude-code-slash-command-3cdb25e1c2cf) | [Automate Reviews](https://alirezarezvani.medium.com/5-tipps-to-automate-your-code-reviews-with-claude-code-5becd60bce5c) | [Security Review Action](https://github.com/anthropics/claude-code-security-review) | [Automate Security](https://www.claude.com/blog/automate-security-reviews-with-claude-code)
+- [PR Review Slash Command](https://nakamasato.medium.com/resolve-github-pr-reviews-consistently-and-rapidly-with-custom-claude-code-slash-command-3cdb25e1c2cf)
+- [Automate Reviews](https://alirezarezvani.medium.com/5-tipps-to-automate-your-code-reviews-with-claude-code-5becd60bce5c)
+- [Security Review Action](https://github.com/anthropics/claude-code-security-review)
+- [Automate Security](https://www.claude.com/blog/automate-security-reviews-with-claude-code)
 
 ### Team
 
@@ -500,15 +533,29 @@ const { data } = useQuery({ queryKey: ['key'], queryFn: fetchData })
 
 ### Advanced
 
-- [Configuring MCP](https://scottspence.com/posts/configuring-mcp-tools-in-claude-code) | [Best MCP Servers](https://mcpcat.io/guides/best-mcp-servers-for-claude-code/) | [Hooks Guide](https://liquidmetal.ai/casesAndBlogs/claude-code-hooks-guide/) | [Ultrathink](https://www.claudecode101.com/en/tutorial/optimization/ultrathink-mode)
+- [Configuring MCP](https://scottspence.com/posts/configuring-mcp-tools-in-claude-code)
+- [Best MCP Servers](https://mcpcat.io/guides/best-mcp-servers-for-claude-code/)
+- [Hooks Guide](https://liquidmetal.ai/casesAndBlogs/claude-code-hooks-guide/)
+- [Ultrathink](https://www.claudecode101.com/en/tutorial/optimization/ultrathink-mode)
 
 ### Other Tools
 
-- [Cursor Rules](https://www.prompthub.us/blog/top-cursor-rules-for-coding-agents) | [awesome-cursorrules](https://github.com/PatrickJS/awesome-cursorrules) | [Cursor Best Practices](https://kirill-markin.com/articles/cursor-ide-rules-for-ai/) | [Windsurf Cascade](https://docs.windsurf.com/windsurf/cascade/cascade) | [Windsurf Rules](https://medium.com/@wahengchang2024/mastering-windsurf-restricting-ai-output-with-windsurf-rules-d7e429654db2) | [Copilot Instructions](https://docs.github.com/en/copilot/how-tos/custom-instructions/adding-repository-custom-instructions-for-github-copilot) | [Tool Comparison](https://www.toolbit.ai/blog/best-ai-coding-tools-copilot-cursor-claude-comparison) | [Aider](https://aider.chat/)
+- [Cursor Rules](https://www.prompthub.us/blog/top-cursor-rules-for-coding-agents)
+- [awesome-cursorrules](https://github.com/PatrickJS/awesome-cursorrules)
+- [Cursor Best Practices](https://kirill-markin.com/articles/cursor-ide-rules-for-ai/)
+- [Windsurf Cascade](https://docs.windsurf.com/windsurf/cascade/cascade)
+- [Windsurf Rules](https://medium.com/@wahengchang2024/mastering-windsurf-restricting-ai-output-with-windsurf-rules-d7e429654db2)
+- [Copilot Instructions](https://docs.github.com/en/copilot/how-tos/custom-instructions/adding-repository-custom-instructions-for-github-copilot)
+- [Tool Comparison](https://www.toolbit.ai/blog/best-ai-coding-tools-copilot-cursor-claude-comparison)
+- [Aider](https://aider.chat/)
 
 ### Examples
 
-- [claude-md-examples](https://github.com/ArthurClune/claude-md-examples) | [awesome-claude-code](https://github.com/hesreallyhim/awesome-claude-code) | [Claude Command Suite](https://github.com/qdhenry/Claude-Command-Suite) | [Subagents](https://github.com/VoltAgent/awesome-claude-code-subagents) | [Gist Examples](https://gist.github.com/cbh123/75dcd353b354b1eb3398c6d2781a502f)
+- [claude-md-examples](https://github.com/ArthurClune/claude-md-examples)
+- [awesome-claude-code](https://github.com/hesreallyhim/awesome-claude-code)
+- [Claude Command Suite](https://github.com/qdhenry/Claude-Command-Suite)
+- [Subagents](https://github.com/VoltAgent/awesome-claude-code-subagents)
+- [Gist Examples](https://gist.github.com/cbh123/75dcd353b354b1eb3398c6d2781a502f)
 
 ---
 

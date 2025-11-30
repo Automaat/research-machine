@@ -9,7 +9,7 @@
 
 ## Structure
 
-```
+```text
 /tools/          # 7 CLI tools (caption-generator, style-analyzer, performance-analyzer,
                  # trend-monitor, engagement-assistant, post-scheduler, content-idea-generator)
 /shared/         # claude_client.py, instagram_client.py, utils.py
@@ -162,7 +162,7 @@ open http://localhost:5678
 
 ### Standard Workflow
 
-```
+```text
 Trigger → Execute Command → Parse JSON → Notify → Error Handler
 ```
 

@@ -1,6 +1,7 @@
 # Generate CLAUDE.md for Existing Project
 
-Use this prompt to analyze your existing codebase and generate tailored CLAUDE.md. Run from project root. Copy and paste into Claude Code.
+Use this prompt to analyze your existing codebase and generate tailored CLAUDE.md. Run from project root.
+Copy and paste into Claude Code.
 
 ---
 
@@ -14,7 +15,7 @@ Analyze existing codebase and create comprehensive, project-specific CLAUDE.md.
 2. Ask clarifying questions about observed patterns
 3. Present plan for CLAUDE.md structure
 4. Get approval
-5. Generate using `tools/templates/CLAUDE.md.template` and actual codebase patterns
+5. Generate using `./CLAUDE.md.template` and actual codebase patterns
 6. Validate (under 500 lines, real examples, tested commands)
 
 ---
@@ -74,7 +75,7 @@ Analyze existing codebase and create comprehensive, project-specific CLAUDE.md.
 
 **After approval:**
 
-- Use `tools/templates/CLAUDE.md.template` as base
+- Use `./CLAUDE.md.template` as base
 - Fill with actual project content (not generic)
 - Include real code examples from codebase
 - Reference actual files/patterns
@@ -113,16 +114,18 @@ Generated CLAUDE.md must:
 
 ## Resources
 
-- `findings/claude-md-best-practices.md` - Complete research
-- `tools/templates/CLAUDE.md.template` - Base template
+- `./claude-md-best-practices.md` - Complete research
+- `./CLAUDE.md.template` - Base template
 
-**Reference for:** Language patterns (Go/TS/Python), Infrastructure (K8s/Terraform), simplicity principles, anti-patterns
+**Reference for:** Language patterns (Go/TS/Python), Infrastructure (K8s/Terraform), simplicity principles,
+anti-patterns
 
 ---
 
 ## Pitfalls
 
-**Avoid:** Generic advice, theoretical patterns not in code, placeholders, verbosity (>500 lines), outdated patterns, skipping exploration, jumping to generation, assuming without checking
+**Avoid:** Generic advice, theoretical patterns not in code, placeholders, verbosity (>500 lines),
+outdated patterns, skipping exploration, jumping to generation, assuming without checking
 
 **Do:** Explore thoroughly, ask questions, present plan, use real examples, test commands, keep concise, be project-specific
 

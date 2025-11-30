@@ -2,7 +2,8 @@
 
 ## Overview
 
-Personal knowledge management using Obsidian with PARA organization. Technical and personal knowledge through Capture → Process → Connect workflow.
+Personal knowledge management using Obsidian with PARA organization.
+Technical and personal knowledge through Capture → Process → Connect workflow.
 
 **System:** Obsidian vault with wikilinks and MOCs
 **Structure:** PARA (Projects, Areas, Resources, Archives)
@@ -12,7 +13,7 @@ Personal knowledge management using Obsidian with PARA organization. Technical a
 
 ## Vault Structure
 
-```
+```text
 0_Inbox/          # Capture zone
 1_Projects/       # Time-bound work
 2_Areas/          # Ongoing responsibilities
@@ -173,7 +174,7 @@ Domain/theme description.
 
 ## Obsidian MCP Integration
 
-**Direct vault access enabled**
+### Direct Vault Access
 
 **Vault:** `/Users/marcin.skalski@konghq.com/Library/Mobile Documents/iCloud~md~obsidian/Documents/second-brain/`
 
@@ -196,6 +197,7 @@ Domain/theme description.
 2. **Ask clarifying questions**: Which aspect? Depth needed? Use case?
 3. **Deep research** (4-6 searches): Detailed investigation, multiple sources
 4. **Synthesize & save**: Comprehensive note with bullets, emojis, wikilinks
+5. **Archive locally**: Save to `./findings/[topic]/` (create dir if needed)
 
 **Output format:**
 
