@@ -278,7 +278,7 @@ Capture patterns in CLAUDE.md
 **Onboarding Impact:**
 
 | Before | After |
-|--------|-------|
+| ------ | ----- |
 | 2-4 weeks ramp-up | Immediate context on clone |
 | Repeated explanations | Consistent AI code |
 | Inconsistent AI style | Auto-enforced patterns |
@@ -342,7 +342,7 @@ black $FILE                 # Python
 ## 12. Other AI Tools Comparison
 
 | Tool | Config | Key Features |
-|------|--------|--------------|
+| ------ | -------- | ------------ |
 | **GitHub Copilot** | `.github/copilot-instructions.md` | Short statements, one per line, markdown links, enable via setting |
 | **Cursor** | `.cursor/*.mdc` (new), `.cursorrules` (legacy) | <500 lines, composable rules, cursor.directory/awesome-cursorrules |
 | **Windsurf** | `global_rules.md`, workspace rules | "Constitutional framework", activation modes, rulebook slash commands |
@@ -431,7 +431,7 @@ const { data } = useQuery({ queryKey: ['key'], queryFn: fetchData })
 **Team Impact:**
 
 | Metric | Improvement |
-|--------|-------------|
+| ------ | ----------- |
 | Onboarding | Weeks → Days |
 | Code consistency | Manual → Automatic |
 | PR review cycles | -30-50% |
@@ -458,7 +458,7 @@ Week 4: MCP+refine | Ongoing: update from PR reviews
 ## 16. Common Pitfalls
 
 | Pitfall | Problem | Solution |
-|---------|---------|----------|
+| ------- | ------- | -------- |
 | **Too Generic** | Copy-paste generic advice | Only project-specific patterns |
 | **Too Verbose** | 5000-line CLAUDE.md | <500 lines, split by module |
 | **Outdated** | Doesn't match current arch | Update during PRs, monthly audits |

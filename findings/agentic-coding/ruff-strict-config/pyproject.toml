@@ -1,0 +1,165 @@
+# 🐍 Strict Ruff Configuration for AI Coding Workflows
+# Copy this section to your project's pyproject.toml
+
+[tool.ruff]
+line-length = 88
+target-version = "py311"
+fix = true
+show-fixes = true
+output-format = "full"
+
+extend-exclude = [
+    ".venv",
+    "venv",
+    ".git",
+    "__pycache__",
+    ".pytest_cache",
+    ".mypy_cache",
+    ".ruff_cache",
+    "build",
+    "dist",
+    "*.egg-info",
+]
+
+[tool.ruff.lint]
+select = [
+    # Core
+    "F",      # Pyflakes
+    "E",      # pycodestyle errors
+    "W",      # pycodestyle warnings
+    "B",      # flake8-bugbear
+    "RUF",    # Ruff-specific
+
+    # Security
+    "S",      # flake8-bandit
+    "G",      # flake8-logging-format
+    "LOG",    # flake8-logging
+
+    # Quality & modernization
+    "UP",     # pyupgrade
+    "FURB",   # refurb
+    "FLY",    # flynt
+
+    # Performance
+    "PERF",   # Perflint
+    "NPY",    # NumPy
+    "PD",     # pandas-vet
+
+    # Complexity
+    "C90",    # mccabe
+    "SIM",    # flake8-simplify
+    "PIE",    # flake8-pie
+
+    # Imports
+    "I",      # isort
+    "ICN",    # flake8-import-conventions
+    "TID",    # flake8-tidy-imports
+    "TC",     # flake8-type-checking
+    "INP",    # flake8-no-pep420
+
+    # Type annotations
+    "ANN",    # flake8-annotations
+    "FA",     # flake8-future-annotations
+    "PYI",    # flake8-pyi
+
+    # Naming
+    "N",      # pep8-naming
+    "A",      # flake8-builtins
+
+    # Docstrings
+    "D",      # pydocstyle
+    "DOC",    # pydoclint
+    "TD",     # flake8-todos
+    "FIX",    # flake8-fixme
+
+    # Exceptions
+    "TRY",    # tryceratops
+    "EM",     # flake8-errmsg
+    "RSE",    # flake8-raise
+    "RET",    # flake8-return
+
+    # Testing
+    "PT",     # flake8-pytest-style
+    "T10",    # flake8-debugger
+    "T20",    # flake8-print
+
+    # Async
+    "ASYNC",  # flake8-async
+
+    # Date/time
+    "DTZ",    # flake8-datetimez
+
+    # Misc
+    "C4",     # flake8-comprehensions
+    "COM",    # flake8-commas
+    "ISC",    # flake8-implicit-str-concat
+    "Q",      # flake8-quotes
+    "PTH",    # flake8-use-pathlib
+    "ERA",    # eradicate
+    "PGH",    # pygrep-hooks
+    "FBT",    # flake8-boolean-trap
+    "ARG",    # flake8-unused-arguments
+    "SLF",    # flake8-self
+    "SLOT",   # flake8-slots
+
+    # Pylint
+    "PL",     # Pylint
+]
+
+ignore = [
+    # Docstring rules (too verbose for rapid iteration)
+    "D100", "D101", "D102", "D103", "D104", "D105", "D107",
+
+    # Type annotations (enable gradually)
+    "ANN101", "ANN102", "ANN401",
+
+    # Formatter conflicts
+    "E501", "COM812", "ISC001",
+
+    # AI-generated patterns
+    "B008", "S101", "TRY003", "EM101", "EM102",
+
+    # Too strict
+    "PLR2004",
+]
+
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["F401", "F403", "E402"]
+"tests/**/*.py" = ["S101", "ANN", "D", "PLR2004", "ARG"]
+"scripts/**/*.py" = ["T20", "T10"]
+"migrations/**/*.py" = ["D", "ANN"]
+"**/conftest.py" = ["ARG"]
+
+[tool.ruff.lint.mccabe]
+max-complexity = 10
+
+[tool.ruff.lint.pylint]
+max-args = 5
+max-branches = 12
+max-returns = 6
+max-statements = 50
+
+[tool.ruff.lint.isort]
+combine-as-imports = true
+force-wrap-aliases = true
+known-first-party = []  # Add your package names here
+lines-after-imports = 2
+lines-between-types = 1
+split-on-trailing-comma = true
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"  # or "numpy" or "pep257"
+
+[tool.ruff.lint.flake8-quotes]
+docstring-quotes = "double"
+inline-quotes = "double"
+
+[tool.ruff.lint.flake8-annotations]
+allow-star-arg-any = true
+suppress-none-returning = true
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"

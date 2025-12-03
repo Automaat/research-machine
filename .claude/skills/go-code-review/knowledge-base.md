@@ -5,7 +5,7 @@ Source: <https://100go.co/>
 ## Code Organization (1-16)
 
 | # | Issue | Check For |
-|---|-------|-----------|
+| --- | ------- | --------- |
 | 1 | **Variable Shadowing** | Name redeclared in inner block → confusion, hard-to-catch errors |
 | 2 | **Nested Code** | Omit `else` when `if` returns; flip conditions; return early; align happy path left |
 | 3 | **Init Functions** | Limited error handling; complicates testing; requires globals → use dedicated init funcs |
@@ -26,7 +26,7 @@ Source: <https://100go.co/>
 ## Data Types (17-29)
 
 | # | Issue | Check For |
-|---|-------|-----------|
+| --- | ------- | --------- |
 | 17 | **Octal Literals** | Use `0o` prefix (not `0`); binary `0b`, hex `0x`; underscore separators `1_000_000` |
 | 18 | **Integer Overflow** | Runtime overflows silent; compile-time errors; implement detection if needed |
 | 19 | **Floating-Point** | Compare within delta; group by magnitude; mult/div before add/sub |
@@ -44,7 +44,7 @@ Source: <https://100go.co/>
 ## Control Structures (30-35)
 
 | # | Issue | Check For |
-|---|-------|-----------|
+| --- | ------- | --------- |
 | 30 | **Range Copies** | Range values are copies → use index `slice[i].field` or pointer fields |
 | 31 | **Range Evaluation** | Expression evaluated once at loop start → modifications don't affect iteration |
 | 32 | **Range Pointers** | Not relevant Go 1.22+ (loop var semantics changed) |
@@ -55,7 +55,7 @@ Source: <https://100go.co/>
 ## Strings (36-41)
 
 | # | Issue | Check For |
-|---|-------|-----------|
+| --- | ------- | --------- |
 | 36 | **Rune Concept** | Rune = Unicode code point; UTF-8 = 1-4 bytes; `len()` = bytes not runes |
 | 37 | **String Iteration** | Range gives rune indices/values; `[]rune(s)` for indexing; `s[i]` gives bytes |
 | 38 | **Trim Functions** | `TrimRight/Left` remove char set; `TrimSuffix/Prefix` remove exact string |
@@ -66,7 +66,7 @@ Source: <https://100go.co/>
 ## Functions/Methods (42-47)
 
 | # | Issue | Check For |
-|---|-------|-----------|
+| --- | ------- | --------- |
 | 42 | **Receiver Type** | Pointer: mutation, sync types, large objects; Value: immutable, maps/funcs/chans, small structs |
 | 43 | **Named Results** | Use for multiple same-type returns; auto zero-init; enables naked returns |
 | 44 | **Named Result Side Effects** | Zero-initialized → assign in all code paths to avoid returning nil instead of error |
@@ -77,7 +77,7 @@ Source: <https://100go.co/>
 ## Error Management (48-54)
 
 | # | Issue | Check For |
-|---|-------|-----------|
+| --- | ------- | --------- |
 | 48 | **Panicking** | Only for unrecoverable: programmer errors, mandatory dependency failures |
 | 49 | **Error Wrapping** | `%w` for context/marking (creates coupling); `%v` for transformation (no coupling) |
 | 50 | **Error Type Comparison** | Use `errors.As(err, &target)` with wrapped errors (not `==`) |
@@ -89,7 +89,7 @@ Source: <https://100go.co/>
 ## Concurrency: Foundations (55-60)
 
 | # | Issue | Check For |
-|---|-------|-----------|
+| --- | ------- | --------- |
 | 55 | **Concurrency vs Parallelism** | Concurrency = task interleaving; parallelism = simultaneous execution |
 | 56 | **Concurrency Speed** | Adds overhead; only helps I/O-bound; CPU-bound often slower → benchmark |
 | 57 | **Channels vs Mutexes** | Channels: coordinate/communicate; mutexes: protect shared state |
@@ -100,7 +100,7 @@ Source: <https://100go.co/>
 ## Concurrency: Practice (61-74)
 
 | # | Issue | Check For |
-|---|-------|-----------|
+| --- | ------- | --------- |
 | 61 | **Context Propagation** | Request-scoped only; don't propagate across request boundaries |
 | 62 | **Goroutine Lifecycle** | Provide stop mechanism (context cancel, stop channel); prevent leaks |
 | 63 | **Loop Variables** | Capture via closure param: `go func(idx int) { }(i)` |
@@ -119,7 +119,7 @@ Source: <https://100go.co/>
 ## Standard Library (75-81)
 
 | # | Issue | Check For |
-|---|-------|-----------|
+| --- | ------- | --------- |
 | 75 | **Time Duration** | Use typed constants: `time.Second` not raw ints |
 | 76 | **time.After Leaks** | Use `time.NewTimer` + `defer timer.Stop()` |
 | 77 | **JSON Mistakes** | Struct tags; type conversions; null handling |
@@ -131,7 +131,7 @@ Source: <https://100go.co/>
 ## Testing (82-91)
 
 | # | Issue | Check For |
-|---|-------|-----------|
+| --- | ------- | --------- |
 | 82 | **Test Categories** | Build tags `//go:build integration`, env vars, `-short` mode |
 | 83 | **Race Flag** | Run `go test -race ./...` |
 | 84 | **Test Modes** | `-parallel N` for concurrency; `-shuffle on` for randomization |
@@ -146,7 +146,7 @@ Source: <https://100go.co/>
 ## Optimizations (92-101)
 
 | # | Issue | Check For |
-|---|-------|-----------|
+| --- | ------- | --------- |
 | 92 | **CPU Caches** | Cache line contention in concurrent code |
 | 93 | **False Sharing** | Multiple goroutines accessing same cache line → pad structs |
 | 94 | **Instruction Parallelism** | Structure code to enable parallel instruction execution |
