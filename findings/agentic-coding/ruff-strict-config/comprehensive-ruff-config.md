@@ -158,8 +158,7 @@ ignore = [
     "D107",   # Missing docstring in __init__
 
     # Type annotation rules (enable gradually)
-    "ANN101", # Missing type annotation for self
-    "ANN102", # Missing type annotation for cls
+    # Note: ANN101 (self) and ANN102 (cls) removed from Ruff (deprecated)
     "ANN401", # Dynamically typed expressions (Any)
 
     # Complexity (adjust thresholds below instead)
@@ -412,7 +411,7 @@ ignore = ["E", "W", "N", "D", "ANN"]  # Too permissive
 **Do:**
 
 ```toml
-ignore = ["D100", "D101", "ANN101"]  # Specific rules
+ignore = ["D100", "D101", "ANN401"]  # Specific rules
 ```
 
 ### 2. Not Using Auto-Fix

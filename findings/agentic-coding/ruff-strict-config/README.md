@@ -129,6 +129,17 @@ See [comprehensive-ruff-config.md](comprehensive-ruff-config.md) for:
 
 ---
 
+## ⚠️ Deprecated Rules
+
+**Removed from Ruff (as of v0.8.0+):**
+
+- `ANN101` - Type annotation for `self` (deprecated, never enforced by type checkers)
+- `ANN102` - Type annotation for `cls` (deprecated, never enforced by type checkers)
+
+These rules no longer need to be ignored. If present in `ignore` list, Ruff will warn but continue.
+
+---
+
 ## 📊 Performance Comparison
 
 | Tool | Time | Rules | Auto-fix |

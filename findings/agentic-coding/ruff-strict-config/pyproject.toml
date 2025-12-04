@@ -111,7 +111,8 @@ ignore = [
     "D100", "D101", "D102", "D103", "D104", "D105", "D107",
 
     # Type annotations (enable gradually)
-    "ANN101", "ANN102", "ANN401",
+    # Note: ANN101/ANN102 removed from Ruff (deprecated)
+    "ANN401",
 
     # Formatter conflicts
     "E501", "COM812", "ISC001",

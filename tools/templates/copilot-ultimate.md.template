@@ -1,0 +1,408 @@
+# 🎯 Ultimate GitHub Copilot Code Review Template
+
+Copy to `.github/copilot-instructions.md` and customize.
+
+---
+
+```markdown
+# Code Review Instructions
+
+## Project Context
+
+**Stack:**
+- Language/Framework: [e.g., Rust with cargo workspaces, Go with modules, TypeScript/React]
+- Architecture: [e.g., microservices, monolithic, event-driven]
+- Build System: [e.g., cargo, make, npm]
+- Key Dependencies: [e.g., tokio, Django, Express]
+
+**Core Modules/Packages:**
+- [module1]: [purpose]
+- [module2]: [purpose]
+- [module3]: [purpose]
+
+**Conventions:**
+- Error Handling: [e.g., anyhow::Result, error wrapping with context]
+- Async Runtime: [e.g., tokio, asyncio]
+- Testing Framework: [e.g., pytest, Jest, cargo test]
+- Documentation: [e.g., inline for public APIs, rustdoc/JSDoc/docstrings]
+
+**Critical Areas (Extra Scrutiny):**
+- [e.g., Authentication/authorization logic]
+- [e.g., Payment processing]
+- [e.g., Data privacy/PII handling]
+- [e.g., External API integrations]
+
+---
+
+## Review Before CI Completes
+
+You review PRs immediately, before CI finishes. Do NOT flag issues that CI will catch.
+
+**CI Already Checks:**
+- Code formatting [e.g., rustfmt, black, prettier]
+- Linting rules [e.g., clippy, eslint, pylint]
+- Type errors [e.g., mypy, TypeScript compiler]
+- Basic security scans [e.g., cargo audit, npm audit]
+
+---
+
+## Review Priority Levels
+
+### 🔴 CRITICAL (Must Block PR)
+
+**Security Vulnerabilities** (95%+ confidence)
+- [ ] SQL/NoSQL injection risks
+- [ ] XSS vulnerabilities
+- [ ] Command injection
+- [ ] Path traversal
+- [ ] Secrets in code (API keys, tokens, passwords)
+- [ ] Authentication bypasses
+- [ ] Authorization missing/broken
+- [ ] Cryptography: weak algorithms, hardcoded keys
+- [ ] Sensitive data in logs
+- [ ] CORS misconfiguration
+
+**Correctness Issues** (90%+ confidence)
+- [ ] Logic errors in critical paths
+- [ ] Breaking API changes without migration
+- [ ] Data loss/corruption risks
+- [ ] Race conditions
+- [ ] Null/undefined dereferences in production
+- [ ] Resource leaks (connections, file handles, memory)
+
+### 🟡 HIGH (Request Changes)
+
+**Maintainability** (80%+ confidence)
+- [ ] Missing tests for new features
+- [ ] Public APIs without documentation
+- [ ] Complex logic without comments
+- [ ] Poor naming (unclear intent)
+- [ ] Tight coupling between modules
+- [ ] Violation of established patterns
+- [ ] Error handling missing/inadequate
+- [ ] Edge cases not handled
+
+**Architecture** (75%+ confidence)
+- [ ] Layer violations (e.g., DB access in controllers)
+- [ ] Duplicated logic (should be abstracted)
+- [ ] Circular dependencies
+- [ ] God objects/functions
+- [ ] Leaky abstractions
+
+### 🟢 MEDIUM (Suggest/Comment)
+
+**Performance** (70%+ confidence)
+- [ ] N+1 query problems
+- [ ] Unnecessary allocations in hot paths
+- [ ] Missing indexes on queries
+- [ ] Blocking operations in async context
+- [ ] Large data loaded into memory
+
+**Best Practices** (65%+ confidence)
+- [ ] Deprecated APIs used
+- [ ] Better standard library alternative exists
+- [ ] Suboptimal algorithm choice
+
+### ⚪ LOW (Optional/Skip)
+
+Don't comment on:
+- Personal style preferences
+- Minor optimizations with no measurable impact
+- Refactoring unrelated to the change
+- Anything below confidence threshold
+
+---
+
+## Security Deep Dive
+
+### Authentication
+- [ ] Auth middleware on ALL protected routes
+- [ ] JWT/token validation includes expiry + signature
+- [ ] Session tokens cryptographically random (not predictable)
+- [ ] Password requirements enforced (if applicable)
+- [ ] Rate limiting on auth endpoints
+
+### Authorization
+- [ ] User permissions checked BEFORE data access
+- [ ] Resource ownership verified (user can only access their data)
+- [ ] No privilege escalation paths
+- [ ] Admin functions properly gated
+
+### Input Validation
+- [ ] ALL user input validated (type, range, format)
+- [ ] Parameterized queries (SQL) or safe query builders
+- [ ] HTML/JS escaped in output (XSS prevention)
+- [ ] File uploads: type, size, content validation
+- [ ] API payloads: schema validation
+
+### Data Protection
+- [ ] Sensitive data encrypted at rest (if applicable)
+- [ ] PII not logged
+- [ ] Error messages don't leak internal details
+- [ ] Database credentials in env vars (not code)
+- [ ] HTTPS enforced (no HTTP fallback)
+
+### Dependencies
+- [ ] No known CVEs in new dependencies
+- [ ] Dependency versions pinned
+- [ ] Supply chain: verify package integrity
+
+---
+
+## Code Quality Standards
+
+### Naming
+- Functions/Variables: [e.g., snake_case (Rust/Python), camelCase (JS/Go)]
+- Classes/Types: [e.g., PascalCase]
+- Constants: [e.g., UPPER_SNAKE_CASE]
+- Meaningful names (intent clear without comments)
+
+### Error Handling
+- Check ALL errors (no ignored/suppressed errors in production)
+- Wrap errors with context: [e.g., `fmt.Errorf("context: %w", err)`, `anyhow::Context`]
+- NEVER: [e.g., `unwrap()`, `panic!()`, bare `except:`, unchecked promise rejections]
+- User-facing errors: safe messages (no stack traces/internals)
+
+### Testing
+- **Coverage:** [e.g., 80% minimum, 95% for critical paths]
+- **Required tests:**
+  - [ ] New features have unit tests
+  - [ ] Bug fixes include regression test
+  - [ ] Public APIs tested
+  - [ ] Edge cases covered
+  - [ ] Error conditions tested
+- **Test quality:**
+  - Clear test names (describe what's tested)
+  - Isolated (no shared state between tests)
+  - Fast (no unnecessary sleep/waits)
+  - Deterministic (no flaky tests)
+
+### Documentation
+- [ ] Public functions/APIs documented
+- [ ] Complex algorithms explained
+- [ ] Non-obvious decisions have comments
+- [ ] Breaking changes noted in PR description
+- [ ] README updated if behavior changes
+
+### Performance
+- [ ] No blocking calls in async functions
+- [ ] Database queries use indexes
+- [ ] Large datasets paginated
+- [ ] Caching considered for expensive operations
+- [ ] Memory usage reasonable (no unbounded growth)
+
+---
+
+## Language-Specific Guidelines
+
+### [Language: e.g., Rust]
+- Use `Result<T, E>` for errors, not panics
+- Prefer borrowing over cloning
+- Document unsafe blocks
+- Use type system to prevent invalid states
+- Async: tokio runtime, avoid blocking
+
+### [Language: e.g., Go]
+- Check ALL errors (no `_` error returns)
+- Use context for cancellation
+- Document goroutine lifecycle
+- Avoid naked goroutines (use errgroup or context)
+- Table-driven tests preferred
+
+### [Language: e.g., Python]
+- Type hints on public APIs
+- Context managers for resources
+- No bare `except:`
+- Prefer stdlib over external deps when possible
+- Use logging module (not print)
+
+### [Language: e.g., TypeScript]
+- Avoid `any`, use `unknown` if needed
+- Explicit return types on public APIs
+- async/await over raw Promises
+- Handle promise rejections
+- Use type guards for narrowing
+
+---
+
+## Architecture Patterns
+
+**Follow these patterns:**
+- [e.g., Repository pattern for data access]
+- [e.g., Dependency injection for services]
+- [e.g., Event-driven for cross-module communication]
+
+**Avoid these anti-patterns:**
+- [e.g., Direct database access from controllers]
+- [e.g., God objects with too many responsibilities]
+- [e.g., Circular dependencies between modules]
+
+---
+
+## Review Examples
+
+### ✅ Good: Parameterized Query
+```sql
+-- With proper parameterization
+db.query("SELECT * FROM users WHERE id = ?", [userId])
+```
+
+## Examples
+
+### ❌ Bad: SQL Injection Risk
+
+```sql
+-- String concatenation - UNSAFE
+query = "SELECT * FROM users WHERE id = " + userId
+```
+
+---
+
+### ✅ Good: Error Handling with Context
+
+```go
+result, err := risky_operation()
+if err != nil {
+    return fmt.Errorf("failed to process user %s: %w", userID, err)
+}
+```
+
+### ❌ Bad: Ignored Error
+
+```go
+result, _ := risky_operation()  // Error ignored!
+```
+
+---
+
+### ✅ Good: Input Validation
+
+```python
+def process_age(age: int) -> Result:
+    if not isinstance(age, int):
+        raise ValueError("Age must be integer")
+    if age < 0 or age > 150:
+        raise ValueError("Age out of valid range")
+    # Process...
+```
+
+### ❌ Bad: No Validation
+
+```python
+def process_age(age):
+    # Directly use age without validation
+    result = database.query(f"SELECT * FROM users WHERE age = {age}")
+```
+
+---
+
+## Maintainer Priorities
+
+**What matters most to this project:**
+
+1. [e.g., Security: we handle PII, cannot compromise]
+2. [e.g., Correctness: financial calculations must be exact]
+3. [e.g., Maintainability: team is small, code must be clear]
+4. [e.g., Performance: high-traffic, sub-100ms responses]
+
+**Trade-offs we accept:**
+
+- [e.g., Code verbosity for clarity (we prefer explicit over clever)]
+- [e.g., Some duplication over premature abstraction]
+- [e.g., Conservative error handling over aggressive optimization]
+
+---
+
+## Confidence Threshold
+
+Only flag issues you're **80% or more confident** about.
+
+If uncertain:
+
+- Phrase as question: "Could this cause...?"
+- Suggest investigation: "Consider checking..."
+- Don't block PR on speculation
+
+---
+
+## Review Tone
+
+- **Constructive:** Explain WHY, not just WHAT
+- **Specific:** Point to exact file:line
+- **Actionable:** Suggest fix or alternative
+- **Respectful:** Assume good intent
+
+**Example:**
+❌ "This is wrong"
+✅ "In api/handlers.go:42, user input is concatenated into SQL query. This creates SQL injection risk.
+Use parameterized query: `db.Query('SELECT * FROM users WHERE id = ?', userId)`"
+
+---
+
+## Out of Scope
+
+Do NOT review:
+
+- [ ] Code formatting (CI handles)
+- [ ] Import ordering (CI handles)
+- [ ] Lint warnings (CI handles)
+- [ ] Personal style preferences
+- [ ] Unrelated code (focus on PR changes)
+- [ ] Future improvements (unless critical)
+
+---
+
+## Special Cases
+
+**When PR is:**
+
+- **Hotfix:** Focus only on correctness + security
+- **Refactor:** Ensure behavior unchanged (tests prove it)
+- **Dependency update:** Check CVEs, breaking changes, test coverage
+- **Documentation only:** Check accuracy, clarity, examples work
+
+---
+
+## Checklist Summary
+
+Before approving PR, verify:
+
+- [ ] No critical security issues
+- [ ] No correctness problems
+- [ ] Tests exist and pass
+- [ ] Error handling adequate
+- [ ] No secrets in code
+- [ ] Performance acceptable
+- [ ] Architecture fits patterns
+- [ ] Documentation sufficient
+- [ ] Changes match PR intent
+
+---
+
+## Additional Context
+
+**See also:**
+
+- [Link to CONTRIBUTING.md]
+- [Link to ARCHITECTURE.md]
+- [Link to SECURITY.md]
+- [Link to coding standards doc]
+
+**For questions:** [How to reach maintainers]
+
+```text
+
+---
+
+## Customization Checklist
+
+- [ ] Fill in Project Context (stack, modules, conventions)
+- [ ] Specify what CI already checks
+- [ ] Set confidence thresholds for each priority level
+- [ ] Add language-specific guidelines (3-5 key rules each)
+- [ ] Include 3-5 code examples (good vs bad)
+- [ ] Define maintainer priorities (what matters most)
+- [ ] List special scrutiny areas (auth, payments, PII, etc)
+- [ ] Adjust review tone preferences
+- [ ] Link to project docs (CONTRIBUTING, ARCHITECTURE, etc)
+- [ ] Add domain-specific sections (frontend, backend, ML, etc)

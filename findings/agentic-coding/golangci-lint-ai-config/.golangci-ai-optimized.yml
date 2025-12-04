@@ -1,0 +1,248 @@
+# golangci-lint v2 - AI-Optimized Configuration
+# Focused on catching common mistakes in AI-generated Go code
+# Balances strictness with development velocity
+
+version: 2
+
+run:
+  timeout: 3m
+  tests: true
+  go: '1.23'
+
+output:
+  formats:
+    - format: colored-line-number
+  print-linter-name: true
+  sort-results: true
+
+issues:
+  max-issues-per-linter: 50
+  max-same-issues: 10
+
+  exclude-rules:
+    - path: _test\.go
+      linters:
+        - errcheck
+        - gosec
+        - funlen
+        - dupl
+
+    - path: ^(.*/)?mock_.*\.go$
+      linters:
+        - all
+
+linters:
+  # Curated list for AI-generated code review
+  enable:
+    # Error handling - AI often forgets error checks
+    - errcheck
+    - errorlint
+    - errname
+    - nilerr
+    - nilnil
+    - wrapcheck
+
+    # Resource leaks - common in AI code
+    - bodyclose
+    - sqlclosecheck
+    - rowserrcheck
+    - noctx
+
+    # Goroutine safety - AI struggles with concurrency
+    - govet
+    - staticcheck
+    - ineffassign
+    - reassign
+
+    # Security - AI may introduce vulnerabilities
+    - gosec
+
+    # Complexity - AI generates overly complex code
+    - gocyclo
+    - gocognit
+    - cyclop
+    - nestif
+    - funlen
+
+    # Code smells
+    - unconvert
+    - unparam
+    - unused
+    - ineffassign
+    - dupl
+
+    # Best practices
+    - gocritic
+    - revive
+    - stylecheck
+
+    # Modern Go (1.22+)
+    - intrange
+    - perfsprint
+
+    # Testing
+    - testifylint
+    - paralleltest
+    - thelper
+
+    # Performance
+    - prealloc
+    - sloglint
+
+    # Documentation
+    - godot
+    - godox
+
+linters-settings:
+  # Relaxed complexity for AI code review feedback
+  gocyclo:
+    min-complexity: 20  # warn on very complex functions
+
+  gocognit:
+    min-complexity: 25
+
+  cyclop:
+    max-complexity: 20
+    skip-tests: true
+
+  funlen:
+    lines: 120
+    statements: 60
+
+  nestif:
+    min-complexity: 5
+
+  # Error handling - strict for AI
+  errcheck:
+    check-type-assertions: true
+    check-blank: true
+    exclude-functions:
+      - (io.Closer).Close
+      - (*database/sql.Rows).Close
+
+  errorlint:
+    errorf: true
+    asserts: true
+    comparison: true
+
+  wrapcheck:
+    ignoreSigs:
+      - .Errorf(
+      - errors.New(
+      - errors.Unwrap(
+      - errors.Join(
+
+  # Security - critical for AI code
+  gosec:
+    severity: medium
+    confidence: medium
+    excludes:
+      - G104  # duplicate of errcheck
+
+  # Resource management
+  noctx:
+    require-context: true  # AI often forgets context
+
+  # Performance
+  perfsprint:
+    err-error: true
+    errorf: true
+    sprintf1: true
+    strconcat: true
+    concat-loop: true
+
+  prealloc:
+    simple: true
+    range-loops: true
+
+  # Style - catch AI code patterns
+  revive:
+    severity: warning
+    rules:
+      # Core rules for AI code
+      - name: blank-imports
+      - name: context-as-argument
+      - name: context-keys-type
+      - name: defer
+        arguments:
+          - call-chain
+          - loop
+          - method-call
+          - recover
+          - return
+      - name: dot-imports
+      - name: error-naming
+      - name: error-return
+      - name: error-strings
+      - name: errorf
+      - name: exported
+      - name: if-return
+      - name: increment-decrement
+      - name: indent-error-flow
+      - name: package-comments
+      - name: range
+      - name: receiver-naming
+      - name: redefines-builtin-id
+      - name: superfluous-else
+      - name: time-naming
+      - name: unexported-return
+      - name: unreachable-code
+      - name: unused-parameter
+      - name: var-declaration
+      - name: var-naming
+
+  # Testing patterns
+  testifylint:
+    enable:
+      - bool-compare
+      - compares
+      - empty
+      - error-is-as
+      - error-nil
+      - expected-actual
+      - len
+      - require-error
+      - suite-dont-use-pkg
+
+  paralleltest:
+    ignore-missing: true  # relaxed for AI
+
+  # Documentation
+  godot:
+    scope: declarations
+    capital: true
+
+  godox:
+    keywords:
+      - BUG
+      - FIXME
+      - TODO
+
+  # Modern Go
+  intrange:
+    always-use-int-loop: false
+
+  # Logging best practices
+  sloglint:
+    no-mixed-args: true
+    kv-only: false
+    attr-only: false
+    no-global: warn
+    context: scope
+
+# AI Code Review Workflow:
+# 1. Run golangci-lint with this config on AI-generated code
+# 2. Fix critical issues (errors, security, resource leaks)
+# 3. Address complexity warnings (refactor if needed)
+# 4. Review and apply style suggestions
+# 5. Ensure tests pass and add missing error handling
+
+# Common AI mistakes this catches:
+# ✓ Unchecked errors
+# ✓ Resource leaks (unclosed HTTP bodies, DB connections)
+# ✓ Goroutine leaks (missing context, unbounded creation)
+# ✓ Security issues (SQL injection, command injection)
+# ✓ Overly complex functions (needs decomposition)
+# ✓ Missing documentation on exported items
+# ✓ Inefficient code patterns
+# ✓ Not using modern Go features (go 1.22+)

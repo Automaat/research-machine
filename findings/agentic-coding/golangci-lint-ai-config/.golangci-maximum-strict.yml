@@ -1,0 +1,358 @@
+# golangci-lint v2 - Maximum Strictness Configuration
+# Optimized for best practices and AI-assisted development
+# Based on research from 2025 community standards
+
+version: 2
+
+run:
+  timeout: 5m
+  tests: true
+  allow-parallel-runners: true
+  go: '1.23'
+
+output:
+  formats:
+    - format: colored-line-number
+  print-issued-lines: true
+  print-linter-name: true
+  sort-results: true
+  sort-order:
+    - linter
+    - severity
+    - file
+
+issues:
+  max-issues-per-linter: 0  # unlimited
+  max-same-issues: 0  # unlimited
+  exclude-use-default: false  # don't exclude default issues
+
+  # Only exclude known false positives
+  exclude-rules:
+    # Test files - some checks don't apply
+    - path: _test\.go
+      linters:
+        - errcheck
+        - gosec
+        - bodyclose
+        - dupl
+        - funlen
+        - gochecknoglobals
+
+    # Generated files
+    - path: ^(.*/)?mock_.*\.go$
+      linters:
+        - all
+
+    # Protobuf/generated
+    - path: \.pb\.go$
+      linters:
+        - all
+
+linters:
+  # Enable ALL linters by default (v2 syntax)
+  default: all
+
+  # Strategically disable only problematic ones
+  disable:
+    # Too many false positives
+    - contextcheck
+    - depguard  # enable manually with custom rules
+    - execinquery  # deprecated in go1.22
+    - gomnd  # deprecated, use mnd instead
+
+    # Too opinionated/noisy - enable selectively per project
+    - varnamelen
+    - tagliatelle
+    - nlreturn
+    - wsl
+    - lll  # line length - handle via golines formatter
+
+    # Deprecated
+    - deadcode
+    - exhaustivestruct
+    - golint
+    - ifshort
+    - interfacer
+    - maligned
+    - nosnakecase
+    - scopelint
+    - structcheck
+    - varcheck
+
+linters-settings:
+  # Cyclomatic complexity
+  cyclop:
+    max-complexity: 15  # strict
+    package-average: 8.0
+    skip-tests: true
+
+  gocognit:
+    min-complexity: 20
+
+  gocyclo:
+    min-complexity: 15
+
+  # Function length
+  funlen:
+    lines: 100  # strict
+    statements: 50
+    ignore-comments: true
+
+  # Error handling
+  errcheck:
+    check-type-assertions: true
+    check-blank: true
+    disable-default-exclusions: true
+    exclude-functions:
+      - (io.Closer).Close
+      - (*database/sql.Rows).Close
+
+  errorlint:
+    errorf: true
+    errorf-multi: true
+    asserts: true
+    comparison: true
+
+  wrapcheck:
+    ignoreSigs:
+      - .Errorf(
+      - errors.New(
+      - errors.Unwrap(
+      - errors.Join(
+      - .Wrap(
+      - .Wrapf(
+      - .WithMessage(
+      - .WithStack(
+    ignorePackageGlobs:
+      - github.com/pkg/errors
+
+  # Security
+  gosec:
+    severity: low
+    confidence: low
+    excludes:
+      - G104  # duplicate of errcheck
+    config:
+      G301: "0644"  # file perms
+      G302: "0640"  # file perms
+      G306: "0644"  # file perms
+
+  # Nil checks
+  nilnil:
+    checked-types:
+      - ptr
+      - func
+      - iface
+      - map
+      - chan
+
+  nilerr:
+    check-error-free-nil-error: true
+
+  # Performance
+  perfsprint:
+    err-error: true
+    errorf: true
+    sprintf1: true
+    strconcat: true
+    concat-loop: true  # new in 2025
+    loop-other-ops: true  # new in 2025
+
+  prealloc:
+    simple: true
+    range-loops: true
+    for-loops: true
+
+  # Testing
+  paralleltest:
+    ignore-missing: false
+    ignore-missing-subtests: false
+
+  testifylint:
+    enable-all: true
+
+  testpackage:
+    skip-regexp: (export|internal)_test\.go
+    allow-packages:
+      - main
+
+  # Style & conventions
+  revive:
+    severity: error
+    enable-all-rules: true
+    rules:
+      # Disable overly strict rules
+      - name: add-constant
+        disabled: true
+      - name: argument-limit
+        disabled: true
+      - name: banned-characters
+        disabled: true
+      - name: cognitive-complexity
+        disabled: true  # use gocognit instead
+      - name: cyclomatic
+        disabled: true  # use gocyclo instead
+      - name: file-header
+        disabled: true
+      - name: function-length
+        disabled: true  # use funlen instead
+      - name: line-length-limit
+        disabled: true  # use golines formatter
+      - name: max-public-structs
+        disabled: true
+      - name: function-result-limit
+        disabled: true
+
+      # Configure enabled rules
+      - name: comments-density
+        arguments: [20]  # min 20% comment density
+      - name: confusing-naming
+        severity: warning
+      - name: defer
+        arguments:
+          - call-chain
+          - loop
+          - method-call
+          - recover
+          - return
+      - name: exported
+        arguments:
+          - checkPrivateReceivers
+          - disableStutteringCheck
+      - name: imports-blocklist
+        arguments:
+          - github.com/golang/protobuf  # use google.golang.org/protobuf
+          - github.com/satori/go.uuid  # use google/uuid
+      - name: indent-error-flow
+        severity: warning
+      - name: unexported-naming
+        severity: warning
+
+  godot:
+    scope: all
+    exclude:
+      - "^fixme:"
+      - "^todo:"
+    capital: true
+
+  godox:
+    keywords:
+      - BUG
+      - FIXME
+      - HACK
+
+  # Struct initialization
+  exhaustruct:
+    include:
+      - .*Config.*
+      - .*Options.*
+    exclude:
+      # stdlib types commonly initialized partially
+      - ^net/http\.Client$
+      - ^net/http\.Server$
+      - ^net/http\.Request$
+      - ^net/http\.Response$
+      - ^time\.Time$
+      - ^time\.Duration$
+      - ^context\.Context$
+    allow-empty: false  # new in v4
+    allow-empty-returns: true  # new in v4
+
+  # Import ordering
+  gci:
+    sections:
+      - standard
+      - default
+      - prefix(github.com/your-org)
+      - blank
+      - dot
+    custom-order: true
+
+  goimports:
+    local-prefixes: github.com/your-org
+
+  # Formatting
+  golines:
+    max-len: 120
+    base-formatter: gofmt
+
+  # Interface sizing
+  interfacebloat:
+    max: 10
+
+  # Maintainability
+  maintidx:
+    under: 20  # strict maintainability index
+
+  # Nesting
+  nestif:
+    min-complexity: 4  # strict nesting
+
+  # Unused code
+  unparam:
+    check-exported: true
+
+  unused:
+    field-writes-are-uses: true
+    exported-is-used: true
+    exported-fields-are-used: true
+    parameters-are-used: true
+    local-variables-are-used: true
+
+  # Naming
+  stylecheck:
+    checks:
+      - all
+      - -ST1000  # package comment (use revive instead)
+      - -ST1020  # package comment on multiple files
+      - -ST1021  # package comment detached
+      - -ST1022  # package comment generic
+    dot-import-whitelist:
+      - github.com/onsi/ginkgo/v2
+      - github.com/onsi/gomega
+
+  # Code duplication
+  dupl:
+    threshold: 100  # strict duplication check
+
+  # Constants
+  goconst:
+    min-len: 3
+    min-occurrences: 3
+    ignore-tests: true
+
+  # Deprecated
+  staticcheck:
+    checks:
+      - all
+      - -SA1019  # deprecation warnings as info, not error
+
+  # Variable declarations
+  varnamelen:
+    min-name-length: 2
+    ignore-names:
+      - i
+      - j
+      - k
+      - id
+      - ok
+      - err
+      - db
+      - tx
+    ignore-decls:
+      - w http.ResponseWriter
+      - r *http.Request
+      - t testing.T
+      - b testing.B
+      - ctx context.Context
+
+  # Go 1.22+ features
+  intrange:
+    always-use-int-loop: false  # suggest using integer range loops
+
+  # Modern Go patterns (2025)
+  # Note: "modernize" linter from Gophercon 2025 may need manual addition
+
+# Formatters - run before linting
+# Note: Use goimports + golines in pre-commit hook
+# gofumpt can be used for stricter formatting than gofmt

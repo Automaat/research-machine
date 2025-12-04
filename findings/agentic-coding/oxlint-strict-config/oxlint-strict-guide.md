@@ -20,7 +20,10 @@ Comprehensive oxlint config enabling 600+ rules across 13 plugins, optimized for
 ## 📦 Installation
 
 ```bash
-# Install oxlint + type-aware support
+# Install oxlint (latest stable)
+pnpm add -D oxlint
+
+# With type-aware support (recommended for TypeScript projects)
 pnpm add -D oxlint oxlint-tsgolint
 
 # Or with npm
@@ -29,6 +32,11 @@ npm install -D oxlint oxlint-tsgolint
 # Or with yarn
 yarn add -D oxlint oxlint-tsgolint
 ```
+
+**Current versions (as of Dec 2024):**
+
+- oxlint: `^1.31.0`
+- oxlint-tsgolint: `^0.8.3` (for type-aware linting)
 
 ---
 
@@ -72,6 +80,19 @@ Copy [.oxlintrc.json](./.oxlintrc.json) to project root.
 ## 🤖 AI Coding Optimizations
 
 ### Why This Config Helps AI
+
+#### 0. **Reasonable Limits**
+
+Pedantic mode can be too strict. Set practical limits:
+
+```json
+"eslint/max-lines-per-function": ["warn", { "max": 100, "skipBlankLines": true }],
+"eslint/max-depth": ["warn", { "max": 3 }],
+"eslint/max-nested-callbacks": ["warn", { "max": 3 }],
+"eslint/max-lines": ["warn", { "max": 300, "skipBlankLines": true }]
+```
+
+**Why:** Prevents pedantic defaults (e.g., 20 lines/function) from blocking legitimate code.
 
 #### 1. **Type Safety = Context Clarity**
 
@@ -169,6 +190,45 @@ function processUserData(data: UserData): ProcessedData { ... }
 - `jsdoc/check-param-names`: warn
 - `jsdoc/check-alignment`: warn
 
+#### 6. **Framework-Specific Adjustments**
+
+##### React 17+ JSX Transform
+
+```json
+"react/react-in-jsx-scope": "off"
+```
+
+**Why:** React 17+ doesn't require `import React` with new JSX transform.
+
+##### React Hooks Rules
+
+```json
+"react/rules-of-hooks": "error",
+"react/exhaustive-deps": "error"
+```
+
+**Why:** Critical for React - prevents hooks misuse and missing dependencies in useEffect/useMemo/useCallback.
+
+##### Vitest Testing Support
+
+```json
+"jest/no-standalone-expect": ["error", {
+  "additionalTestBlockFunctions": ["waitFor", "waitForElementToBeRemoved", "vi.waitFor"]
+}]
+```
+
+**Why:** Vitest uses Jest-compatible API but has additional async utilities.
+
+##### Import Side Effects
+
+```json
+"import/no-unassigned-import": ["error", {
+  "allow": ["**/*.css", "@testing-library/jest-dom"]
+}]
+```
+
+**Why:** CSS imports and testing library extensions have intentional side effects.
+
 ---
 
 ## 🚀 Usage
@@ -179,11 +239,17 @@ function processUserData(data: UserData): ProcessedData { ... }
 # Lint entire project
 pnpm dlx oxlint
 
-# With type-aware rules (10x faster than typescript-eslint)
+# With type-aware rules (recommended for TypeScript)
 pnpm dlx oxlint --type-aware
 
-# Auto-fix (limited support for type-aware rules)
+# Auto-fix
 pnpm dlx oxlint --fix
+
+# Type-aware with auto-fix
+pnpm dlx oxlint --type-aware --fix
+
+# Fail on warnings (for CI)
+pnpm dlx oxlint --type-aware --deny-warnings
 ```
 
 ### CI/CD Integration
@@ -225,12 +291,18 @@ Install extension: [Oxc](https://marketplace.visualstudio.com/items?itemName=oxc
 ```json
 {
   "scripts": {
-    "lint": "oxlint",
-    "lint:fix": "oxlint --fix",
+    "lint": "oxlint --type-aware",
+    "lint:fix": "oxlint --type-aware --fix",
     "lint:strict": "oxlint --type-aware --deny-warnings"
+  },
+  "devDependencies": {
+    "oxlint": "^1.31.0",
+    "oxlint-tsgolint": "^0.8.3"
   }
 }
 ```
+
+**Note:** `--type-aware` requires `oxlint-tsgolint` package and adds type-checking rules (e.g., `no-floating-promises`, `strict-boolean-expressions`).
 
 ---
 
@@ -258,14 +330,19 @@ pnpm dlx oxlint && pnpm dlx eslint .
 
 ### Option 2: Full Migration
 
-Replace ESLint entirely (may lose some specialized rules).
+Replace ESLint entirely (recommended for new projects).
 
 ```bash
 # Remove ESLint
 pnpm remove eslint @typescript-eslint/eslint-plugin @typescript-eslint/parser
 
-# Install oxlint
+# Install oxlint with type-aware support
 pnpm add -D oxlint oxlint-tsgolint
+
+# Update scripts
+npm pkg set scripts.lint="oxlint --type-aware"
+npm pkg set scripts.lint:fix="oxlint --type-aware --fix"
+npm pkg set scripts.lint:strict="oxlint --type-aware --deny-warnings"
 ```
 
 ---
@@ -309,16 +386,48 @@ pnpm add -D oxlint oxlint-tsgolint
 ### Framework-Specific
 
 ```json
-// React-only project
+// React-only project (remove Next.js if not using)
 {
-  "plugins": ["eslint", "typescript", "react", "jsx-a11y", "react-perf"]
+  "plugins": ["eslint", "typescript", "react", "jsx-a11y", "react-perf"],
+  "rules": {
+    "react/react-in-jsx-scope": "off"  // For React 17+
+  }
 }
 
 // Node.js backend
 {
-  "plugins": ["eslint", "typescript", "node", "promise", "unicorn"]
+  "plugins": ["eslint", "typescript", "node", "promise", "unicorn"],
+  "env": {
+    "node": true,
+    "es2024": true
+  }
+}
+
+// Tauri/Electron (desktop apps)
+{
+  "plugins": ["eslint", "typescript", "react", "jsx-a11y", "react-perf"],
+  "env": {
+    "browser": true,
+    "es2024": true
+  }
 }
 ```
+
+### Common Adjustments from Real Migration
+
+**Based on creatorops migration (Tauri + React + Vitest):**
+
+1. **Remove Next.js rules** if not using Next.js
+2. **Set complexity limits** to override pedantic defaults:
+   - `max-lines-per-function`: 100 (default can be too low)
+   - `max-lines`: 300 (prevents excessive splitting)
+3. **Add React hooks rules** (critical for React projects):
+   - `react/rules-of-hooks`: error
+   - `react/exhaustive-deps`: error
+4. **Add Vitest test utilities** to `jest/no-standalone-expect`
+5. **Allow CSS imports** in `import/no-unassigned-import`
+6. **Disable `react-in-jsx-scope`** for React 17+
+7. **Use `--type-aware` flag** + install `oxlint-tsgolint` for TypeScript projects
 
 ---
 

@@ -41,3 +41,9 @@ MD049:
 MD050:
   # Prefer asterisks for strong
   style: asterisk
+
+# MD036 - Emphasis used instead of heading
+MD036: false  # Allow emphasis for section labels (intentional styling)
+
+# MD060 - Table column style
+MD060: false  # Disable table alignment checks (cosmetic)
