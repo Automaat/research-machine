@@ -34,6 +34,17 @@ Input: @$ARGUMENTS
 - Never use skip/disable directives
 - Fix root cause, not symptoms
 
+### Report ONLY if ALL true
+
+1. Traced exact execution path showing issue
+2. Verified params/return values don't prevent issue
+3. Checked full function context (not isolated lines)
+4. Can explain precisely why current code is wrong
+5. Issue exists in actual runtime behavior
+6. No defensive code/guards that prevent issue
+
+### If ANY doubt: don't report
+
 ## Priority Checks
 
 **Critical:**
