@@ -26,7 +26,10 @@ Input: @$ARGUMENTS
 
 ## Review Guidelines
 
-**Reference**: `~/.claude/skills/go-code-review/knowledge-base.md`
+**Reference**:
+
+- `~/.claude/skills/go-code-review/knowledge-base.md`
+- `~/.claude/skills/go-code-review/real-world-patterns.md`
 
 **Follow**: Linter error handling from `~/.claude/CLAUDE.md`:
 
@@ -34,16 +37,40 @@ Input: @$ARGUMENTS
 - Never use skip/disable directives
 - Fix root cause, not symptoms
 
+### Two-Phase Process
+
+**Phase 1: Initial Analysis (Internal Only)**
+
+For each potential issue, trace execution path and identify concerns.
+DO NOT output anything yet.
+
+**Phase 2: Verification (CoVe)**
+
+Before reporting, verify each finding by asking:
+
+1. Could params/types prevent this issue?
+2. Is there defensive code elsewhere?
+3. Could this be intentional design?
+4. Does broader context explain this?
+5. Would this actually fail at runtime?
+
+**If ANY verification question is "yes" or "maybe": DISCARD SILENTLY**
+
 ### Report ONLY if ALL true
 
 1. Traced exact execution path showing issue
-2. Verified params/return values don't prevent issue
-3. Checked full function context (not isolated lines)
-4. Can explain precisely why current code is wrong
-5. Issue exists in actual runtime behavior
-6. No defensive code/guards that prevent issue
+2. Verified NO params/guards prevent issue
+3. Checked full function context
+4. Issue WILL fail at runtime
+5. NOT intentional design pattern
+6. Verification phase confirms issue
 
-### If ANY doubt: don't report
+### CRITICAL: No Hedging
+
+- NEVER output "actually, upon closer inspection"
+- NEVER explain why you're NOT reporting something
+- If uncertain after verification: stay silent
+- Only output confirmed high-confidence issues
 
 ## Priority Checks
 
