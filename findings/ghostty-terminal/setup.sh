@@ -23,9 +23,9 @@ if [ -f "$CONFIG_DIR/config" ]; then
     cp "$CONFIG_DIR/config" "$CONFIG_DIR/config.backup.$(date +%Y%m%d_%H%M%S)"
 fi
 
-# Copy starter config
+# Copy config
 echo "📝 Installing optimized config..."
-cp ghostty-config-starter.conf "$CONFIG_DIR/config"
+cp ghostty-config.conf "$CONFIG_DIR/config"
 
 # Init git for version control
 if [ ! -d "$CONFIG_DIR/.git" ]; then

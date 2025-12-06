@@ -5,8 +5,7 @@ Comprehensive research & config for migrating from iTerm to Ghostty, optimized f
 ## 📁 Files
 
 - **[ghostty-migration-guide.md](ghostty-migration-guide.md)** - Full research, features, comparisons
-- **[ghostty-config-fixed.conf](ghostty-config-fixed.conf)** - ✅ **VALIDATED** config (use this!)
-- **[ghostty-config-starter.conf](ghostty-config-starter.conf)** - ⚠️ Has invalid options, use fixed version
+- **[ghostty-config.conf](ghostty-config.conf)** - ✅ **VALIDATED** config (use this!)
 - **[setup.sh](setup.sh)** - Automated setup script
 
 ## ⚡ Quick Setup
@@ -29,7 +28,7 @@ cd findings/ghostty-terminal
 
 ```bash
 # Copy config
-cp ghostty-config-starter.conf ~/Library/Application\ Support/com.mitchellh.ghostty/config
+cp ghostty-config.conf ~/Library/Application\ Support/com.mitchellh.ghostty/config
 
 # Or edit directly
 open ~/Library/Application\ Support/com.mitchellh.ghostty/config
