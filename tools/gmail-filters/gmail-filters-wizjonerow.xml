@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns='http://www.w3.org/2005/Atom' xmlns:apps='http://schemas.google.com/apps/2006'>
+  <title>Wizjonerów Email Filter</title>
+
+  <entry>
+    <category term='filter'></category>
+    <title>Castelia - Wizjonerów</title>
+    <apps:property name='from' value='@castelia.com.pl'/>
+    <apps:property name='label' value='Wizjonerów'/>
+  </entry>
+
+</feed>

@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns='http://www.w3.org/2005/Atom' xmlns:apps='http://schemas.google.com/apps/2006'>
+  <title>Booking.com Email Filters</title>
+
+  <!-- All booking.com emails get parent label -->
+  <entry>
+    <category term='filter'></category>
+    <title>Booking: All</title>
+    <apps:property name='from' value='@booking.com'/>
+    <apps:property name='label' value='Booking'/>
+  </entry>
+
+  <!-- Confirmations (EN + PL) -->
+  <entry>
+    <category term='filter'></category>
+    <title>Booking: Confirmations</title>
+    <apps:property name='from' value='@booking.com'/>
+    <apps:property name='subject' value='(confirmation OR confirmed OR potwierdzenie OR potwierdzona OR potwierdzone)'/>
+    <apps:property name='label' value='Booking/Confirmations'/>
+  </entry>
+
+  <!-- Reminders (EN + PL) -->
+  <entry>
+    <category term='filter'></category>
+    <title>Booking: Reminders</title>
+    <apps:property name='from' value='@booking.com'/>
+    <apps:property name='subject' value='(reminder OR upcoming stay OR przypomnienie OR nadchodzący pobyt OR zbliża się)'/>
+    <apps:property name='label' value='Booking/Reminders'/>
+  </entry>
+
+  <!-- Reviews (EN + PL) -->
+  <entry>
+    <category term='filter'></category>
+    <title>Booking: Reviews</title>
+    <apps:property name='from' value='@booking.com'/>
+    <apps:property name='subject' value='(review OR rate your stay OR opinia OR oceń pobyt OR ocena)'/>
+    <apps:property name='label' value='Booking/Reviews'/>
+  </entry>
+
+</feed>

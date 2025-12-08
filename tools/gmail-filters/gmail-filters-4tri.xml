@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns='http://www.w3.org/2005/Atom' xmlns:apps='http://schemas.google.com/apps/2006'>
+  <title>4tri Email Filter</title>
+
+  <entry>
+    <category term='filter'></category>
+    <title>4tri Team</title>
+    <apps:property name='from' value='4triteam@gmail.com'/>
+    <apps:property name='label' value='4TRI'/>
+  </entry>
+
+  <entry>
+    <category term='filter'></category>
+    <title>4tri Rozliczenia</title>
+    <apps:property name='from' value='4triteam@gmail.com'/>
+    <apps:property name='subject' value='rozliczenia'/>
+    <apps:property name='label' value='4TRI/rozliczenia'/>
+  </entry>
+
+</feed>

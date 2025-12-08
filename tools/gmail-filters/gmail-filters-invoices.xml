@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns='http://www.w3.org/2005/Atom' xmlns:apps='http://schemas.google.com/apps/2006'>
+  <title>Invoices Email Filter</title>
+
+  <!-- Subject-based matching -->
+  <entry>
+    <category term='filter'></category>
+    <title>Invoices - Subject</title>
+    <apps:property name='hasTheWord' value='subject:(invoice OR faktura OR receipt OR paragon OR rachunek OR billing OR płatność OR "payment receipt" OR "potwierdzenie płatności" OR "dokument sprzedażowy" OR "dokument sprzedaży")'/>
+    <apps:property name='label' value='Invoices'/>
+  </entry>
+
+  <!-- Attachment-based matching -->
+  <entry>
+    <category term='filter'></category>
+    <title>Invoices - Attachments</title>
+    <apps:property name='hasTheWord' value='has:attachment (filename:invoice OR filename:faktura OR filename:receipt OR filename:paragon OR filename:rachunek)'/>
+    <apps:property name='label' value='Invoices'/>
+  </entry>
+
+</feed>

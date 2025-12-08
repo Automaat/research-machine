@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns='http://www.w3.org/2005/Atom' xmlns:apps='http://schemas.google.com/apps/2006'>
+  <title>GitHub Email Filters</title>
+
+  <!-- Filter 0: ALL GitHub emails get parent label -->
+  <entry>
+    <category term='filter'></category>
+    <title>GitHub: All</title>
+    <apps:property name='from' value='notifications@github.com'/>
+    <apps:property name='label' value='GitHub'/>
+    <apps:property name='shouldNeverSpam' value='true'/>
+  </entry>
+
+  <!-- Filter 1: Failed CI - Critical, stays in inbox, starred -->
+  <entry>
+    <category term='filter'></category>
+    <title>GitHub: Failed CI</title>
+    <apps:property name='from' value='notifications@github.com'/>
+    <apps:property name='subject' value='(failed OR failing OR failure)'/>
+    <apps:property name='label' value='GitHub/CI-Failed'/>
+    <apps:property name='shouldStar' value='true'/>
+  </entry>
+
+  <!-- Filter 2: Your PRs - Activity on PRs you authored -->
+  <entry>
+    <category term='filter'></category>
+    <title>GitHub: My PRs</title>
+    <apps:property name='from' value='notifications@github.com'/>
+    <apps:property name='to' value='author@noreply.github.com'/>
+    <apps:property name='label' value='GitHub/My-PRs'/>
+  </entry>
+
+  <!-- Filter 3: Review Requests -->
+  <entry>
+    <category term='filter'></category>
+    <title>GitHub: Review Requests</title>
+    <apps:property name='from' value='notifications@github.com'/>
+    <apps:property name='subject' value='requested your review'/>
+    <apps:property name='label' value='GitHub/Review-Requests'/>
+  </entry>
+
+  <!-- Filter 4: Direct mentions -->
+  <entry>
+    <category term='filter'></category>
+    <title>GitHub: Mentions</title>
+    <apps:property name='from' value='notifications@github.com'/>
+    <apps:property name='to' value='mention@noreply.github.com'/>
+    <apps:property name='label' value='GitHub/Mentions'/>
+  </entry>
+
+  <!-- Filter 5: All other GitHub - Noise, archive -->
+  <entry>
+    <category term='filter'></category>
+    <title>GitHub: Noise (Archive)</title>
+    <apps:property name='from' value='notifications@github.com'/>
+    <apps:property name='label' value='GitHub/Noise'/>
+    <apps:property name='shouldArchive' value='true'/>
+  </entry>
+
+</feed>

@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns='http://www.w3.org/2005/Atom' xmlns:apps='http://schemas.google.com/apps/2006'>
+  <title>Adventures Email Filters</title>
+
+  <entry>
+    <category term='filter'></category>
+    <title>Adventures - Airlines Parent</title>
+    <apps:property name='from' value='(@ryanair.com OR @wizzair.com OR @easyjet.com OR @lot.com OR @lufthansa.com OR @klm.com OR @airfrance.com OR @britishairways.com OR @emirates.com OR @turkishairlines.com OR @skyscanner.com OR @kayak.com OR @klm-info.com)'/>
+    <apps:property name='label' value='Adventures'/>
+  </entry>
+
+  <entry>
+    <category term='filter'></category>
+    <title>Adventures - Airlines</title>
+    <apps:property name='from' value='(@ryanair.com OR @wizzair.com OR @easyjet.com OR @lot.com OR @lufthansa.com OR @klm.com OR @airfrance.com OR @britishairways.com OR @emirates.com OR @turkishairlines.com OR @skyscanner.com OR @kayak.com OR @klm-info.com)'/>
+    <apps:property name='label' value='Adventures/Airlines'/>
+  </entry>
+
+</feed>

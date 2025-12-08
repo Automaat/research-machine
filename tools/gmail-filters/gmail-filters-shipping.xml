@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns='http://www.w3.org/2005/Atom' xmlns:apps='http://schemas.google.com/apps/2006'>
+  <title>Shipping Email Filters</title>
+
+  <entry>
+    <category term='filter'></category>
+    <apps:property name='from' value='(@ups.com OR @fedex.com OR @dhl.com OR @dhl.pl OR shipment-tracking@amazon.com OR @inpost.pl OR @dpd.com OR @dpd.pl OR @gls-group.com OR @gls-group.pl OR @poczta-polska.pl OR @paczkomaty.pl)'/>
+    <title>Shipping - Senders</title>
+    <apps:property name='label' value='Shipping'/>
+  </entry>
+
+  <entry>
+    <category term='filter'></category>
+    <title>Shipping - Keywords</title>
+    <apps:property name='hasTheWord' value='(przesyłka OR doręczenie OR paczka OR kurier OR dostawa OR nadanie OR odbiór OR wysyłka OR śledzenie OR shipment OR delivery OR parcel OR courier OR tracking OR dispatch)'/>
+    <apps:property name='label' value='Shipping'/>
+  </entry>
+
+</feed>

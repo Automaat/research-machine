@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns='http://www.w3.org/2005/Atom' xmlns:apps='http://schemas.google.com/apps/2006'>
+  <title>AKZ Email Filter</title>
+
+  <entry>
+    <category term='filter'></category>
+    <title>AKZ</title>
+    <apps:property name='from' value='keja.agh@gmail.com'/>
+    <apps:property name='label' value='AKZ'/>
+  </entry>
+
+  <entry>
+    <category term='filter'></category>
+    <title>AKZ Newsletter</title>
+    <apps:property name='from' value='keja.agh@gmail.com'/>
+    <apps:property name='subject' value='[AKŻ AGH Mailing]'/>
+    <apps:property name='label' value='AKZ/newsletter'/>
+  </entry>
+
+</feed>
