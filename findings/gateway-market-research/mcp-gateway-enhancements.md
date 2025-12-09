@@ -77,7 +77,10 @@
 **Quote from BCC Research:**
 > "MCP represents one of the biggest shifts in AI since the introduction of large language models."
 
-[Sources: [Medium](https://medium.com/@2025mooibusiness/how-anthropic-mcp-is-influencing-the-market-4836f0239bf4), [BCC Research](https://www.globenewswire.com/news-release/2025/11/21/3192940/0/en/BCC-Research-Launches-New-Model-Context-Protocol-MCP-Connections-Unlocking-Instant-Access-to-Proprietary-Market-Data.html)]
+**Sources:**
+
+- [Medium](https://medium.com/@2025mooibusiness/how-anthropic-mcp-is-influencing-the-market-4836f0239bf4)
+- [BCC Research](https://www.globenewswire.com/news-release/2025/11/21/3192940/0/en/BCC-Research-Launches-New-Model-Context-Protocol-MCP-Connections-Unlocking-Instant-Access-to-Proprietary-Market-Data.html)
 
 ---
 

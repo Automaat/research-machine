@@ -302,7 +302,8 @@ Install extension: [Oxc](https://marketplace.visualstudio.com/items?itemName=oxc
 }
 ```
 
-**Note:** `--type-aware` requires `oxlint-tsgolint` package and adds type-checking rules (e.g., `no-floating-promises`, `strict-boolean-expressions`).
+**Note:** `--type-aware` requires `oxlint-tsgolint` package and adds type-checking rules
+(e.g., `no-floating-promises`, `strict-boolean-expressions`).
 
 ---
 

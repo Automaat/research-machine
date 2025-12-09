@@ -18,6 +18,22 @@ Comprehensive research on writing effective CLAUDE.md files for software enginee
 
 ## Tools & Templates
 
+### Research Prompts
+
+Evidence-based research prompts with CoT, CoVe, and self-critique to prevent hallucination.
+
+| Prompt | Use Case |
+|--------|----------|
+| [grounded-research.md](tools/prompts/grounded-research.md) | Systematic 4-phase research with full source verification |
+| [quick-research.md](tools/prompts/quick-research.md) | Lightweight lookup for tool configs, how-tos |
+
+**Slash commands:**
+
+```bash
+/full-research RAG hallucination mitigation techniques
+/quick-research mise task runner syntax
+```
+
 ### CLAUDE.md Generator
 
 Generate tailored CLAUDE.md files for your projects:
@@ -43,7 +59,9 @@ cat tools/prompts/generate-claude-md-new.md
 ## Project Structure
 
 ```text
-/findings/          # Research findings and reports
+/.claude/
+  /commands/       # Slash commands (/full-research, /quick-research)
+/findings/         # Research findings and reports
 /tools/
   /templates/      # Reusable templates
   /prompts/        # Prompt engineering resources

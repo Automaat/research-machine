@@ -27,7 +27,8 @@ Create comprehensive CLAUDE.md for my new project. Establish patterns from day o
 3. **Structure:** Standard or custom, monorepo/single, module organization
 4. **Team:** Solo/team size, experience level, remote/co-located
 5. **Practices:** TDD/test-after, code review, git workflow, CI/CD
-6. **AI Priorities:** Focus areas (consistency/simplicity/security), anti-patterns to avoid, architectural preferences, style
+6. **AI Priorities:** Focus areas (consistency/simplicity/security), anti-patterns to avoid,
+   architectural preferences, style
 7. **Domain:** What it does, terminology, special requirements (performance/security)
 
 ---
@@ -109,7 +110,8 @@ Generated CLAUDE.md must:
 
 ## Pitfalls
 
-**Avoid:** Generic advice without adapting, over-specifying early, inflexibility, verbosity (>500 lines), forgetting to update
+**Avoid:** Generic advice without adapting, over-specifying early, inflexibility,
+verbosity (>500 lines), forgetting to update
 
 **Do:** Start with stack best practices, leave room for specifics, focus on preventing issues, keep concise, plan to iterate
 
