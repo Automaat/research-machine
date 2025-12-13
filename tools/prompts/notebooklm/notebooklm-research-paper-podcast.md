@@ -24,6 +24,12 @@ Generate a podcast that covers:
 - Compare/contrast with existing approaches
 - End with "so what" - impact and next steps
 
+## Language
+
+- Keep ALL technical terms in English (no translations)
+- Preserve original names: algorithms, architectures, frameworks, libraries, protocols, patterns
+- Examples: "transformer", "attention mechanism", "fine-tuning", "embedding" - never translate
+
 ## Avoid
 
 - Jargon without explanation
