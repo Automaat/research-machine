@@ -8,6 +8,6 @@ White background. The dog rides a majestic glowing llama made of neural
 network patterns charging forward with epic momentum.
 Write the text "LLaMA" in bold, warm brown with fluffy texture, angular anime font at top right.
 Epic mount riding pose, open source charge, bold linework. No clutter.
-```text
+```
 
 **Text:** LLaMA | **Color:** Warm Brown

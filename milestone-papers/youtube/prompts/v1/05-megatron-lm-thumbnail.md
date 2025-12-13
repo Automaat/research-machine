@@ -8,6 +8,6 @@ White background. The dog stands before a colossal robot silhouette made
 of interconnected GPU arrays and neural pathways. Epic scale contrast.
 Write the text "MEGATRON" in bold, metallic silver, angular anime font at bottom.
 Defiant pose against massive scale, bold linework. No clutter.
-```text
+```
 
 **Text:** MEGATRON | **Color:** Metallic Silver

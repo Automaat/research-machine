@@ -8,6 +8,6 @@ White background. The dog operates glowing filtration system transforming
 raw web chaos into refined golden data drops. Quality inspector pose.
 Write the text "FINEWEB" in bold, refined gold with web pattern, angular anime font at bottom center.
 Data sommelier pose, web distillation quality, bold linework. No clutter.
-```text
+```
 
 **Text:** FINEWEB | **Color:** Refined Gold

@@ -8,6 +8,6 @@ White background. The dog transforms mid-air as new glowing purple abilities
 burst from within - sudden power awakening with shocked amazement face.
 Write the text "EMERGENT" in bold, magical purple with spark effect, angular anime font at top left.
 Transformation awakening pose, unexpected power reveal, bold linework. No clutter.
-```text
+```
 
 **Text:** EMERGENT | **Color:** Magical Purple

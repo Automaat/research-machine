@@ -8,6 +8,6 @@ White background. The dog climbs a massive glowing tree where each branch
 is a different reasoning path, exploring multiple routes upward.
 Write the text "TREE" in bold, nature green with branch patterns, angular anime font at top right.
 Tree climbing explorer pose, branching thought paths, bold linework. No clutter.
-```text
+```
 
 **Text:** TREE | **Color:** Nature Green

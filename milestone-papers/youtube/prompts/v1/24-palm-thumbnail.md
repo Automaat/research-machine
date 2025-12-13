@@ -8,6 +8,6 @@ White background. The dog surfs on a massive glowing palm leaf made of
 neural pathway patterns, riding waves of data. Tropical tech fusion.
 Write the text "PaLM" in bold, tropical green with gold sun glow, angular anime font at upper right.
 Dynamic surfing pose, pathway riding energy, bold linework. No clutter.
-```text
+```
 
 **Text:** PaLM | **Color:** Tropical Green + Gold

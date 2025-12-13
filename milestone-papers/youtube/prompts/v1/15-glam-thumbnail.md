@@ -8,6 +8,6 @@ White background. The dog conducts an orchestra of glowing expert modules
 with a baton, each specialist contributing power to a central beam.
 Write the text "GLaM" in bold, glamorous pink with sparkles, angular anime font in upper right.
 Maestro conductor pose, coordinated expertise, bold linework. No clutter.
-```text
+```
 
 **Text:** GLaM | **Color:** Pink + Sparkles

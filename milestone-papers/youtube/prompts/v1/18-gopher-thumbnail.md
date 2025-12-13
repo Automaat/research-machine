@@ -8,6 +8,6 @@ White background. The dog burrows through layers of data underground,
 creating tunnels of knowledge with dirt and data particles flying.
 Write the text "GOPHER" in bold, earthy brown with gold highlights, angular anime font at bottom right.
 Dynamic digging pose, deep exploration energy, bold linework. No clutter.
-```text
+```
 
 **Text:** GOPHER | **Color:** Earthy Brown + Gold

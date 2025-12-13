@@ -8,6 +8,6 @@ White background. The dog directly chooses between two glowing orbs -
 green preferred vs red rejected - with decisive pointing action.
 Write the text "DIRECT!" in bold, decision green with choice arrows, angular anime font at upper left.
 Decisive choice pose, direct preference action, bold linework. No clutter.
-```text
+```
 
 **Text:** DIRECT! | **Color:** Decision Green

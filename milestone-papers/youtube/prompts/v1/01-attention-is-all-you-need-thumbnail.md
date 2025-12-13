@@ -9,6 +9,6 @@ glowing orange attention beams and connection nodes burst behind him.
 Bold manga speed lines. Write the text "ATTENTION!" in bold, bright
 orange, angular anime font in the upper left corner.
 Dynamic action pose, high energy, bold linework. No clutter.
-```text
+```
 
 **Text:** ATTENTION! | **Color:** Orange

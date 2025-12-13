@@ -8,6 +8,6 @@ White background. The dog reaches into a massive glowing database archive,
 pulling out streams of relevant knowledge. Data vortex retrieval effect.
 Write the text "RETRO" in bold, synthwave cyan with pink outline, angular anime font at top left.
 Database diving pose, knowledge extraction action, bold linework. No clutter.
-```text
+```
 
 **Text:** RETRO | **Color:** Synthwave Cyan + Pink

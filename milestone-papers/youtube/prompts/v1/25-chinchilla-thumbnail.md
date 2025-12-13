@@ -8,6 +8,6 @@ White background. The dog balances perfectly on a scale between compute
 power crystals and data token orbs, finding the optimal equilibrium point.
 Write the text "OPTIMAL" in bold, soft gray with efficiency sparkle, angular anime font at bottom center.
 Zen balance pose, perfect equilibrium, bold linework. No clutter.
-```text
+```
 
 **Text:** OPTIMAL | **Color:** Soft Gray + Sparkle

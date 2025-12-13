@@ -8,6 +8,6 @@ White background. The dog stands as central hub with interface cables
 connecting to vision, speech, and text modules all around. Arms spread wide.
 Write the text "INTERFACE" in bold, chrome blue with circuit patterns, angular anime font at top center.
 Universal connector pose, multi-modal hub energy, bold linework. No clutter.
-```text
+```
 
 **Text:** INTERFACE | **Color:** Chrome Blue

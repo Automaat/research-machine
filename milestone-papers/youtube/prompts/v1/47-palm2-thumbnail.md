@@ -8,6 +8,6 @@ White background. The dog dual-wields two glowing palm fronds channeling
 multilingual and reasoning powers with "2" energy symbol behind.
 Write the text "PaLM 2" in bold, evolved gold with level-up sparkle, angular anime font at bottom center.
 Level 2 evolution pose, doubled power energy, bold linework. No clutter.
-```text
+```
 
 **Text:** PaLM 2 | **Color:** Evolved Gold

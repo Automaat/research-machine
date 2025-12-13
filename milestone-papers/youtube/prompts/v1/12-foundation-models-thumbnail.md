@@ -8,6 +8,6 @@ White background. The dog stands atop a massive stone foundation block
 with branches of applications flowing upward - images, text, code, robots.
 Write the text "FOUNDATION" in bold, stone gray with gold edge, angular anime font at bottom.
 Solid stance on foundation, branching potential energy, bold linework. No clutter.
-```text
+```
 
 **Text:** FOUNDATION | **Color:** Stone Gray + Gold

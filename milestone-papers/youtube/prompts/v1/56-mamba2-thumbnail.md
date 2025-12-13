@@ -8,6 +8,6 @@ White background. The dog commands twin-headed mamba snake - one head
 Transformer, one head SSM - both unified under his control.
 Write the text "MAMBA 2" in bold, evolved green with dual snake pattern, angular anime font at bottom center.
 Dual power master pose, transformer-SSM fusion, bold linework. No clutter.
-```text
+```
 
 **Text:** MAMBA 2 | **Color:** Evolved Green

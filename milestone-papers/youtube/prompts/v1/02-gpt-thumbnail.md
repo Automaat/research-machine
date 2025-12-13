@@ -8,6 +8,6 @@ White background. The dog bursts through a wall of text that transforms
 into golden light particles. Manga explosion effect with speed lines.
 Write the text "GPT" in bold, gold, angular anime font in the lower right.
 Dynamic leap pose, explosive energy, bold linework. No clutter.
-```text
+```
 
 **Text:** GPT | **Color:** Gold

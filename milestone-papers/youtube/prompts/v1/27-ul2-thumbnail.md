@@ -8,6 +8,6 @@ White background. The dog merges three different colored training beams
 into one unified powerful rainbow stream. Fusion conductor pose.
 Write the text "UNIFIED" in bold, prismatic rainbow gradient, angular anime font at bottom center.
 Energy merging pose, paradigm unification, bold linework. No clutter.
-```text
+```
 
 **Text:** UNIFIED | **Color:** Rainbow Gradient

@@ -8,6 +8,6 @@ White background. The dog rides a massive glowing black mamba snake made
 of state space patterns slithering at lightning speed.
 Write the text "MAMBA" in bold, venomous green with snake scale texture, angular anime font at top left.
 Snake rider action pose, linear speed energy, bold linework. No clutter.
-```text
+```
 
 **Text:** MAMBA | **Color:** Venomous Green

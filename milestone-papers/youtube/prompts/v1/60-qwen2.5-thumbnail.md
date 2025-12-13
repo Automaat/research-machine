@@ -8,6 +8,6 @@ White background. The dog performs martial arts kata surrounded by Chinese
 dragon made of neural patterns with flowing energy trail.
 Write the text "QWEN" in bold, imperial red with Chinese brush stroke style, angular anime font at top right.
 Kung fu master pose, eastern tech mastery, bold linework. No clutter.
-```text
+```
 
 **Text:** QWEN | **Color:** Imperial Red

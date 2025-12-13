@@ -8,6 +8,6 @@ White background. The dog surfs on a massive wave of cascading cyan text
 and data streams. Manga motion blur and speed lines.
 Write the text "GPT-2" in bold, electric cyan, angular anime font in upper right.
 Dynamic surfing pose, unstoppable momentum, bold linework. No clutter.
-```text
+```
 
 **Text:** GPT-2 | **Color:** Electric Cyan

@@ -8,6 +8,6 @@ White background. The dog stands at a glowing yellow crossroads with
 multiple pathways branching to different expert modules. Energy routing sparks.
 Write the text "SWITCH!" in bold, electric yellow, angular anime font in upper right.
 Decisive pointing pose, pathway selection energy, bold linework. No clutter.
-```text
+```
 
 **Text:** SWITCH! | **Color:** Electric Yellow

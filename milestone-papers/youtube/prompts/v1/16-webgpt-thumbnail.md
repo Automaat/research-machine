@@ -8,6 +8,6 @@ White background. The dog surfs through floating browser windows and web
 pages, grabbing information from websites as he passes.
 Write the text "WebGPT" in bold, browser blue, angular anime font at bottom center.
 Dynamic web surfing pose, information hunting action, bold linework. No clutter.
-```text
+```
 
 **Text:** WebGPT | **Color:** Browser Blue

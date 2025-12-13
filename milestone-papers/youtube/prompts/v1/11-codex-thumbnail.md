@@ -8,6 +8,6 @@ White background. The dog types on holographic keyboard while streams of
 glowing green code spiral around him. Matrix-style code rain effect.
 Write the text "CODEX" in bold, neon green, angular anime font in lower left.
 Hacker action pose, coding mastery energy, bold linework. No clutter.
-```text
+```
 
 **Text:** CODEX | **Color:** Neon Green

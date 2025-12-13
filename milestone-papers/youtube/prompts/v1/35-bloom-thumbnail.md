@@ -8,6 +8,6 @@ White background. The dog stands in a garden where flowers bloom into
 46 different language scripts, each petal a different writing system.
 Write the text "BLOOM" in bold, floral pink with petal effects, angular anime font at top center.
 Blooming discovery pose, multilingual flourish, bold linework. No clutter.
-```text
+```
 
 **Text:** BLOOM | **Color:** Floral Pink

@@ -8,6 +8,6 @@ White background. The dog lifts an impossibly heavy barbell made of 200+
 floating task icons. Power lift pose straining but succeeding, sweat drops.
 Write the text "BIG BENCH" in bold, gym red with iron texture, angular anime font at bottom center.
 Heroic weightlifting pose, ultimate challenge energy, bold linework. No clutter.
-```text
+```
 
 **Text:** BIG BENCH | **Color:** Gym Red

@@ -8,6 +8,6 @@ White background. The dog has one eye transformed into camera lens, seeing
 both images and text merging together with visual scan effect.
 Write the text "LLaVA" in bold, camera silver with vision rays, angular anime font at top left.
 Dual perception cyborg pose, image-language fusion, bold linework. No clutter.
-```text
+```
 
 **Text:** LLaVA | **Color:** Camera Silver

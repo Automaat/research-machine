@@ -9,6 +9,6 @@ thought bubbles, each step lighting up as he progresses toward a bright
 solution star. Write the text "THINK!" in bold, golden yellow, angular
 anime font at top center.
 Dynamic running pose, step-by-step energy, bold linework. No clutter.
-```text
+```
 
 **Text:** THINK! | **Color:** Golden Yellow

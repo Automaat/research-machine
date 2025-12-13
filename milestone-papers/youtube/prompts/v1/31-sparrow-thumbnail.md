@@ -8,6 +8,6 @@ White background. The dog flies alongside a glowing mechanical sparrow bird,
 both perfectly aligned in formation with synchronized flight trails.
 Write the text "ALIGNED" in bold, sky blue with feather accents, angular anime font at top right.
 Aerial flight pose, perfect alignment harmony, bold linework. No clutter.
-```text
+```
 
 **Text:** ALIGNED | **Color:** Sky Blue

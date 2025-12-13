@@ -8,6 +8,6 @@ White background. The dog achieves Super Saiyan-like transformation with
 multimodal auras - text, vision, reasoning all swirling around him.
 Write the text "GPT-4" in bold, brilliant white with rainbow edge glow, angular anime font at center.
 Ultimate power-up pose, peak evolution transformation, bold linework. No clutter.
-```text
+```
 
 **Text:** GPT-4 | **Color:** White + Rainbow

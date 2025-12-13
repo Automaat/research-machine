@@ -8,6 +8,6 @@ White background. The dog emerges from deepest ocean trench holding glowing
 "V3" artifact, ascending victoriously with treasure discovered.
 Write the text "V3" in bold, deep ocean blue with pressure lines, angular anime font at center.
 Deep sea victory pose, maximum depth treasure, bold linework. No clutter.
-```text
+```
 
 **Text:** V3 | **Color:** Deep Ocean Blue

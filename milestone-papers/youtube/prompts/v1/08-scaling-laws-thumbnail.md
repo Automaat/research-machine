@@ -8,6 +8,6 @@ White background. The dog rockets upward along an exponentially rising
 chart made of glowing green energy blocks. Speed lines and afterburner effect.
 Write the text "SCALE UP" in bold, neon green, angular anime font at top right.
 Vertical ascent pose, exponential growth energy, bold linework. No clutter.
-```text
+```
 
 **Text:** SCALE UP | **Color:** Neon Green

@@ -8,6 +8,6 @@ White background. The dog absorbs instructions from multiple floating
 task scrolls, each one adding power with glowing intake effect.
 Write the text "META" in bold, silver chrome with instruction flow, angular anime font at upper left.
 Knowledge absorption pose, meta learning energy, bold linework. No clutter.
-```text
+```
 
 **Text:** META | **Color:** Silver Chrome

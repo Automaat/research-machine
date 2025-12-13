@@ -8,6 +8,6 @@ White background. The dog wears a captain's helm/wheel displaying holographic
 evaluation metrics and benchmark scores all around him.
 Write the text "HELM" in bold, naval blue with compass rose accent, angular anime font at bottom left.
 Ship captain steering pose, holistic navigation, bold linework. No clutter.
-```text
+```
 
 **Text:** HELM | **Color:** Naval Blue

@@ -8,6 +8,6 @@ White background. The dog stands at cosmic convergence where images, text,
 and sound waves merge into unified understanding beam above his head.
 Write the text "KOSMOS" in bold, cosmic gold with planetary rings, angular anime font at top center.
 Cosmic enlightenment pose, multimodal unity, bold linework. No clutter.
-```text
+```
 
 **Text:** KOSMOS | **Color:** Cosmic Gold

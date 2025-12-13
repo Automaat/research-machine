@@ -8,6 +8,6 @@ White background. The dog channels energy between two glowing text boxes -
 input on left transforming into output on right through green conversion beam.
 Write the text "T5" in bold, bright green, angular anime font at center.
 Focused channeling pose, transformation energy, bold linework. No clutter.
-```text
+```
 
 **Text:** T5 | **Color:** Bright Green

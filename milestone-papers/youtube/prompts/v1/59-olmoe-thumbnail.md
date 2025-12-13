@@ -8,6 +8,6 @@ White background. The dog conducts open orchestra of expert modules, each
 specialist playing in harmony with visible sheet music for all.
 Write the text "OLMoE" in bold, harmony blue with expert icons, angular anime font at top center.
 Open conductor pose, transparent MoE coordination, bold linework. No clutter.
-```text
+```
 
 **Text:** OLMoE | **Color:** Harmony Blue

@@ -8,6 +8,6 @@ White background. The dog dives deep into ocean of data, seeking treasures
 with expert efficiency, bubbles and data streams around him.
 Write the text "DEEPSEEK" in bold, ocean blue with depth gradient, angular anime font at bottom center.
 Deep sea diving pose, treasure hunting action, bold linework. No clutter.
-```text
+```
 
 **Text:** DEEPSEEK | **Color:** Ocean Blue

@@ -8,6 +8,6 @@ White background. The dog solves floating mathematical equations that
 transform into golden light as he touches them. Scholarly wisdom aura.
 Write the text "MINERVA" in bold, royal purple with gold math symbols, angular anime font at top center.
 Intellectual pose touching equation, mathematical mastery, bold linework. No clutter.
-```text
+```
 
 **Text:** MINERVA | **Color:** Royal Purple + Gold

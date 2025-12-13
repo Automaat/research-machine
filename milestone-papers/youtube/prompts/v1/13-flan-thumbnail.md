@@ -8,6 +8,6 @@ White background. The dog juggles multiple glowing orange task orbs,
 each representing different capabilities orbiting around him.
 Write the text "FLAN" in bold, warm orange, angular anime font in upper left.
 Skillful juggling pose, multitask mastery, bold linework. No clutter.
-```text
+```
 
 **Text:** FLAN | **Color:** Warm Orange

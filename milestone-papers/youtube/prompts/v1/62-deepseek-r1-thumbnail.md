@@ -8,6 +8,6 @@ White background. The dog has visible glowing brain showing chain-of-thought
 reasoning paths lighting up in sequence with "R1" racing number on cape.
 Write the text "R1" in bold, racing red with reasoning circuit pattern, angular anime font at top left.
 Deep thinker pose, visible thought process, bold linework. No clutter.
-```text
+```
 
 **Text:** R1 | **Color:** Racing Red

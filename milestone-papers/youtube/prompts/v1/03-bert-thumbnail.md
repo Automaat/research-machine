@@ -9,6 +9,6 @@ portals with bidirectional teal arrows flowing through him. Symmetrical
 composition with manga impact lines. Write the text "BERT" in bold, teal,
 angular anime font centered at top.
 Powerful stance, symmetry energy, bold linework. No clutter.
-```text
+```
 
 **Text:** BERT | **Color:** Teal

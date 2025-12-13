@@ -8,6 +8,6 @@ White background. The dog bridges two worlds - English text flowing on
 one side, Chinese characters on the other, both merging through him.
 Write the text "130B" in bold, red with gold Chinese style accents, angular anime font at top center.
 Cultural bridge pose, bilingual mastery, bold linework. No clutter.
-```text
+```
 
 **Text:** 130B | **Color:** Red + Gold

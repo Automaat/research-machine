@@ -8,6 +8,6 @@ White background. The dog breaks open a treasure chest releasing glowing
 model weights and knowledge for everyone. Arms wide open sharing gesture.
 Write the text "OPEN!" in bold, freedom blue with unlock sparkle, angular anime font at top center.
 Generous sharing pose, open source liberation, bold linework. No clutter.
-```text
+```
 
 **Text:** OPEN! | **Color:** Freedom Blue

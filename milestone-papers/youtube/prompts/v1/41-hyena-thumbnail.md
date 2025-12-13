@@ -8,6 +8,6 @@ White background. The dog leads a pack of glowing hyena-shaped convolution
 patterns in hierarchical formation charging forward.
 Write the text "HYENA" in bold, wild orange with spotted texture, angular anime font at bottom right.
 Alpha pack leader pose, hierarchy command energy, bold linework. No clutter.
-```text
+```
 
 **Text:** HYENA | **Color:** Wild Orange

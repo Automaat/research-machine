@@ -8,6 +8,6 @@ White background. The dog holds up glowing open book labeled "SCIENCE"
 while data, code, and weights float openly for all to see.
 Write the text "OPEN" in bold, scientific blue with transparency effect, angular anime font at top center.
 Open science presenter pose, reproducibility champion, bold linework. No clutter.
-```text
+```
 
 **Text:** OPEN | **Color:** Scientific Blue

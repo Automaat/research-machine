@@ -8,6 +8,6 @@ White background. The dog shatters ice blue chains and memory barriers,
 freeing massive data streams. Manga impact burst with debris flying.
 Write the text "ZERO" in bold, ice blue, angular anime font in upper left.
 Breaking free action pose, liberation energy, bold linework. No clutter.
-```text
+```
 
 **Text:** ZERO | **Color:** Ice Blue
