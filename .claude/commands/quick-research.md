@@ -1,3 +1,9 @@
+---
+description: Quick web research with source citations. Use when user asks for brief research, fact-checking, quick lookups, or wants concise answers with sources on any topic.
+argument-hint: [topic]
+allowed-tools: WebSearch, WebFetch, Read
+---
+
 # Quick Research: $ARGUMENTS
 
 ## Rules

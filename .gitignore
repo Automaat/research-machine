@@ -2,3 +2,6 @@
 .mise.lock
 .mise/
 node_modules/
+
+# Local secrets
+.env.local

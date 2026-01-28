@@ -1,5 +1,5 @@
 ---
-description: Manual Go code review against 100go.co best practices
+description: Manual Go code review against 100go.co best practices. Use when user asks to review Go code quality, find Go bugs, check Go patterns, or analyze a PR containing Go files.
 argument-hint: [file-path|pattern|PR-URL]
 allowed-tools: Read,Grep,Glob,Bash(gh:*,git:*)
 ---

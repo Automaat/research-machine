@@ -1,5 +1,5 @@
 ---
-description: Apply unresolved PR review comment fixes
+description: Analyze and apply unresolved PR review comment fixes. Use when user provides a GitHub PR URL with review comments to address, or asks to fix PR feedback.
 argument-hint: [PR-URL]
 allowed-tools: Read,Grep,Glob,Bash(gh:*,git:*)
 ---
@@ -27,32 +27,34 @@ PR=$(echo "$1" | sed 's|.*/pull/\([0-9]*\).*|\1|')
 
 ### 2. Fetch Unresolved Review Threads
 
+**IMPORTANT**: Use heredoc with stdin (`@-`) to avoid character encoding issues with `$` in GraphQL.
+
+**NOTE**: Query excludes `diffHunk` to avoid output truncation (~80KB+). Read files directly when analyzing.
+
 ```bash
-gh api graphql -f owner="$OWNER" -f repo="$REPO" -F pr="$PR" -f query='
+gh api graphql -f owner="$OWNER" -f repo="$REPO" -F pr="$PR" -F query=@- << 'EOF'
 query($owner: String!, $repo: String!, $pr: Int!) {
   repository(owner: $owner, name: $repo) {
     pullRequest(number: $pr) {
       reviewThreads(first: 100) {
-        edges {
-          node {
-            isResolved
-            isOutdated
-            comments(first: 100) {
-              nodes {
-                author { login }
-                body
-                path
-                line
-                diffHunk
-                createdAt
-              }
+        nodes {
+          isResolved
+          isOutdated
+          path
+          line
+          comments(first: 100) {
+            nodes {
+              author { login }
+              body
+              createdAt
             }
           }
         }
       }
     }
   }
-}'
+}
+EOF
 ```
 
 Filter: `isResolved: false` AND `isOutdated: false`
@@ -63,8 +65,7 @@ For each unresolved comment, use explicit reasoning:
 
 #### Step 1: Context Gathering
 
-- Read affected file (if `path` specified)
-- Read `diffHunk` for immediate context
+- Read affected file at specified `path:line` (use Read tool)
 - Search codebase for similar patterns (Grep)
 - Check language/framework best practices
 

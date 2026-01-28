@@ -1,3 +1,9 @@
+---
+description: Comprehensive grounded research with rigorous source verification. Use when user needs thorough research with verbatim citations, fact-checking verification, or academic-level source grounding on complex topics.
+argument-hint: [topic]
+allowed-tools: WebSearch, WebFetch, Read, Task
+---
+
 # Grounded Research: $ARGUMENTS
 
 ## Critical Grounding Rules
@@ -53,21 +59,39 @@ Connect sources systematically:
 
 ---
 
-## Phase 3: Grounded Verification
+## Phase 3: Grounded Verification (Subagent)
 
-### 3.1 Extract Your Claims
+**IMPORTANT:** Use Task tool to spawn a verification subagent with clean context.
 
-List each factual claim from your synthesis.
+Pass to subagent:
 
-### 3.2 Verify Against Sources
+1. Your synthesis claims (Phase 2 output)
+2. All source URLs and their extracted quotes
 
-| Claim | Source Quote Supporting | Exact Match? | Adjustment Needed |
-|-------|------------------------|--------------|-------------------|
-| [claim] | "[quote]" from Source N | Yes/Partial/No | [correction] |
+Subagent prompt:
 
-### 3.3 Flag Ungrounded Content
+```markdown
+You are a fact-checking agent. Verify these claims against provided sources.
 
-Remove or mark as speculation anything not traceable to source.
+CLAIMS TO VERIFY:
+[paste synthesis claims]
+
+SOURCES WITH QUOTES:
+[paste source extracts]
+
+For each claim:
+1. Find supporting quote in sources
+2. Check if quote actually supports claim (exact match vs stretched interpretation)
+3. Flag any claim without direct source backing
+
+Output format:
+| Claim | Source Quote | Match Quality | Issue |
+|-------|--------------|---------------|-------|
+
+Flag as UNGROUNDED anything not directly traceable to source quote.
+```
+
+Integrate subagent findings back into your output.
 
 ---
 
