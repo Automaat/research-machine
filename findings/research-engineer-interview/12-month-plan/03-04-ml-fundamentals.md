@@ -16,22 +16,26 @@
 ## 📆 Month 3: Classical ML with Math
 
 ### Linear Models (Derived)
+
 - **Linear regression:** Closed-form solution derivation (normal equations)
 - **Logistic regression:** Gradient derivation, cross-entropy from MLE
 - **Regularization:** L1 vs L2, why L1 gives sparsity
 
 ### Tree-Based Methods (Theory)
+
 - **Decision trees:** Entropy, information gain, Gini impurity proofs
 - **Why trees overfit:** Complexity analysis
 - **Pruning:** Theory and practice
 
 ### Support Vector Machines (Math)
+
 - **Hard margin SVM:** Optimization problem formulation
 - **Soft margin:** Slack variables
 - **Kernel trick:** Mathematical foundation
 - **Lagrangian duality** (important!)
 
 ### Model Selection
+
 - **Bias-variance decomposition:** Derive it
 - **Cross-validation:** Why it works
 - **Regularization theory:** Connection to Bayesian priors
@@ -41,22 +45,26 @@
 ## 📆 Month 4: Advanced Classical + First Kaggle
 
 ### Ensemble Methods
+
 - **Bagging:** Why it reduces variance (prove it)
 - **Random forests:** Feature randomization theory
 - **Boosting:** AdaBoost derivation
 - **Gradient boosting:** Connection to gradient descent
 
 ### Dimensionality Reduction
+
 - **PCA:** Eigenvector derivation, variance maximization proof
 - **Kernel PCA:** Extension to non-linear
 - **t-SNE:** How it works (high-level)
 
 ### Clustering
+
 - **k-means:** Lloyd's algorithm, convergence proof
 - **EM algorithm:** Derive for Gaussian mixture
 - **Hierarchical:** Linkage criteria
 
 ### Kaggle Competition
+
 - Choose tabular data competition
 - Apply learned techniques
 - Focus on feature engineering
@@ -85,12 +93,14 @@
 ## 🎬 YouTube Watch List
 
 ### Month 3: Classical ML
+
 1. **StatQuest** - Linear/Logistic Regression (with math)
 2. **StatQuest** - Decision Trees, Random Forests
 3. **StatQuest** - SVM series
 4. **Stanford CS229** - Lecture on SVMs
 
 ### Month 4: Advanced
+
 1. **StatQuest** - Gradient Boosting, XGBoost
 2. **StatQuest** - PCA (mathematical)
 3. **StatQuest** - k-means, clustering
@@ -101,11 +111,13 @@
 ## ✅ Milestones
 
 ### Month 3
+
 - [ ] Derive linear regression closed-form solution
 - [ ] Derive logistic regression gradient
 - [ ] Implement 5 algorithms from scratch
 
 ### Month 4
+
 - [ ] ✅ Implement 10 algorithms from scratch (total)
 - [ ] ✅ Kaggle competition: top 25%
 - [ ] ✅ Derive gradient descent convergence conditions
@@ -128,6 +140,7 @@
 | 10 | Gradient Boosting | Functional gradient descent |
 
 ### Implementation Requirements
+
 - No sklearn for core algorithm
 - sklearn OK for data loading, metrics
 - Include training + prediction
@@ -139,6 +152,7 @@
 ## 📝 Self-Assessment Checklist
 
 **Theory:**
+
 - [ ] Can derive normal equations on whiteboard
 - [ ] Explain why L1 gives sparsity (geometrically)
 - [ ] Know SVM dual formulation
@@ -146,6 +160,7 @@
 - [ ] Understand bias-variance decomposition
 
 **Practical:**
+
 - [ ] 10 algorithms implemented
 - [ ] Kaggle competition completed
 - [ ] Can debug ML pipeline issues

@@ -231,6 +231,7 @@ Immediate rejection if:
 ## Customization Points
 
 **Adjust categories:**
+
 - Technical criteria
 - Business criteria
 - Risk factors
@@ -238,16 +239,19 @@ Immediate rejection if:
 - Timeline factors
 
 **Adjust scoring:**
+
 - Weight critical factors higher (+5 instead of +1)
 - Add severity to negatives (-5 for dealbreakers)
 - Use ranges for uncertainty (+1 to +3)
 
 **Adjust thresholds:**
+
 - Simple pass/fail: threshold = 0 (just count positives/negatives)
 - Tiered: < 5 reject, 5-10 maybe, > 10 accept
 - Percentage: score must be > 60% of maximum
 
 **Adjust auto-reject:**
+
 - Project-specific dealbreakers
 - Regulatory requirements
 - Technical constraints
@@ -272,6 +276,7 @@ Immediate rejection if:
 ## Anti-Patterns
 
 **AVOID:**
+
 - ❌ Too many criteria (analysis paralysis)
 - ❌ All criteria weighted equally (no priorities)
 - ❌ Ignoring auto-reject conditions

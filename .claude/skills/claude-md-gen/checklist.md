@@ -119,18 +119,21 @@ Run before starting generation:
 After generation, before presenting to user:
 
 1. **Verify all placeholders replaced:**
+
    ```bash
    grep -E '\[(PROJECT|LANGUAGE|FRAMEWORK|COMMAND|DIR)' CLAUDE.md
    # Should return no matches
    ```
 
 2. **Check for TODOs:**
+
    ```bash
    grep -i 'TODO\|FIXME\|XXX' CLAUDE.md
    # Should return no matches
    ```
 
 3. **Verify commands (sample check):**
+
    ```bash
    # Extract first command from "Common Commands" section
    # Run with --help or --version (non-destructive)
@@ -160,21 +163,25 @@ Do NOT generate if:
 ## Severity Levels
 
 **Critical (must fix before generation):**
+
 - Missing tech stack info
 - Wrong project type detected
 - Unresolved contradictions
 
 **High (fix during generation):**
+
 - Placeholder not replaced
 - Command syntax incorrect
 - Wrong directory paths
 
 **Medium (note in summary):**
+
 - Command not testable (mark for verification)
 - Optional section missing
 - Pattern adaptation could be better
 
 **Low (user can fix):**
+
 - Minor formatting inconsistencies
 - Could add more examples
 - Could expand certain sections

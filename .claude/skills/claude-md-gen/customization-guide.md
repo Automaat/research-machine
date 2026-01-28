@@ -23,6 +23,7 @@ Generated CLAUDE.md is a **starting point**, not a final artifact. As your proje
 ### When to Add a Section
 
 Add when you:
+
 - Introduce new workflow (e.g., deployment, releases)
 - Adopt new tool (e.g., monitoring, analytics)
 - Establish new pattern (e.g., caching strategy)
@@ -42,10 +43,12 @@ Add when you:
 [Details]
 
 **Example:**
-```
+```text
+
 [Code or command example]
-```
-```
+
+```text
+```text
 
 ### Where to Place New Sections
 
@@ -72,6 +75,7 @@ Add when you:
 5. Add examples if helpful
 
 **Example addition:**
+
 ```markdown
 ### Adding Feature with Feature Flag
 
@@ -81,7 +85,7 @@ Add when you:
 4. Deploy to staging with flag off
 5. Enable flag for internal testing
 6. Monitor metrics before production rollout
-```
+```text
 
 ### Quality Gates
 
@@ -93,10 +97,11 @@ Add when you:
 4. Document new tools/versions
 
 **Example:**
+
 ```markdown
 - [ ] golangci-lint passes (added 2024-01)
 - [ ] gosec security scan passes (added 2024-02)
-```
+```text
 
 ### Anti-Patterns
 
@@ -108,11 +113,12 @@ Add when you:
 4. Show correct approach
 
 **Example:**
+
 ```markdown
 - ❌ Storing tokens in localStorage (XSS risk)
   - **Correct:** httpOnly cookies or memory-only storage
   - **Incident:** Issue #342
-```
+```text
 
 ---
 
@@ -134,9 +140,11 @@ Create new section using this structure:
 3. [Step 3]
 
 **Example:**
-```
+```text
+
 [Concrete example from your project]
-```
+
+```text
 
 **Benefits:**
 - [Benefit 1]
@@ -145,23 +153,26 @@ Create new section using this structure:
 **Trade-offs:**
 - [Trade-off 1]
 - [Trade-off 2]
-```
+```text
 
 ### Pattern Categories
 
 **Workflow patterns:**
+
 - Development workflows
 - Testing workflows
 - Deployment workflows
 - Review workflows
 
 **Code patterns:**
+
 - Error handling
 - Logging
 - Validation
 - Performance optimization
 
 **Organizational patterns:**
+
 - File organization
 - Code sharing
 - Versioning
@@ -199,7 +210,7 @@ Create new section using this structure:
 - Forgot to update version → Publishing fails
 - Didn't run tests → Publish broken version
 - Wrong version bump (breaking change as minor)
-```
+```text
 
 ---
 
@@ -210,9 +221,10 @@ If the generated template doesn't fit, create custom template.
 ### Template Location
 
 Create in skill directory:
-```
+
+```text
 .claude/skills/claude-md-gen/templates/my-custom-type.md
-```
+```text
 
 ### Template Structure
 
@@ -227,6 +239,7 @@ Use existing templates as reference. Include:
 7. **Anti-Patterns** (type-defaults)
 
 **Placeholders to use:**
+
 - `[PROJECT_NAME]`
 - `[LANGUAGE_VERSION]`
 - `[FRAMEWORK_VERSION]`
@@ -237,9 +250,10 @@ Use existing templates as reference. Include:
 ### Question Framework
 
 Create matching questions file:
-```
+
+```text
 .claude/skills/claude-md-gen/questions/my-custom-type-questions.md
-```
+```text
 
 Follow structure from existing question files (5-7 questions across categories).
 
@@ -251,7 +265,7 @@ Edit `.claude/skills/claude-md-gen/SKILL.md`:
 my-custom-type:
   IF [detection indicators]
   → my-custom-type
-```
+```text
 
 ---
 
@@ -260,6 +274,7 @@ my-custom-type:
 ### Early Stage (0-6 months)
 
 **Focus:**
+
 - Core workflows
 - Essential quality gates
 - Basic anti-patterns
@@ -269,6 +284,7 @@ my-custom-type:
 ### Growth Stage (6-18 months)
 
 **Add:**
+
 - Team conventions
 - Deployment workflows
 - Performance standards
@@ -279,6 +295,7 @@ my-custom-type:
 ### Mature Stage (18+ months)
 
 **Expand:**
+
 - Complex workflows
 - Integration patterns
 - Troubleshooting guides
@@ -303,20 +320,21 @@ See `.claude/workflows/` for detailed workflows:
 - `.claude/workflows/feature-development.md`
 - `.claude/workflows/bug-fixes.md`
 - `.claude/workflows/releases.md`
-```
+```text
 
 ### Option 2: Move to .claude/
 
 Move main file:
+
 ```bash
 mv CLAUDE.md .claude/CLAUDE.md
-```
+```text
 
 Tell AI where to find it in conversations.
 
 ### Option 3: Split by Concern
 
-```
+```text
 .claude/
 ├── CLAUDE.md (main entry point)
 ├── workflows/
@@ -329,14 +347,15 @@ Tell AI where to find it in conversations.
 └── templates/
     ├── component.tsx
     └── api-endpoint.go
-```
+```text
 
 Reference from main CLAUDE.md:
+
 ```markdown
 ## Workflows
 
 See `.claude/workflows/` for detailed workflows.
-```
+```text
 
 ---
 
@@ -374,6 +393,7 @@ See `.claude/workflows/` for detailed workflows.
 ### When to Regenerate
 
 Consider regenerating when:
+
 - Project type fundamentally changed
 - Tech stack completely replaced
 - CLAUDE.md no longer matches reality
@@ -382,11 +402,13 @@ Consider regenerating when:
 ### How to Regenerate
 
 1. **Backup current CLAUDE.md:**
+
    ```bash
    cp CLAUDE.md CLAUDE.md.backup
    ```
 
 2. **Run skill again:**
+
    ```bash
    /claude-md-gen
    ```
@@ -417,11 +439,13 @@ If you create valuable patterns or templates:
 ### Pattern Library Additions
 
 Create new pattern file:
-```
+
+```text
 .claude/skills/claude-md-gen/patterns/my-pattern.md
-```
+```text
 
 Follow structure from existing patterns:
+
 - When to use
 - Structure/template
 - Examples (2-3)
@@ -434,6 +458,7 @@ Update SKILL.md to reference new pattern.
 ## Tips for Effective CLAUDE.md
 
 **DO:**
+
 - ✅ Keep concrete and specific
 - ✅ Use actual commands and examples
 - ✅ Update as project changes
@@ -443,6 +468,7 @@ Update SKILL.md to reference new pattern.
 - ✅ Show real examples from codebase
 
 **DON'T:**
+
 - ❌ Document ideal processes that aren't followed
 - ❌ Leave outdated information
 - ❌ Over-document early (start small, grow)
@@ -457,6 +483,7 @@ Update SKILL.md to reference new pattern.
 **Skill location:** `.claude/skills/claude-md-gen/`
 
 **Files:**
+
 - `SKILL.md` - Main skill logic
 - `templates/` - Project type templates
 - `patterns/` - Reusable patterns

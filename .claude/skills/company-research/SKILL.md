@@ -27,13 +27,15 @@ User invokes `/company-research [company]` or asks for deep research on a specif
 ### Phase 1: Company Basics
 
 **Search queries:**
-```
+
+```text
 WebSearch: "[Company] funding stage investors 2026"
 WebSearch: "[Company] company size employees headcount"
 WebSearch: "[Company] product revenue business model"
-```
+```text
 
 **Extract:**
+
 - Funding stage (Seed, A, B, C, D, Public)
 - Total raised
 - Key investors
@@ -49,14 +51,16 @@ WebSearch: "[Company] product revenue business model"
 Reference: `culture-signals.md` in this skill folder.
 
 **Search queries:**
-```
+
+```text
 WebSearch: "[Company] engineering blog"
 WebSearch: "[Company] github open source"
 WebSearch: "[Company] tech stack architecture"
 WebSearch: "[Company] engineering team conference talks"
-```
+```text
 
 **Evaluate:**
+
 - Engineering blog quality and frequency
 - Open source contributions
 - Tech stack modernity
@@ -65,6 +69,7 @@ WebSearch: "[Company] engineering team conference talks"
 - Remote work culture signals
 
 **Fetch and analyze:**
+
 - Engineering blog (if exists)
 - GitHub organization
 - Recent tech talks/podcasts
@@ -74,14 +79,16 @@ WebSearch: "[Company] engineering team conference talks"
 ### Phase 3: Employee Sentiment
 
 **Search queries:**
-```
+
+```text
 WebSearch: "site:glassdoor.com [Company] reviews"
 WebSearch: "site:levels.fyi [Company]"
 WebSearch: "[Company] blind reviews"
 WebSearch: "[Company] employee experience 2025 2026"
-```
+```text
 
 **Analyze:**
+
 - Glassdoor rating (overall, engineering-specific)
 - Common praise themes
 - Common complaint themes
@@ -96,13 +103,15 @@ WebSearch: "[Company] employee experience 2025 2026"
 Reference: `compensation.md` in this skill folder.
 
 **Search queries:**
-```
+
+```text
 WebSearch: "site:levels.fyi [Company] engineer salary"
 WebSearch: "[Company] compensation bands transparent"
 WebSearch: "[Company] equity RSU stock options"
-```
+```text
 
 **Extract:**
+
 - Base salary ranges (by level)
 - Equity structure (RSU vs options, vesting)
 - Bonus structure
@@ -114,6 +123,7 @@ WebSearch: "[Company] equity RSU stock options"
 ### Phase 5: Red Flag Scan
 
 **Check for:**
+
 - Recent layoffs (last 12 months)
 - Leadership departures
 - Product pivots
@@ -122,22 +132,25 @@ WebSearch: "[Company] equity RSU stock options"
 - Lawsuit/controversy
 
 **Search queries:**
-```
+
+```text
 WebSearch: "[Company] layoffs 2025 2026"
 WebSearch: "[Company] controversy news"
 WebSearch: "[Company] leadership changes"
-```
+```text
 
 ---
 
 ### Phase 6: Role Fit Assessment
 
 **Load profile:**
-```
+
+```text
 Read findings/job-search/profile.md
-```
+```text
 
 **Evaluate:**
+
 - Technical alignment (stack, domain)
 - Role level match
 - Growth opportunity
@@ -149,6 +162,7 @@ Read findings/job-search/profile.md
 ### Phase 7: Interview Prep Notes
 
 **Research:**
+
 - Recent company news/announcements
 - Key technical challenges they face
 - Their approach to scaling
@@ -156,6 +170,7 @@ Read findings/job-search/profile.md
 - Key people to research (engineering leadership)
 
 **Questions to ask them:**
+
 - About engineering culture
 - About tech decisions
 - About growth/roadmap
@@ -168,20 +183,23 @@ Read findings/job-search/profile.md
 Use template from `output-template.md`.
 
 Generate comprehensive report saved to:
-```
+
+```text
 findings/job-search/research/[company-slug].md
-```
+```text
 
 ---
 
 ## Error Handling
 
 ### Limited Public Info
+
 - Note what couldn't be found
 - Suggest questions to ask in interview
 - Still provide available analysis
 
 ### Conflicting Information
+
 - Present both perspectives
 - Note uncertainty
 - Recommend verification approach

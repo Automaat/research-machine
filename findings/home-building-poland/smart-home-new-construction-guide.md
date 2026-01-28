@@ -199,6 +199,7 @@ Building a smart home during new construction is the optimal time for infrastruc
 ## 🔗 What Sources DON'T Cover
 
 ❓ **UNCERTAIN/NOT FOUND:**
+
 - Specific wattage calculations for smart home loads
 - Optimal network closet dimensions
 - Recommended UPS sizing for smart home infrastructure

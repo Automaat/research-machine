@@ -91,7 +91,7 @@ MPZP coverage:       [Y]%
 Max footprint:       [Z] m²
 
 Verdict: [✅ Comfortable / ⚠️ Tight / ❌ Insufficient]
-```
+```text
 
 ---
 
@@ -142,7 +142,7 @@ Land + acquisition fees:      [X]k PLN
 Development + construction:   [Y]k PLN
 ─────────────────────────────────────
 TOTAL (120m² house):         ~[Z]k PLN
-```
+```text
 
 ### 4.4 Comparative Analysis
 
@@ -197,13 +197,13 @@ TOTAL (120m² house):         ~[Z]k PLN
 
 ## 7. Site Visit Checklist
 
-### Before Visit - Request from seller:
+### Before Visit - Request from seller
 
 - [ ] Full KW printout (all 4 sections)
 - [ ] MPZP wypis/wyrys (if exists)
 - [ ] Utility connection confirmation letters
 
-### During Visit - Observe:
+### During Visit - Observe
 
 - [ ] Slope/inclination - walk entire plot
 - [ ] Water pooling areas
@@ -212,7 +212,7 @@ TOTAL (120m² house):         ~[Z]k PLN
 - [ ] Distance to power poles, water hydrants
 - [ ] Woods/nature distance (GPS measure)
 
-### Photos to take:
+### Photos to take
 
 - [ ] Plot from all 4 corners
 - [ ] Road access (both directions)
@@ -272,4 +272,5 @@ TOTAL (120m² house):         ~[Z]k PLN
 - Lines 131: Hidden costs 25-40%
 - Lines 239: Flat comparison prices
 - Lines 651-660: Transport ratings
-```
+
+```text

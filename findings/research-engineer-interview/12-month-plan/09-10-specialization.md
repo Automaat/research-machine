@@ -19,6 +19,7 @@
 ### Domain Selection
 
 Choose based on:
+
 - Personal interest (you'll read 30+ papers)
 - Target company focus
 - Career trajectory
@@ -26,6 +27,7 @@ Choose based on:
 ### Primary Domain: 20-30 Papers
 
 **Paper Reading Strategy:**
+
 - First pass (10 min): Title, abstract, figures, conclusion
 - Second pass (1 hr): Intro, method, experiments
 - Third pass (2+ hrs): Full details, reproduce if needed
@@ -35,6 +37,7 @@ Choose based on:
 ### Implementation from Papers
 
 Choose 3-5 key algorithms to implement:
+
 - Read paper multiple times
 - Understand every equation
 - Implement from description (not reference code)
@@ -47,6 +50,7 @@ Choose 3-5 key algorithms to implement:
 ### Secondary Domain: 10-15 Papers
 
 Lighter coverage:
+
 - Focus on landmark papers
 - Understand key ideas
 - Know state-of-the-art
@@ -54,6 +58,7 @@ Lighter coverage:
 ### Cross-Domain Connections
 
 Identify patterns across domains:
+
 - Attention mechanisms everywhere
 - Self-supervised learning across modalities
 - Scaling laws
@@ -62,6 +67,7 @@ Identify patterns across domains:
 ### Blog Post
 
 Write one deep technical blog post:
+
 - Choose a paper you understand well
 - Explain to someone with ML basics
 - Include your own insights
@@ -126,11 +132,13 @@ Write one deep technical blog post:
 ## 🎬 YouTube Watch List
 
 ### Domain-Specific
+
 - **Yannic Kilcher** - Papers in your chosen domains
 - **Stanford courses** - CS224n (NLP), CS231n (Vision)
 - **Spinning Up** - RL video tutorials
 
 ### Research Skills
+
 - How to read papers effectively
 - How to reproduce results
 - How to write about research
@@ -140,11 +148,13 @@ Write one deep technical blog post:
 ## ✅ Milestones
 
 ### Month 9
+
 - [ ] Read 20-30 papers in primary domain
 - [ ] Implement 3 algorithms from papers
 - [ ] Know SOTA on key benchmarks
 
 ### Month 10
+
 - [ ] ✅ Read 40+ papers total
 - [ ] ✅ Implement 5 algorithms from papers
 - [ ] ✅ Write blog post explaining one paper deeply
@@ -166,6 +176,7 @@ Write one deep technical blog post:
 ## 📝 Blog Post Requirements
 
 **Structure:**
+
 1. **Hook** - Why should reader care?
 2. **Background** - What do they need to know?
 3. **Method** - Explain the paper's approach
@@ -176,6 +187,7 @@ Write one deep technical blog post:
 **Target length:** 2000-4000 words
 
 **Where to publish:**
+
 - Personal blog (GitHub Pages, Notion)
 - Medium
 - Substack
@@ -186,17 +198,20 @@ Write one deep technical blog post:
 ## 📝 Self-Assessment Checklist
 
 **Primary Domain:**
+
 - [ ] Can explain 10+ papers in depth
 - [ ] Know SOTA methods and benchmarks
 - [ ] Implemented key algorithms
 - [ ] Understand open problems
 
 **Secondary Domain:**
+
 - [ ] Know landmark papers
 - [ ] Understand main approaches
 - [ ] Can discuss at high level
 
 **Cross-Domain:**
+
 - [ ] See connections between fields
 - [ ] Understand transfer of techniques
 - [ ] Can discuss future directions

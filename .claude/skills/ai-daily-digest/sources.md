@@ -99,44 +99,44 @@
 
 ### Daily Technical
 
-```
+```text
 AI LLM model release {YYYY-MM-DD}
 "large language model" OR "foundation model" new
 AI benchmark OR evaluation results
 transformer architecture improvement
-```
+```text
 
 ### Daily Business
 
-```
+```text
 AI startup funding round {YYYY-MM-DD}
 AI company acquisition merger
 AI valuation investment
 OpenAI Anthropic Google Microsoft AI partnership
-```
+```text
 
 ### Daily Engineering
 
-```
+```text
 AI coding assistant tool developer
 AI workflow automation productivity
 AI developer experience integration
 "AI pair programming" OR "AI code review"
-```
+```text
 
 ### Daily Leadership
 
-```
+```text
 AI leadership engineering management
 AI strategy CTO "VP engineering"
 AI transformation organizational change
 "engineering leadership" AI adoption
 AI team structure skills
-```
+```text
 
 ### Indie Bloggers
 
-```
+```text
 site:lilianweng.github.io
 site:jalammar.github.io
 site:eugeneyan.com
@@ -145,34 +145,37 @@ site:vickiboykis.com
 site:hamel.dev
 site:swyx.io
 site:ruder.io
-```
+```text
 
 ### Weekly Roundup (Friday Mode)
 
-```
+```text
 "this week in AI" OR "AI weekly"
 AI news roundup summary
 top AI stories week
 "weekly recap" AI machine learning
 AI highlights week {YYYY-MM-DD}
 most important AI news this week
-```
+```text
 
 ---
 
 ## Source Tiers
 
 **Tier 1 (Primary)** — High credibility, original content
+
 - Official company blogs (OpenAI, Anthropic, Google AI)
 - arXiv papers
 - Major tech news (TechCrunch, Ars Technica)
 
 **Tier 2 (Secondary)** — Good coverage, some analysis
+
 - Newsletters (The Batch, Import AI)
 - Tech blogs (Simon Willison, Latent Space)
 - Business news (Fortune, Bloomberg)
 
 **Tier 3 (Community)** — Signal in noise, needs filtering
+
 - Hacker News
 - Reddit communities
 - Twitter/X

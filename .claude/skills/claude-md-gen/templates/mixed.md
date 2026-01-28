@@ -9,15 +9,16 @@ Base structure for hybrid projects combining multiple component types.
 [PROJECT_DESCRIPTION]
 
 **Components:**
+
 - [COMPONENT_1]: [TYPE] - [PURPOSE]
 - [COMPONENT_2]: [TYPE] - [PURPOSE]
 - [COMPONENT_3]: [TYPE] - [PURPOSE]
 
 ## Project Structure
 
-```
+```text
 [DIRECTORY_STRUCTURE]
-```
+```text
 
 ## Tech Stack
 
@@ -57,13 +58,14 @@ Base structure for hybrid projects combining multiple component types.
 **Monorepo structure:** [MONOREPO_STRUCTURE]
 
 **Commands:**
+
 ```bash
 # Run command in specific workspace
 [WORKSPACE_COMMAND]
 
 # Run command in all workspaces
 [ALL_WORKSPACES_COMMAND]
-```
+```text
 
 [END_IF_MONOREPO]
 
@@ -72,20 +74,23 @@ Base structure for hybrid projects combining multiple component types.
 **Repository structure:** [REPO_STRUCTURE]
 
 **Local development:**
+
 ```bash
 [LOCAL_DEV_SETUP]
-```
+```text
 
 [END_IF_SEPARATE_REPOS]
 
 ### Integration Points
 
 **[Component 1] ↔ [Component 2]:**
+
 - [INTEGRATION_METHOD_1]
 - [INTEGRATION_METHOD_2]
 
 **[Component 2] ↔ [Component 3]:**
 [IF_COMPONENT_3_EXISTS]
+
 - [INTEGRATION_METHOD_3]
 - [INTEGRATION_METHOD_4]
 [END_IF_COMPONENT_3]
@@ -97,14 +102,16 @@ Base structure for hybrid projects combining multiple component types.
 **Location:** `[SHARED_CODE_DIR]/`
 
 **Contents:**
+
 - [SHARED_MODULE_1] - [PURPOSE]
 - [SHARED_MODULE_2] - [PURPOSE]
 - [SHARED_MODULE_3] - [PURPOSE]
 
 **Import convention:**
+
 ```[LANGUAGE]
 [SHARED_IMPORT_EXAMPLE]
-```
+```text
 
 [END_IF_SHARED_CODE]
 
@@ -123,7 +130,7 @@ Base structure for hybrid projects combining multiple component types.
 
 ```bash
 [COMPONENT_1_TEST_COMMAND]
-```
+```text
 
 #### Common Commands
 
@@ -133,7 +140,7 @@ Base structure for hybrid projects combining multiple component types.
 
 # [Command purpose]
 [COMPONENT_1_COMMAND_2]
-```
+```text
 
 ### [Component 2]: [Component Name]
 
@@ -148,7 +155,7 @@ Base structure for hybrid projects combining multiple component types.
 
 ```bash
 [COMPONENT_2_TEST_COMMAND]
-```
+```text
 
 #### Common Commands
 
@@ -158,7 +165,7 @@ Base structure for hybrid projects combining multiple component types.
 
 # [Command purpose]
 [COMPONENT_2_COMMAND_2]
-```
+```text
 
 ### [Component 3]: [Component Name]
 
@@ -174,7 +181,7 @@ Base structure for hybrid projects combining multiple component types.
 
 ```bash
 [COMPONENT_3_TEST_COMMAND]
-```
+```text
 
 #### Common Commands
 
@@ -184,7 +191,7 @@ Base structure for hybrid projects combining multiple component types.
 
 # [Command purpose]
 [COMPONENT_3_COMMAND_2]
-```
+```text
 
 [END_IF_COMPONENT_3]
 
@@ -193,36 +200,41 @@ Base structure for hybrid projects combining multiple component types.
 **Approach:** [INTEGRATION_TEST_APPROACH]
 
 **Test scenarios:**
+
 1. [SCENARIO_1]
 2. [SCENARIO_2]
 3. [SCENARIO_3]
 
 **Run integration tests:**
+
 ```bash
 [INTEGRATION_TEST_COMMAND]
-```
+```text
 
 ## Configuration
 
 ### Environment Variables
 
 **Shared:**
-```
+
+```text
 [SHARED_ENV_VAR_1]=[DESCRIPTION]
 [SHARED_ENV_VAR_2]=[DESCRIPTION]
-```
+```text
 
 **[Component 1]:**
-```
+
+```text
 [COMPONENT_1_ENV_VAR_1]=[DESCRIPTION]
 [COMPONENT_1_ENV_VAR_2]=[DESCRIPTION]
-```
+```text
 
 **[Component 2]:**
-```
+
+```text
 [COMPONENT_2_ENV_VAR_1]=[DESCRIPTION]
 [COMPONENT_2_ENV_VAR_2]=[DESCRIPTION]
-```
+```text
 
 ### Config Files
 
@@ -237,14 +249,16 @@ Base structure for hybrid projects combining multiple component types.
 [IF_BUILD_DEPENDENCIES]
 
 **Dependencies:**
+
 1. [BUILD_STEP_1]
 2. [BUILD_STEP_2]
 3. [BUILD_STEP_3]
 
 **Build all:**
+
 ```bash
 [BUILD_ALL_COMMAND]
-```
+```text
 
 [END_IF_BUILD_DEPENDENCIES]
 
@@ -255,13 +269,14 @@ Base structure for hybrid projects combining multiple component types.
 **[Component 3]:** [DEPLOYMENT_3] (if applicable)
 
 **Deploy commands:**
+
 ```bash
 # Deploy [Component 1]
 [DEPLOY_1_COMMAND]
 
 # Deploy [Component 2]
 [DEPLOY_2_COMMAND]
-```
+```text
 
 ## Quality Gates
 
@@ -275,6 +290,7 @@ Before committing:
 - [ ] [HOOK_NAME] hooks pass (if configured)
 
 Commands:
+
 ```bash
 # Lint all
 [LINT_ALL_COMMAND]
@@ -284,7 +300,7 @@ Commands:
 
 # Integration tests
 [INTEGRATION_TEST_COMMAND]
-```
+```text
 
 ## Common Commands
 
@@ -305,19 +321,21 @@ Commands:
 
 # Clean all
 [CLEAN_ALL_COMMAND]
-```
+```text
 
 ### Component-Specific
 
 **[Component 1]:**
+
 ```bash
 [COMPONENT_1_COMMANDS]
-```
+```text
 
 **[Component 2]:**
+
 ```bash
 [COMPONENT_2_COMMANDS]
-```
+```text
 
 ## Documentation
 
@@ -326,9 +344,10 @@ Commands:
 **[Component 2] docs:** `[COMPONENT_2_DOCS_DIR]/`
 
 **Generate all docs:**
+
 ```bash
 [DOCS_GENERATE_COMMAND]
-```
+```text
 
 ## Anti-Patterns
 
@@ -362,6 +381,7 @@ Commands:
 ## Extensibility
 
 Add sections as needs evolve:
+
 - New components
 - New integration points
 - Shared utilities

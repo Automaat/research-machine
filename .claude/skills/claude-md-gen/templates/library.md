@@ -6,9 +6,9 @@ Base structure for reusable libraries and packages.
 
 ## Project Structure
 
-```
+```text
 [DIRECTORY_STRUCTURE]
-```
+```text
 
 ## Tech Stack
 
@@ -55,9 +55,10 @@ Base structure for reusable libraries and packages.
 **Naming convention:** [NAMING_CONVENTION]
 
 **Example:**
+
 ```[LANGUAGE]
 [PUBLIC_API_EXAMPLE]
-```
+```text
 
 ### API Surface Principles
 
@@ -77,6 +78,7 @@ Base structure for reusable libraries and packages.
 [BREAKING_CHANGE_RULES]
 
 **Deprecation process:**
+
 1. Mark as deprecated in version X
 2. Add warning in documentation
 3. Remove in version X+2 (minimum)
@@ -90,38 +92,44 @@ Base structure for reusable libraries and packages.
 **Location:** `[DOCS_DIR]/`
 
 **Generate docs:**
+
 ```bash
 [DOCS_GENERATE_COMMAND]
-```
+```text
 
 **Docstring format:**
+
 ```[LANGUAGE]
 [DOCSTRING_EXAMPLE]
-```
+```text
 
 ### Usage Examples
 
 **Location:** `[EXAMPLES_DIR]/`
 
 **Coverage:**
+
 - Basic usage (getting started)
 - Common use cases
 - Advanced patterns
 - Edge cases
 
 **Example file structure:**
-```
+
+```text
 [EXAMPLES_STRUCTURE]
-```
+```text
 
 **Running examples:**
+
 ```bash
 [RUN_EXAMPLE_COMMAND]
-```
+```text
 
 ### README
 
 **Sections:**
+
 1. Installation
 2. Quick start (1-2 minute example)
 3. Features
@@ -137,6 +145,7 @@ Base structure for reusable libraries and packages.
 **Minimum:** [COVERAGE_PERCENTAGE]%
 
 **Focus areas:**
+
 - All public APIs (100% coverage)
 - Edge cases
 - Error conditions
@@ -146,7 +155,7 @@ Base structure for reusable libraries and packages.
 
 ```[LANGUAGE]
 [TEST_EXAMPLE]
-```
+```text
 
 ### Test Categories
 
@@ -162,6 +171,7 @@ Base structure for reusable libraries and packages.
 **Format:** [VERSION_FORMAT]
 
 **Bump rules:**
+
 - MAJOR: Breaking changes
 - MINOR: New features (backwards compatible)
 - PATCH: Bug fixes (backwards compatible)
@@ -169,23 +179,26 @@ Base structure for reusable libraries and packages.
 **Version file:** `[VERSION_FILE]`
 
 **Tagging:**
+
 ```bash
 git tag -a v[VERSION] -m "Release v[VERSION]"
 git push origin v[VERSION]
-```
+```text
 
 ## Publishing
 
 ### Build Artifacts
 
 **Build command:**
+
 ```bash
 [BUILD_COMMAND]
-```
+```text
 
 **Output:** `[BUILD_OUTPUT_DIR]/`
 
 **Artifacts:**
+
 - [ARTIFACT_1]
 - [ARTIFACT_2]
 - [ARTIFACT_3]
@@ -208,9 +221,10 @@ git push origin v[VERSION]
 **Package name:** `[PACKAGE_NAME]`
 
 **Publish command:**
+
 ```bash
 [PUBLISH_COMMAND]
-```
+```text
 
 ## Dependencies
 
@@ -219,10 +233,9 @@ git push origin v[VERSION]
 **Approach:** [DEPENDENCY_APPROACH] (minimal, batteries-included, etc.)
 
 **Allowed dependencies:**
-- [DEPENDENCY_CATEGORY_1]: [EXAMPLES]
-- [DEPENDENCY_CATEGORY_2]: [EXAMPLES]
 
 **Avoid:**
+
 - Large dependencies for small features
 - Dependencies with poor maintenance
 - Dependencies with different license requirements
@@ -232,6 +245,7 @@ git push origin v[VERSION]
 [IF_PEER_DEPENDENCIES]
 
 **Peer dependencies:**
+
 - [PEER_DEP_1] - [REASON]
 - [PEER_DEP_2] - [REASON]
 
@@ -245,34 +259,38 @@ git push origin v[VERSION]
 
 ```[LANGUAGE]
 [ERROR_TYPES_DEFINITION]
-```
+```text
 
 ### Error Messages
 
 **Guidelines:**
+
 - Clear and actionable
 - Include context (what was attempted)
 - Suggest fix when possible
 - Consistent format across library
 
 **Example:**
+
 ```[LANGUAGE]
 [ERROR_EXAMPLE]
-```
+```text
 
 ## Type Definitions
 
 [IF_TYPED_LANGUAGE]
 
 **Type export:**
+
 ```[LANGUAGE]
 [TYPE_EXPORT_EXAMPLE]
-```
+```text
 
 **Generic types:**
+
 ```[LANGUAGE]
 [GENERIC_TYPE_EXAMPLE]
-```
+```text
 
 [END_IF_TYPED_LANGUAGE]
 
@@ -299,13 +317,14 @@ Before releasing:
 - [ ] [HOOK_NAME] hooks pass (if configured)
 
 Commands:
+
 ```bash
 [LINT_COMMAND]
 [TEST_COMMAND]
 [COVERAGE_COMMAND]
 [DOCS_COMMAND]
 [EXAMPLES_TEST_COMMAND]
-```
+```text
 
 ## Common Commands
 
@@ -333,7 +352,7 @@ Commands:
 
 # Publish package
 [PUBLISH_COMMAND]
-```
+```text
 
 ## Examples
 
@@ -343,13 +362,13 @@ Commands:
 
 ```[LANGUAGE]
 [EXAMPLE_1_CODE]
-```
+```text
 
 ### Example 2: [EXAMPLE_2_TITLE]
 
 ```[LANGUAGE]
 [EXAMPLE_2_CODE]
-```
+```text
 
 [END_IF_EXAMPLES]
 
@@ -373,6 +392,7 @@ Commands:
 ## Extensibility
 
 Add sections as needs evolve:
+
 - Plugin system design
 - Custom configuration options
 - Hooks/callbacks for extensions

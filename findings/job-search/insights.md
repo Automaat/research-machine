@@ -29,6 +29,7 @@
 | Public/Scale-up | €140-220k | ✅ Yes |
 
 ### Key Insight
+>
 > **€160k+ target requires:** Series C+ funding OR US company paying global rates OR Staff+ level at well-funded startup
 
 ---
@@ -47,6 +48,7 @@
 | "Remote-first" | Best signal, usually global |
 
 ### EU Entity Patterns
+
 - **UK entity only:** Brexit complications for EU
 - **German GmbH:** Good for EU hiring
 - **Dutch BV:** Common for distributed companies
@@ -57,6 +59,7 @@
 ## 🏢 Company Type Patterns
 
 ### Agencies/Consultancies to Avoid
+
 - Accenture, Deloitte, McKinsey Digital
 - Toptal, Turing, Andela (talent marketplaces)
 - Proxify, Lemon.io (staffing firms)
@@ -77,12 +80,15 @@
 ## 📈 Market Observations
 
 ### 2026 Trends
+
 - *Add observations from discovery runs*
 
 ### What Works
+
 - *Add successful patterns*
 
 ### What Doesn't Work
+
 - *Add failed approaches*
 
 ---
@@ -90,11 +96,13 @@
 ## 🎯 Actionable Insights
 
 ### High-Value Targets
+
 - Series C+ AI companies with EU presence
 - US companies with remote global policy
 - Dev tools companies (usually pay well)
 
 ### Avoid
+
 - "Competitive salary" without numbers (usually below market)
 - Bootstrapped companies (can't hit €160k)
 - Early seed (<$5M raised)

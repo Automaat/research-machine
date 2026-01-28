@@ -13,14 +13,16 @@ Generate comprehensive daily AI news digest with technical, business, and engine
 ## Arguments
 
 Parse from `$ARGUMENTS`:
+
 - `--focus [technical|business|engineering|leadership|all]` — Default: all
 
 ## State File
 
 Track last run date in:
-```
+
+```text
 ./findings/ai-daily-digest/.last-run
-```
+```text
 
 Format: `YYYY-MM-DD`
 
@@ -38,19 +40,22 @@ When running on Friday, automatically enable broader research:
 ### Blog Discovery (Friday)
 
 Search for new interesting smaller blogs:
-```
+
+```text
 "AI blog" OR "ML blog" interesting {date_range}
 site:substack.com AI machine learning
 site:medium.com AI LLM practical (filter by quality)
 site:dev.to AI machine learning tutorial
 HN "Show HN" AI blog
-```
+```text
 
 When finding new quality blogs:
+
 1. Add to "🆕 New Blogs Discovered" section in digest
 2. Suggest adding to `sources.md` if consistently good
 
 Quality signals:
+
 - Original content (not aggregation)
 - Technical depth
 - Practical examples
@@ -74,6 +79,7 @@ Quality signals:
 **Skip if focus excludes technical**
 
 Search patterns:
+
 - `AI LLM breakthrough OR release site:arxiv.org {date_range}`
 - `AI model release OR launch {date_range}`
 - `LLM framework tool release {date_range}`
@@ -82,6 +88,7 @@ Search patterns:
 - `site:anthropic.com news {date_range}`
 
 Collect:
+
 - New model releases (GPT, Claude, Gemini, Llama, etc.)
 - Research paper highlights
 - Framework/tool updates (LangChain, LlamaIndex, vLLM, etc.)
@@ -92,6 +99,7 @@ Collect:
 **Skip if focus excludes business**
 
 Search patterns:
+
 - `AI startup funding OR acquisition {date_range}`
 - `AI company valuation OR investment {date_range}`
 - `site:techcrunch.com AI {date_range}`
@@ -99,6 +107,7 @@ Search patterns:
 - `OpenAI OR Anthropic OR Google AI business {date_range}`
 
 Collect:
+
 - Funding rounds
 - Acquisitions/mergers
 - Product launches
@@ -110,6 +119,7 @@ Collect:
 **Skip if focus excludes engineering**
 
 Search patterns:
+
 - `AI coding assistant OR developer tools {date_range}`
 - `AI engineering workflow productivity {date_range}`
 - `AI job market developer skills {date_range}`
@@ -118,6 +128,7 @@ Search patterns:
 - `site:reddit.com/r/LocalLLaMA {date_range}`
 
 Collect:
+
 - New dev tools and integrations
 - Workflow automation updates
 - Job market trends
@@ -128,6 +139,7 @@ Collect:
 **Skip if focus excludes leadership**
 
 Search patterns:
+
 - `AI leadership engineering management {date_range}`
 - `AI team strategy CTO VP engineering {date_range}`
 - `site:hbr.org AI leadership management`
@@ -136,6 +148,7 @@ Search patterns:
 - `engineering leadership AI adoption {date_range}`
 
 Collect:
+
 - AI strategy for engineering orgs
 - Team structure changes due to AI
 - Leadership perspectives on AI adoption
@@ -145,12 +158,14 @@ Collect:
 ### Phase 6: Newsletter & Blog Aggregation
 
 Fetch and extract from:
+
 - Simon Willison's blog (simonwillison.net)
 - Latent Space blog
 - The Batch (deeplearning.ai)
 - TLDR AI newsletter archives
 
 **Indie bloggers** (check for recent posts):
+
 - Lilian Weng, Jay Alammar, Eugene Yan
 - Chip Huyen, Vicki Boykis, Hamel Husain
 - Sebastian Ruder, swyx, François Chollet
@@ -179,25 +194,31 @@ Search pattern: `site:{blog_url} {date_range}`
 ### Phase 9: Save
 
 **Step 1:** Create directories if needed
+
 ```bash
 mkdir -p ./findings/ai-daily-digest
-```
+```text
 
 **Step 2:** Write digest to Obsidian Inbox
-```
+
+```text
 /Users/marcin.skalski@konghq.com/Library/Mobile Documents/iCloud~md~obsidian/Documents/second-brain/0_Inbox/ai-digest/{YYYY-MM-DD}.md
-```
+```text
+
 Create `0_Inbox/ai-digest/` directory if needed.
 
 **Step 3:** Write archive copy
-```
+
+```text
 ./findings/ai-daily-digest/ai-digest-{YYYY-MM-DD}.md
-```
+```text
 
 **Step 4: CRITICAL — Update state file**
-```
+
+```text
 ./findings/ai-daily-digest/.last-run
-```
+```text
+
 Use Write tool to save today's date in `YYYY-MM-DD` format (e.g., `2026-01-28`).
 File contains only the date string, nothing else.
 
@@ -231,4 +252,4 @@ File contains only the date string, nothing else.
 
 # Business news only
 /ai-digest --focus business
-```
+```text

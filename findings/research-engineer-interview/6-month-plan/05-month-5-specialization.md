@@ -18,6 +18,7 @@
 ### Domain Selection
 
 Pick ONE domain based on:
+
 - Your interest and curiosity
 - Target company/role focus
 - Existing background leverage
@@ -30,6 +31,7 @@ Pick ONE domain based on:
 | **Generative AI** | VAEs, GANs, Diffusion, Flow matching | Creative, generative focus |
 
 ### Deep Dive Activities
+
 - Read 10-15 key papers in domain
 - Implement 2-3 algorithms from papers
 - Understand state-of-the-art benchmarks
@@ -51,21 +53,25 @@ Build evidence that you can do ML research:
 ### Project Ideas by Domain
 
 **NLP:**
+
 - Fine-tune LLM for specific task
 - Build RAG system with evaluation
 - Implement paper from scratch
 
 **Computer Vision:**
+
 - Object detection on custom dataset
 - Image generation with Stable Diffusion fine-tuning
 - Video understanding task
 
 **RL:**
+
 - Train agent on complex environment
 - Implement PPO/SAC from scratch
 - Multi-agent scenario
 
 **Generative AI:**
+
 - Train diffusion model on custom data
 - Implement flow matching
 - Controllable generation
@@ -75,30 +81,35 @@ Build evidence that you can do ML research:
 ## 📚 Resources by Domain
 
 ### NLP
+
 | Resource | Link |
 |----------|------|
 | HuggingFace NLP Course | [huggingface.co/learn/nlp-course](https://huggingface.co/learn/nlp-course/) |
 | CS224n Lectures | [YouTube Playlist](https://www.youtube.com/playlist?list=PLoROMvodv4rOSH4v6133s9LFPRHjEmbmJ) |
 
 ### Computer Vision
+
 | Resource | Link |
 |----------|------|
 | CS231n Lectures | [YouTube Playlist](https://www.youtube.com/playlist?list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv) |
 | PyTorch Vision Tutorials | [pytorch.org/vision](https://pytorch.org/vision/stable/index.html) |
 
 ### Reinforcement Learning
+
 | Resource | Link |
 |----------|------|
 | Spinning Up (OpenAI) | [spinningup.openai.com](https://spinningup.openai.com/) |
 | Key Papers in Deep RL | [spinningup.openai.com/keypapers](https://spinningup.openai.com/en/latest/spinningup/keypapers.html) |
 
 ### Generative AI
+
 | Resource | Link |
 |----------|------|
 | Lilian Weng's Blog | [lilianweng.github.io](https://lilianweng.github.io/) |
 | Diffusion Models Tutorial | [lilianweng.github.io/posts/2021-07-11-diffusion-models](https://lilianweng.github.io/posts/2021-07-11-diffusion-models/) |
 
 ### General
+
 | Resource | Link |
 |----------|------|
 | Papers With Code | [paperswithcode.com](https://paperswithcode.com/) |
@@ -109,10 +120,12 @@ Build evidence that you can do ML research:
 ## 🎬 YouTube Watch List
 
 ### Domain-Specific
+
 - **Yannic Kilcher** - Papers in your chosen domain
 - **CS224n** (NLP) or **CS231n** (Vision) selected lectures
 
 ### Research Skills
+
 - Paper reading techniques
 - Experiment design
 - Result analysis
@@ -124,6 +137,7 @@ Build evidence that you can do ML research:
 **Complete 1 substantial project, publish on GitHub**
 
 ### Project Checklist
+
 - [ ] Clear problem statement
 - [ ] Data pipeline implemented
 - [ ] Model trained and evaluated
@@ -133,6 +147,7 @@ Build evidence that you can do ML research:
 - [ ] Hosted on GitHub
 
 ### README Template
+
 ```markdown
 # Project Title
 

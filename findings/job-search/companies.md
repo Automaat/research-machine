@@ -130,11 +130,13 @@
 ## 📝 How to Use
 
 **Adding companies:**
+
 1. Run `/company-discover` to find new targets
 2. Or manually add with required fields
 3. Include: Stage, Remote EU status, Expected Comp, Score
 
 **Scoring (0-100):**
+
 - Remote EU (25): Remote-first EU=25, Remote OK=15, US-only=0
 - Funding (20): Series B-D=20, A=15, Seed=5
 - Comp (20): €160k+=20, Maybe=10, Unlikely=0
@@ -143,6 +145,7 @@
 - Culture (10): Positive=10, Neutral=5, Red flags=0
 
 **Threshold:**
+
 - 70+ → Active (weekly check)
 - 50-69 → Watch (monthly check)
 - <50 → Don't add

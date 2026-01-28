@@ -14,9 +14,9 @@ Base structure for knowledge management systems (Obsidian, Notion, etc.).
 
 ## Vault/Workspace Structure
 
-```
+```text
 [DIRECTORY_STRUCTURE]
-```
+```text
 
 **Flow:** [PROCESSING_FLOW]
 
@@ -30,9 +30,10 @@ Base structure for knowledge management systems (Obsidian, Notion, etc.).
 **Location:** [LOCATION]
 
 **Template:**
+
 ```markdown
 [NOTE_TEMPLATE_1]
-```
+```text
 
 ### [Note Type 2]
 
@@ -40,9 +41,10 @@ Base structure for knowledge management systems (Obsidian, Notion, etc.).
 **Location:** [LOCATION]
 
 **Template:**
+
 ```markdown
 [NOTE_TEMPLATE_2]
-```
+```text
 
 ### [Note Type 3]
 
@@ -50,9 +52,10 @@ Base structure for knowledge management systems (Obsidian, Notion, etc.).
 **Location:** [LOCATION]
 
 **Template:**
+
 ```markdown
 [NOTE_TEMPLATE_3]
-```
+```text
 
 [END_IF_NOTE_TEMPLATES]
 
@@ -71,6 +74,7 @@ Base structure for knowledge management systems (Obsidian, Notion, etc.).
 **Convention:** [NAMING_CONVENTION]
 
 **Examples:**
+
 - [NAMING_EXAMPLE_1]
 - [NAMING_EXAMPLE_2]
 - [NAMING_EXAMPLE_3]
@@ -90,6 +94,7 @@ Base structure for knowledge management systems (Obsidian, Notion, etc.).
 5. [PROCESSING_STEP_5]
 
 **Decision criteria:**
+
 - [CRITERIA_1]
 - [CRITERIA_2]
 - [CRITERIA_3]
@@ -110,18 +115,16 @@ Base structure for knowledge management systems (Obsidian, Notion, etc.).
 
 ```markdown
 [RESEARCH_OUTPUT_TEMPLATE]
-```
+```text
 
 ## Linking Strategy
 
 [IF_LINKING_SYSTEM]
 
 **Link types:**
-- [LINK_TYPE_1]: [USAGE]
-- [LINK_TYPE_2]: [USAGE]
-- [LINK_TYPE_3]: [USAGE]
 
 **When to link:**
+
 - [LINKING_RULE_1]
 - [LINKING_RULE_2]
 - [LINKING_RULE_3]
@@ -150,12 +153,14 @@ Base structure for knowledge management systems (Obsidian, Notion, etc.).
 **Citation format:** [CITATION_FORMAT]
 
 **Examples:**
+
 ```markdown
 [CITATION_EXAMPLE_1]
 [CITATION_EXAMPLE_2]
-```
+```text
 
 **Required for:**
+
 - [SOURCE_REQUIREMENT_1]
 - [SOURCE_REQUIREMENT_2]
 - [SOURCE_REQUIREMENT_3]
@@ -207,7 +212,7 @@ Before saving notes:
 
 # [Operation 3]
 [COMMAND_3]
-```
+```text
 
 [END_IF_TOOL_SPECIFIC_COMMANDS]
 
@@ -219,13 +224,13 @@ Before saving notes:
 
 ```markdown
 [OUTPUT_TEMPLATE_1]
-```
+```text
 
 ### [Output Type 2]
 
 ```markdown
 [OUTPUT_TEMPLATE_2]
-```
+```text
 
 [END_IF_OUTPUT_TEMPLATES]
 
@@ -249,6 +254,7 @@ Before saving notes:
 ## Extensibility
 
 Add sections as needs evolve:
+
 - New note types
 - New tag categories
 - New processing workflows

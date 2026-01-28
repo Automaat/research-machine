@@ -11,6 +11,7 @@ Questions for command-line tool projects to customize CLAUDE.md.
 **Purpose:** Define command structure section
 
 **Options:**
+
 - Single command with flags
 - Multiple subcommands (like git)
 - Hierarchical commands (nested subcommands)
@@ -23,6 +24,7 @@ Questions for command-line tool projects to customize CLAUDE.md.
 **Purpose:** Define validation approach
 
 **Options:**
+
 - Strict (reject immediately on invalid input)
 - Lenient (warn but continue when possible)
 - Interactive (prompt for corrections)
@@ -35,6 +37,7 @@ Questions for command-line tool projects to customize CLAUDE.md.
 **Purpose:** Document test strategy
 
 **Options:**
+
 - Unit tests for functions
 - Command-level integration tests
 - End-to-end tests with real inputs
@@ -49,6 +52,7 @@ Questions for command-line tool projects to customize CLAUDE.md.
 **Purpose:** Create output templates
 
 **Options (select multiple):**
+
 - Plain text (human-readable)
 - JSON (machine-readable)
 - YAML
@@ -63,6 +67,7 @@ Questions for command-line tool projects to customize CLAUDE.md.
 **Purpose:** Define error handling pattern
 
 **Options:**
+
 - Detailed error messages with suggestions
 - Concise error messages
 - Structured error output (JSON)
@@ -77,6 +82,7 @@ Questions for command-line tool projects to customize CLAUDE.md.
 **Purpose:** Document config approach
 
 **Options:**
+
 - Yes, [format: YAML/TOML/JSON]
 - Environment variables only
 - CLI flags only (no config file)
@@ -89,6 +95,7 @@ Questions for command-line tool projects to customize CLAUDE.md.
 **Purpose:** Document API interactions
 
 **Options:**
+
 - Yes, requires API keys/auth
 - Yes, but optional functionality
 - No external dependencies
@@ -103,6 +110,7 @@ Questions for command-line tool projects to customize CLAUDE.md.
 **Purpose:** Define quality gates section
 
 **Options (select multiple):**
+
 - Linter passes
 - Tests pass
 - All commands run with `--help`
@@ -120,6 +128,7 @@ Questions for command-line tool projects to customize CLAUDE.md.
 **Purpose:** Populate anti-patterns section
 
 **Options (select multiple):**
+
 - Silent failures (no error output)
 - Unclear error messages
 - Using stdout for errors (should use stderr)

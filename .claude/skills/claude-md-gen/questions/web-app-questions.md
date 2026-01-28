@@ -11,6 +11,7 @@ Questions for web application projects to customize CLAUDE.md.
 **Purpose:** Define workflow sections
 
 **Options:**
+
 - Adding new components
 - Creating new pages/routes
 - Implementing API integrations
@@ -26,6 +27,7 @@ Questions for web application projects to customize CLAUDE.md.
 **Purpose:** Determine if design system section needed
 
 **Options:**
+
 - Yes, custom design system
 - Yes, using [Library] (MUI, Chakra, etc.)
 - No, but consistent patterns exist
@@ -38,6 +40,7 @@ Questions for web application projects to customize CLAUDE.md.
 **Purpose:** Document responsive approach
 
 **Options:**
+
 - Mobile-first with specific breakpoints
 - Desktop-first with specific breakpoints
 - Fluid/flexible (no fixed breakpoints)
@@ -52,6 +55,7 @@ Questions for web application projects to customize CLAUDE.md.
 **Purpose:** Include templates in CLAUDE.md
 
 **Options:**
+
 - Yes, use generator/scaffolding tool
 - Yes, copy existing component patterns
 - No, write from scratch each time
@@ -63,6 +67,7 @@ Questions for web application projects to customize CLAUDE.md.
 **Purpose:** Document patterns
 
 **Options:**
+
 - Consistent pattern across app
 - Per-component basis
 - Using library (React Query, SWR, etc.)
@@ -77,6 +82,7 @@ Questions for web application projects to customize CLAUDE.md.
 **Purpose:** Document commands
 
 **Options:**
+
 - CI/CD automated
 - Manual deploy with scripts
 - Platform-specific (Vercel, Netlify, etc.)
@@ -89,6 +95,7 @@ Questions for web application projects to customize CLAUDE.md.
 **Purpose:** Add to quality gates
 
 **Options:**
+
 - ESLint + Prettier + TypeScript
 - Just ESLint
 - Other tools: [specify]
@@ -103,6 +110,7 @@ Questions for web application projects to customize CLAUDE.md.
 **Purpose:** Define quality gates section
 
 **Options (select multiple):**
+
 - Linter passes
 - Tests pass
 - Type checking passes
@@ -120,6 +128,7 @@ Questions for web application projects to customize CLAUDE.md.
 **Purpose:** Populate anti-patterns section
 
 **Options (select multiple):**
+
 - Prop drilling (passing props too deep)
 - Missing alt text on images
 - Hardcoded breakpoints

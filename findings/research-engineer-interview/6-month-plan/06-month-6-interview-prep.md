@@ -16,18 +16,21 @@
 ## 📆 Week 1-2: Coding Interview Prep
 
 ### Data Structures & Algorithms
+
 - Arrays, strings, hash maps
 - Trees, graphs, heaps
 - Dynamic programming
 - Recursion, backtracking
 
 ### Focus Areas (Research Engineer Specific)
+
 - Graph algorithms (common in ML)
 - DP (optimization problems)
 - Matrix operations
 - Probability/statistics problems
 
 ### Practice Strategy
+
 - LeetCode medium/hard: 150+ problems
 - Focus on patterns, not memorization
 - Time yourself (45 min per problem max)
@@ -51,6 +54,7 @@
 Research engineer interviews uniquely test ML debugging:
 
 **Common Bug Types:**
+
 - Shape mismatches (batch, sequence, feature dims)
 - Gradient issues (vanishing, exploding, NaN)
 - Data leakage (train/test contamination)
@@ -74,17 +78,20 @@ Research engineer interviews uniquely test ML debugging:
 ### ML Interview Questions
 
 **Fundamentals:**
+
 - Explain backpropagation
 - Bias-variance tradeoff
 - Regularization techniques
 - When to use which loss function
 
 **Deep Learning:**
+
 - Walk through transformer architecture
 - Explain attention mechanism
 - CNN vs RNN vs Transformer tradeoffs
 
 **Practical:**
+
 - How would you debug a model that's not learning?
 - Model is overfitting - what do you try?
 - How to handle class imbalance?
@@ -94,6 +101,7 @@ Research engineer interviews uniquely test ML debugging:
 ## 🎤 Research Talk Preparation
 
 ### Talk Structure (40-55 minutes)
+
 1. **Problem motivation** (5 min) - Why does this matter?
 2. **Related work** (5 min) - What's been tried?
 3. **Your approach** (15 min) - Technical deep dive
@@ -102,12 +110,14 @@ Research engineer interviews uniquely test ML debugging:
 6. **Q&A** (15+ min) - The real interview
 
 ### Preparation Tips
+
 - Build Q&A slide deck for common follow-ups
 - Practice with timer
 - Anticipate tough questions
 - Know your weaknesses
 
 ### Common Questions
+
 - "Why this approach vs X?"
 - "What if you had more compute?"
 - "How would this scale?"
@@ -118,6 +128,7 @@ Research engineer interviews uniquely test ML debugging:
 ## 🤝 Mock Interviews
 
 ### Interview Types to Practice
+
 1. **Coding** (2-3 sessions)
 2. **ML fundamentals** (2-3 sessions)
 3. **ML debugging** (1-2 sessions)
@@ -125,12 +136,14 @@ Research engineer interviews uniquely test ML debugging:
 5. **Research discussion** (1-2 sessions)
 
 ### Finding Mock Partners
+
 - Non-competitive peers (other job seekers)
 - Pramp, Interviewing.io
 - ML Discord communities
 - University career services
 
 ### Strategy
+
 - "Start with conversations you're least interested in"
 - Schedule target company interviews LAST
 - Get feedback, iterate
@@ -154,6 +167,7 @@ Research engineer interviews uniquely test ML debugging:
 **Complete 200 coding problems, 3+ mock interviews**
 
 ### Checklist
+
 - [ ] 200+ LeetCode problems (mix of medium/hard)
 - [ ] 3+ full mock interviews
 - [ ] Research talk practiced 5+ times
@@ -166,12 +180,14 @@ Research engineer interviews uniquely test ML debugging:
 ## 📝 Interview Day Checklist
 
 ### Before
+
 - [ ] Review your projects (you'll discuss them)
 - [ ] Review key papers in your domain
 - [ ] Get good sleep
 - [ ] Prepare questions for interviewers
 
 ### During
+
 - [ ] Think out loud
 - [ ] Ask clarifying questions
 - [ ] Start with brute force, optimize
@@ -179,6 +195,7 @@ Research engineer interviews uniquely test ML debugging:
 - [ ] Be honest about what you don't know
 
 ### Research Talk
+
 - [ ] Arrive early, test setup
 - [ ] Speak slowly, clearly
 - [ ] Make eye contact

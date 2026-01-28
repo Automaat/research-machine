@@ -24,23 +24,27 @@ Examples as executable specifications showing expected behavior.
 
 ### Example Format
 
-```
+```text
 ## Example [N]: [Descriptive Title]
 
 **Context:** [When this example applies]
 
 **Input:**
-```
+```text
+
 [Input code/command/data]
-```
+
+```text
 
 **Expected Output:**
-```
+```text
+
 [Output code/response/result]
-```
+
+```text
 
 **Explanation:** [Why this works / what to note]
-```
+```text
 
 ## Meta-Example: How to Write Examples
 
@@ -49,14 +53,16 @@ Examples as executable specifications showing expected behavior.
 **Context:** User wants to check tool version
 
 **Input:**
+
 ```bash
 mytool --version
-```
+```text
 
 **Expected Output:**
-```
+
+```text
 mytool version 1.2.3 (build abc123)
-```
+```text
 
 **Explanation:** Always show semantic version plus build identifier
 
@@ -65,18 +71,20 @@ mytool version 1.2.3 (build abc123)
 **Context:** User provides invalid flag
 
 **Input:**
+
 ```bash
 mytool --invalid-flag
-```
+```text
 
 **Expected Output:**
-```
+
+```text
 Error: Unknown flag '--invalid-flag'
 
 Did you mean: --input-file?
 
 Run 'mytool --help' for usage.
-```
+```text
 
 **Explanation:** Suggest similar flags, point to help
 
@@ -85,16 +93,18 @@ Run 'mytool --help' for usage.
 **Context:** User provides empty input
 
 **Input:**
+
 ```bash
 mytool process --input ""
-```
+```text
 
 **Expected Output:**
-```
+
+```text
 Error: Input cannot be empty
 
 Usage: mytool process --input FILE
-```
+```text
 
 **Explanation:** Validate inputs, show usage hint
 
@@ -105,12 +115,14 @@ Usage: mytool process --input FILE
 **Context:** Run basic analysis
 
 **Input:**
+
 ```bash
 plot-triage https://otodom.pl/listing/123
-```
+```text
 
 **Expected Output:**
-```
+
+```text
 🏡 Plot Triage Analysis
 
 Location: Podgórze, Kraków
@@ -125,7 +137,7 @@ Size: 1200 m²
 Recommendation: PASS to verification stage
 
 Next: Run 'plot-verify 123' for deep analysis
-```
+```text
 
 **Explanation:** Quick triage output with emoji, clear next step
 
@@ -134,11 +146,13 @@ Next: Run 'plot-verify 123' for deep analysis
 **Context:** Output as JSON for parsing
 
 **Input:**
+
 ```bash
 plot-triage https://otodom.pl/listing/123 --output json
-```
+```text
 
 **Expected Output:**
+
 ```json
 {
   "status": "pass",
@@ -153,7 +167,7 @@ plot-triage https://otodom.pl/listing/123 --output json
   "recommendation": "verify",
   "next_steps": ["plot-verify 123"]
 }
-```
+```text
 
 **Explanation:** Machine-readable format for automation
 
@@ -162,12 +176,14 @@ plot-triage https://otodom.pl/listing/123 --output json
 **Context:** Invalid URL provided
 
 **Input:**
+
 ```bash
 plot-triage invalid-url
-```
+```text
 
 **Expected Output:**
-```
+
+```text
 Error: Invalid listing URL
 
 Expected format: https://otodom.pl/listing/[ID]
@@ -175,7 +191,7 @@ Expected format: https://otodom.pl/listing/[ID]
 Examples:
   plot-triage https://otodom.pl/listing/12345
   plot-triage https://otodom.pl/oferta/some-listing-ID123
-```
+```text
 
 **Explanation:** Clear error, show expected format with examples
 
@@ -186,6 +202,7 @@ Examples:
 **Context:** Authenticate user with valid credentials
 
 **Request:**
+
 ```http
 POST /api/auth/login HTTP/1.1
 Content-Type: application/json
@@ -194,9 +211,10 @@ Content-Type: application/json
   "email": "user@example.com",
   "password": "correct_password"
 }
-```
+```text
 
 **Response:**
+
 ```http
 HTTP/1.1 200 OK
 Content-Type: application/json
@@ -210,7 +228,7 @@ Content-Type: application/json
     "role": "user"
   }
 }
-```
+```text
 
 **Explanation:** Returns JWT token valid for 24 hours
 
@@ -219,6 +237,7 @@ Content-Type: application/json
 **Context:** Missing required field
 
 **Request:**
+
 ```http
 POST /api/auth/login HTTP/1.1
 Content-Type: application/json
@@ -226,9 +245,10 @@ Content-Type: application/json
 {
   "email": "user@example.com"
 }
-```
+```text
 
 **Response:**
+
 ```http
 HTTP/1.1 400 Bad Request
 Content-Type: application/json
@@ -246,7 +266,7 @@ Content-Type: application/json
     ]
   }
 }
-```
+```text
 
 **Explanation:** Returns 400 with specific field errors
 
@@ -255,6 +275,7 @@ Content-Type: application/json
 **Context:** Invalid credentials
 
 **Request:**
+
 ```http
 POST /api/auth/login HTTP/1.1
 Content-Type: application/json
@@ -263,9 +284,10 @@ Content-Type: application/json
   "email": "user@example.com",
   "password": "wrong_password"
 }
-```
+```text
 
 **Response:**
+
 ```http
 HTTP/1.1 401 Unauthorized
 Content-Type: application/json
@@ -276,7 +298,7 @@ Content-Type: application/json
     "message": "Email or password is incorrect"
   }
 }
-```
+```text
 
 **Explanation:** Vague message for security (don't reveal which field is wrong)
 
@@ -287,6 +309,7 @@ Content-Type: application/json
 **Context:** Test successful user creation
 
 **Test Code:**
+
 ```python
 def test_create_user_success():
     # Given
@@ -303,7 +326,7 @@ def test_create_user_success():
     assert response.json()["email"] == user_data["email"]
     assert "password" not in response.json()  # Never return password
     assert "id" in response.json()
-```
+```text
 
 **Explanation:** Verify status, returned data, and security (no password leak)
 
@@ -312,6 +335,7 @@ def test_create_user_success():
 **Context:** Test duplicate email rejection
 
 **Test Code:**
+
 ```python
 def test_create_user_duplicate_email(existing_user):
     # Given - existing_user fixture creates user with test@example.com
@@ -326,7 +350,7 @@ def test_create_user_duplicate_email(existing_user):
     # Then
     assert response.status_code == 409  # Conflict
     assert response.json()["error"]["code"] == "duplicate_email"
-```
+```text
 
 **Explanation:** Use fixture for setup, verify specific error code
 
@@ -335,6 +359,7 @@ def test_create_user_duplicate_email(existing_user):
 **Context:** Test password requirements
 
 **Test Code:**
+
 ```python
 @pytest.mark.parametrize("password,expected_error", [
     ("short", "min_length"),
@@ -354,7 +379,7 @@ def test_create_user_invalid_password(password, expected_error):
     # Then
     assert response.status_code == 400
     assert expected_error in response.json()["error"]["details"][0]["error"]
-```
+```text
 
 **Explanation:** Parametrize to test multiple invalid inputs efficiently
 
@@ -365,6 +390,7 @@ def test_create_user_invalid_password(password, expected_error):
 **Context:** Parse and validate JSON schema
 
 **Code:**
+
 ```python
 from mylib import Schema, ValidationError
 
@@ -385,7 +411,7 @@ try:
     user_schema.validate(invalid)
 except ValidationError as e:
     print(e.errors)  # {"age": "expected int, got str"}
-```
+```text
 
 **Explanation:** Shows both success and error paths
 
@@ -394,6 +420,7 @@ except ValidationError as e:
 **Context:** Custom validators and optional fields
 
 **Code:**
+
 ```python
 from mylib import Schema, Field, validators
 
@@ -414,7 +441,7 @@ try:
     user_schema.validate(invalid)
 except ValidationError as e:
     print(e.errors)  # {"email": "invalid email format"}
-```
+```text
 
 **Explanation:** Shows optional fields and custom validators
 
@@ -423,6 +450,7 @@ except ValidationError as e:
 **Context:** Validate nested objects
 
 **Code:**
+
 ```python
 from mylib import Schema
 
@@ -460,28 +488,32 @@ try:
     user_schema.validate(invalid)
 except ValidationError as e:
     print(e.errors)  # {"address.city": "required", "address.zip": "required"}
-```
+```text
 
 **Explanation:** Shows schema composition and nested error paths
 
 ## Customization Points
 
 **Adjust example count:**
+
 - Quick reference: 1-2 examples
 - Tutorial: 3-5 examples
 - Comprehensive docs: 5-10 examples with variations
 
 **Adjust detail level:**
+
 - Minimal: Just input/output
 - Standard: Add explanation
 - Detailed: Include process/reasoning
 
 **Adjust format:**
+
 - Inline: Small snippets in prose
 - Dedicated section: "Examples" section
 - Separate file: `examples/` directory
 
 **Adjust variations:**
+
 - Happy path only: Simplest case
 - Happy + error: Common patterns
 - Comprehensive: All edge cases
@@ -505,6 +537,7 @@ except ValidationError as e:
 ## Anti-Patterns
 
 **AVOID:**
+
 - ❌ Too few examples (just one happy path)
 - ❌ Unrealistic examples (toy data only)
 - ❌ No error examples (hides failure modes)

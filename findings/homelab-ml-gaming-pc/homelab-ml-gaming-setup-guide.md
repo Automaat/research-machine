@@ -65,12 +65,14 @@
 **Setup:** Linux host + Windows VM with dedicated GPU
 
 **Pros:**
+
 - 🔄 Switch between ML (Linux) and gaming (Windows VM) without reboot
 - 🔒 Windows isolated in VM (security/privacy)
 - 📸 ZFS snapshots, encryption options
 - 🖥️ Looking Glass for single-monitor setup
 
 **Cons:**
+
 - ⚙️ Complex initial setup (VFIO, IOMMU groups)
 - 🎮 Anti-cheat may detect/ban VM players
 - 🔧 Some performance overhead (~5%)
@@ -79,14 +81,16 @@
 
 **📄 STATED:** "The majority of multiplayer games with anti-cheat will still not let you play or they will outright ban you" [Source: [Hacker News](https://news.ycombinator.com/item?id=18328323)]
 
-#### Two Approaches:
+#### Two Approaches
 
 **A) Dual GPU Setup (Easier)**
+
 - GPU 1 (iGPU or cheap card): Linux host display
 - GPU 2 (RTX 4090/3090): Passthrough to Windows VM
 - More stable, GPU always dedicated to VM
 
 **B) Single GPU Passthrough (Advanced)**
+
 - Dynamic unbinding: GPU switches between host/VM
 - Uses libvirt hooks for driver switching
 - Host loses display while VM runs
@@ -98,11 +102,13 @@
 **Setup:** Windows + Linux on separate partitions/drives
 
 **Pros:**
+
 - ✅ Maximum performance (native hardware)
 - ✅ No anti-cheat issues
 - ✅ Simpler to set up
 
 **Cons:**
+
 - 🔄 Reboot required to switch OS
 - ⏰ Context switching friction
 - 🔓 Windows may access Linux partition data
@@ -287,25 +293,30 @@ pip install faster-whisper
 ## 📚 Resources & References
 
 ### GPU Selection
+
 - [BIZON: Best GPU for LLM Training/Inference](https://bizon-tech.com/blog/best-gpu-llm-training-inference)
 - [LocalLLM.in: Best GPUs for LLM Inference 2025](https://localllm.in/blog/best-gpus-llm-inference-2025)
 - [HomelabSec: Best GPU for Local LLM Homelab](https://homelabsec.com/posts/best-gpu-for-local-llm-homelab/)
 
 ### GPU Passthrough
+
 - [Arch Wiki: PCI Passthrough via OVMF](https://wiki.archlinux.org/title/PCI_passthrough_via_OVMF)
 - [Gentoo Wiki: GPU Passthrough Guide](https://wiki.gentoo.org/wiki/GPU_passthrough_with_virt-manager,_QEMU,_and_KVM)
 - [GitHub: GPU Passthrough Tutorial](https://github.com/bryansteiner/gpu-passthrough-tutorial)
 - [Looking Glass Project](https://github.com/gnif/LookingGlass)
 
 ### CUDA vs ROCm
+
 - [SCIMUS: ROCm vs CUDA Comparison](https://thescimus.com/blog/rocm-vs-cuda-a-practical-comparison-for-ai-developers/)
 - [Thunder Compute: CUDA vs ROCm 2025](https://www.thundercompute.com/blog/rocm-vs-cuda-gpu-computing)
 
 ### LLM Frameworks
+
 - [Red Hat: Ollama vs vLLM Benchmarking](https://developers.redhat.com/articles/2025/08/08/ollama-vs-vllm-deep-dive-performance-benchmarking)
 - [ITECS: vLLM vs Ollama vs llama.cpp](https://itecsonline.com/post/vllm-vs-ollama-vs-llama.cpp-vs-tgi-vs-tensort)
 
 ### Whisper
+
 - [Tom's Hardware: Whisper GPU Benchmarks](https://www.tomshardware.com/news/whisper-audio-transcription-gpus-benchmarked)
 - [OpenAI Whisper GitHub](https://github.com/openai/whisper)
 

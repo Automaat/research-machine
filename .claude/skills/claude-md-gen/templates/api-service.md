@@ -6,9 +6,9 @@ Base structure for backend APIs and services.
 
 ## Project Structure
 
-```
+```text
 [DIRECTORY_STRUCTURE]
-```
+```text
 
 ## Tech Stack
 
@@ -55,28 +55,32 @@ Base structure for backend APIs and services.
 **Pattern:** `[API_PREFIX]/[VERSION]/[RESOURCE]/[ID]`
 
 **Example routes:**
-```
+
+```text
 [ENDPOINT_EXAMPLES]
-```
+```text
 
 ### Request/Response Format
 
 **Content-Type:** `application/json`
 
 **Request example:**
+
 ```json
 [REQUEST_EXAMPLE]
-```
+```text
 
 **Response example:**
+
 ```json
 [RESPONSE_EXAMPLE]
-```
+```text
 
 **Error response:**
+
 ```json
 [ERROR_RESPONSE_EXAMPLE]
-```
+```text
 
 ### Versioning
 
@@ -93,9 +97,10 @@ Base structure for backend APIs and services.
 ### Authentication
 
 **Implementation:**
+
 ```[LANGUAGE]
 [AUTH_IMPLEMENTATION_EXAMPLE]
-```
+```text
 
 **Token format:** [TOKEN_FORMAT]
 **Token expiry:** [TOKEN_EXPIRY]
@@ -108,9 +113,10 @@ Base structure for backend APIs and services.
 **Roles:** [ROLE_LIST]
 
 **Permission check:**
+
 ```[LANGUAGE]
 [PERMISSION_CHECK_EXAMPLE]
-```
+```text
 
 ## Database
 
@@ -119,9 +125,10 @@ Base structure for backend APIs and services.
 **Location:** `[MODELS_DIR]/`
 
 **Example model:**
+
 ```[LANGUAGE]
 [MODEL_DEFINITION_EXAMPLE]
-```
+```text
 
 ### Migrations
 
@@ -130,6 +137,7 @@ Base structure for backend APIs and services.
 **Location:** `[MIGRATIONS_DIR]/`
 
 **Commands:**
+
 ```bash
 # Create migration
 [MIGRATION_CREATE_COMMAND]
@@ -142,7 +150,7 @@ Base structure for backend APIs and services.
 
 # Check status
 [MIGRATION_STATUS_COMMAND]
-```
+```text
 
 ### Query Patterns
 
@@ -150,18 +158,22 @@ Base structure for backend APIs and services.
 **ORM:** [ORM_NAME]
 
 **Query example:**
+
 ```[LANGUAGE]
 [ORM_QUERY_EXAMPLE]
-```
+```text
+
 [END_IF_ORM]
 
 [IF_RAW_SQL]
 **Approach:** Raw SQL with [DRIVER_NAME]
 
 **Query example:**
+
 ```[LANGUAGE]
 [RAW_SQL_EXAMPLE]
-```
+```text
+
 [END_IF_RAW_SQL]
 
 ## Validation
@@ -169,14 +181,16 @@ Base structure for backend APIs and services.
 **Library:** [VALIDATION_LIBRARY]
 
 **Schema definition:**
+
 ```[LANGUAGE]
 [VALIDATION_SCHEMA_EXAMPLE]
-```
+```text
 
 **Validation in handler:**
+
 ```[LANGUAGE]
 [VALIDATION_USAGE_EXAMPLE]
-```
+```text
 
 ## Error Handling
 
@@ -184,11 +198,11 @@ Base structure for backend APIs and services.
 
 ```[LANGUAGE]
 [ERROR_TYPES_DEFINITION]
-```
+```text
 
 ### HTTP Status Codes
 
-```
+```text
 200 - OK
 201 - Created
 400 - Bad Request (validation errors)
@@ -200,7 +214,7 @@ Base structure for backend APIs and services.
 429 - Too Many Requests
 500 - Internal Server Error
 [CUSTOM_STATUS_CODES]
-```
+```text
 
 ### Error Response Format
 
@@ -213,7 +227,7 @@ Base structure for backend APIs and services.
     "request_id": "[REQUEST_ID]"
   }
 }
-```
+```text
 
 ## Middleware Stack
 
@@ -231,14 +245,16 @@ Base structure for backend APIs and services.
 **Strategy:** [RATE_LIMIT_STRATEGY]
 
 **Limits:**
+
 - Authenticated: [AUTH_RATE_LIMIT]
 - Anonymous: [ANON_RATE_LIMIT]
 - By endpoint: [ENDPOINT_SPECIFIC_LIMITS]
 
 **Implementation:**
+
 ```[LANGUAGE]
 [RATE_LIMIT_IMPLEMENTATION]
-```
+```text
 
 ## Logging
 
@@ -249,11 +265,13 @@ Base structure for backend APIs and services.
 **Format:** [LOG_FORMAT] (JSON, text, etc.)
 
 **Example:**
+
 ```[LANGUAGE]
 [LOGGING_EXAMPLE]
-```
+```text
 
 **What to log:**
+
 - All requests (method, path, status, duration)
 - Authentication attempts
 - Authorization failures
@@ -262,6 +280,7 @@ Base structure for backend APIs and services.
 - Rate limit hits
 
 **What NOT to log:**
+
 - Passwords or tokens
 - Full request/response bodies (unless debug)
 - PII (unless required and secured)
@@ -279,9 +298,10 @@ Base structure for backend APIs and services.
 **Approach:** [TEST_DB_APPROACH]
 
 **Setup:**
+
 ```bash
 [TEST_DB_SETUP_COMMAND]
-```
+```text
 
 **Teardown:** [TEST_DB_TEARDOWN_APPROACH]
 
@@ -289,7 +309,7 @@ Base structure for backend APIs and services.
 
 ```[LANGUAGE]
 [API_TEST_EXAMPLE]
-```
+```text
 
 ## Configuration
 
@@ -298,30 +318,34 @@ Base structure for backend APIs and services.
 **Environment-specific:** [ENV_CONFIG_APPROACH]
 
 **Required variables:**
-```
+
+```text
 [ENV_VAR_1]=[DESCRIPTION]
 [ENV_VAR_2]=[DESCRIPTION]
 [ENV_VAR_3]=[DESCRIPTION]
-```
+```text
 
 **Loading:**
+
 ```[LANGUAGE]
 [CONFIG_LOADING_EXAMPLE]
-```
+```text
 
 ## Deployment
 
 **Platform:** [DEPLOYMENT_PLATFORM]
 
 **Build:**
+
 ```bash
 [BUILD_COMMAND]
-```
+```text
 
 **Run:**
+
 ```bash
 [RUN_COMMAND]
-```
+```text
 
 **Health check endpoint:** `[HEALTH_ENDPOINT]`
 
@@ -340,11 +364,12 @@ Before committing:
 - [ ] [HOOK_NAME] hooks pass (if configured)
 
 Commands:
+
 ```bash
 [LINT_COMMAND]
 [TEST_COMMAND]
 [MIGRATION_CHECK_COMMAND]
-```
+```text
 
 ## Common Commands
 
@@ -375,7 +400,7 @@ Commands:
 
 # Generate API docs
 [DOCS_COMMAND]
-```
+```text
 
 ## API Documentation
 
@@ -384,9 +409,10 @@ Commands:
 **Location:** `[DOCS_LOCATION]`
 
 **Generate docs:**
+
 ```bash
 [DOCS_GENERATE_COMMAND]
-```
+```text
 
 **View docs:** `[DOCS_URL]`
 
@@ -410,6 +436,7 @@ Commands:
 ## Extensibility
 
 Add sections as needs evolve:
+
 - Caching strategy
 - Background job processing
 - WebSocket support

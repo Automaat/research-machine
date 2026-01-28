@@ -35,24 +35,29 @@
 ## 🎬 Recommended YouTube Watch Order
 
 **Month 1-2:** Foundations
+
 - 3Blue1Brown: Linear Algebra & Calculus series
 - StatQuest: Probability & Statistics playlist
 - 3Blue1Brown: Neural Networks Ch 1-4
 
 **Month 3:** Deep Learning
+
 - Andrej Karpathy: Videos 1-3 (micrograd, makemore basics)
 - fast.ai: Lessons 1-4
 
 **Month 4:** Transformers & LLMs
+
 - 3Blue1Brown: Neural Networks Ch 5-7 (transformers)
 - Andrej Karpathy: Video 7 (Let's build GPT) ⭐
 - Andrej Karpathy: Video 8 (Tokenization)
 
 **Month 5:** Specialization
+
 - Yannic Kilcher: Papers in your chosen domain
 - Domain-specific playlists (NLP → CS224n, Vision → CS231n)
 
 **Month 6:** Interview Prep
+
 - Review Karpathy videos for implementation details
 - Yannic Kilcher: Recent paper discussions for research talk prep
 

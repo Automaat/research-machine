@@ -15,21 +15,25 @@
 ## 📆 Week 1-2: Core ML Concepts
 
 ### Learning Paradigms
+
 - Supervised learning (classification, regression)
 - Unsupervised learning (clustering, dimensionality reduction)
 - When to use which
 
 ### Regression
+
 - Linear regression (closed-form + gradient descent)
 - Logistic regression (sigmoid, cross-entropy loss)
 - Regularization (L1/L2)
 
 ### Optimization
+
 - Gradient descent variants
 - Learning rate intuition
 - Convergence criteria
 
 ### Model Evaluation
+
 - Bias-variance tradeoff
 - Overfitting vs underfitting
 - Train/val/test splits
@@ -40,19 +44,23 @@
 ## 📆 Week 3-4: Classical Algorithms
 
 ### Tree-Based Methods
+
 - Decision trees (entropy, information gain, Gini)
 - Random forests (bagging, feature importance)
 - Boosting basics (AdaBoost, gradient boosting)
 
 ### Distance-Based Methods
+
 - k-Nearest Neighbors (distance metrics, k selection)
 - Support Vector Machines (margins, kernel trick intuition)
 
 ### Dimensionality Reduction
+
 - PCA (variance maximization, eigenvector interpretation)
 - t-SNE basics (for visualization)
 
 ### Clustering
+
 - k-means (Lloyd's algorithm, elbow method)
 - Hierarchical clustering basics
 
@@ -79,11 +87,13 @@ Best practical ML book. Read chapters 1-8 for classical ML.
 ## 🎬 YouTube Watch List
 
 ### Week 1-2: Core Concepts
+
 1. **StatQuest** - Linear Regression, Logistic Regression
 2. **StatQuest** - Gradient Descent, Bias-Variance Tradeoff
 3. **Andrew Ng (Coursera)** - Week 1-3 videos
 
 ### Week 3-4: Algorithms
+
 1. **StatQuest** - Decision Trees, Random Forests
 2. **StatQuest** - SVM, k-NN
 3. **StatQuest** - PCA (step by step)

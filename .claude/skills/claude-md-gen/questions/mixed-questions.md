@@ -11,6 +11,7 @@ Questions for hybrid projects with multiple component types to customize CLAUDE.
 **Purpose:** Identify component types and structure
 
 **Options (select multiple):**
+
 - Frontend (web app)
 - Backend (API service)
 - CLI tool
@@ -26,6 +27,7 @@ Questions for hybrid projects with multiple component types to customize CLAUDE.
 **Purpose:** Document project structure
 
 **Options:**
+
 - Monorepo (all components in one repo)
 - Separate repos with integration
 - Hybrid (some together, some separate)
@@ -37,6 +39,7 @@ Questions for hybrid projects with multiple component types to customize CLAUDE.
 **Purpose:** Define integration workflows
 
 **Options (select multiple):**
+
 - API client updates (backend → frontend)
 - Shared type definitions
 - End-to-end testing
@@ -53,6 +56,7 @@ Questions for hybrid projects with multiple component types to customize CLAUDE.
 **Purpose:** Document integration patterns
 
 **Options (select multiple):**
+
 - REST API (JSON)
 - GraphQL
 - gRPC
@@ -68,6 +72,7 @@ Questions for hybrid projects with multiple component types to customize CLAUDE.
 **Purpose:** Include templates per component
 
 **Options:**
+
 - Yes, each component has specific formats
 - Shared format across components
 - Not applicable
@@ -81,6 +86,7 @@ Questions for hybrid projects with multiple component types to customize CLAUDE.
 **Purpose:** Document code sharing strategy
 
 **Options:**
+
 - Shared directory/package in monorepo
 - Published internal library
 - Code duplication (each component independent)
@@ -93,6 +99,7 @@ Questions for hybrid projects with multiple component types to customize CLAUDE.
 **Purpose:** Document testing strategy
 
 **Options:**
+
 - Separate integration test suite
 - Within each component's tests
 - End-to-end test suite
@@ -108,6 +115,7 @@ Questions for hybrid projects with multiple component types to customize CLAUDE.
 **Purpose:** Define quality gates section
 
 **Options (select multiple):**
+
 - All component linters pass
 - All component tests pass
 - Integration tests pass
@@ -126,6 +134,7 @@ Questions for hybrid projects with multiple component types to customize CLAUDE.
 **Purpose:** Populate anti-patterns section
 
 **Options (select multiple):**
+
 - Tight coupling between components
 - Shared state without clear ownership
 - Circular dependencies
@@ -171,6 +180,7 @@ After initial questions, load relevant questions from component-specific files:
 **Total across all questions:** Max 7 (mixed questions + component questions)
 
 **Example question flow:**
+
 1. Q1: Components? (Answer: API + Frontend)
 2. Q2: Monorepo? (Answer: Yes, Turborepo)
 3. Q8: Quality gates? (Answer: Linters + tests + integration)

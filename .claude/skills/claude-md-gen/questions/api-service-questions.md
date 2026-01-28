@@ -11,6 +11,7 @@ Questions for backend API/service projects to customize CLAUDE.md.
 **Purpose:** Define workflow sections
 
 **Options (select multiple):**
+
 - Adding new endpoints
 - Adding middleware
 - Database schema changes/migrations
@@ -25,6 +26,7 @@ Questions for backend API/service projects to customize CLAUDE.md.
 **Purpose:** Document auth patterns
 
 **Options:**
+
 - JWT tokens
 - OAuth 2.0
 - API keys
@@ -39,6 +41,7 @@ Questions for backend API/service projects to customize CLAUDE.md.
 **Purpose:** Document migration workflow
 
 **Options:**
+
 - Migration tool (Alembic, Flyway, etc.)
 - ORM auto-migrations
 - Manual SQL scripts
@@ -53,6 +56,7 @@ Questions for backend API/service projects to customize CLAUDE.md.
 **Purpose:** Document response structure
 
 **Options:**
+
 - JSON (standard REST)
 - JSON:API spec
 - GraphQL
@@ -67,6 +71,7 @@ Questions for backend API/service projects to customize CLAUDE.md.
 **Purpose:** Create error handling section
 
 **Options:**
+
 - Custom error format
 - RFC 7807 (Problem Details)
 - Simple message + status code
@@ -82,6 +87,7 @@ Questions for backend API/service projects to customize CLAUDE.md.
 **Purpose:** Document test strategy
 
 **Options (select multiple):**
+
 - Unit tests (handler logic)
 - Integration tests (with test DB)
 - API contract tests
@@ -95,6 +101,7 @@ Questions for backend API/service projects to customize CLAUDE.md.
 **Purpose:** Document middleware stack
 
 **Options (select multiple):**
+
 - Rate limiting
 - CORS configuration
 - Request logging
@@ -112,6 +119,7 @@ Questions for backend API/service projects to customize CLAUDE.md.
 **Purpose:** Define quality gates section
 
 **Options (select multiple):**
+
 - Linter passes
 - Tests pass (unit + integration)
 - Database migrations apply cleanly
@@ -130,6 +138,7 @@ Questions for backend API/service projects to customize CLAUDE.md.
 **Purpose:** Populate anti-patterns section
 
 **Options (select multiple):**
+
 - Missing authentication on endpoints
 - Exposing internal errors to clients
 - No rate limiting

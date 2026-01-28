@@ -5,11 +5,8 @@
 default: true
 
 # MD013 - Line length
-MD013:
-  # Allow long lines in tables and code blocks
-  line_length: 120
-  tables: false
-  code_blocks: false
+# Disabled: prose wrapping is cosmetic; most tools reflow automatically
+MD013: false
 
 # MD024 - Multiple headings with same content
 MD024:
@@ -44,6 +41,12 @@ MD050:
 
 # MD036 - Emphasis used instead of heading
 MD036: false  # Allow emphasis for section labels (intentional styling)
+
+# MD028 - Blank line inside blockquote
+MD028: false  # Allow blank lines in blockquotes for readability
+
+# MD029 - Ordered list item prefix
+MD029: false  # Allow any numbering style (1. 2. 3. or 1. 1. 1.)
 
 # MD060 - Table column style
 MD060: false  # Disable table alignment checks (cosmetic)

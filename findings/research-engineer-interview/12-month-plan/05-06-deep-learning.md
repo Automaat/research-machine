@@ -17,23 +17,27 @@
 ## 📆 Month 5: Neural Networks Deep Dive
 
 ### Theory Foundations
+
 - **Universal approximation theorem:** What it means, limitations
 - **Expressiveness vs learnability:** Why depth matters
 - **Loss landscapes:** Local minima, saddle points
 
 ### Backpropagation Deep Dive
+
 - Computational graphs formalism
 - Automatic differentiation (forward vs reverse mode)
 - Gradient flow analysis
 - Numerical gradient checking
 
 ### Optimization Theory
+
 - **SGD:** Convergence analysis
 - **Momentum:** Physical intuition + math
 - **Adam:** Adaptive learning rates, why it works
 - **Learning rate schedules:** Warmup, decay, cyclical
 
 ### Regularization Theory
+
 - **Dropout:** Bayesian interpretation, co-adaptation
 - **Batch normalization:** Internal covariate shift debate
 - **Weight decay:** Connection to L2, decoupled weight decay
@@ -44,12 +48,14 @@
 ## 📆 Month 6: Architectures
 
 ### Convolutional Neural Networks
+
 - Convolution math: cross-correlation, stride, padding
 - Receptive fields: calculation, importance
 - Pooling: max vs average, when to use
 - **Modern architectures:** ResNet (skip connections), EfficientNet
 
 ### Recurrent Neural Networks
+
 - Vanishing/exploding gradients: mathematical analysis
 - **LSTM:** Gating mechanisms, gradient flow
 - **GRU:** Simplified gating
@@ -57,11 +63,13 @@
 - Sequence-to-sequence basics
 
 ### Attention Preview
+
 - Attention as soft addressing
 - Bahdanau attention (RNN context)
 - Setup for transformers
 
 ### Project: CV or NLP
+
 - Choose one domain
 - End-to-end project
 - Proper evaluation
@@ -88,11 +96,13 @@
 ## 🎬 YouTube Watch List
 
 ### Month 5: Fundamentals
+
 1. **Andrej Karpathy** - makemore Part 1-5 (all of them)
 2. **3Blue1Brown** - Neural Networks Ch 1-4
 3. **Stanford CS231n** - Optimization, Backprop lectures
 
 ### Month 6: Architectures
+
 1. **Stanford CS231n** - CNN architecture lectures
 2. **Colah's Blog** - Understanding LSTMs (read + watch explanations)
 3. **fast.ai** - Full course (parallel with implementation)
@@ -102,11 +112,13 @@
 ## ✅ Milestones
 
 ### Month 5
+
 - [ ] Can derive backprop for arbitrary computational graph
 - [ ] Understand Adam optimizer mathematically
 - [ ] Know dropout's Bayesian interpretation
 
 ### Month 6
+
 - [ ] ✅ Train CNN on CIFAR-10: >90% accuracy
 - [ ] ✅ Implement LSTM from scratch
 - [ ] ✅ Complete one end-to-end DL project
@@ -116,6 +128,7 @@
 ## 📝 LSTM from Scratch Requirements
 
 Implement LSTM cell with:
+
 - Forget gate
 - Input gate
 - Output gate
@@ -132,9 +145,10 @@ class LSTMCell:
         # Update cell state
         # Compute output
         return h_next, c_next
-```
+```text
 
 Train on:
+
 - Character-level language modeling
 - Simple sequence classification
 
@@ -145,14 +159,16 @@ Train on:
 Build CNN achieving >90% accuracy:
 
 ### Architecture Suggestions
-```
+
+```text
 Conv → BN → ReLU → Conv → BN → ReLU → MaxPool →
 Conv → BN → ReLU → Conv → BN → ReLU → MaxPool →
 Conv → BN → ReLU → Conv → BN → ReLU → MaxPool →
 Flatten → FC → Dropout → FC → Softmax
-```
+```text
 
 ### Must Include
+
 - [ ] Data augmentation (RandomCrop, HorizontalFlip)
 - [ ] Learning rate scheduling
 - [ ] Training curves visualization
@@ -164,6 +180,7 @@ Flatten → FC → Dropout → FC → Softmax
 ## 📝 Self-Assessment Checklist
 
 **Theory:**
+
 - [ ] Can explain universal approximation theorem
 - [ ] Know why ResNet skip connections help
 - [ ] Understand LSTM gating mechanism
@@ -171,6 +188,7 @@ Flatten → FC → Dropout → FC → Softmax
 - [ ] Know BatchNorm training vs inference difference
 
 **Practical:**
+
 - [ ] CIFAR-10 >90% achieved
 - [ ] LSTM implemented and working
 - [ ] Can debug training issues systematically

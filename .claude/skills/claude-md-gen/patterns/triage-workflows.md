@@ -285,21 +285,25 @@ Each stage filters items for next stage.
 ## Customization Points
 
 **Adjust time limits:**
+
 - Triage: 1-5 minutes (based on complexity)
 - Verification: 5-20 minutes (based on claims)
 - Deep: 15-60 minutes (based on depth needed)
 
 **Adjust stage criteria:**
+
 - Triage: Must-have requirements only
 - Verification: Key claims to validate
 - Deep: Comprehensive analysis areas
 
 **Adjust filtering:**
+
 - Strict: Reject on any triage failure
 - Lenient: Pass with warnings to next stage
 - Hybrid: Some failures are hard rejects, others are flags
 
 **Adjust output:**
+
 - Triage: One sentence (pass/reject)
 - Verification: Table of results
 - Deep: Full structured report
@@ -323,6 +327,7 @@ Each stage filters items for next stage.
 ## Anti-Patterns
 
 **AVOID:**
+
 - ❌ Skipping triage (wastes time on obvious rejects)
 - ❌ Deep analysis without verification (risky)
 - ❌ Vague triage criteria (everything passes)

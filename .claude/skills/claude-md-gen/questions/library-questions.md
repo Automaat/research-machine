@@ -11,6 +11,7 @@ Questions for reusable library/package projects to customize CLAUDE.md.
 **Purpose:** Define API development workflow
 
 **Options:**
+
 - Design API first, then implement
 - TDD (tests first)
 - Implement, then add tests
@@ -23,6 +24,7 @@ Questions for reusable library/package projects to customize CLAUDE.md.
 **Purpose:** Document versioning and breaking changes
 
 **Options:**
+
 - Strict semver (no breaking changes in minor)
 - Deprecation period before removal
 - Breaking changes allowed with major bump
@@ -35,6 +37,7 @@ Questions for reusable library/package projects to customize CLAUDE.md.
 **Purpose:** Document examples organization
 
 **Options:**
+
 - `examples/` directory with runnable code
 - In documentation only
 - In docstrings/doc comments
@@ -50,6 +53,7 @@ Questions for reusable library/package projects to customize CLAUDE.md.
 **Purpose:** Document docs approach
 
 **Options:**
+
 - Generated from code (JSDoc, Sphinx, rustdoc, etc.)
 - Handwritten markdown
 - Both (code docs + guides)
@@ -62,6 +66,7 @@ Questions for reusable library/package projects to customize CLAUDE.md.
 **Purpose:** Include in library patterns
 
 **Options:**
+
 - Structured data (JSON, objects)
 - Text reports
 - Visualization (charts, graphs)
@@ -76,6 +81,7 @@ Questions for reusable library/package projects to customize CLAUDE.md.
 **Purpose:** Document test approach
 
 **Options (select multiple):**
+
 - Unit tests (all public APIs)
 - Integration tests (component interactions)
 - Example tests (examples work)
@@ -90,6 +96,7 @@ Questions for reusable library/package projects to customize CLAUDE.md.
 **Purpose:** Document release process
 
 **Options:**
+
 - Package registry (npm, PyPI, crates.io, etc.)
 - Git tags only
 - Manual distribution
@@ -104,6 +111,7 @@ Questions for reusable library/package projects to customize CLAUDE.md.
 **Purpose:** Define quality gates section
 
 **Options (select multiple):**
+
 - Linter passes
 - All tests pass
 - Coverage threshold met (X%)
@@ -124,6 +132,7 @@ Questions for reusable library/package projects to customize CLAUDE.md.
 **Purpose:** Populate anti-patterns section
 
 **Options (select multiple):**
+
 - Breaking API in minor version
 - Undocumented public functions
 - No usage examples

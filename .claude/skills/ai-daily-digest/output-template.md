@@ -136,46 +136,55 @@ Use this template for generating AI daily digests.
 ## Section Guidelines
 
 ### Technical Advances
+
 - Prioritize novel research over incremental updates
 - Include paper links when available
 - Note benchmark improvements with numbers
 
 ### Indie Blogger Posts
+
 - Highlight unique perspectives not in mainstream coverage
 - Include author name for attribution
 - Focus on practical insights and deep dives
 
 ### Business & Industry
+
 - Include funding amounts when known
 - Note valuation changes
 - Highlight strategic implications
 
 ### Engineering Impact
+
 - Focus on practical, actionable insights
 - Emphasize tools engineers can use today
 - Note workflow changes and productivity gains
 
 ### Leadership & Strategy
+
 - Focus on actionable insights for eng leaders
 - Include org transformation examples
 - Note strategic implications for teams
 
 ### Top 5 Stories
+
 - Cross-category selection
 - Ranked by impact and relevance
 - Brief "why it matters" for each
 
 ### Personal Takeaways
+
 - Actionable items with checkboxes
 - Connections to existing vault notes via wikilinks
 - Specific, not generic
 
 ### Stories You Might Have Missed (Friday only)
+
 - Lower-profile but interesting stories
 - Community discussions worth noting
 - Smaller releases that didn't make headlines
 
 ### New Blogs Discovered (Friday only)
+
 - Original content creators (not aggregators)
 - Technical depth over clickbait
 - Active posting (last 3 months)

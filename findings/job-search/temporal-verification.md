@@ -1,6 +1,6 @@
 # 🔍 Temporal Technologies - CoVe Verification Report
 
-**URL:** https://temporal.io/careers
+**URL:** <https://temporal.io/careers>
 **Company:** Temporal Technologies
 **Roles:** Multiple Go/Distributed Systems Engineering Positions
 **Verdict:** **REJECTED**
@@ -13,6 +13,7 @@
 ### Q1: Europe/EMEA/Poland explicitly allowed?
 
 **Evidence:**
+
 - All engineering positions specify "US Remote" or "US/Canada Remote"
 - Only non-engineering EMEA positions found: Staff Developer Advocate EMEA (London), Senior Developer Support Engineer EMEA (UK)
 - UK-based roles require residency in UK with work authorization
@@ -27,6 +28,7 @@
 ### Q2: EU entity or EU contractors?
 
 **Evidence:**
+
 - Company has ~342 employees across 5 continents including Europe
 - Uses Remote.com as EOR partner for international benefits
 - Has UK-based positions (London) for Developer Advocate/Support roles
@@ -42,6 +44,7 @@
 ### Q3: Timezone compatible with Poland?
 
 **Evidence:**
+
 - UK EMEA Developer Advocate role requires "Pacific Time Zone meetings 2-3 times weekly"
 - Poland is CET (UTC+1) / CEST (UTC+2)
 - US Pacific is UTC-8 (9 hour difference from Poland)
@@ -56,6 +59,7 @@
 ### Q4: Geographic restrictions?
 
 **Evidence:**
+
 - All engineering roles explicitly state "United States (Remote)" or "US/Canada (Remote)"
 - UK roles state "must reside in the United Kingdom"
 - No engineering positions open to Poland/EU
@@ -69,6 +73,7 @@
 ### Q5: Evidence of EU employees?
 
 **Evidence:**
+
 - LinkedIn search for "Temporal Technologies engineer Poland/Europe" returned 0 EU-based engineers
 - Found UK-based non-engineering roles (Developer Advocate, Support Engineer)
 - Company confirmed to have employees across 5 continents
@@ -83,6 +88,7 @@
 ### Q6: Compensation meets €160k+ target?
 
 **Evidence:**
+
 - **Levels.fyi data:**
   - Median Software Engineer: $268k total comp (~€246k)
   - Highest reported: $324k total comp (~€298k)
@@ -108,11 +114,13 @@
 ## Contradiction Check
 
 **Major Contradictions:**
+
 1. **Remote-first culture vs geographic restrictions:** Company claims "remote-first" but all engineering roles restricted to US/Canada
 2. **Global presence vs engineering concentration:** Has employees on 5 continents but 0 visible EU-based engineers
 3. **WeWork access globally vs US-only hiring:** Offers 150+ WeWork locations worldwide but doesn't hire EU engineers
 
 **Interpretation:**
+
 - "Remote-first" means remote within permitted geographies (US/Canada for engineering)
 - European presence limited to UK for customer-facing roles (Developer Advocate, Support)
 - Engineering team concentrated in North America
@@ -158,12 +166,14 @@ Moving from **GO** → **NO-GO**
 ## Notes for Future Monitoring
 
 **Watch for:**
+
 - EU engineering hub announcements
 - Poland/EMEA engineering role postings
 - Remote.com EOR expansion to engineering roles
 - Changes to geographic restrictions
 
 **Revisit if:**
+
 - Company announces European engineering expansion
 - Engineering roles appear with "EMEA" or "Europe Remote" designation
 - LinkedIn shows EU-based engineer hires

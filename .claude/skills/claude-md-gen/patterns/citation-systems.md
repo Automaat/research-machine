@@ -28,13 +28,14 @@ Source attribution formats for traceability and verification.
 
 For internal project files:
 
-```
+```text
 [KB: file.ext:line]
 [KB: path/to/file.ext:line-range]
 [KB: file.ext] (if whole file)
-```
+```text
 
 **Examples:**
+
 - `[KB: handlers/auth.go:45]`
 - `[KB: docs/api.md:100-120]`
 - `[KB: README.md]`
@@ -43,13 +44,14 @@ For internal project files:
 
 For web content, docs, papers:
 
-```
+```text
 [Source: Title](URL)
 [Doc: Title](URL)
 [Paper: Authors, Year](URL)
-```
+```text
 
 **Examples:**
+
 - `[Source: React Documentation](https://react.dev/reference)`
 - `[Doc: FastAPI Tutorial](https://fastapi.tiangolo.com/tutorial/)`
 - `[Paper: Raft Consensus, Ongaro & Ousterhout 2014](https://raft.github.io/raft.pdf)`
@@ -58,13 +60,14 @@ For web content, docs, papers:
 
 For structured sources (real estate, jobs, etc.):
 
-```
+```text
 [Listing: Item Title](URL)
 [Job: Company - Role](URL)
 [Plot: Location - ID](URL)
-```
+```text
 
 **Examples:**
+
 - `[Listing: Działka Podgórze 1200m²](https://otodom.pl/...)`
 - `[Job: Acme Corp - Senior Go Engineer](https://jobs.acme.com/...)`
 
@@ -72,12 +75,13 @@ For structured sources (real estate, jobs, etc.):
 
 For code locations in reports:
 
-```
+```text
 file.ext:line
 path/to/file.ext:line
-```
+```text
 
 **Examples:**
+
 - `handlers/auth.go:45`
 - `src/components/Button.tsx:120`
 
@@ -85,12 +89,13 @@ path/to/file.ext:line
 
 For CLI or API results:
 
-```
+```text
 [Tool: command](output snippet)
 [API: endpoint](response excerpt)
-```
+```text
 
 **Examples:**
+
 - `[Tool: go version](go version go1.21.0 darwin/arm64)`
 - `[API: GET /api/status]({ "status": "healthy" })`
 
@@ -113,7 +118,7 @@ Research by [Paper: Authors, Year](url) demonstrates...
 - [KB: file2.ext:line-range] - [Brief description]
 - [Source: Title](URL) - [Brief description]
 - [Listing: Title](URL) - [Brief description]
-```
+```text
 
 ## Example 1: Go Code Review (from go-review skill)
 
@@ -132,12 +137,13 @@ synchronization. Three concurrent access points identified:
 According to [KB: handlers/websocket.go:78], the connection is added:
 ```go
 activeConnections[conn.ID] = conn  // No mutex
-```
+```text
 
 The metrics handler reads this map [KB: handlers/metrics.go:145]:
+
 ```go
 count := len(activeConnections)  // Concurrent read
-```
+```text
 
 ### Recommendation
 
@@ -149,7 +155,8 @@ Add sync.RWMutex as shown in [Doc: Go Memory Model](https://go.dev/ref/mem).
 - handlers/metrics.go:145 - Read operation
 - handlers/cleanup.go:89 - Delete operation
 - [Doc: Go Memory Model](https://go.dev/ref/mem) - Synchronization guidance
-```
+
+```text
 
 ## Example 2: Plot Analysis (from plot-analysis skill)
 
@@ -181,7 +188,7 @@ Local regulations [Doc: Podgórze Building Code](url) specify:
 - [Listing: Działka Podgórze 1200m²](https://otodom.pl/...) - Original listing
 - [Source: Krakow Zoning Map](url) - MN designation verification
 - [Doc: Podgórze Building Code](url) - Building regulations
-```
+```text
 
 ## Example 3: API Documentation
 
@@ -200,15 +207,16 @@ Authenticates user and returns JWT token.
   "email": "user@example.com",
   "password": "secret"
 }
-```
+```text
 
 **Response:** [KB: handlers/auth.go:67-72]
+
 ```json
 {
   "token": "eyJhbG...",
   "expires_at": "2024-01-27T12:00:00Z"
 }
-```
+```text
 
 **Error handling:** [KB: middleware/errors.go:23] wraps all auth errors
 as 401 responses.
@@ -223,7 +231,8 @@ Follows [Doc: JWT Best Practices](https://datatracker.ietf.org/doc/html/rfc8725)
 - middleware/errors.go:23 - Error handling
 - config/auth.go:12 - Token configuration
 - [Doc: JWT Best Practices](https://datatracker.ietf.org/doc/html/rfc8725)
-```
+
+```text
 
 ## Example 4: Research Note
 
@@ -259,26 +268,30 @@ Key difference: Raft restricts possible states to simplify reasoning.
 - [Paper: In Search of an Understandable Consensus Algorithm, Ongaro & Ousterhout, 2014](https://raft.github.io/raft.pdf) - Original Raft paper
 - [Source: etcd Architecture](https://etcd.io/docs/latest/learning/design/) - Production implementation
 - [Doc: Raft Visualization](https://raft.github.io/) - Interactive explanation
-```
+```text
 
 ## Customization Points
 
 **Adjust citation density:**
+
 - High density: Every claim cited (academic style)
 - Medium density: Key claims cited (technical docs)
 - Low density: Just controversial/non-obvious claims
 
 **Adjust format:**
+
 - Inline: `[KB: file:line]` within text
 - Footnote-style: Numbered references at end
 - Section-based: "Sources" section per major section
 
 **Adjust granularity:**
+
 - Line-level: `file.go:45` for precise location
 - Function-level: `file.go:functionName` for broader context
 - File-level: `file.go` for whole-file reference
 
 **Adjust required fields:**
+
 - Minimal: Just URL or file:line
 - Standard: Format + brief description
 - Detailed: Format + description + relevance note
@@ -302,6 +315,7 @@ Key difference: Raft restricts possible states to simplify reasoning.
 ## Anti-Patterns
 
 **AVOID:**
+
 - ❌ Vague references ("according to docs")
 - ❌ Missing line numbers for code (can't locate)
 - ❌ Dead links (always check URLs)

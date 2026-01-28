@@ -132,23 +132,28 @@
 ## 🗓️ Recommended Learning Path
 
 ### Month 1-2: Foundations
+
 1. ⭐ [Math for ML Specialization](https://www.deeplearning.ai/courses/mathematics-for-machine-learning-and-data-science-specialization/) (Coursera) - 3 courses
 2. 🆓 [3Blue1Brown](https://www.3blue1brown.com/topics/linear-algebra) - Visual supplement
 
 ### Month 2-3: ML Fundamentals
+
 1. ⭐ [ML Specialization](https://www.coursera.org/specializations/machine-learning-introduction) (Coursera) - Andrew Ng
 2. 🆓 [StatQuest](https://statquest.org/video-index/) - Algorithm intuition
 
 ### Month 3-4: Deep Learning
+
 1. ⭐ [Deep Learning Specialization](https://www.coursera.org/specializations/deep-learning) (Coursera)
 2. 🆓 [fast.ai](https://course.fast.ai/) - Practical complement
 
 ### Month 4-5: PyTorch & Transformers
+
 1. ⭐ [PyTorch for Deep Learning](https://zerotomastery.io/courses/learn-pytorch/) (ZTM)
 2. 🆓 [Andrej Karpathy](https://www.youtube.com/playlist?list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ) - Let's build GPT
 3. [LLMs Mastery](https://www.udemy.com/course/llms-mastery-complete-guide-to-transformers-generative-ai/) (Udemy)
 
 ### Month 5-6: Interview Prep
+
 1. ⭐ [Grokking ML Interview](https://www.educative.io/courses/grokking-the-machine-learning-interview) (Educative)
 2. 🆓 [NeetCode Roadmap](https://neetcode.io/roadmap) - Coding practice
 3. 🆓 [ML Interviews Book](https://huyenchip.com/ml-interviews-book/) - Chip Huyen
@@ -169,15 +174,19 @@
 ## 🔗 Quick Links
 
 **Best Overall Value:**
+
 - [Coursera Plus](https://www.coursera.org/courseraplus) - $59/mo, unlimited courses
 
 **Best for PyTorch:**
+
 - [learnpytorch.io](https://www.learnpytorch.io/) (Free) or [ZTM](https://zerotomastery.io/courses/learn-pytorch/) (Paid)
 
 **Best for Interview Prep:**
+
 - [Grokking ML Interview](https://www.educative.io/courses/grokking-the-machine-learning-interview)
 
 **Best Free Resources:**
+
 - [fast.ai](https://course.fast.ai/)
 - [HuggingFace Courses](https://huggingface.co/learn)
 - [Full Stack Deep Learning](https://fullstackdeeplearning.com/)

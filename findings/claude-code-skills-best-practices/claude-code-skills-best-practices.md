@@ -35,11 +35,13 @@
 | "When to use" info belongs in description, not body | [Anthropic skill-creator](https://github.com/anthropics/skills/blob/main/skills/skill-creator/SKILL.md) | "The body is only loaded after triggering, so 'When to Use This Skill' sections in the body are not helpful to Claude." | High |
 
 **✅ Good description example:**
+
 ```yaml
 description: Extract text and tables from PDF files, fill forms, merge documents. Use when working with PDF files or when the user mentions PDFs, forms, or document extraction.
-```
+```text
 
 **❌ Bad description examples:**
+
 - "Helps with documents" (too vague)
 - "I can help you process Excel files" (wrong POV)
 - "You can use this to process files" (wrong POV)
@@ -56,12 +58,14 @@ description: Extract text and tables from PDF files, fill forms, merge documents
 ### 5. Progressive Disclosure Architecture
 
 **Loading order:**
+
 1. 📋 **Metadata (name + description)** → Always in context (~100 words)
 2. 📄 **SKILL.md body** → When skill triggers (<500 lines recommended)
 3. 📁 **Bundled resources** → As needed by Claude (unlimited)
 
 **Recommended directory structure:**
-```
+
+```text
 skill-name/
 ├── SKILL.md              # Main instructions (required, <500 lines)
 ├── FORMS.md              # Reference (loaded as needed)
@@ -70,7 +74,7 @@ skill-name/
 │   └── sales.md
 └── scripts/
     └── helper.py         # Executed, NOT loaded into context
-```
+```text
 
 **Critical rule:** Keep references ONE level deep from SKILL.md
 
@@ -82,11 +86,13 @@ skill-name/
 | Claude is smart | "Default assumption: Claude is already very smart. Only add context Claude doesn't already have." |
 
 **Self-check questions:**
+
 - 🤔 "Does Claude really need this explanation?"
 - 🤔 "Can I assume Claude knows this?"
 - 🤔 "Does this paragraph justify its token cost?"
 
 **Concise example (~50 tokens):**
+
 ```markdown
 ## Extract PDF text
 Use pdfplumber for text extraction:
@@ -95,15 +101,16 @@ import pdfplumber
 with pdfplumber.open("file.pdf") as pdf:
     text = pdf.pages[0].extract_text()
 \`\`\`
-```
+```text
 
 **Verbose anti-pattern (~150 tokens):**
+
 ```markdown
 ## Extract PDF text
 PDF (Portable Document Format) files are a common file format that contains
 text, images, and other content. To extract text from a PDF, you'll need to
 use a library. There are many libraries available...
-```
+```text
 
 ### 7. Degrees of Freedom
 
@@ -116,12 +123,14 @@ Match specificity to task fragility:
 | **Low** (exact scripts) | Fragile operations, consistency critical | Database migrations, deployments |
 
 **Analogy:**
+
 - 🌉 Narrow bridge with cliffs → Low freedom (specific guardrails)
 - 🌾 Open field, no hazards → High freedom (general direction)
 
 ### 8. Workflow Patterns
 
 **Checklist pattern for multi-step tasks:**
+
 ```markdown
 ## PDF form filling workflow
 
@@ -135,12 +144,13 @@ Task Progress:
 - [ ] Step 4: Fill the form (run fill_form.py)
 - [ ] Step 5: Verify output (run verify_output.py)
 \`\`\`
-```
+```text
 
 **Feedback loop pattern:**
-```
+
+```text
 Run validator → Fix errors → Repeat until pass
-```
+```text
 
 ---
 
@@ -202,7 +212,7 @@ python scripts/analyze.py input.xlsx
 python scripts/validate.py data.json
 # Returns: "OK" or lists issues
 \`\`\`
-```
+```text
 
 ---
 
@@ -241,6 +251,7 @@ python scripts/validate.py data.json
 > "Custom slash commands have been merged into skills. A file at `.claude/commands/review.md` and a skill at `.claude/skills/review/SKILL.md` both create `/review` and work the same way."
 
 **Benefits of skills over legacy commands:**
+
 - Directory for supporting files
 - Frontmatter for invocation control
 - Automatic triggering when relevant

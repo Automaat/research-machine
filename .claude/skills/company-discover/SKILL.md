@@ -20,16 +20,18 @@ User invokes `/company-discover` or asks to find companies to watch/monitor.
 ## Input
 
 **Optional arguments:**
+
 - `--domain [ai|devtools|infra|fintech|...]` — Focus on specific domain
 - `--source [yc|crunchbase|hn|techcrunch|...]` — Search specific source
 - `--count [N]` — Number of companies to research (default: 5)
 
 **Examples:**
-```
+
+```text
 /company-discover
 /company-discover --domain ai --count 10
 /company-discover --source yc
-```
+```text
 
 ---
 
@@ -38,15 +40,19 @@ User invokes `/company-discover` or asks to find companies to watch/monitor.
 ### Phase 1: Load Current State
 
 1. **Read watched companies:**
-   ```
+
+   ```text
    Read findings/job-search/companies.md
    ```
+
    Build list of already-watched companies to avoid duplicates.
 
 2. **Read profile criteria:**
-   ```
+
+   ```text
    Read findings/job-search/profile.md
    ```
+
    Note: remote EU, €160k+, product company, preferred domains.
 
 ---
@@ -57,64 +63,68 @@ Search for promising companies across sources:
 
 #### Source 1: YC Companies (High Quality)
 
-```
+```text
 WebSearch: "site:ycombinator.com/companies AI infrastructure 2024 2025"
 WebSearch: "site:ycombinator.com/companies developer tools remote"
 WebSearch: "site:ycombinator.com/companies Series B Series C 2025"
-```
+```text
 
-```
+```text
 WebFetch: https://www.ycombinator.com/companies?batch=W24&batch=S24&industry=B2B&industry=Developer%20Tools
 Prompt: "Extract company names, descriptions, and batch for AI/infra/dev tools companies"
-```
+```text
 
 #### Source 2: Recently Funded (Crunchbase/TechCrunch)
 
-```
+```text
 WebSearch: "AI startup Series B Series C funding 2025 2026"
 WebSearch: "developer tools startup raised funding 2025 remote"
 WebSearch: "infrastructure startup Series B Europe remote"
 WebSearch: "site:techcrunch.com Series B AI startup 2025"
-```
+```text
 
 #### Source 3: HN "Who's Hiring" Notable Companies
 
-```
+```text
 WebSearch: "site:news.ycombinator.com who is hiring remote europe golang"
-```
+```text
+
 Extract companies that appear frequently with good stack match.
 
 #### Source 4: Tech Blogs / Lists
 
-```
+```text
 WebSearch: "best remote-first companies 2025 2026 engineering"
 WebSearch: "top AI startups to work for 2025 2026"
 WebSearch: "best developer tools companies 2025"
 WebSearch: "YC top companies 2025"
-```
+```text
 
 #### Source 5: Domain-Specific (if --domain specified)
 
 **AI/ML:**
-```
+
+```text
 WebSearch: "AI infrastructure company Series B C D 2025"
 WebSearch: "LLM startup funding 2025 engineering"
 WebSearch: "ML platform company remote"
-```
+```text
 
 **Dev Tools:**
-```
+
+```text
 WebSearch: "developer tools startup funding 2025"
 WebSearch: "devex platform company Series B"
 WebSearch: "CLI tools startup 2025"
-```
+```text
 
 **Infrastructure:**
-```
+
+```text
 WebSearch: "cloud infrastructure startup Series B 2025"
 WebSearch: "kubernetes platform company funding"
 WebSearch: "database startup Series C 2025"
-```
+```text
 
 ---
 
@@ -124,12 +134,13 @@ For each discovered company, gather:
 
 #### 3.1 Basic Info
 
-```
+```text
 WebSearch: "[Company] funding crunchbase"
 WebSearch: "[Company] about company product"
-```
+```text
 
 **Extract:**
+
 - Company name
 - One-line description
 - Core product/service
@@ -138,11 +149,12 @@ WebSearch: "[Company] about company product"
 
 #### 3.2 Funding & Stage
 
-```
+```text
 WebSearch: "[Company] Series funding raised investors"
-```
+```text
 
 **Extract:**
+
 - Stage: Seed / A / B / C / D / Public
 - Total raised
 - Last round (date + amount)
@@ -151,48 +163,52 @@ WebSearch: "[Company] Series funding raised investors"
 
 #### 3.3 Remote & EU Policy
 
-```
+```text
 WebSearch: "[Company] remote work policy"
 WebSearch: "[Company] Europe office EU"
 WebSearch: "[Company] careers remote"
 WebSearch: "site:linkedin.com [Company] engineer Poland OR Germany OR Europe"
-```
+```text
 
 **Determine:**
+
 - Remote policy: Remote-first / Remote OK / Hybrid / On-site
 - EU presence: EU office / EU entity / EU contractors / US-only
 - EU engineers visible on LinkedIn?
 
 #### 3.4 Tech Stack
 
-```
+```text
 WebSearch: "[Company] tech stack engineering blog"
 WebSearch: "[Company] golang OR go OR kubernetes"
-```
+```text
 
 **Extract:**
+
 - Primary languages
 - Infrastructure (K8s, cloud provider)
 - Relevant tech matches (Go, distributed systems)
 
 #### 3.5 Compensation Potential
 
-```
+```text
 WebSearch: "site:levels.fyi [Company] engineer"
 WebSearch: "[Company] salary glassdoor engineer"
-```
+```text
 
 **Assess:**
+
 - Can likely pay €160k+? (Based on stage + market data)
 - Comp philosophy visible?
 
 #### 3.6 Blind Sentiment (Quick Check)
 
-```
+```text
 WebSearch: "site:teamblind.com [Company]"
-```
+```text
 
 **Note:**
+
 - General sentiment
 - Any red flags (layoffs, toxicity, RTO)
 
@@ -212,6 +228,7 @@ Score each company (0-100):
 | **Culture Signals** | 10 | Strong positive: 10, Neutral: 5, Red flags: 0 |
 
 **Thresholds:**
+
 - 70+ → Add to **Active** monitoring
 - 50-69 → Add to **Watch** (lower priority)
 - <50 → Skip (don't add)
@@ -223,20 +240,22 @@ Score each company (0-100):
 For qualifying companies, add to `findings/job-search/companies.md`:
 
 **Active section (70+ score):**
+
 ```markdown
 - **[Company]** — [One-line description]
   - Stage: Series X ($XXM raised)
   - Remote: [policy], EU: [presence]
   - Stack: [relevant tech]
   - Score: XX/100
-```
+```text
 
 **Watch section (50-69 score):**
+
 ```markdown
 - **[Company]** — [One-line description]
   - Stage: Series X
   - Note: [why watching, what to verify]
-```
+```text
 
 ---
 
@@ -273,7 +292,7 @@ For qualifying companies, add to `findings/job-search/companies.md`:
 - Check [Company] careers page weekly (actively hiring)
 - Monitor [Company] for Series B announcement
 - [Company] opening EU office soon (per news)
-```
+```text
 
 ---
 
@@ -321,7 +340,7 @@ For each researched company, generate internal notes:
 
 ### Career Page
 [URL to careers page]
-```
+```text
 
 ---
 

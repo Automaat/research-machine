@@ -16,12 +16,14 @@
 ## 📆 Week 1-2: Paper Replication
 
 ### Why Replicate?
+
 - Proves you can go from paper → code
 - Deep understanding of methods
 - Interview talking point
 - Potential contribution to community
 
 ### Paper Selection Criteria
+
 - Recent (< 2 years old)
 - Feasible compute requirements
 - Clear methodology
@@ -58,18 +60,21 @@
 ### Option A: Open Source Contribution
 
 **Target repos:**
+
 - PyTorch
 - HuggingFace Transformers
 - FastAI
 - Your domain's key libraries
 
 **Contribution types:**
+
 - Bug fixes (start here)
 - Documentation improvements
 - Small features
 - Performance optimizations
 
 **Process:**
+
 1. Find "good first issue" labels
 2. Understand contribution guidelines
 3. Make small PR first
@@ -80,6 +85,7 @@
 **Target:** Medal (bronze minimum)
 
 **Strategy:**
+
 - Join active competition early
 - Read discussion forums
 - Start with baseline
@@ -100,6 +106,7 @@
 ### Technical Blog (3 posts minimum)
 
 **Post Ideas:**
+
 - Paper explanation (from Month 10)
 - Implementation tutorial
 - Lessons from paper replication
@@ -109,17 +116,20 @@
 ### Social Presence
 
 **Twitter/X:**
+
 - Share learnings
 - Engage with ML community
 - Comment on papers
 - Build network
 
 **LinkedIn:**
+
 - Update with projects
 - Post technical content
 - Connect with researchers
 
 **GitHub:**
+
 - Clean profile
 - Pinned repositories
 - Contribution graph visible
@@ -221,17 +231,20 @@ Links to related work.
 ## 📝 Self-Assessment Checklist
 
 **Paper Replication:**
+
 - [ ] Paper fully understood
 - [ ] Implementation complete
 - [ ] Results documented
 - [ ] Writeup published
 
 **Community Contribution:**
+
 - [ ] PR merged OR medal achieved
 - [ ] Positive interaction with community
 - [ ] Learned collaboration process
 
 **Credibility:**
+
 - [ ] 3+ blog posts live
 - [ ] GitHub profile polished
 - [ ] Social presence established

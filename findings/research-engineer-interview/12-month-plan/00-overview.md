@@ -58,10 +58,10 @@
 
 **Additional benefits:**
 
-4. **Build public presence** - Blog, Twitter, GitHub profile
-5. **Real ML work mid-journey** - Internal transfer, part-time projects possible
-6. **Paper replication** - Stronger research credibility
-7. **Sustainable pace** - 15-20 hrs/week vs 20-25 hrs/week
+1. **Build public presence** - Blog, Twitter, GitHub profile
+2. **Real ML work mid-journey** - Internal transfer, part-time projects possible
+3. **Paper replication** - Stronger research credibility
+4. **Sustainable pace** - 15-20 hrs/week vs 20-25 hrs/week
 
 ---
 
@@ -90,30 +90,36 @@ This validates direction + builds resume simultaneously.
 ## 🎬 Recommended YouTube Watch Order
 
 **Months 1-2:** Foundations
+
 - 3Blue1Brown: Linear Algebra & Calculus series (complete)
 - StatQuest: Probability & Statistics playlist
 - 3Blue1Brown: Neural Networks Ch 1-4
 
 **Months 3-4:** ML Fundamentals
+
 - StatQuest: All ML algorithm videos
 - Andrew Ng: Coursera ML course videos
 
 **Months 5-6:** Deep Learning
+
 - Andrej Karpathy: Videos 1-6 (micrograd through makemore)
 - fast.ai: Full course
 - Stanford CS231n: Selected lectures
 
 **Months 7-8:** Transformers
+
 - 3Blue1Brown: Neural Networks Ch 5-7 (transformers)
 - Andrej Karpathy: Video 7 (Let's build GPT) ⭐
 - Andrej Karpathy: Video 8 (Tokenization)
 - Yannic Kilcher: Transformer papers
 
 **Months 9-10:** Specialization
+
 - Yannic Kilcher: Papers in your domains
 - Domain courses (CS224n for NLP, CS231n for Vision)
 
 **Months 11-12:** Interview Prep
+
 - Review all Karpathy videos
 - Practice explaining papers out loud
 

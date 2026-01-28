@@ -15,16 +15,19 @@
 ## 📆 Week 1-2: Math Refresh
 
 ### Linear Algebra
+
 - Vectors, matrices, matrix multiplication
 - Eigenvalues, eigenvectors
 - Matrix decompositions (SVD basics)
 
 ### Calculus
+
 - Gradients, partial derivatives
 - Chain rule (critical for backprop)
 - Multivariate calculus basics
 
 ### Probability & Statistics
+
 - Probability distributions
 - Bayes theorem
 - Expected value, variance
@@ -34,20 +37,24 @@
 ## 📆 Week 3-4: Python ML Stack
 
 ### NumPy
+
 - Array operations & broadcasting
 - Vectorization (avoid loops!)
 - Advanced indexing
 
 ### Pandas
+
 - DataFrames, Series
 - Data manipulation & cleaning
 - Groupby, merge, pivot
 
 ### Visualization
+
 - Matplotlib basics
 - Seaborn for statistical plots
 
 ### PyTorch Basics
+
 - Tensor operations
 - einsum mastery
 - Automatic differentiation basics
@@ -76,11 +83,13 @@
 ## 🎬 YouTube Watch List
 
 ### Math (Week 1-2)
+
 1. **3Blue1Brown - Essence of Linear Algebra** (full playlist)
 2. **3Blue1Brown - Essence of Calculus** (focus: chain rule, gradients)
 3. **StatQuest** - Probability fundamentals playlist
 
 ### PyTorch (Week 3-4)
+
 1. **PyTorch Official YouTube Series** - Intro to PyTorch
 2. Work through **Tensor Puzzles** in Colab
 

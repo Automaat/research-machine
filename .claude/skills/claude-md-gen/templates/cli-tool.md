@@ -6,9 +6,9 @@ Base structure for command-line tools and utilities.
 
 ## Project Structure
 
-```
+```text
 [DIRECTORY_STRUCTURE]
-```
+```text
 
 ## Tech Stack
 
@@ -51,29 +51,32 @@ Base structure for command-line tools and utilities.
 
 ### Command Structure
 
-```
+```text
 [COMMAND_HIERARCHY]
-```
+```text
 
 **Command pattern:**
+
 ```[LANGUAGE]
 [COMMAND_DEFINITION_EXAMPLE]
-```
+```text
 
 ### Input Validation
 
 **Approach:** [VALIDATION_APPROACH]
 
 **Rules:**
+
 - Required vs optional arguments
 - Type validation (string, int, bool, enum)
 - Format validation (URL, path, email, etc.)
 - Range validation (min/max, allowed values)
 
 **Validation example:**
+
 ```[LANGUAGE]
 [VALIDATION_EXAMPLE]
-```
+```text
 
 ### Output Formatting
 
@@ -82,13 +85,15 @@ Base structure for command-line tools and utilities.
 **Flag:** `--output=[format]` or `-o [format]`
 
 **Implementation:**
+
 ```[LANGUAGE]
 [OUTPUT_FORMAT_EXAMPLE]
-```
+```text
 
 ### Configuration
 
 **Config locations:**
+
 1. `[GLOBAL_CONFIG_PATH]` - Global defaults
 2. `[PROJECT_CONFIG_PATH]` - Project-specific
 3. Environment variables: `[ENV_VAR_PREFIX]_*`
@@ -102,25 +107,26 @@ Base structure for command-line tools and utilities.
 
 ### Exit Codes
 
-```
+```text
 0   - Success
 1   - General error
 2   - Invalid input
 3   - File not found
 4   - Permission denied
 [CUSTOM_EXIT_CODES]
-```
+```text
 
 ### Error Messages
 
 **Format:** `Error: [clear description]. [actionable suggestion]`
 
 **Examples:**
-```
+
+```text
 Error: Config file not found at ~/.config/[tool]/config.yml. Run '[tool] init' to create it.
 Error: Invalid format 'xml'. Supported formats: json, yaml, text.
 Error: Permission denied writing to /etc/[tool]/. Try running with sudo.
-```
+```text
 
 ## Testing
 
@@ -135,7 +141,7 @@ Error: Permission denied writing to /etc/[tool]/. Try running with sudo.
 
 ```[LANGUAGE]
 [TEST_EXAMPLE]
-```
+```text
 
 ### Test Data
 
@@ -156,7 +162,7 @@ Error: Permission denied writing to /etc/[tool]/. Try running with sudo.
 
 # Cross-compile (if applicable)
 [CROSS_COMPILE_COMMAND]
-```
+```text
 
 **Output:** `[BUILD_OUTPUT_DIR]/[BINARY_NAME]`
 
@@ -170,16 +176,17 @@ Error: Permission denied writing to /etc/[tool]/. Try running with sudo.
 
 # Install globally
 [GLOBAL_INSTALL_COMMAND]
-```
+```text
 
 ### Versioning
 
 **Format:** [VERSION_FORMAT] (semver, calver, etc.)
 
 **Show version:**
+
 ```bash
 [TOOL_NAME] --version
-```
+```text
 
 ## Quality Gates
 
@@ -193,11 +200,12 @@ Before committing:
 - [ ] [HOOK_NAME] hooks pass (if configured)
 
 Commands:
+
 ```bash
 [LINT_COMMAND]
 [TEST_COMMAND]
 [BUILD_COMMAND]
-```
+```text
 
 ## Common Commands
 
@@ -225,7 +233,7 @@ Commands:
 
 # Show help
 [HELP_COMMAND]
-```
+```text
 
 ## Output Templates
 
@@ -235,19 +243,19 @@ Commands:
 
 ```json
 [JSON_OUTPUT_TEMPLATE]
-```
+```text
 
 ### Text Output
 
-```
+```text
 [TEXT_OUTPUT_TEMPLATE]
-```
+```text
 
 ### Table Output
 
-```
+```text
 [TABLE_OUTPUT_TEMPLATE]
-```
+```text
 
 [END_IF_STRUCTURED_OUTPUT]
 
@@ -255,7 +263,7 @@ Commands:
 
 ### Command Help Format
 
-```
+```text
 [TOOL_NAME] [COMMAND] - [Short description]
 
 Usage:
@@ -272,7 +280,7 @@ Flags:
 Examples:
   [TOOL_NAME] [COMMAND] [example1]
   [TOOL_NAME] [COMMAND] --flag1 [example2]
-```
+```text
 
 ## Anti-Patterns
 
@@ -294,6 +302,7 @@ Examples:
 ## Extensibility
 
 Add sections as needs evolve:
+
 - Shell completion scripts
 - Plugin system
 - Interactive mode

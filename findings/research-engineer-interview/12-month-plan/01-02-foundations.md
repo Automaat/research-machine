@@ -16,24 +16,28 @@
 ## 📆 Month 1: Mathematics with Rigor
 
 ### Linear Algebra (Deep)
+
 - Vectors, matrices with proofs
 - Eigenvalues, eigenvectors (derivations)
 - Matrix decompositions (SVD, QR)
 - Geometric interpretations
 
 ### Calculus (Deep)
+
 - Multivariate calculus
 - Chain rule derivations
 - Jacobians, Hessians
 - Optimization theory basics
 
 ### Probability Theory
+
 - Probability distributions (continuous & discrete)
 - Bayes theorem (derive from first principles)
 - Information theory basics (entropy, KL divergence)
 - Maximum likelihood estimation
 
 ### Statistics
+
 - Hypothesis testing
 - Confidence intervals
 - Statistical significance
@@ -44,22 +48,26 @@
 ## 📆 Month 2: Python ML Stack + First Implementations
 
 ### NumPy Mastery
+
 - Internals: how arrays work in memory
 - Broadcasting rules (know them cold)
 - Advanced indexing
 - Vectorization patterns
 
 ### From-Scratch Implementations
+
 - Matrix multiplication
 - Gradient computation
 - Simple optimization (gradient descent)
 
 ### Neural Network from Scratch
+
 - Forward pass implementation
 - Backward pass (backpropagation)
 - **No frameworks allowed** - pure NumPy
 
 ### PyTorch Foundations
+
 - Tensor operations
 - einsum mastery
 - Autograd understanding
@@ -93,12 +101,14 @@
 ## 🎬 YouTube Watch List
 
 ### Month 1: Math
+
 1. **Gilbert Strang** - MIT Linear Algebra (selected lectures)
 2. **3Blue1Brown** - Essence of Linear Algebra (complete)
 3. **3Blue1Brown** - Essence of Calculus (complete)
 4. **StatQuest** - Probability & Statistics fundamentals
 
 ### Month 2: Implementation
+
 1. **Andrej Karpathy** - micrograd ⭐ (watch after building yours)
 2. **3Blue1Brown** - Neural Networks Ch 1-4
 3. Work through Tensor Puzzles
@@ -108,12 +118,14 @@
 ## ✅ Milestones
 
 ### Month 1
+
 - [ ] Can prove matrix properties
 - [ ] Derive chain rule for multivariate functions
 - [ ] Explain Bayes theorem with examples
 - [ ] Understand KL divergence geometrically
 
 ### Month 2
+
 - [ ] ✅ Implement neural network from scratch (NumPy only)
 - [ ] ✅ Complete Sasha Rush Tensor Puzzles
 - [ ] ✅ Derive backprop equations by hand
@@ -123,6 +135,7 @@
 ## 📝 Neural Network from Scratch Requirements
 
 Build a 2-layer neural network that can:
+
 - Classify MNIST digits
 - Use only NumPy (no PyTorch/TensorFlow)
 - Implement forward pass
@@ -131,6 +144,7 @@ Build a 2-layer neural network that can:
 - Achieve >90% accuracy
 
 ### Code Structure
+
 ```python
 class NeuralNetwork:
     def __init__(self, layer_sizes):
@@ -154,6 +168,7 @@ class NeuralNetwork:
 ## 📝 Self-Assessment Checklist
 
 **Math:**
+
 - [ ] Can derive eigenvalue decomposition
 - [ ] Understand SVD geometrically and algebraically
 - [ ] Can compute gradients of complex functions
@@ -162,6 +177,7 @@ class NeuralNetwork:
 - [ ] Understand MLE derivation
 
 **Implementation:**
+
 - [ ] Know NumPy broadcasting rules without looking up
 - [ ] Can implement matrix operations efficiently
 - [ ] Built working neural network (NumPy only)

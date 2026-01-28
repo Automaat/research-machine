@@ -6,9 +6,9 @@ Base structure for Python CLI tools with TDD focus.
 
 ## Project Structure
 
-```
+```text
 [DIRECTORY_STRUCTURE]
-```
+```text
 
 ## Tech Stack
 
@@ -54,20 +54,23 @@ Base structure for Python CLI tools with TDD focus.
 **Location:** `[TEST_DIR]/` mirrors `[SOURCE_DIR]/` structure
 
 **Naming:**
+
 - Test files: `test_[module].py`
 - Test functions: `test_[function]_[scenario]`
 - Test classes: `Test[ClassName]`
 
 **Example:**
+
 ```python
 [TEST_EXAMPLE]
-```
+```text
 
 ### Fixtures and Mocking
 
 **Shared fixtures:** `[TEST_DIR]/conftest.py`
 
 **Common fixtures:**
+
 - `tmp_path` - Temporary directories
 - `monkeypatch` - Environment variables, attributes
 - `[CUSTOM_FIXTURE_1]` - [Purpose]
@@ -77,18 +80,20 @@ Base structure for Python CLI tools with TDD focus.
 
 ```python
 [MOCKING_EXAMPLE]
-```
+```text
 
 ### Coverage Requirements
 
 **Minimum coverage:** [COVERAGE_PERCENTAGE]%
 
 **Check coverage:**
+
 ```bash
 [COVERAGE_COMMAND]
-```
+```text
 
 **Exclude from coverage:**
+
 - `[EXCLUDE_PATTERN_1]`
 - `[EXCLUDE_PATTERN_2]`
 
@@ -99,32 +104,36 @@ Base structure for Python CLI tools with TDD focus.
 **Location:** `[UTILS_DIR]/`
 
 **Modules:**
+
 - `[UTILS_DIR]/[module1].py` - [Purpose]
 - `[UTILS_DIR]/[module2].py` - [Purpose]
 - `[UTILS_DIR]/[module3].py` - [Purpose]
 
 **Import convention:**
+
 ```python
 [IMPORT_EXAMPLE]
-```
+```text
 
 ### CLI Commands
 
 **Location:** `[COMMANDS_DIR]/`
 
 **Structure:**
+
 ```python
 [COMMAND_STRUCTURE_EXAMPLE]
-```
+```text
 
 ### Entry Point
 
 **File:** `[ENTRY_POINT_FILE]`
 
 **Registration:**
+
 ```python
 [ENTRY_POINT_EXAMPLE]
-```
+```text
 
 ## Click/Typer Patterns
 
@@ -134,19 +143,19 @@ Base structure for Python CLI tools with TDD focus.
 
 ```python
 [COMMAND_GROUP_EXAMPLE]
-```
+```text
 
 ### Options and Arguments
 
 ```python
 [OPTIONS_ARGUMENTS_EXAMPLE]
-```
+```text
 
 ### Output Formatting
 
 ```python
 [OUTPUT_FORMATTING_EXAMPLE]
-```
+```text
 
 [END_IF_CLICK_OR_TYPER]
 
@@ -155,14 +164,16 @@ Base structure for Python CLI tools with TDD focus.
 **Approach:** [TYPE_CHECKING_APPROACH]
 
 **Run type checker:**
+
 ```bash
 [TYPE_CHECK_COMMAND]
-```
+```text
 
 **Example:**
+
 ```python
 [TYPE_ANNOTATION_EXAMPLE]
-```
+```text
 
 ## Error Handling
 
@@ -172,19 +183,19 @@ Base structure for Python CLI tools with TDD focus.
 
 ```python
 [EXCEPTION_DEFINITION_EXAMPLE]
-```
+```text
 
 ### Error Display
 
 ```python
 [ERROR_DISPLAY_EXAMPLE]
-```
+```text
 
 ### Exit Codes
 
 ```python
 [EXIT_CODE_EXAMPLE]
-```
+```text
 
 ## Configuration
 
@@ -192,9 +203,10 @@ Base structure for Python CLI tools with TDD focus.
 **Format:** [CONFIG_FORMAT]
 
 **Loading:**
+
 ```python
 [CONFIG_LOADING_EXAMPLE]
-```
+```text
 
 **Precedence:** CLI args > env vars > config file > defaults
 
@@ -205,9 +217,10 @@ Base structure for Python CLI tools with TDD focus.
 **Approach:** [API_TESTING_APPROACH] (vcr.py, responses, mock)
 
 **Example:**
+
 ```python
 [API_MOCKING_EXAMPLE]
-```
+```text
 
 **Fixture location:** `[API_FIXTURE_DIR]/`
 
@@ -225,12 +238,13 @@ Before committing:
 - [ ] [HOOK_NAME] hooks pass (if configured)
 
 Commands:
+
 ```bash
 [LINT_COMMAND]
 [TYPE_CHECK_COMMAND]
 [TEST_COMMAND]
 [COVERAGE_COMMAND]
-```
+```text
 
 ## Common Commands
 
@@ -261,7 +275,7 @@ Commands:
 
 # Build distribution
 [BUILD_COMMAND]
-```
+```text
 
 ## Output Templates
 
@@ -271,23 +285,25 @@ Commands:
 
 ```python
 [JSON_OUTPUT_CODE]
-```
+```text
 
 Output:
+
 ```json
 [JSON_OUTPUT_EXAMPLE]
-```
+```text
 
 ### Table Output
 
 ```python
 [TABLE_OUTPUT_CODE]
-```
+```text
 
 Output:
-```
+
+```text
 [TABLE_OUTPUT_EXAMPLE]
-```
+```text
 
 [END_IF_STRUCTURED_OUTPUT]
 
@@ -311,6 +327,7 @@ Output:
 ## Extensibility
 
 Add sections as needs evolve:
+
 - Async command support
 - Plugin architecture
 - Configuration validation schemas

@@ -11,11 +11,13 @@
 ### Source 1: [Atlant Estates - Cost to Build House Poland 2025](https://www.atlantestates.com/en/cost-to-build-house-poland-2025/)
 
 **Key Claims (verbatim quotes):**
+
 1. "Building a house in Poland in 2025 is a cost in the range of PLN 5,550-6,200 per m²" → Supports: baseline construction costs
 2. "For an average project of 120 m² you need to prepare more than PLN 700,000, not counting the price of the plot" → Supports: total budget estimation
 3. "Warsaw remains the most expensive location, with prices exceeding PLN 6,200 per square meter" → Supports: regional price variation
 
 **Source Limitations:**
+
 - Type: Real estate agency blog
 - Potential bias: May encourage building to generate leads
 
@@ -24,11 +26,13 @@
 ### Source 2: [TS2.Tech - Kraków Real Estate Market 2025](https://ts2.tech/en/krakow-real-estate-market-2025-comprehensive-report/)
 
 **Key Claims (verbatim quotes):**
+
 1. "Apartment prices in Krakow average PLN 15,277-20,139 per m²" → Supports: Krakow flat prices
 2. "The city has seen 105% price growth over five years" → Supports: price appreciation rate
 3. "In Q2 2025, average prices on the secondary market fell by 1.4% in Kraków" → Supports: market stabilization
 
 **Source Limitations:**
+
 - Type: Tech company market report
 - Potential bias: None apparent, data-driven
 
@@ -37,9 +41,11 @@
 ### Source 3: [GUS/Statistics Poland](https://stat.gov.pl/en/latest-statistical-news/communications-and-announcements/list-of-communiques-and-announcements/price-of-a-square-metre-of-useful-floor-area-of-a-residential-building-for-the-second-quarter-of-2025,270,49.html)
 
 **Key Claims (verbatim quotes):**
+
 1. "The price of useful floor area of a residential building for Q2 2025 amounted to PLN 6,973" → Supports: official construction cost benchmark
 
 **Source Limitations:**
+
 - Type: Official government statistics
 - Potential bias: None - authoritative source
 
@@ -48,10 +54,12 @@
 ### Source 4: [Property Forum - Investment Land Prices](https://www.property-forum.eu/news/investment-land-how-much-per-sqm-in-poland/7378)
 
 **Key Claims (verbatim quotes):**
+
 1. "The Kraków land market takes the second spot in Poland, with transaction prices at PLN 400-450 per sqm" → Supports: land costs near Krakow
 2. "Supply of investment plots in key distribution hubs such as Warsaw, Kraków... is highly limited" → Supports: land scarcity
 
 **Source Limitations:**
+
 - Type: Industry publication
 - Potential bias: Focus on commercial/investment land
 
@@ -60,11 +68,13 @@
 ### Source 5: [Domy Expobud - Ukryte Koszty Budowy](https://domy-expobud.pl/ukryte-koszty-budowy-domu-o-ktorych-nikt-ci-nie-powie/)
 
 **Key Claims (verbatim quotes):**
+
 1. "Ukryte koszty... can account for 25% to 40% of the total investment budget" → Supports: hidden cost estimation
 2. "Utility connections (20,000-30,000 PLN)" → Supports: specific hidden costs
 3. "Labor costs constitute 30-50% of the total house construction budget" → Supports: labor cost share
 
 **Source Limitations:**
+
 - Type: Modular house company blog
 - Potential bias: May emphasize traditional building complexity
 
@@ -73,10 +83,12 @@
 ### Source 6: [Realting - Poland Mortgages Q2 2025](https://realting.com/news/mortgages-and-housing-prices-in-poland)
 
 **Key Claims (verbatim quotes):**
+
 1. "Current mortgage rates range from 7.10-7.94% for 5-year fixed loans" → Supports: financing costs
 2. "The value of newly issued loans in Q2 2025 amounted to 23.3 billion PLN... 26.3% more than Q2 last year" → Supports: market activity
 
 **Source Limitations:**
+
 - Type: Real estate portal
 - Potential bias: Pro-purchase messaging
 
@@ -85,10 +97,12 @@
 ### Source 7: [Tabelaofert - Ceny Wieliczka](https://tabelaofert.pl/ceny-mieszkan/wieliczka)
 
 **Key Claims (verbatim quotes):**
+
 1. "Średnia cena metra kwadratowego w Wieliczce wynosi 11,418 zł" → Supports: Krakow suburb pricing
 2. "Wzrost o 1,90% rok do roku" → Supports: slower growth in suburbs
 
 **Source Limitations:**
+
 - Type: Real estate aggregator
 - Potential bias: Based on listing prices, not transactions
 
@@ -97,11 +111,13 @@
 ### Source 8: [Szybko.pl - Ceny działek powiat krakowski](https://ceny.szybko.pl/małopolskie-powiat-krakowski-ceny-dzialek.html)
 
 **Key Claims (verbatim quotes):**
+
 1. "Działka w powiecie krakowskim kosztuje średnio około 790 tysięcy zł" → Supports: total land costs
 2. "Cena metra kwadratowego... to 210 zł" → Supports: per sqm land prices
 3. "Średnia cena za m² to 198 zł" (January 2025) → Supports: land price verification
 
 **Source Limitations:**
+
 - Type: Real estate portal
 - Potential bias: Listing-based, may skew higher
 
@@ -114,6 +130,7 @@
 **Claim:** Building a 120m² house near Krakow is significantly cheaper than buying equivalent flat space in the city.
 
 **Evidence Chain:**
+
 - Building cost: 5,550-6,200 PLN/m² [Source 1] + land ~200 PLN/m² × 1,000m² plot = ~200,000 PLN [Source 8]
 - Total for 120m² house: ~700,000 + 200,000 = **~900,000 PLN**
 - Krakow flat: 15,277-20,139 PLN/m² × 120m² = **1,833,240 - 2,416,680 PLN** [Source 2]
@@ -128,6 +145,7 @@
 **Claim:** Actual building costs exceed initial estimates by 25-40%.
 
 **Evidence:**
+
 - "Ukryte koszty... can account for 25-40% of the total investment budget" [Source 5]
 - Utility connections alone: 20,000-30,000 PLN [Source 5]
 - Land purchase adds: ~2% PCC tax + notary ~2,000 PLN + court fees [Source 5]
@@ -142,6 +160,7 @@
 **Claim:** Building takes 12-24 months total; buying a flat takes 1-3 months.
 
 **Evidence:**
+
 - Permit process: "3-4 months" average [DD Projekt source]
 - Construction: "9 to 15 months" traditional [Multiple sources]
 - Modular alternative: "2 to 3 months" [Produkcja Domów source]
@@ -156,6 +175,7 @@
 **Claim:** Suburbs offer 25-30% lower prices than central Krakow.
 
 **Evidence:**
+
 - Wieliczka: 11,418 PLN/m² [Source 7]
 - Central Krakow: 15,277-20,139 PLN/m² [Source 2]
 - Calculation: 11,418 / 15,277 = 74.7% → ~25% cheaper
@@ -170,6 +190,7 @@
 **Claim:** High mortgage rates (~7-8%) significantly impact affordability.
 
 **Evidence:**
+
 - "Current mortgage rates: 7.10-7.94% for 5-year fixed" [Source 6]
 - "Average mortgage interest rate in Poland was 8.06%" (August 2024) [Deloitte study]
 - NBP cut rates to 4.00% in December 2025 [Trading Economics]
@@ -184,6 +205,7 @@
 **Claim:** Apartments have predictable monthly fees (czynsz); houses have variable maintenance costs.
 
 **Evidence:**
+
 - Apartment czynsz: "8-10 zł per square meter" average [Finding Poland source]
 - 75m² flat example: 894.66 zł/month [Finding Poland source]
 - House: No czynsz, but self-managed maintenance/repairs
@@ -246,11 +268,13 @@
 ### 🏠 Building a House
 
 **Pros:**
+
 - 📄 **STATED:** "Building remains significantly cheaper than buying apartments in large cities, where prices reach PLN 13,200–16,400 per m²" [Atlant Estates]
 - 📄 **STATED:** Customization, outdoor space, no neighbor issues
 - 📄 **STATED:** "Houses up to 70 sq m may be built... without a building permit" [Gov.pl]
 
 **Cons:**
+
 - 📄 **STATED:** "Hidden costs... can account for 25% to 40% of the total investment budget" [Domy Expobud]
 - 📄 **STATED:** "In Poland, obtaining a building permit takes an average of 3-4 months" + "9 to 15 months" construction [Multiple]
 - 📄 **STATED:** "Lack of awareness of these expenses is the most common reason for construction stoppages" [Domy Expobud]
@@ -260,11 +284,13 @@
 ### 🏢 Buying a Flat
 
 **Pros:**
+
 - 📄 **STATED:** Immediate availability (move-in ready)
 - 📄 **STATED:** "Established locations, with access to schools, shopping, and transport" [Multiple]
 - 📄 **STATED:** "105% price growth over five years" in Krakow = strong appreciation [TS2.Tech]
 
 **Cons:**
+
 - 📄 **STATED:** "Average czynsz: 8-10 zł per square meter" monthly fees [Finding Poland]
 - 📄 **STATED:** "Limited modifications... comply with maintenance repair schedules" [General sources]
 - 📄 **STATED:** "In Q2 2025, average prices fell by 1.4% in Kraków" = market cooling [TS2.Tech]
@@ -292,6 +318,7 @@
 #### 🏔️ WIELICZKA
 
 **📍 Overview:**
+
 - Distance to Krakow center: 13 km
 - Population: ~26,000 (city) + gmina
 - Famous for UNESCO Salt Mine (tourist attraction)
@@ -318,6 +345,7 @@
 Najtańsza kosztuje 333,440 zł, średnia cena 10,601 zł/m²" [Rynek Pierwotny]
 
 **🏥 Healthcare:**
+
 - **Centrum Medyczne Wieliczka** (ul. Kościuszki 28) — 20+ specialties, NFZ + private
 - **NZOZ Lekarze Rodzinni** (ul. Szpunara 20a) — Family medicine, pediatrics, cardiology
 - **Biotamed** — Private center, 10+ years operating
@@ -360,6 +388,7 @@ Najtańsza kosztuje 333,440 zł, średnia cena 10,601 zł/m²" [Rynek Pierwotny]
 #### 🏭 SKAWINA
 
 **📍 Overview:**
+
 - Distance to Krakow center: 15 km
 - Population: ~25,000
 - Industrial heritage (but modernizing)
@@ -399,6 +428,7 @@ medycyna rodzinna, interna, laryngologia, medycyna pracy, okulistyka, ortopedia.
 [Przychodnia Skawina]
 
 **🛒 Shopping:**
+
 - **Galeria Skawina** (ul. 29-go Listopada 21) — Main center: NETTO, DaGrasso, gym
 - **S-MALL Park Skawina** (ul. Mickiewicza 19E) — 4,000 m², 12 stores, Orlen station
 - Biedronka, Lidl, Kaufland present
@@ -408,6 +438,7 @@ medycyna rodzinna, interna, laryngologia, medycyna pracy, okulistyka, ortopedia.
 powierzchnia handlowa 4000 m²" [Sawig Invest]
 
 **🎓 Schools:**
+
 - Multiple Szkoły Podstawowe
 - Liceum Ogólnokształcące
 - Zespół Szkół Technicznych i Ogólnokształcących
@@ -429,6 +460,7 @@ powierzchnia handlowa 4000 m²" [Sawig Invest]
 #### 🌲 ZABIERZÓW
 
 **📍 Overview:**
+
 - Distance to Krakow center: 12 km
 - Population: ~27,000 (gmina)
 - Near Kraków Business Park (corporate zone)
@@ -480,6 +512,7 @@ placówkę założył dr n. med. Maciej Kowalewski" [SafiMed]
 z centrów handlowych w pobliskim Krakowie" [Okazjum]
 
 **🎓 Schools:**
+
 - Multiple przedszkola across gmina
 - Szkoły Podstawowe in each sołectwo
 - Easy access to Kraków schools (train connection)
@@ -545,6 +578,7 @@ i zagranicznych rodzin, dzięki bliskości Międzynarodowej Szkoły w Lusinie"
 Pogotowia Ratunkowego" [Gmina Mogilany]
 
 **🛒 Shopping:**
+
 - **Delikatesy Centrum** (ul. Krakowska 4a) — Main grocery, Mon-Sat 6:00-21:00
 - Nearby (3-4 km): Rossmann Libertów, Lidl Libertów, Biedronka Libertów
 - Must travel to Kraków for larger shopping
@@ -607,6 +641,7 @@ Najtańsza kosztuje 465,773 zł" [Rynek Pierwotny]
 KVH, energooszczędna konstrukcja" [Przedmieście Zielonki]
 
 **🏥 Healthcare:**
+
 - **Piomedic** (ul. Krakowskie Przedmieście 230A) — Urology, modern equipment
 - **LARDENT** (ul. Krakowskie Przedmieście 12) — Dental + ENT, founded 1994
 - **Gabinety Lekarzy Rodzinnych** — 5 NFZ-contracted practices:
@@ -627,6 +662,7 @@ KVH, energooszczędna konstrukcja" [Przedmieście Zielonki]
 [Gazeta Krakowska]
 
 **🎓 Schools:**
+
 - 6+ przedszkola across gmina
 - Szkoły Podstawowe in each major sołectwo
 - **Szkoła z basenem** — school with swimming pool (notable amenity)
@@ -750,11 +786,13 @@ including Wieliczka, Skawina, Mogilany, Zabierzów, Zielonki [MPK Kraków]
 ### 💰 Financial Considerations
 
 **Mortgage Rates (2025):**
+
 - 📄 **STATED:** "7.10-7.94% for 5-year fixed loans" [Realting]
 - 📄 **STATED:** "NBP cut rates to 4.00% in December 2025" [Trading Economics]
 - 🔗 **INFERRED:** Rates may decrease further in 2026 as NBP easing continues
 
 **Financing Impact Example (800,000 PLN loan, 25 years, 7.5%):**
+
 - Monthly payment: ~5,800 PLN
 - Total interest: ~940,000 PLN
 - Total repaid: ~1,740,000 PLN
@@ -1091,6 +1129,7 @@ subsidies of up to 50% of the total investment" [OneStep Solar]
 ## 🔗 Sources
 
 ### Primary Sources
+
 - [Atlant Estates - Cost to Build House 2025](https://www.atlantestates.com/en/cost-to-build-house-poland-2025/)
 - [TS2.Tech - Kraków Real Estate Market 2025](https://ts2.tech/en/krakow-real-estate-market-2025-comprehensive-report/)
 - [Statistics Poland (GUS) - Q2 2025](https://stat.gov.pl/en/latest-statistical-news/)
@@ -1098,6 +1137,7 @@ subsidies of up to 50% of the total investment" [OneStep Solar]
 - [Realting - Mortgages Poland Q2 2025](https://realting.com/news/mortgages-and-housing-prices-in-poland)
 
 ### Polish Sources
+
 - [Tabelaofert - Wieliczka Prices](https://tabelaofert.pl/ceny-mieszkan/wieliczka)
 - [Szybko.pl - Powiat Krakowski Land](https://ceny.szybko.pl/małopolskie-powiat-krakowski-ceny-dzialek.html)
 - [Domy Expobud - Hidden Costs](https://domy-expobud.pl/ukryte-koszty-budowy-domu-o-ktorych-nikt-ci-nie-powie/)
@@ -1105,6 +1145,7 @@ subsidies of up to 50% of the total investment" [OneStep Solar]
 - [Domiporta.pl - Listings](https://www.domiporta.pl/)
 
 ### Supporting Sources
+
 - [Finding Poland - Czynsz Explained](https://findingpoland.com/czynsz-bill/)
 - [DD Projekt - Building Timeline](https://ddprojekt.pl/en/v-blog/information/how-long-do-the-formalities-before-the-house-is-built/)
 - [Gov.pl - Houses up to 70m²](https://www.gov.pl/web/development-technology/the-president-signed-the-act-on-houses-up-to-70-sq-m)
@@ -1123,6 +1164,7 @@ subsidies of up to 50% of the total investment" [OneStep Solar]
 ## 🎯 Recommendation Framework
 
 **Choose BUILDING if:**
+
 - ✅ Timeline flexibility (18+ months OK)
 - ✅ Budget includes 30-40% buffer for hidden costs
 - ✅ Want 120+ m² space
@@ -1131,6 +1173,7 @@ subsidies of up to 50% of the total investment" [OneStep Solar]
 - ✅ Targeting suburbs (Wieliczka, Zabierzów, Skawina)
 
 **Choose BUYING FLAT if:**
+
 - ✅ Need quick move-in (3-6 months)
 - ✅ Prefer city center location
 - ✅ Fixed budget with no buffer for overruns

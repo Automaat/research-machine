@@ -1,0 +1,29 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(git pull:*)",
+      "Bash(git stash:*)",
+      "Skill(full-research)",
+      "Skill(full-research:*)",
+      "Bash(gh api:*)",
+      "Bash(curl:*)",
+      "Bash(python3:*)",
+      "Bash(bc:*)",
+      "Skill(job-verify)",
+      "Skill(job-triage)",
+      "Bash(git check-ignore:*)",
+      "Bash(source .env.local)",
+      "Bash(if [ -n \"$JSEARCH_API_KEY\" ])",
+      "Bash(then echo \"✅ JSearch API key loaded\")",
+      "Bash(else echo \"⚠️ JSearch API key not found, will skip JSearch source\")",
+      "Bash(fi)",
+      "Bash(npx markdownlint-cli2:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

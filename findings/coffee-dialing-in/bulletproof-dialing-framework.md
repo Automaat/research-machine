@@ -59,7 +59,7 @@
 
 ### 🔧 Dialing-In Protocol
 
-```
+```text
 1. LOCK DOSE → Choose based on basket (e.g., 18g)
 2. SET RATIO → Start at 1:2 (18g in → 36g out)
 3. ADJUST GRIND → Target 25-35s extraction
@@ -70,7 +70,7 @@
    - Bitter → DECREASE ratio (try 18g/32g)
    - Bitter AND Sour → Uneven extraction, fix puck prep
 5. REFINE GRIND → As fine as possible without channeling
-```
+```text
 
 > 📄 **STATED**: "Grind as fine as possible while maintaining balance... 'Too fine' causes channeling and faster flow" [Source: Espresso AF]
 
@@ -110,7 +110,7 @@
 
 ### 🔧 Dialing-In Protocol
 
-```
+```text
 1. LOCK DOSE → 18g (or basket capacity)
 2. SET RATIO → 1:2 (18g in → 36g out)
 3. START GRIND → 12 clicks (Standard) / 20 clicks (Red Clix)
@@ -121,7 +121,7 @@
    - Sour → INCREASE ratio (try 1:2.5)
    - Bitter → DECREASE ratio (try 1:1.8)
 6. FINE-TUNE → Adjust temp if needed (lighter=hotter, darker=cooler)
-```
+```text
 
 ### ⚠️ Commandante Espresso Limitations
 
@@ -173,7 +173,7 @@
 
 ### 🔧 Dialing-In Protocol
 
-```
+```text
 1. SET RATIO → 1:15 (20g coffee : 300g water)
 2. START GRIND → Based on roast (see table above)
 3. BLOOM → 40-50g water, wait 30-45s
@@ -184,7 +184,7 @@
    - Bitter/harsh → COARSER grind OR cooler water
    - Too fast (<2:30) → grind FINER
    - Too slow (>3:30) → grind COARSER
-```
+```text
 
 > 📄 **STATED**: "A grind that's too fine will stall the drawdown and make your coffee bitter; too coarse and it will rush through and taste weak" [Source: Daniel Norris]
 
@@ -230,7 +230,7 @@
 
 ### 🔧 Dialing-In Protocol
 
-```
+```text
 1. SET RATIO → 1:16 (30g coffee : 480g water)
 2. START GRIND → Based on roast (see table above)
 3. BLOOM → 90-120g water, wait 30-45s
@@ -241,7 +241,7 @@
    - Bitter → COARSER grind (try +2 clicks)
    - Brew too long (>5min) → COARSER grind
    - Brew too fast (<3min) → FINER grind
-```
+```text
 
 ---
 
@@ -284,7 +284,7 @@
 
 ### 🔧 Dialing-In Protocol (Standard Recipe)
 
-```
+```text
 1. SET RECIPE → 18g coffee : 210g water (1:11.7)
 2. START GRIND → Based on roast (see table above)
 3. ADD WATER → All at once
@@ -295,7 +295,7 @@
    - Sour/weak → FINER grind OR hotter water OR longer steep
    - Bitter/harsh → COARSER grind OR cooler water OR shorter steep
    - Thin body → MORE coffee OR finer grind
-```
+```text
 
 ---
 
@@ -402,7 +402,7 @@
 
 ### Quick Decision Matrix
 
-```
+```text
 IF switching to LIGHTER roast:
    → Grind FINER (2-3 clicks)
    → Temperature HIGHER (+2-4°C)
@@ -414,7 +414,7 @@ IF switching to DARKER roast:
    → Temperature LOWER (-2-4°C)
    → Time SHORTER (-15-30s)
    → Ratio can be LOWER (less water)
-```
+```text
 
 ---
 
@@ -442,7 +442,7 @@ IF switching to DARKER roast:
 
 ## 🧪 The Scientific Method for Coffee
 
-```
+```text
 HYPOTHESIS → Make a prediction about taste outcome
 CONTROL → Keep all variables constant except ONE
 TEST → Change that ONE variable
@@ -450,7 +450,7 @@ MEASURE → Time extraction, weigh output
 TASTE → Evaluate objectively
 RECORD → Keep a brew journal
 ITERATE → Adjust based on results
-```
+```text
 
 > 📄 **STATED**: "Keeping a brewing journal can be extremely helpful—record your variables and tasting notes for each brew" [Source: HexNub]
 

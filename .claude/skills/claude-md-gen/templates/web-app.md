@@ -6,9 +6,9 @@ Base structure for frontend/fullstack web applications.
 
 ## Project Structure
 
-```
+```text
 [DIRECTORY_STRUCTURE]
-```
+```text
 
 ## Tech Stack
 
@@ -53,18 +53,19 @@ Base structure for frontend/fullstack web applications.
 Core components: [COMPONENT_LIST]
 
 **Usage:**
+
 ```[LANGUAGE]
 [COMPONENT_EXAMPLE]
-```
+```text
 
 ### Breakpoints
 
-```
+```text
 Mobile:  [MOBILE_BREAKPOINT]
 Tablet:  [TABLET_BREAKPOINT]
 Desktop: [DESKTOP_BREAKPOINT]
 Wide:    [WIDE_BREAKPOINT]
-```
+```text
 
 ### Color System
 
@@ -81,6 +82,7 @@ Wide:    [WIDE_BREAKPOINT]
 **Standards:** [ACCESSIBILITY_LEVEL] (WCAG 2.1 AA, etc.)
 
 **Requirements:**
+
 - Semantic HTML elements
 - ARIA labels for interactive elements
 - Keyboard navigation support
@@ -88,20 +90,23 @@ Wide:    [WIDE_BREAKPOINT]
 - Color contrast ratios: [CONTRAST_REQUIREMENTS]
 
 **Testing:**
+
 ```bash
 [ACCESSIBILITY_TEST_COMMAND]
-```
+```text
 
 ## State Management
 
 **Approach:** [STATE_MANAGEMENT_APPROACH]
 
 **State structure:**
+
 ```[LANGUAGE]
 [STATE_STRUCTURE_EXAMPLE]
-```
+```text
 
 **Best practices:**
+
 - [STATE_BEST_PRACTICE_1]
 - [STATE_BEST_PRACTICE_2]
 - [STATE_BEST_PRACTICE_3]
@@ -111,9 +116,10 @@ Wide:    [WIDE_BREAKPOINT]
 **Router:** [ROUTER_NAME]
 
 **Route structure:**
-```
+
+```text
 [ROUTE_STRUCTURE]
-```
+```text
 
 **Dynamic routes:** [DYNAMIC_ROUTE_PATTERN]
 **Protected routes:** [AUTH_ROUTE_PATTERN]
@@ -124,14 +130,16 @@ Wide:    [WIDE_BREAKPOINT]
 **Base URL:** [API_BASE_URL_CONFIG]
 
 **Request pattern:**
+
 ```[LANGUAGE]
 [API_REQUEST_EXAMPLE]
-```
+```text
 
 **Error handling:**
+
 ```[LANGUAGE]
 [ERROR_HANDLING_EXAMPLE]
-```
+```text
 
 ## Build & Deploy
 
@@ -139,13 +147,13 @@ Wide:    [WIDE_BREAKPOINT]
 
 ```bash
 [DEV_SERVER_COMMAND]
-```
+```text
 
 ### Production Build
 
 ```bash
 [BUILD_COMMAND]
-```
+```text
 
 **Output:** `[BUILD_OUTPUT_DIR]/`
 
@@ -154,6 +162,7 @@ Wide:    [WIDE_BREAKPOINT]
 [DEPLOYMENT_APPROACH]
 
 **Environment variables:**
+
 - `[ENV_VAR_1]` - [PURPOSE]
 - `[ENV_VAR_2]` - [PURPOSE]
 
@@ -169,12 +178,13 @@ Before committing:
 - [ ] [HOOK_NAME] hooks pass (if configured)
 
 Commands:
+
 ```bash
 [LINT_COMMAND]
 [TEST_COMMAND]
 [TYPE_CHECK_COMMAND]
 [BUILD_COMMAND]
-```
+```text
 
 ## Common Commands
 
@@ -202,7 +212,7 @@ Commands:
 
 # Run accessibility checks
 [A11Y_COMMAND]
-```
+```text
 
 ## Component Templates
 
@@ -212,19 +222,19 @@ Commands:
 
 ```[LANGUAGE]
 [FUNCTIONAL_COMPONENT_TEMPLATE]
-```
+```text
 
 ### Page Component
 
 ```[LANGUAGE]
 [PAGE_COMPONENT_TEMPLATE]
-```
+```text
 
 ### Layout Component
 
 ```[LANGUAGE]
 [LAYOUT_COMPONENT_TEMPLATE]
-```
+```text
 
 [END_IF_COMPONENT_TEMPLATES]
 
@@ -248,6 +258,7 @@ Commands:
 ## Extensibility
 
 Add sections as needs evolve:
+
 - Animation/transition guidelines
 - Internationalization approach
 - Analytics integration

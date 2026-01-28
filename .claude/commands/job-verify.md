@@ -6,7 +6,8 @@ allowed-tools: WebFetch, WebSearch, Read, Edit
 
 # Job Verify (CoVe)
 
-Chain of Verification for GO listings. Confirms Europe/Poland remote eligibility AND compensation meets €160k+ target before promoting to VERIFIED.
+Chain of Verification for GO listings. Confirms Europe/Poland remote eligibility AND compensation
+meets €160k+ target before promoting to VERIFIED.
 
 ## Input
 
@@ -27,11 +28,12 @@ Chain of Verification for GO listings. Confirms Europe/Poland remote eligibility
 
 ### Phase 1: Re-fetch Listing
 
-```
+```text
 WebFetch [URL]
 ```
 
 Extract fresh data, look specifically for:
+
 - Geographic restrictions
 - Timezone mentions
 - "Must be authorized to work in..."
@@ -95,7 +97,7 @@ For each question, search and document:
 
 **Search patterns:**
 
-```
+```text
 WebSearch: "[Company] remote Europe"
 WebSearch: "[Company] hiring Poland"
 WebSearch: "[Company] EMEA jobs"
@@ -124,6 +126,7 @@ Compare answers:
 | Q6 | YES/NO | HIGH/MED/LOW | - |
 
 **Contradiction examples:**
+
 - Listing says "remote" but careers page shows US positions only
 - "Global" company but no EU employees on LinkedIn
 - "Async" culture but "US timezone required"
@@ -134,14 +137,17 @@ Compare answers:
 ### Phase 5: Final Verdict
 
 **VERIFIED** — All questions YES or N/A, high confidence, no contradictions
+
 - Update tracking.md: Move from GO to VERIFIED
 - Ready for application or company research
 
 **REJECTED** — Any question NO with high confidence
+
 - Update tracking.md: Move from GO to NO-GO
 - Add rejection reason
 
 **NEEDS-MANUAL** — Mixed signals, low confidence, or contradictions
+
 - Keep in GO but add notes
 - Specific questions to ask recruiter
 
@@ -222,6 +228,7 @@ Compare answers:
 After verification, update `findings/job-search/tracking.md`:
 
 **If VERIFIED:**
+
 ```markdown
 ## ✅ VERIFIED (Ready to Apply)
 | Date | Company | Role | URL | Verified |
@@ -240,22 +247,26 @@ Keep in GO, add note: "⚠️ Needs manual verification: [question]"
 ## Common Rejection Patterns
 
 ### US-Only Signals
+
 - "Must be authorized to work in the United States"
 - "US persons only" (ITAR/security)
 - Only US states listed in location
 - "W-2 employment" without international option
 
 ### Timezone Blockers
+
 - "Core hours 9am-5pm PT required"
 - "Must overlap 6+ hours with US West Coast"
 - No mention of async culture
 
 ### Entity Issues
+
 - "No international contractors"
 - "Must be employed through US entity"
 - No EU office/entity visible
 
 ### Compensation Below Target
+
 - Levels.fyi shows total comp <€160k for level
 - Glassdoor salary range tops out below target
 - Early-stage startup with "competitive" but no data
@@ -263,6 +274,7 @@ Keep in GO, add note: "⚠️ Needs manual verification: [question]"
 - Heavy equity, low base at risky stage
 
 ### Compensation Green Flags
+
 - Listing states range meeting/exceeding €160k
 - Levels.fyi shows Staff/Senior at €180k+
 - Known high-paying company (FAANG-tier)
@@ -411,9 +423,9 @@ If notable insight found, include in verification output:
 
 ### Examples
 
-```
+```text
 | 2026-01-28 | Geo | Temporal: US/Canada only, no EU engineering despite UK office |
-| 2026-01-28 | Geo | Vercel: "Remote" positions are US Remote, EU has separate listings |
+| 2026-01-28 | Geo | Vercel: "Remote" positions = US Remote, EU has separate listings |
 | 2026-01-28 | Comp | Neon (Databricks): Germany €150-188k, Poland likely similar |
 | 2026-01-28 | Entity | Redpanda: UK entity, hires Poland via contractor arrangement |
 ```
@@ -421,11 +433,13 @@ If notable insight found, include in verification output:
 ### Patterns to Track
 
 **"Remote" Lies:**
+
 - US Remote ≠ Global Remote
 - "Remote with X% office" = Hybrid
 - "Remote (location)" = Only that location
 
 **EU Hiring Patterns:**
+
 - EU entity → direct employment
 - US-only entity → contractor (tax implications)
 - UK post-Brexit → separate from EU

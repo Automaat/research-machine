@@ -16,18 +16,21 @@
 ## 📆 Week 1-2: Transformer Architecture
 
 ### Attention Is All You Need (Mandatory Deep Study)
+
 - Self-attention mechanism (Q, K, V)
 - Scaled dot-product attention (why scale?)
 - Multi-head attention (why multiple heads?)
 - Positional encodings (sinusoidal, learned, RoPE)
 
 ### Transformer Components
+
 - Encoder-decoder structure
 - Layer normalization (pre-LN vs post-LN)
 - Feed-forward networks
 - Residual connections
 
 ### Implementation
+
 - Build transformer encoder from scratch
 - Build transformer decoder from scratch
 - Understand causal masking
@@ -37,18 +40,21 @@
 ## 📆 Week 3-4: LLMs & Modern Techniques
 
 ### Pre-training
+
 - Tokenization (BPE, WordPiece, SentencePiece)
 - Language modeling objective
 - Scaling laws (Chinchilla)
 - Perplexity metric
 
 ### Post-training
+
 - Instruction tuning
 - LoRA and parameter-efficient fine-tuning
 - RLHF (Reinforcement Learning from Human Feedback)
 - DPO (Direct Preference Optimization)
 
 ### Inference
+
 - KV cache (why and how)
 - Sampling schemes (temperature, top-k, top-p)
 - Speculative decoding
@@ -56,6 +62,7 @@
 - FlashAttention (memory-efficient attention)
 
 ### Distributed Training (Interview Hot Topic)
+
 - Data parallelism
 - Model parallelism (tensor, pipeline)
 - ZeRO optimization
@@ -87,11 +94,13 @@
 ## 🎬 YouTube Watch List
 
 ### Week 1-2: Transformers
+
 1. **3Blue1Brown** - Attention in transformers ⭐
 2. **3Blue1Brown** - How might LLMs store facts
 3. **Andrej Karpathy** - Let's build GPT ⭐⭐ (essential!)
 
 ### Week 3-4: Modern LLMs
+
 1. **Andrej Karpathy** - Tokenization
 2. **Yannic Kilcher** - Attention Is All You Need breakdown
 3. **Yannic Kilcher** - RLHF, DPO explanations
@@ -103,6 +112,7 @@
 **Implement nanoGPT, train on small corpus**
 
 ### Project Steps
+
 1. Clone nanoGPT repo
 2. Study the code thoroughly
 3. Train on Shakespeare dataset
@@ -110,6 +120,7 @@
 5. Train on your own dataset
 
 ### What You Should Understand
+
 - Every line of the transformer implementation
 - Why each hyperparameter matters
 - Memory/compute tradeoffs

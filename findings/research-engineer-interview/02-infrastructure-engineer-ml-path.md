@@ -414,9 +414,9 @@ Key features for your background:
 
 ## 🔗 Sources
 
-9. [DeepMind Research Engineer Job Posting](https://job-boards.greenhouse.io/deepmind/jobs/6604209)
-10. [JoinTaro - Transition to ML Engineer](https://www.jointaro.com/question/YqrpDDCPbsGpg0lwrKXY/looking-to-transition-to-ml-engineer-what-do-you-want-to-know/)
-11. [Second Talent - ML Infrastructure Engineer](https://www.secondtalent.com/occupations/machine-learning-infrastructure-engineer/)
+1. [DeepMind Research Engineer Job Posting](https://job-boards.greenhouse.io/deepmind/jobs/6604209)
+2. [JoinTaro - Transition to ML Engineer](https://www.jointaro.com/question/YqrpDDCPbsGpg0lwrKXY/looking-to-transition-to-ml-engineer-what-do-you-want-to-know/)
+3. [Second Talent - ML Infrastructure Engineer](https://www.secondtalent.com/occupations/machine-learning-infrastructure-engineer/)
 
 ---
 

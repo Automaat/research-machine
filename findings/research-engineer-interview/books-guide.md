@@ -143,31 +143,38 @@
 ## 📊 Reading Order Recommendation
 
 ### Phase 1: Foundations (Month 1-2)
+
 1. **[Mathematics for ML](https://mml-book.github.io/)** - Math foundations
 2. **[The Hundred-Page ML Book](https://themlbook.com/)** - Quick ML overview
 
 ### Phase 2: Core ML (Month 2-3)
+
 3. **[Hands-On ML](https://www.amazon.com/Hands-Machine-Learning-Scikit-Learn-TensorFlow/dp/1098125975)** - Practical implementation
-4. **[Introduction to Statistical Learning](https://www.statlearning.com/)** - Theory complement
+2. **[Introduction to Statistical Learning](https://www.statlearning.com/)** - Theory complement
 
 ### Phase 3: Deep Learning (Month 3-4)
+
 5. **[Deep Learning](https://www.deeplearningbook.org/)** - Theory bible
-6. **[Dive into Deep Learning](https://d2l.ai/)** - Interactive practice
+2. **[Dive into Deep Learning](https://d2l.ai/)** - Interactive practice
 
 ### Phase 4: Specialization (Month 4-5)
+
 7. **[NLP with Transformers](https://transformersbook.com/)** OR **[Sutton & Barto RL](http://incompleteideas.net/book/the-book-2nd.html)** - Domain depth
-8. **[Pattern Recognition & ML](https://www.microsoft.com/en-us/research/wp-content/uploads/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf)** - Advanced theory
+2. **[Pattern Recognition & ML](https://www.microsoft.com/en-us/research/wp-content/uploads/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf)** - Advanced theory
 
 ### Phase 5: Interview (Month 5-6)
+
 9. **[ML Interviews Book](https://huyenchip.com/ml-interviews-book/)** - Interview prep
-10. **[Designing ML Systems](https://www.amazon.com/Designing-Machine-Learning-Systems-Production-Ready/dp/1098107969)** - System design
+2. **[Designing ML Systems](https://www.amazon.com/Designing-Machine-Learning-Systems-Production-Ready/dp/1098107969)** - System design
 
 ---
 
 ## 💰 Budget Guide
 
 ### 🆓 Free Essentials (~$0)
+
 All available as free PDFs:
+
 - [Deep Learning](https://www.deeplearningbook.org/) (Goodfellow)
 - [Mathematics for ML](https://mml-book.github.io/) (Deisenroth)
 - [Pattern Recognition & ML](https://www.microsoft.com/en-us/research/wp-content/uploads/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf) (Bishop)
@@ -179,6 +186,7 @@ All available as free PDFs:
 - [Speech & Language Processing](https://web.stanford.edu/~jurafsky/slp3/) (Jurafsky)
 
 ### 💵 Worth Buying (~$150-200)
+
 - **[Hands-On ML](https://www.amazon.com/Hands-Machine-Learning-Scikit-Learn-TensorFlow/dp/1098125975)** (~$50) - Best practical guide
 - **[NLP with Transformers](https://transformersbook.com/)** (~$50) - Modern NLP
 - **[Designing ML Systems](https://www.amazon.com/Designing-Machine-Learning-Systems-Production-Ready/dp/1098107969)** (~$45) - Production ML

@@ -19,24 +19,28 @@
 ### Focus Areas
 
 **Data Structures:**
+
 - Arrays, strings, hash maps
 - Trees (BST, traversals)
 - Graphs (BFS, DFS, shortest path)
 - Heaps, priority queues
 
 **Algorithms:**
+
 - Dynamic programming (CRITICAL)
 - Recursion, backtracking
 - Two pointers, sliding window
 - Binary search variations
 
 **ML-Adjacent:**
+
 - Matrix operations
 - Probability problems
 - Statistics problems
 - Numerical algorithms
 
 ### Practice Strategy
+
 - 200+ problems total
 - Focus on medium/hard
 - Time yourself (45 min max)
@@ -49,18 +53,21 @@
 ### ML Fundamentals Review
 
 **Basics:**
+
 - Backpropagation (derive it)
 - Bias-variance tradeoff
 - Regularization techniques
 - Loss functions (when to use which)
 
 **Deep Learning:**
+
 - Transformer architecture (cold)
 - Attention mechanism
 - CNN vs RNN vs Transformer
 - Optimization (SGD, Adam)
 
 **Modern ML:**
+
 - RLHF, DPO
 - LoRA, fine-tuning
 - Distributed training
@@ -69,6 +76,7 @@
 ### ML Debugging Practice
 
 **Common Bug Types:**
+
 - Shape mismatches
 - Gradient issues (vanishing, exploding, NaN)
 - Data leakage
@@ -77,6 +85,7 @@
 - Incorrect normalization
 
 **Practice Method:**
+
 - Review buggy code snippets
 - Find issues without running
 - Explain fixes and reasoning
@@ -88,6 +97,7 @@
 ### ML System Design
 
 **Framework:**
+
 1. Clarify requirements
 2. Define metrics (offline + online)
 3. Data pipeline
@@ -98,6 +108,7 @@
 8. Iteration strategy
 
 **Common Questions:**
+
 - Design a recommendation system
 - Design a search ranking system
 - Design a content moderation system
@@ -106,6 +117,7 @@
 ### Research Talk (40-55 min)
 
 **Structure:**
+
 1. Problem motivation (5 min)
 2. Related work (5 min)
 3. Your approach (15 min)
@@ -114,6 +126,7 @@
 6. Q&A (15+ min)
 
 **Preparation:**
+
 - Build Q&A slide deck
 - Anticipate tough questions
 - Practice with timer
@@ -136,6 +149,7 @@
 **Total:** 5+ mock interviews
 
 ### Finding Mock Partners
+
 - Non-competitive peers
 - Pramp, Interviewing.io
 - ML Discord communities
@@ -166,6 +180,7 @@
 | System Design | Grokking ML Interview | [educative.io](https://www.educative.io/courses/grokking-the-machine-learning-interview) |
 
 ### 📖 Books
+
 - "Cracking the Coding Interview" - McDowell
 - "Grokking the Machine Learning Interview"
 - "Introduction to Machine Learning Interviews" - Chip Huyen
@@ -183,6 +198,7 @@
 ## 📝 Interview Day Checklist
 
 ### Before (Night Before)
+
 - [ ] Review your projects
 - [ ] Review key papers in domain
 - [ ] Prepare questions for interviewers
@@ -190,6 +206,7 @@
 - [ ] Prepare outfit, tech setup
 
 ### During: Coding
+
 - [ ] Think out loud
 - [ ] Ask clarifying questions
 - [ ] Start with brute force, optimize
@@ -197,12 +214,14 @@
 - [ ] Time management (don't stuck)
 
 ### During: ML Interview
+
 - [ ] Be precise with terminology
 - [ ] Use equations when helpful
 - [ ] Admit when you don't know
 - [ ] Connect to your experience
 
 ### During: Research Talk
+
 - [ ] Arrive early, test setup
 - [ ] Speak slowly, clearly
 - [ ] Eye contact with audience
@@ -214,29 +233,34 @@
 ## 📝 Common Interview Questions
 
 ### Coding (Research Engineer Flavor)
+
 - Implement attention mechanism
 - Matrix operations
 - Graph algorithms
 - DP with probability
 
 ### ML Fundamentals
+
 - Walk through backpropagation
 - Explain transformer architecture
 - Bias-variance tradeoff
 - When to use which loss function
 
 ### ML Debugging
+
 - Model not learning - debug
 - Loss is NaN - causes?
 - Model overfitting - solutions
 - Shape mismatch - how to find
 
 ### System Design
+
 - Design recommendation system
 - Design training pipeline for LLM
 - Design real-time inference system
 
 ### Behavioral
+
 - Tell me about a challenging project
 - How do you approach ambiguous problems
 - Disagreement with teammate
@@ -270,9 +294,10 @@
 
 ---
 
-## 🎉 You Made It!
+## 🎉 You Made It
 
 After 12 months of dedicated preparation, you have:
+
 - ✅ Strong math and coding foundations
 - ✅ Deep ML knowledge with implementations
 - ✅ Transformer expertise

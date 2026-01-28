@@ -32,19 +32,24 @@ Structured outputs with consistent sections and metadata.
 
 ## Structure
 
-```
+```text
+
 [FORMAT_NAME] Format:
 
 [HEADER_SECTION]
 ---
+
 [SUMMARY_SECTION]
 ---
+
 [BODY_SECTION_1]
 [BODY_SECTION_2]
 [BODY_SECTION_3]
 ---
+
 [METADATA_FOOTER]
-```
+
+```text
 
 ## Placeholder Syntax
 
@@ -52,7 +57,7 @@ Structured outputs with consistent sections and metadata.
 - `[OPTIONAL_FIELD]` - Optional field
 - `[LIST_ITEM]` - Repeating element
 - `{dynamic|value}` - Alternative values
-```
+```text
 
 ## Example 1: Plot Analysis Report (from plot-analysis skill)
 
@@ -173,7 +178,7 @@ Structured outputs with consistent sections and metadata.
 
 **Tags:** #plot-analysis #location #status
 **Related:** [[Other Analysis]], [[Comparison]]
-```
+```text
 
 ## Example 2: CLI Tool JSON Output
 
@@ -210,7 +215,7 @@ Structured outputs with consistent sections and metadata.
     }
   ]
 }
-```
+```text
 
 ## Example 3: Research Note (Obsidian-style)
 
@@ -266,7 +271,7 @@ Structured outputs with consistent sections and metadata.
 
 **Related MOCs:** [[Topic MOC]], [[Domain MOC]]
 **Next Steps:** [[Follow-up Note]], [[Exploration Area]]
-```
+```text
 
 ## Example 4: Go Code Review Output
 
@@ -293,15 +298,16 @@ Structured outputs with consistent sections and metadata.
 **Code:**
 ```go
 [Problematic code snippet]
-```
+```text
 
 **Recommendation:**
 [How to fix it]
 
 **Fixed Code:**
+
 ```go
 [Corrected code snippet]
-```
+```text
 
 **Reference:** [Doc: Go Best Practice](URL)
 
@@ -347,7 +353,8 @@ Structured outputs with consistent sections and metadata.
 - handlers/auth.go:45 - [Issue location]
 - [Doc: Go Code Review Guide](URL)
 - [KB: CONTRIBUTING.md] - Project standards
-```
+
+```text
 
 ## Example 5: API Test Results
 
@@ -389,34 +396,39 @@ Structured outputs with consistent sections and metadata.
     "percentage": 91.3
   }
 }
-```
+```text
 
 ## Customization Points
 
 **Adjust sections:**
+
 - Add domain-specific sections
 - Remove irrelevant sections
 - Reorder by priority
 - Nest subsections for depth
 
 **Adjust metadata:**
+
 - More/fewer fields in header
 - Different footer elements
 - Versioning approach
 - Timestamps and tracking
 
 **Adjust format:**
+
 - Markdown for human reading
 - JSON for machine processing
 - YAML for configuration
 - Plain text for simplicity
 
 **Adjust emoji usage:**
+
 - Heavy emoji (research notes, visual scanning)
 - Light emoji (section markers only)
 - No emoji (formal/technical docs)
 
 **Adjust granularity:**
+
 - Executive: summary only
 - Standard: summary + key sections
 - Detailed: all sections with examples
@@ -440,6 +452,7 @@ Structured outputs with consistent sections and metadata.
 ## Anti-Patterns
 
 **AVOID:**
+
 - ❌ Skipping sections (breaks consistency)
 - ❌ Inconsistent placeholder syntax
 - ❌ Too many sections (cognitive overload)

@@ -16,22 +16,26 @@
 ## 📆 Week 1-2: Neural Network Fundamentals
 
 ### Architecture Basics
+
 - Perceptrons and MLPs
 - Layers, neurons, weights, biases
 - Forward pass computation
 
 ### Activation Functions
+
 - Sigmoid, tanh, ReLU, Leaky ReLU
 - Why non-linearity matters
 - Dying ReLU problem
 
 ### Backpropagation
+
 - Computational graphs
 - Chain rule application
 - Gradient flow through layers
 - **Implement from scratch** (NumPy only)
 
 ### Regularization
+
 - Dropout (and why it works)
 - Batch normalization
 - Weight decay (L2 regularization)
@@ -42,18 +46,21 @@
 ## 📆 Week 3-4: CNNs and RNNs
 
 ### Convolutional Neural Networks
+
 - Convolution operation (filters, stride, padding)
 - Pooling layers (max, average)
 - Common architectures (LeNet, AlexNet concepts)
 - Feature hierarchies
 
 ### Recurrent Neural Networks
+
 - Sequence modeling motivation
 - Vanilla RNN architecture
 - Vanishing gradient problem
 - LSTM and GRU (gating mechanisms)
 
 ### Practical Training
+
 - Data augmentation
 - Learning rate scheduling
 - Batch size effects
@@ -81,11 +88,13 @@
 ## 🎬 YouTube Watch List
 
 ### Week 1-2: Fundamentals
+
 1. **Andrej Karpathy** - micrograd (build backprop from scratch) ⭐
 2. **Andrej Karpathy** - makemore Part 1-2
 3. **3Blue1Brown** - Neural Networks Ch 1-4
 
 ### Week 3-4: Architectures
+
 1. **Andrej Karpathy** - makemore Part 3-5 (BatchNorm, advanced)
 2. **Stanford CS231n** - CNN lectures
 3. **fast.ai** - Lessons 1-4
@@ -97,6 +106,7 @@
 **Train CNN on CIFAR-10, achieve >85% accuracy**
 
 ### Project Requirements
+
 - Build CNN architecture from scratch (PyTorch)
 - Implement proper train/val/test split
 - Use data augmentation
@@ -104,12 +114,13 @@
 - Experiment with hyperparameters
 
 ### Suggested Architecture
-```
+
+```text
 Conv2d → ReLU → MaxPool →
 Conv2d → ReLU → MaxPool →
 Flatten → Linear → ReLU → Dropout →
 Linear → Softmax
-```
+```text
 
 ---
 

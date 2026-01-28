@@ -11,6 +11,7 @@ Questions for knowledge management projects (Obsidian, etc.) to customize CLAUDE
 **Purpose:** Create note templates section
 
 **Options (select multiple):**
+
 - Research notes (from sources)
 - Technical notes (concepts, how-tos)
 - Meeting notes
@@ -27,6 +28,7 @@ Questions for knowledge management projects (Obsidian, etc.) to customize CLAUDE
 **Purpose:** Define processing workflow section
 
 **Options:**
+
 - Capture to inbox → Process → Archive to folders
 - Create in final location immediately
 - Progressive refinement (multiple passes)
@@ -39,6 +41,7 @@ Questions for knowledge management projects (Obsidian, etc.) to customize CLAUDE
 **Purpose:** Define AI assistance goals section
 
 **Options (select multiple):**
+
 - Organizing (moving from inbox, suggesting tags)
 - Summarizing (articles, papers, meetings)
 - Finding patterns (connections, themes)
@@ -56,6 +59,7 @@ Questions for knowledge management projects (Obsidian, etc.) to customize CLAUDE
 **Purpose:** Document format conventions
 
 **Options:**
+
 - Heavy emoji usage (visual scanning)
 - Light emoji usage (sparingly)
 - No emoji (formal)
@@ -70,6 +74,7 @@ Questions for knowledge management projects (Obsidian, etc.) to customize CLAUDE
 **Purpose:** Include output templates
 
 **Options:**
+
 - Yes, for research findings
 - Yes, for comparisons/analysis
 - Yes, for summaries
@@ -85,6 +90,7 @@ Questions for knowledge management projects (Obsidian, etc.) to customize CLAUDE
 **Purpose:** Document linking strategy
 
 **Options:**
+
 - Heavy wikilink usage [[Like This]]
 - Folder-based organization
 - Tag-based organization
@@ -100,6 +106,7 @@ Questions for knowledge management projects (Obsidian, etc.) to customize CLAUDE
 **Purpose:** Define citation approach
 
 **Options:**
+
 - Always cite sources
 - Cite for factual claims only
 - No formal citation system
@@ -114,6 +121,7 @@ Questions for knowledge management projects (Obsidian, etc.) to customize CLAUDE
 **Purpose:** Define quality standards
 
 **Options (select multiple):**
+
 - Clear title (descriptive, not generic)
 - Proper location (right folder/area)
 - Appropriate tags
@@ -133,6 +141,7 @@ Questions for knowledge management projects (Obsidian, etc.) to customize CLAUDE
 **Purpose:** Populate anti-patterns section
 
 **Options (select multiple):**
+
 - Overcomplicating structure
 - Oversimplifying (losing nuance)
 - Orphaned notes (no connections)

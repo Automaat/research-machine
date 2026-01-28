@@ -39,7 +39,7 @@ Five-phase generation process:
 
 Analyze codebase to determine project type:
 
-```
+```text
 DETECTION RULES:
 
 research-knowledge:
@@ -85,25 +85,28 @@ mixed:
 
 FALLBACK:
   IF ambiguous → ask user to select
-```
+```text
 
 ### Context Collection
 
 Gather for template customization:
 
 **From package files:**
+
 - Languages and versions
 - Frameworks and versions
 - Dependencies (testing, linting, etc.)
 - Scripts/tasks (build, test, lint)
 
 **From directory structure:**
+
 - Primary directories with purposes
 - Test organization
 - Documentation location
 - Configuration files
 
 **From existing files:**
+
 - README.md (project description, setup)
 - Existing CLAUDE.md (preserve custom sections)
 - Taskfile.yml / Makefile / mise.toml (commands)
@@ -120,7 +123,8 @@ Gather for template customization:
 6. Check for existing conventions: read existing CLAUDE.md, pre-commit config
 
 **Store context:**
-```
+
+```text
 project_context = {
   "name": from directory or package file,
   "type": detected type,
@@ -134,7 +138,7 @@ project_context = {
   "hooks": [hook names],
   "existing_claude_md": sections to preserve
 }
-```
+```text
 
 ---
 
@@ -145,6 +149,7 @@ Load question framework from `questions/{detected-type}-questions.md`.
 Ask 5-7 questions via AskUserQuestion tool based on project type.
 
 **Question categories:**
+
 1. Domain workflows (2-3 questions)
 2. Output formats (1-2 questions)
 3. Tool integrations (1-2 questions)
@@ -154,7 +159,8 @@ Ask 5-7 questions via AskUserQuestion tool based on project type.
 **For mixed projects:** Combine questions from component types (max 7 total).
 
 **Store answers:**
-```
+
+```text
 user_answers = {
   "workflows": [workflow descriptions],
   "output_formats": [format descriptions],
@@ -162,7 +168,7 @@ user_answers = {
   "quality_gates": [requirements],
   "pitfalls": [common mistakes]
 }
-```
+```text
 
 ---
 
@@ -184,35 +190,42 @@ Based on user answers, select 2-4 relevant patterns from `patterns/`.
 ### Priority by Project Type
 
 **research-knowledge:**
+
 1. output-templates.md (for note templates)
 2. citation-systems.md (for source attribution)
 3. triage-workflows.md (for inbox processing)
 
 **python-cli:**
+
 1. cove-verification.md (for TDD workflow)
 2. output-templates.md (for structured CLI outputs)
 3. few-shot-examples.md (for test fixtures)
 
 **web-app:**
+
 1. output-templates.md (for component templates if design system)
 2. decision-matrices.md (for A11y criteria)
 
 **cli-tool:**
+
 1. output-templates.md (for CLI output formats)
 2. decision-matrices.md (for input validation)
 3. few-shot-examples.md (for command examples)
 
 **api-service:**
+
 1. decision-matrices.md (for endpoint validation)
 2. cove-verification.md (for integration tests)
 3. citation-systems.md (for API docs)
 
 **library:**
+
 1. few-shot-examples.md (for usage examples)
 2. decision-matrices.md (for breaking change criteria)
 3. citation-systems.md (for API docs)
 
 **mixed:**
+
 - Select from all types based on components
 - Max 4 patterns total
 - Prioritize patterns mentioned in answers
@@ -247,7 +260,7 @@ if len(selected_patterns) < 2:
 
 # Limit to 4 patterns
 selected_patterns = selected_patterns[:4]
-```
+```text
 
 ---
 
@@ -256,6 +269,7 @@ selected_patterns = selected_patterns[:4]
 ### Load Base Template
 
 From `templates/{type}.md`:
+
 - Single type: load one template
 - Mixed: merge relevant sections from multiple templates
 
@@ -263,18 +277,18 @@ From `templates/{type}.md`:
 
 **1. Replace placeholders:**
 
-```
+```text
 [Project Name] → project_context["name"]
 [Tech Stack] → project_context["languages"] + project_context["frameworks"]
 [Directory Structure] → project_context["directories"]
 [Commands] → project_context["commands"]
 [Linter Name] → project_context["linting"]
 [Test Framework] → project_context["testing"]
-```
+```text
 
 **2. Add domain-specific sections based on answers:**
 
-```
+```text
 IF web-app + design system mentioned:
   Add "Design System" section with breakpoints, components
 
@@ -286,11 +300,12 @@ IF research + note templates mentioned:
 
 IF api-service + auth mentioned:
   Add "Authentication" section with method, middleware
-```
+```text
 
 **3. Include selected patterns (2-4 from Phase 3):**
 
 For each pattern file:
+
 - Read pattern from `patterns/{name}.md`
 - Adapt examples to project context
 - Add as section in generated CLAUDE.md
@@ -299,6 +314,7 @@ For each pattern file:
 **4. Generate output templates if applicable:**
 
 IF output_templates.md selected OR type requires it:
+
 - Create "Output Templates" section
 - Include 1-2 concrete examples with structure
 - Use project-specific metadata/fields
@@ -319,8 +335,9 @@ Before committing:
 Commands:
 ```bash
 {actual commands from project_context["commands"]}
-```
-```
+```text
+
+```text
 
 **6. Add common commands:**
 
@@ -333,8 +350,9 @@ Commands:
 
 # {purpose}
 {actual command}
-```
-```
+```text
+
+```text
 
 **7. Add anti-patterns:**
 
@@ -354,7 +372,7 @@ Format:
 - ❌ {specific pitfall 3}
 
 **REASON:** {why each is problematic}
-```
+```text
 
 ### Template Structure
 
@@ -367,12 +385,14 @@ All generated CLAUDE.md files follow this structure:
 
 ## Project Structure
 
-```
+```text
+
 {auto-generated from directory analysis}
 src/          - {purpose}
 tests/        - {purpose}
 docs/         - {purpose}
-```
+
+```text
 
 ## Tech Stack
 
@@ -421,7 +441,7 @@ docs/         - {purpose}
 
 ```markdown
 {Template structure with placeholders}
-```
+```text
 
 ## Anti-Patterns
 
@@ -445,10 +465,12 @@ To add sections as project evolves:
 4. Include examples where helpful
 
 See `.claude/skills/claude-md-gen/customization-guide.md` for:
+
 - Adding new project types
 - Creating custom patterns
 - Updating as requirements change
-```
+
+```text
 
 ---
 
@@ -549,7 +571,7 @@ Add sections as project evolves. See .claude/skills/claude-md-gen/customization-
 - Adding new project type templates
 - Creating custom patterns
 - Adapting generated output as requirements change
-```
+```text
 
 ---
 
@@ -558,15 +580,19 @@ Add sections as project evolves. See .claude/skills/claude-md-gen/customization-
 ### File Locations
 
 **Templates:** `.claude/skills/claude-md-gen/templates/{type}.md`
+
 - web-app.md, cli-tool.md, python-cli.md, research-knowledge.md, api-service.md, library.md, mixed.md
 
 **Patterns:** `.claude/skills/claude-md-gen/patterns/{name}.md`
+
 - cove-verification.md, decision-matrices.md, triage-workflows.md, citation-systems.md, output-templates.md, few-shot-examples.md
 
 **Questions:** `.claude/skills/claude-md-gen/questions/{type}-questions.md`
+
 - web-app-questions.md, cli-tool-questions.md, python-cli-questions.md, research-questions.md, api-service-questions.md, library-questions.md, mixed-questions.md
 
 **Support:** `.claude/skills/claude-md-gen/`
+
 - checklist.md, customization-guide.md
 
 ---
@@ -624,24 +650,29 @@ When including patterns:
 ## Error Handling
 
 **If auto-detection fails:**
+
 - Show detected indicators
 - Ask user to select type manually via AskUserQuestion
 - Proceed with selected type
 
 **If package files missing:**
+
 - Infer from directory structure
 - Ask user for key details (language, framework)
 - Note gaps in summary
 
 **If commands untestable:**
+
 - Include in output with verification note
 - List in "Next Steps" for user to verify
 
 **If no patterns match:**
+
 - Select type-default patterns (minimum 2)
 - Note in summary: "Used default patterns for {type}"
 
 **If template file missing:**
+
 - Fall back to generic template structure
 - Note in summary: "Generated generic structure"
 - Suggest creating custom template
@@ -665,26 +696,31 @@ See `customization-guide.md` for details.
 ## Quality Principles
 
 **Concrete over generic:**
+
 - "Run pytest" not "Run tests"
 - "ruff check ." not "Run linter"
 - Actual directory names not "source code directory"
 
 **Actionable over descriptive:**
+
 - Step-by-step workflows not "handle this area"
 - Specific commands not "use the build tool"
 - Concrete examples not "see documentation"
 
 **Self-contained over referential:**
+
 - Complete instructions in CLAUDE.md
 - No "see ~/.claude/CLAUDE.md" references
 - No "ask your team" placeholders
 
 **Extensible over rigid:**
+
 - Clear how to add sections
 - Pattern library for reuse
 - Customization guide included
 
 **Project-specific over universal:**
+
 - Use actual project context
 - Adapt patterns to domain
 - Include project anti-patterns

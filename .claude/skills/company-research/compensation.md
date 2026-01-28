@@ -10,23 +10,28 @@
 ## Research Sources
 
 ### Levels.fyi
+
 - **Best for:** US-based companies, FAANG-tier
 - **Check:** Engineer levels, total comp breakdown
 - **Note:** May need to convert USD → EUR
 
 ### Glassdoor
+
 - **Best for:** Salary ranges, bonus info
 - **Limitation:** Often outdated, self-reported
 
 ### Blind
+
 - **Best for:** Real offers, negotiation data points
 - **Check:** Specific company channels
 
 ### Company Careers Page
+
 - **Look for:** Transparent salary bands
 - **Some companies:** List ranges in job posts
 
 ### LinkedIn Salary Insights
+
 - **Best for:** Regional data
 - **Limitation:** Less detailed breakdown
 
@@ -35,12 +40,15 @@
 ## Compensation Components
 
 ### Base Salary
+
 - **Target:** Majority of total comp
 - **Benchmark:** What does market pay for level?
 - **Consider:** Tax implications by country
 
 ### Equity
+
 **Types:**
+
 - **RSU** — Restricted Stock Units (preferred)
   - Vesting schedule (4 years typical)
   - Cliff period (1 year typical)
@@ -55,17 +63,20 @@
   - Less favorable than real equity
 
 **Questions:**
+
 - What's the vesting schedule?
 - Are there refresh grants?
 - What happens to unvested on departure?
 - (If options) What's the exercise window after leaving?
 
 ### Bonus
+
 - **Annual bonus** — % of base
 - **Sign-on bonus** — One-time
 - **Performance bonus** — Variable
 
 ### Benefits
+
 - **Health insurance** — Coverage quality
 - **401k/pension** — Match percentage
 - **Equipment** — WFH setup budget
@@ -91,12 +102,14 @@
 ## Negotiation Data Points
 
 ### What to Research
+
 - Company's typical offers
 - Counter-offer patterns
 - Signing bonus availability
 - Equity flexibility vs base
 
 ### Questions to Ask
+
 - "Is the salary band for this role fixed?"
 - "How does equity work for remote employees?"
 - "What's the typical refresh grant cadence?"
@@ -107,11 +120,13 @@
 ## Currency Considerations
 
 ### USD → EUR
+
 - Check current rate
 - Note: Many US companies pay global market rates
 - Some adjust for cost of living (CoL adjustment)
 
 ### CoL Adjustments
+
 - **Full US pay** — Best scenario
 - **Adjusted** — % reduction from US rate
 - **Local market** — Paid local rates
@@ -123,6 +138,7 @@
 ## Red Flags
 
 ### Compensation Red Flags
+
 - ❌ Below-market for level
 - ❌ Heavy equity, low base (especially early stage)
 - ❌ Unclear equity terms
@@ -131,6 +147,7 @@
 - ❌ "Competitive compensation" without specifics
 
 ### Green Flags
+
 - ✅ Transparent salary bands
 - ✅ Levels.fyi data available
 - ✅ Long exercise window (10 years)

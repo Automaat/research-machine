@@ -11,6 +11,7 @@ Questions for Python CLI projects with TDD focus to customize CLAUDE.md.
 **Purpose:** Document project organization
 
 **Options:**
+
 - `utils/` or `lib/` directory
 - Within each command module
 - Separate package
@@ -23,6 +24,7 @@ Questions for Python CLI projects with TDD focus to customize CLAUDE.md.
 **Purpose:** Define development workflow section
 
 **Options:**
+
 - Strict TDD (always write test first)
 - Test after implementation
 - Tests for critical paths only
@@ -35,6 +37,7 @@ Questions for Python CLI projects with TDD focus to customize CLAUDE.md.
 **Purpose:** Include framework-specific patterns
 
 **Options:**
+
 - Click
 - Typer
 - argparse
@@ -49,6 +52,7 @@ Questions for Python CLI projects with TDD focus to customize CLAUDE.md.
 **Purpose:** Create output templates
 
 **Options (select multiple):**
+
 - Plain text
 - JSON
 - Table format (rich, tabulate, etc.)
@@ -63,6 +67,7 @@ Questions for Python CLI projects with TDD focus to customize CLAUDE.md.
 **Purpose:** Document data handling patterns
 
 **Options:**
+
 - Parse and display immediately
 - Cache locally
 - Transform to internal models
@@ -78,6 +83,7 @@ Questions for Python CLI projects with TDD focus to customize CLAUDE.md.
 **Purpose:** Document test patterns
 
 **Options:**
+
 - Fixtures in `conftest.py`
 - Fixtures in test files
 - Mock external APIs (vcr.py, responses, etc.)
@@ -91,6 +97,7 @@ Questions for Python CLI projects with TDD focus to customize CLAUDE.md.
 **Purpose:** Document setup/install commands
 
 **Options:**
+
 - Poetry
 - PDM
 - pip-tools (requirements.txt)
@@ -106,6 +113,7 @@ Questions for Python CLI projects with TDD focus to customize CLAUDE.md.
 **Purpose:** Define quality gates section
 
 **Options (select multiple):**
+
 - Ruff (or other linter) passes
 - mypy (or other type checker) passes
 - pytest tests pass
@@ -123,6 +131,7 @@ Questions for Python CLI projects with TDD focus to customize CLAUDE.md.
 **Purpose:** Populate anti-patterns section
 
 **Options (select multiple):**
+
 - Skipping tests (violates TDD)
 - No type annotations
 - Mutable default arguments
