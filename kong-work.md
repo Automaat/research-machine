@@ -1,0 +1,41 @@
+- Working on new datadog tracing capabilities and validation of buildtin CA backend configuration
+- Working on RBAC for new policies in Kong mesh and improving stability and observability of Kuma control plane
+- Working on implementing MeshTimeout policy
+- Working on kafka metrics, and hiding sensitive information in logs, designed new OPA policy
+- Designing and implementing new MeshOPA policy. Implemented new policy generation mechanism.
+- Designing Global Rate Limiting mechanism
+- Implementing Global Rate Limiting mechanism
+- Writting documentation for Global Rate Limitng, and added new features like possibility to configure additional environment variables in service
+- Added possibility to configure global ratelmit based of request header. Introduced database integration and row level security in mink-vcp-manager
+- Creating perormance evaluation envionment and adding posibility to cofigure kube client. Created new model of virtual outboud
+- Add possibility to automatically run performance tests on EKS cluster
+- Implementing billing endpoint for Mesh in Konnect
+- Design and implement new Global Insight
+- Design and implement new Locality Aware Loadbalancing API
+- Design and implementation of Locality Aware Load Balancing for Zone Egress proxy
+- Design and implementation of new MeshMetric policy
+- Design and implementation of OpenTelemetry support in new MeshMetric policy
+- Design and implement improvements for OpenTelemetry integration in MeshMetric policy, multiple backends and possibility to configure refresh interval
+- Improving performance and stability of OpenTelemetry integration
+- Add posibility to add custom labels on metrics in OpenTelemetry
+- Create OTEL guide, designing namespaced scoped policies
+- Implementing API for namespace scoped policies
+- Design of new API for targeting Mesh*Routes in policies
+- Implement support for real MeshService in Kuma policies
+- Improvements to new policy matching
+- Writing new docs and guides for Kuma
+- Preparing new India environment for Mesh Manager
+- Designing new inbound policy api
+- Implementing new kind Dataplane for policies
+- Implementing new rules api for inbound policies
+- Designing new inspect API
+- Designing new inspect API
+- Implementing new api for MeshOPA and MeshGlobalRateLimit
+- Implementing new Inspect API
+- Implementing new policies Inspect API
+- Implementing support for SpiffeId in MeshTrafficPermission policy
+- Designing and creating guides for MeshTrafficPermission
+- Design and implement support for internal addresses with ipv6 disabled
+- Implement new Workload resource
+- Designing and creating special copilot AI instructions for automated pr review
+- "Adding possibility to run kuma without Inbound tags

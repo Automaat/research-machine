@@ -46,6 +46,13 @@ For EACH source, extract:
 - Type: [docs/paper/blog/etc.]
 - Potential bias: [if any]
 
+**Funding & Sponsorship:**
+
+- 💰 **Funder/Sponsor:** [Organization/company funding the study, or "Not disclosed"]
+- 🏢 **Author Affiliations:** [Key affiliations that may indicate conflicts]
+- ⚠️ **Conflict of Interest:** [Declared COIs, or "None declared", or "Not stated"]
+- 🎯 **Sponsor Alignment:** [Does the conclusion align with sponsor's commercial interests? Yes/No/N/A]
+
 ---
 
 ## Phase 2: Chain-of-Thought Synthesis
@@ -55,7 +62,10 @@ Connect sources systematically:
 1. **Claim:** [Your synthesized point]
    - **Evidence:** [Source N, Quote: "..."]
    - **Confidence:** High/Medium/Low
+   - **Sponsorship Bias Risk:** 🟢 None / 🟡 Possible / 🔴 Likely — [brief explanation if applicable]
    - **Reasoning chain:** Source A states X → Source B confirms Y → Therefore Z
+
+⚠️ **Bias Check:** When multiple sources agree, verify they don't share the same funder. Industry-funded studies with conclusions favoring the sponsor's product should be weighted lower. Prefer independently funded or publicly funded research when available.
 
 ---
 
@@ -89,6 +99,12 @@ Output format:
 |-------|--------------|---------------|-------|
 
 Flag as UNGROUNDED anything not directly traceable to source quote.
+
+SPONSORSHIP BIAS CHECK:
+For each claim backed primarily by industry-funded sources:
+1. Is there independent corroboration from non-industry sources?
+2. Does the claim directly benefit the funding organization?
+3. Rate sponsorship bias risk: 🟢 None / 🟡 Possible / 🔴 Likely
 ```
 
 Integrate subagent findings back into your output.
@@ -103,6 +119,8 @@ Integrate subagent findings back into your output.
 | Quotes are verbatim? | |
 | No "common knowledge" gap-filling? | |
 | Uncertainties flagged? | |
+| Funding/sponsorship identified per source? | |
+| Industry-funded claims independently corroborated? | |
 
 **If any FAIL:** Revise before output.
 
@@ -110,15 +128,33 @@ Integrate subagent findings back into your output.
 
 ## Output Format
 
+**IMPORTANT: Always output TL;DR FIRST, before any phases or detailed analysis.**
+
+### TL;DR
+
+[2-3 sentence bottom-line answer. Plain language, no citations. What does the user need to know?]
+
+---
+
+*Detailed analysis follows below.*
+
 ### Summary
 
 [Key findings - every sentence with [Source: N] citation]
 
 ### Evidence Table
 
-| Finding | Source | Verbatim Quote | Confidence |
-|---------|--------|----------------|------------|
-| [claim] | [N] | "[exact words]" | High/Med/Low |
+| Finding | Source | Verbatim Quote | Confidence | Bias Risk |
+|---------|--------|----------------|------------|-----------|
+| [claim] | [N] | "[exact words]" | High/Med/Low | 🟢/🟡/🔴 |
+
+### Sponsorship & Bias Map
+
+| Source | Funder/Sponsor | Author Affiliations | Declared COI | Conclusion Favors Sponsor? |
+|--------|---------------|---------------------|--------------|---------------------------|
+| [N] | [org] | [affiliations] | [yes/no/undisclosed] | [yes/no/N/A] |
+
+**⚠️ Bias Warnings:** [Flag any findings that rely primarily on industry-funded sources without independent corroboration]
 
 ### What Sources DON'T Cover
 

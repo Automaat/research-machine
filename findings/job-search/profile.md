@@ -34,6 +34,7 @@ If remote EU + €160k+ match, keep as MAYBE even if these don't match. Note con
 
 ### Domain (Preferred)
 
+- ✅ **Concrete product** — Working on actual product, not internal tooling only
 - ✅ AI-related: infrastructure, AI-powered products, AI-adjacent
 - ✅ Developer tools, platform, infrastructure
 - ⚠️ Traditional industries OK if other criteria strong
@@ -75,9 +76,14 @@ If remote EU + €160k+ match, keep as MAYBE even if these don't match. Note con
 - Observability/monitoring
 - CI/CD pipelines
 
+### Acceptable Match (GO if project compelling)
+
+- Kotlin, Java — If product is interesting, concrete, and impactful
+- Note: Prioritize Go, but open to JVM if right product
+
 ### Weak Match (MAYBE if geo+comp fit)
 
-- Java, .NET, PHP — Note stack mismatch
+- .NET, PHP — Note stack mismatch
 - Frontend-heavy — Note preference mismatch
 - Any modern stack if role scope is right
 

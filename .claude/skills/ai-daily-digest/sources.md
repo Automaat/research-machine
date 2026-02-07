@@ -10,6 +10,7 @@
 | DeepMind | deepmind.google | `site:deepmind.google blog` |
 | OpenAI | openai.com | `site:openai.com blog OR research` |
 | Anthropic | anthropic.com | `site:anthropic.com news OR research` |
+| MCP Blog | blog.modelcontextprotocol.io | `site:blog.modelcontextprotocol.io` |
 | Meta AI | ai.meta.com | `site:ai.meta.com blog` |
 
 ## Tech News
@@ -34,6 +35,10 @@
 | TLDR AI | tldr.tech/ai | Daily AI digest |
 | Ben's Bites | bensbites.com | AI products, launches |
 | Ahead of AI | magazine.sebastianraschka.com | ML research |
+| AI-Weekly | ai-weekly.ai | Weekly industry roundup |
+| Radical Data Science | radicaldatascience.wordpress.com | AI news bulletin board |
+| Last Week in AI | medium.com/last-week-in-ai | Weekly research/news digest |
+| Fladgate AI Round-Up | fladgate.com/insights (search "AI") | Legal/business perspective |
 
 ## Indie & Smaller Bloggers
 
@@ -52,6 +57,28 @@
 | swyx | swyx.io | AI engineering, latent space |
 | Rachel Thomas | rachel.fast.ai | AI ethics, fast.ai |
 | François Chollet | fchollet.substack.com | Keras, AI philosophy |
+| Addy Osmani | addyo.substack.com | LLM coding workflows, Chrome DevRel |
+| R. Srinivasan | rsrini7.substack.com | AI production, Java/Python, agents |
+
+## YouTube AI Channels
+
+| Channel | URL | Focus |
+|---------|-----|-------|
+| 3Blue1Brown | youtube.com/@3blue1brown | Math/ML visualizations, deep learning |
+| Andrej Karpathy | youtube.com/@AndrejKarpathy | Neural nets, AI education |
+| Yannic Kilcher | youtube.com/@YannicKilcher | AI paper reviews, analysis |
+| Two Minute Papers | youtube.com/@TwoMinutePapers | Research highlights, quick summaries |
+| AI Explained | youtube.com/@aiexplained-official | AI news, analysis, breakdowns |
+| Fireship | youtube.com/@Fireship | Dev-focused AI content, quick tutorials |
+| Matt Wolfe | youtube.com/@maboroshi | AI tools, news roundups |
+| The AI Advantage | youtube.com/@AIAdvantage | Practical AI tutorials |
+| AI Jason | youtube.com/@AIJasonZ | AI tools, tutorials |
+| Prompt Engineering | youtube.com/@PromptEngineering | LLM practical use |
+| Sam Witteveen | youtube.com/@samwitteveen | LLM tutorials, RAG |
+| James Briggs | youtube.com/@jamesbriggs | ML/AI engineering |
+| Nicholas Renotte | youtube.com/@NicholasRenotte | Practical ML tutorials |
+| sentdex | youtube.com/@sentdex | Python ML, AI projects |
+| StatQuest | youtube.com/@statquest | Stats/ML explained simply |
 
 ## Community
 
@@ -68,9 +95,39 @@
 | Source | URL | Focus |
 |--------|-----|-------|
 | Dev.to AI | dev.to/t/ai | Tutorials, tools |
-| GitHub Trending | github.com/trending | AI/ML repos |
 | Pragmatic Engineer | pragmaticengineer.com | Industry analysis |
 | Engineering Blogs | Various | Company engineering posts |
+
+## GitHub Trending AI
+
+| Source | URL | Focus |
+|--------|-----|-------|
+| GitHub Trending (all) | github.com/trending | Overall trending repos |
+| GitHub Trending Python | github.com/trending/python | Python AI/ML repos |
+| GitHub Trending Jupyter | github.com/trending/jupyter-notebook | ML notebooks |
+| GitHub Trending TypeScript | github.com/trending/typescript | AI tooling, agents |
+
+## AI Tools for Software Engineers
+
+| Source | URL | Focus |
+|--------|-----|-------|
+| Product Hunt | producthunt.com | New tool launches |
+| DevHunt | devhunt.org | Developer tools launches |
+| Console.dev | console.dev | Dev tools newsletter |
+| There's An AI For That | theresanaiforthat.com | AI tool directory |
+| Future Tools | futuretools.io | AI tool aggregator |
+| AI Tool Report | aitoolreport.com | AI tool reviews |
+
+## AI Tools for Photo/Video
+
+| Source | URL | Focus |
+|--------|-----|-------|
+| PetaPixel | petapixel.com | Photography news, AI tools |
+| Fstoppers | fstoppers.com | Photo/video tools |
+| No Film School | nofilmschool.com | Video production tools |
+| Frame.io Blog | frame.io/blog | Video workflow |
+| Topaz Labs | topazlabs.com/blog | AI photo/video enhancement |
+| Runway | runwayml.com | AI video generation |
 
 ## Business & Funding
 
@@ -134,6 +191,32 @@ AI transformation organizational change
 AI team structure skills
 ```text
 
+### AI Tools for Developers
+
+```text
+AI developer tool new release {YYYY-MM-DD}
+AI coding assistant launch
+"AI for developers" tool app
+site:producthunt.com AI developer coding
+AI IDE plugin extension new
+AI terminal CLI tool
+AI code review debugging tool
+```
+
+### AI Tools for Photo/Video
+
+```text
+AI photo editing tool new {YYYY-MM-DD}
+AI video editing software launch
+"AI for photographers" tool app
+"AI for videographers" tool app
+site:producthunt.com AI photo video
+AI color grading tool new
+AI video upscaling enhancement
+site:petapixel.com AI
+site:nofilmschool.com AI
+```
+
 ### Indie Bloggers
 
 ```text
@@ -145,7 +228,30 @@ site:vickiboykis.com
 site:hamel.dev
 site:swyx.io
 site:ruder.io
+```
+
+### YouTube AI Videos
+
 ```text
+AI tutorial OR explanation site:youtube.com {YYYY-MM-DD}
+LLM "large language model" site:youtube.com {YYYY-MM-DD}
+AI news update site:youtube.com {YYYY-MM-DD}
+"AI paper" review breakdown site:youtube.com {YYYY-MM-DD}
+machine learning explained site:youtube.com {YYYY-MM-DD}
+AI coding assistant demo site:youtube.com {YYYY-MM-DD}
+"Andrej Karpathy" OR "Yannic Kilcher" new video
+"Two Minute Papers" OR "AI Explained" new
+```
+
+### GitHub Trending AI
+
+```text
+site:github.com AI LLM "stars" trending {YYYY-MM-DD}
+github trending AI machine learning new
+"Show HN" github AI tool
+site:github.com "released" AI framework {YYYY-MM-DD}
+github.com/trending python AI
+```
 
 ### Weekly Roundup (Friday Mode)
 

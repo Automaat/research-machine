@@ -47,6 +47,22 @@ If not set, skip JSearch source and use other sources.
 
 ---
 
+## Compensation Tolerance Rule
+
+**10% Tolerance for MAYBE:**
+- Target: €160k total compensation
+- Tolerance: ±10% (€144k-€176k range)
+- **€144k-€160k** → MAYBE (within 10% below target)
+- **<€144k** → NO-GO (more than 10% below target)
+- **€160k+** → GO (meets or exceeds target)
+
+Example:
+- €151k → MAYBE (5.6% below, within tolerance)
+- €135k → NO-GO (15.6% below, outside tolerance)
+- €172k → GO (exceeds target)
+
+---
+
 ## Workflow
 
 ### Phase 1: Load State
@@ -73,7 +89,7 @@ If not set, skip JSearch source and use other sources.
    Read findings/job-search/profile.md
    ```
 
-   Note key terms: Go, distributed systems, platform, AI, remote.
+   Note key terms: Go, Kotlin, Java, distributed systems, platform, AI, remote, product.
 
 ---
 
@@ -138,6 +154,22 @@ curl -s "https://jsearch.p.rapidapi.com/search?query=staff%20engineer%20remote&p
   -H "X-RapidAPI-Host: jsearch.p.rapidapi.com" | jq -r '.data[]? | "\(.employer_name) | \(.job_title) | \(.job_country // "Unknown") | \(.job_min_salary // "N/A")-\(.job_max_salary // "N/A") | \(.job_apply_link)"'
 ```text
 
+##### Search 6: Kotlin Engineer Remote Europe
+
+```bash
+curl -s "https://jsearch.p.rapidapi.com/search?query=kotlin%20engineer%20remote&page=1&num_pages=2&country=pl,de,uk,nl&remote_jobs_only=true" \
+  -H "X-RapidAPI-Key: $JSEARCH_API_KEY" \
+  -H "X-RapidAPI-Host: jsearch.p.rapidapi.com" | jq -r '.data[]? | "\(.employer_name) | \(.job_title) | \(.job_country // "Unknown") | \(.job_apply_link)"'
+```text
+
+##### Search 7: Java Backend Engineer Remote (Product Companies)
+
+```bash
+curl -s "https://jsearch.p.rapidapi.com/search?query=java%20backend%20engineer%20remote%20product&page=1&num_pages=2&remote_jobs_only=true" \
+  -H "X-RapidAPI-Key: $JSEARCH_API_KEY" \
+  -H "X-RapidAPI-Host: jsearch.p.rapidapi.com" | jq -r '.data[]? | "\(.employer_name) | \(.job_title) | \(.job_country // "Unknown") | \(.job_apply_link)"'
+```text
+
 **JSearch API Parameters:**
 
 - `query` — Search terms
@@ -179,25 +211,26 @@ WebSearch: "site:news.ycombinator.com Who is Hiring 2026"
 Find current month's thread. Then:
 
 ```text
-WebFetch the thread, prompt: "Extract job listings mentioning: Go, Golang, distributed systems, platform, infrastructure, AI, remote, EMEA, Europe. Return company name and any URL or email for each."
+WebFetch the thread, prompt: "Extract job listings mentioning: Go, Golang, Kotlin, Java, distributed systems, platform, infrastructure, AI, remote, EMEA, Europe. Return company name and any URL or email for each."
 ```text
 
 ##### Source 2: RemoteOK
 
 ```text
 WebFetch: https://remoteok.com/remote-dev-jobs
-Prompt: "Extract job listings for: Go, Golang, Python, AI, ML, platform, infrastructure. Return job title, company, and listing URL for each."
+Prompt: "Extract job listings for: Go, Golang, Kotlin, Java, Python, AI, ML, platform, infrastructure. Return job title, company, and listing URL for each."
 ```text
 
 ##### Source 3: We Work Remotely
 
 ```text
 WebFetch: https://weworkremotely.com/categories/remote-back-end-programming-jobs
-Prompt: "Extract job listings mentioning: Go, Golang, Python, AI, infrastructure, platform, distributed. Return job title, company, and listing URL."
+Prompt: "Extract job listings mentioning: Go, Golang, Kotlin, Java, Python, AI, infrastructure, platform, distributed. Return job title, company, and listing URL."
 ```text
 
 ```text
 WebSearch: "site:weworkremotely.com golang OR go engineer 2026"
+WebSearch: "site:weworkremotely.com kotlin OR java backend engineer 2026"
 WebSearch: "site:weworkremotely.com AI infrastructure engineer 2026"
 ```text
 
@@ -209,7 +242,13 @@ Prompt: "Extract all job listings. Return job title, company, location requireme
 ```text
 
 ```text
+WebFetch: https://arc.dev/remote-jobs/kotlin
+Prompt: "Extract all job listings. Return job title, company, location requirements, and listing URL."
+```text
+
+```text
 WebSearch: "site:arc.dev golang remote europe 2026"
+WebSearch: "site:arc.dev kotlin remote europe 2026"
 WebSearch: "site:arc.dev AI engineer remote 2026"
 ```text
 
@@ -217,6 +256,8 @@ WebSearch: "site:arc.dev AI engineer remote 2026"
 
 ```text
 WebSearch: "site:wellfound.com golang engineer remote 2026"
+WebSearch: "site:wellfound.com kotlin engineer remote 2026"
+WebSearch: "site:wellfound.com java backend engineer remote product 2026"
 WebSearch: "site:wellfound.com AI infrastructure engineer remote 2026"
 WebSearch: "site:wellfound.com platform engineer remote europe 2026"
 ```text
@@ -225,11 +266,12 @@ WebSearch: "site:wellfound.com platform engineer remote europe 2026"
 
 ```text
 WebFetch: https://www.workatastartup.com/jobs
-Prompt: "Extract job listings for: Go, Golang, infrastructure, platform, AI, remote. Return company name, role, and listing URL."
+Prompt: "Extract job listings for: Go, Golang, Kotlin, Java, infrastructure, platform, AI, remote. Return company name, role, and listing URL."
 ```text
 
 ```text
 WebSearch: "site:workatastartup.com golang remote 2026"
+WebSearch: "site:workatastartup.com kotlin remote 2026"
 WebSearch: "site:workatastartup.com infrastructure engineer remote 2026"
 ```text
 
@@ -245,7 +287,13 @@ Prompt: "Extract job listings. Return company, role, location, and URL."
 ```text
 
 ```text
+WebFetch: https://landing.jobs/jobs?keywords=kotlin&remote=true
+Prompt: "Extract job listings. Return company, role, location, and URL."
+```text
+
+```text
 WebSearch: "site:landing.jobs golang remote 2026"
+WebSearch: "site:landing.jobs kotlin remote 2026"
 WebSearch: "site:landing.jobs platform engineer remote 2026"
 ```text
 
@@ -253,6 +301,8 @@ WebSearch: "site:landing.jobs platform engineer remote 2026"
 
 ```text
 WebSearch: "site:swissdevjobs.ch golang remote 2026"
+WebSearch: "site:swissdevjobs.ch kotlin remote 2026"
+WebSearch: "site:swissdevjobs.ch java backend remote 2026"
 WebSearch: "site:swissdevjobs.ch infrastructure engineer remote 2026"
 ```text
 
@@ -331,6 +381,20 @@ WebSearch: "staff engineer remote europe kubernetes 2026"
 WebSearch: "infrastructure engineer remote poland 2026"
 WebSearch: "site reliability engineer remote europe 2026"
 ```text
+
+**Kotlin/Java (interesting products only):**
+
+```text
+WebSearch: "kotlin engineer remote europe product 2026"
+WebSearch: "senior kotlin developer remote EMEA 2026"
+WebSearch: "java backend engineer remote europe startup 2026"
+WebSearch: "staff engineer kotlin remote 2026"
+```text
+
+**NOTE:** For Kotlin/Java results, prioritize:
+- Concrete products (not internal tooling/agencies)
+- Interesting domain (AI, dev tools, fintech product, etc.)
+- Strong engineering culture signals
 
 ---
 
@@ -652,7 +716,7 @@ Try again tomorrow or add new sources.
 
 **Environment variable:** `JSEARCH_API_KEY`
 **Rate limit:** Free tier ~500 requests/month
-**Searches per run:** 5 (golang, distributed, AI infra, platform, staff)
+**Searches per run:** 7 (golang, distributed, AI infra, platform, staff, kotlin, java)
 **Pages per search:** 2
 
 ### Flags

@@ -1,0 +1,15 @@
+[project]
+name = "{skill-name}-scripts"
+version = "0.1.0"
+requires-python = ">=3.14"
+dependencies = [
+    # Add only dependencies that provide clear value
+    # Common choices:
+    # "httpx",           # HTTP client (async-capable)
+    # "pydantic",        # Data validation
+    # "typer",           # CLI framework (if complex args)
+    # "rich",            # Pretty output (if terminal display)
+]
+
+[tool.uv]
+dev-dependencies = []

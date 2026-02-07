@@ -133,7 +133,14 @@ These are dealbreakers regardless of comp or geo:
 
 #### SOFT CRITERIA (MAYBE if geo + comp match)
 
-If listing appears to offer **remote Europe/Poland + €160k+ comp**, mark as MAYBE even if these don't match. Note the concern.
+**COMPENSATION TOLERANCE (10% Rule):**
+- **€160k+** → GO (meets or exceeds target)
+- **€144k-€160k** → MAYBE (within 10% tolerance below target)
+- **<€144k** → NO-GO (more than 10% below target)
+
+Example: €151k (~5.6% below) → MAYBE, €135k (~15.6% below) → NO-GO
+
+If listing appears to offer **remote Europe/Poland + comp within tolerance (€144k+)**, mark as MAYBE even if other criteria don't match. Note the concern.
 
 **Industry (not preferred but acceptable):**
 
@@ -155,19 +162,20 @@ If listing appears to offer **remote Europe/Poland + €160k+ comp**, mark as MA
 
 **Tech stack mismatch:**
 
-- ⚠️ No Go/Python — Note: "Stack: [X], not Go"
+- ⚠️ No Go/Python/Kotlin/Java — Note: "Stack: [X], not preferred"
 - ⚠️ Frontend-heavy — Note: "Frontend focus, not backend"
 
 ### 6. Decision Logic
 
 ```text
 IF hard NO-GO criteria → NO-GO (stop)
-ELSE IF all green flags + tech match → GO
-ELSE IF remote EU/Poland likely + €160k+ likely → MAYBE (note concerns)
+ELSE IF all green flags + tech match + €160k+ → GO
+ELSE IF remote EU/Poland likely + comp €144k+ (within 10% tolerance) → MAYBE (note concerns)
+ELSE IF comp <€144k (>10% below target) → NO-GO (comp insufficient)
 ELSE → NO-GO
 ```
 
-**Key insight:** We want to capture ALL opportunities that meet geo + comp, even if other
+**Key insight:** We want to capture ALL opportunities that meet geo + comp tolerance (€144k+), even if other
 criteria don't match. Better to review a MAYBE than miss a good opportunity.
 
 ---
@@ -179,7 +187,7 @@ criteria don't match. Better to review a MAYBE than miss a good opportunity.
 - ✅ AI in product or mission statement
 - ✅ Building developer tools
 - ✅ Open source involvement mentioned
-- ✅ Modern stack (Go, Rust, K8s, etc.)
+- ✅ Modern stack (Go, Kotlin, Rust, K8s, etc.)
 
 **Culture:**
 
@@ -209,9 +217,15 @@ criteria don't match. Better to review a MAYBE than miss a good opportunity.
 - Infrastructure / DevOps
 - Observability
 
+**Acceptable Match (GO if product is compelling):**
+
+- Kotlin — If concrete product, interesting domain
+- Java — If concrete product, not agency, compelling problem space
+- Note: JVM roles need interesting product to be GO, otherwise MAYBE
+
 **Weak Match (MAYBE if geo+comp fit):**
 
-- Java, .NET, PHP — Note stack mismatch
+- .NET, PHP — Note stack mismatch
 - Frontend-heavy (React, Vue)
 - Mobile development
 
@@ -446,13 +460,12 @@ Traditional fintech, not AI-related, Java stack. BUT: Remote EU confirmed, €18
 - Well-funded, stable
 
 ### Technical Match
-- Weak — Java/.NET, not Go. But distributed systems experience relevant.
+- Acceptable — Java/Kotlin, distributed systems relevant. Product is concrete.
 
 ### Soft Criteria Concerns
 - ⚠️ Industry: Traditional fintech, not AI-related
-- ⚠️ Stack: Java/.NET primary, Go not mentioned
 - ⚠️ Tooling: Finance may have restrictions
-- ✅ WHY KEEPING: Remote EU + €180k confirmed + well-funded
+- ✅ WHY KEEPING: Remote EU + €180k confirmed + well-funded + concrete product
 
 ### Questions
 - AI tooling allowed? (Claude Code, etc.)
