@@ -2,16 +2,16 @@
 
 ## Overview
 
-Personal knowledge management using Obsidian with PARA organization.
+Personal knowledge management using Notion with PARA organization.
 Technical and personal knowledge through Capture → Process → Connect workflow.
 
-**System:** Obsidian vault with wikilinks and MOCs
+**System:** Notion workspace with wikilinks and MOCs
 **Structure:** PARA (Projects, Areas, Resources, Archives)
 **Primary Use:** Technical research, knowledge synthesis, pattern discovery
 
 ---
 
-## Vault Structure
+## Workspace Structure
 
 ```text
 0_Inbox/          # Capture zone
@@ -172,20 +172,22 @@ Domain/theme description.
 
 ---
 
-## Obsidian MCP Integration
+## Notion MCP Integration
 
-### Direct Vault Access
+### Direct Workspace Access
 
-**Vault:** `/Users/marcin.skalski@konghq.com/Library/Mobile Documents/iCloud~md~obsidian/Documents/second-brain/`
+**Workspace:** Connected via Notion MCP
 
 **Operations:**
 
-- Read/write notes
-- Search vault
-- Move between folders
-- Add/update tags
-- Fix broken links
-- Find orphaned notes
+- Read/write pages
+- Search workspace (semantic + keyword)
+- Create/update pages and databases
+- Move pages between parents
+- Add comments
+- Update page properties
+- Fetch page content
+- Query databases
 
 ---
 
@@ -239,13 +241,13 @@ Domain/theme description.
 
 ## Maintenance Tasks
 
-**Help maintain vault quality:**
+**Help maintain workspace quality:**
 
-- Find orphaned notes (no links in/out)
-- Identify broken links
+- Find orphaned pages (no links in/out)
 - Tag consistency checks
 - Duplicate detection
 - Inbox overflow assistance
+- Database property cleanup
 
 ---
 

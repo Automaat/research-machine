@@ -103,6 +103,8 @@
 | 2026-02-05 | Coder | AI engineering roles | €90-121k | <https://coder.com/careers> | All engineering US/Canada only, no EU/Poland. Only PM role Poland-eligible (below target) |
 | 2026-02-05 | DeepL | Backend engineering roles | €65-178k | <https://jobs.ashbyhq.com/DeepL> | Hybrid required (2x/week London office), not fully remote |
 | 2026-02-05 | Anthropic | Multiple engineering roles | $265k-746k | <https://job-boards.greenhouse.io/anthropic> | 25% in-office required (1 week/month), no Poland remote despite London/Dublin/Zurich offices |
+| 2026-02-12 | MindsDB | Platform & Infrastructure Engineer | $130-180k est | <https://weworkremotely.com/remote-jobs/mindsdb-platform-infrastructure-engineer> | Series A $55M, Python/K8s/microservices, AI analytics. Job posting closed, Greenhouse shows "no current openings" |
+| 2026-02-12 | Starbridge | Senior Backend Engineer (Java/Kotlin) | $110-210k | <https://weworkremotely.com/remote-jobs/starbridge-senior-backend-engineer-java-kotlin> | Series A $42M govtech AI, JVM stack. Should be MAYBE per updated profile (Java/Kotlin acceptable if interesting company), but marked NO-GO by agent |
 
 ---
 
@@ -146,20 +148,22 @@
 | 2026-01-31 | Cohere | Applied AI Engineer – Agentic Workflows | €160k+ | <https://jobs.ashbyhq.com/cohere> | London, AI-native, Series D+ $7B. Poor culture 2.9/5 Glassdoor (28% recommend, burnout). Likely Python/ML heavy |
 | 2026-01-31 | Cohere | Member of Technical Staff, MLE (UK/EU) | €160k+ | <https://jobs.ashbyhq.com/cohere/03a001c1-1082-4a73-a35d-4ef18e2a8770> | London/Paris hybrid (red flag), Applied ML, Series D+ $7B. Poor culture 2.9/5. Confirm remote policy |
 | 2026-01-31 | Cohere | Full-Stack Software Engineer, Inference | €160k+ | <https://jobs.ashbyhq.com/cohere/e4079e60-c3f9-454c-a81f-2a07730dc7d7> | London secondary (Toronto primary hybrid), full-stack (frontend heavy), inference infra. Poor culture 2.9/5 |
+| 2026-02-12 | Stacker | Full Stack Engineer (Remote, Europe) | €51-75k | <https://weworkremotely.com/remote-jobs/stacker-full-stack-engineer-remote-europe> | Series A $23M YC/A16z, no-code platform. React/TypeScript/Python, excellent culture 4.7/5. Comp 52-68% below €160k target, no-code niche risk |
 
 ---
 
 ## 📈 Stats
 
-- **Total Processed:** 111
+- **Total Processed:** 114
 - **VERIFIED:** 2 (Neon/Databricks, Cohere)
 - **NEEDS-MANUAL:** 5 (Redpanda x2, Grafana, Railway, Hatchet)
 - **GO (pending verify):** 5 (Supabase x2, PostHog x3)
-- **NO-GO:** 55 (latest: Anthropic, DeepL, Coder, Modal, GitLab x2, Grafana, Linear)
-- **MAYBE:** 43 (latest: DuckDuckGo, Mistral AI x2, Arc AI Infra, Chainlink)
-- **Success Rate:** 48% pass initial triage (43 MAYBE, 5 NEEDS-MANUAL, 5 GO, 2 VERIFIED of 111)
+- **NO-GO:** 57 (latest: MindsDB closed, Starbridge JVM)
+- **MAYBE:** 44 (latest: Stacker €51-75k)
+- **Success Rate:** 48% pass initial triage (44 MAYBE, 5 NEEDS-MANUAL, 5 GO, 2 VERIFIED of 114)
 - **Verification Stats:** 9 companies verified (6 rejected, 3 needs manual clarification, 2 VERIFIED)
 - **Comp Tolerance:** ±10% of €160k target (€144k-€176k) = MAYBE, outside = NO-GO
+- **Last Discovery Run:** 2026-02-12 (13+ sources, 3 triaged, 0 GO)
 
 ---
 
@@ -183,3 +187,4 @@
 
 - [[profile]] — Search criteria
 - [[companies]] — Watched companies
+

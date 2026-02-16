@@ -76,10 +76,15 @@ If remote EU + €160k+ match, keep as MAYBE even if these don't match. Note con
 - Observability/monitoring
 - CI/CD pipelines
 
-### Acceptable Match (GO if project compelling)
+### Acceptable Match (MAYBE minimum, GO if compelling)
 
-- Kotlin, Java — If product is interesting, concrete, and impactful
-- Note: Prioritize Go, but open to JVM if right product
+- **Kotlin, Java** — Acceptable if company/product interesting
+  - **Don't auto-reject JVM roles** — evaluate company first
+  - Series A+ with good funding → MAYBE minimum
+  - AI/platform/infrastructure focus → promotes to GO
+  - Concrete product (not internal tooling) → promotes to GO
+  - Interesting domain + strong team → promotes to GO
+- Note: Prioritize Go, but JVM is fine for right company
 
 ### Weak Match (MAYBE if geo+comp fit)
 

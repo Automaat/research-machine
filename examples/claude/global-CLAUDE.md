@@ -116,7 +116,7 @@ When creating pr description follow format:
 
 ### Notes
 
-- When asked to save note/findings to inbox, always save to: /Users/marcin.skalski@konghq.com/Library/Mobile Documents/iCloud~md~obsidian/Documents/second-brain/0_Inbox
+- When asked to save note/findings to inbox, create Notion page in workspace inbox
 - Always use markdown format for notes
 - Use good amount of emojis when writing notes
 

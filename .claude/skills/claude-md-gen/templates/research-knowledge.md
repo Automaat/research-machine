@@ -1,6 +1,6 @@
 # Research & Knowledge Management Template
 
-Base structure for knowledge management systems (Obsidian, Notion, etc.).
+Base structure for knowledge management systems (Notion, Roam, etc.).
 
 ---
 
@@ -8,11 +8,11 @@ Base structure for knowledge management systems (Obsidian, Notion, etc.).
 
 [PROJECT_DESCRIPTION]
 
-**System:** [SYSTEM_NAME] (Obsidian, Notion, Roam, etc.)
+**System:** [SYSTEM_NAME] (Notion, Roam, etc.)
 **Structure:** [ORGANIZATION_METHOD] (PARA, Zettelkasten, folders, etc.)
 **Primary Use:** [PRIMARY_USE_CASES]
 
-## Vault/Workspace Structure
+## Workspace Structure
 
 ```text
 [DIRECTORY_STRUCTURE]
@@ -169,7 +169,7 @@ Base structure for knowledge management systems (Obsidian, Notion, etc.).
 
 ## Maintenance Tasks
 
-**Regular maintenance:**
+**Help maintain workspace quality:**
 
 - [MAINTENANCE_TASK_1]
 - [MAINTENANCE_TASK_2]
@@ -242,12 +242,12 @@ Before saving notes:
 - ❌ Oversimplifying (maintain nuance when important)
 - ❌ Creating information from nothing (base on actual content)
 - ❌ Ignoring conventions ([SPECIFIC_CONVENTION_1], [SPECIFIC_CONVENTION_2])
-- ❌ Orphaned notes (no links in/out) - unless intentional
-- ❌ Duplicate notes on same topic
+- ❌ Orphaned pages (no links in/out) - unless intentional
+- ❌ Duplicate pages on same topic
 - ❌ Generic titles ("Notes on X", "Thoughts about Y")
 - ❌ Mixing capture and processing (inbox is for capture only)
 - ❌ Over-tagging (dilutes tag value)
-- ❌ No sources on research notes
+- ❌ No sources on research pages
 
 **REASON:** Knowledge management systems fail when they become burdensome or inconsistent. Keep it sustainable.
 
