@@ -61,30 +61,27 @@ If remote EU + €160k+ match, keep as MAYBE even if these don't match. Note con
 
 ## 🔧 Technical Fit
 
-### Strong Match (promotes GO)
+### Primary Focus (promotes GO)
 
-- Go (primary)
-- Distributed systems
-- Kubernetes/cloud-native
-- API design
-- Platform engineering
+- **Go + Kubernetes + Distributed Systems** — core target combination
+- **Product collaboration** — engineering close to product team (not pure infra/ops)
+- Distributed systems (consensus, replication, messaging, coordination)
+- Platform engineering with product impact
+- Cloud-native infrastructure
 
 ### Good Match (promotes GO)
 
+- Go without K8s (still strong)
+- Kubernetes without Go (if platform/infra scope)
 - Python (ML/AI tooling)
-- Infrastructure as code
-- Observability/monitoring
-- CI/CD pipelines
+- Infrastructure as code, Observability
 
-### Acceptable Match (MAYBE minimum, GO if compelling)
+### Acceptable Match (MAYBE minimum)
 
-- **Kotlin, Java** — Acceptable if company/product interesting
-  - **Don't auto-reject JVM roles** — evaluate company first
-  - Series A+ with good funding → MAYBE minimum
-  - AI/platform/infrastructure focus → promotes to GO
-  - Concrete product (not internal tooling) → promotes to GO
-  - Interesting domain + strong team → promotes to GO
-- Note: Prioritize Go, but JVM is fine for right company
+- **Kotlin, Java** — only if: general recruitment process (stack-agnostic) AND comp meets floor
+  - Do NOT pursue JVM-specific roles proactively
+  - Exception: general hiring process where stack is flexible
+- Any modern stack if recruitment is general and €160k+ confirmed
 
 ### Weak Match (MAYBE if geo+comp fit)
 
@@ -96,22 +93,22 @@ If remote EU + €160k+ match, keep as MAYBE even if these don't match. Note con
 
 ## 👤 Role Types
 
-### Preferred (promotes GO)
+### Required (hard filter — instant NO-GO if not met)
 
-- Staff Engineer (IC track)
-- Senior Engineer (high-impact)
-- Tech Lead (hands-on)
+- **Staff Engineer** (or equivalent: Staff SWE, Staff Platform, Staff Infrastructure)
+- **Principal Engineer** (IC track, above Staff)
 
-### Acceptable
+### Exception: General Recruitment
 
-- Engineering Manager (if still technical)
-- Principal Engineer
-- Founding Engineer (right stage)
+- If recruitment process is stack-agnostic (no Go/K8s required) AND comp meets €160k+ → MAYBE minimum regardless of role title
+- Note: "general" means they hire for problem-solving, not specific stack match
 
-### MAYBE (if geo+comp fit)
+### NO-GO role levels
 
-- Mid-level title but Staff scope
-- Manager-heavy role
+- Senior Engineer (unless title is clearly Staff-scope, verify in JD)
+- Engineering Manager (unless hybrid IC/EM with strong IC component)
+- Tech Lead without Staff title
+- Mid-level, Junior, Associate
 
 ---
 
@@ -131,6 +128,8 @@ These are absolute dealbreakers:
 
 ### AI/Tech Focus
 
+- **Distributed systems** — consensus, replication, messaging, coordination (strong signal)
+- **Product-adjacent engineering** — staff eng working closely with product, not pure ops
 - AI in product or mission
 - Building developer tools
 - Open source involvement

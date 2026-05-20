@@ -1,3 +1,18 @@
+---
+name: job-discover
+description: Search multiple job sources for new listings, spawn parallel triage agents, and update tracking state. Use when running /job-discover or searching for new job opportunities.
+allowed-tools:
+  - WebSearch
+  - WebFetch
+  - Read
+  - Edit
+  - Grep
+  - Bash
+  - Task
+  - Skill
+user-invocable: true
+---
+
 # Job Discover Skill
 
 ## Description
@@ -8,58 +23,50 @@ Search multiple job sources, find new listings, spawn parallel triage agents, up
 
 User invokes `/job-discover` or asks to search for new jobs.
 
-## Tools Required
-
-- WebSearch
-- WebFetch
-- Read
-- Edit
-- Grep
-- Bash (for JSearch API calls)
-- Task (for parallel triage agents)
-- Skill (for invoking job-triage)
-
 ---
 
 ## Prerequisites
 
 ### JSearch API Key
 
-**Load from local file (git-ignored):**
+Load from `.env.local` (git-ignored):
 
 ```bash
 source .env.local 2>/dev/null || true
-```text
+```
 
-**Check if loaded:**
-
-```bash
-if [ -n "$JSEARCH_API_KEY" ]; then
-  echo "✅ JSearch API key loaded"
-else
-  echo "⚠️ JSearch API key not found, skipping JSearch source"
-fi
-```text
-
-**Key location:** `.env.local` (git-ignored)
-
-If not set, skip JSearch source and use other sources.
+If `$JSEARCH_API_KEY` not set, skip JSearch source and use other sources.
 
 ---
 
 ## Compensation Tolerance Rule
 
-**10% Tolerance for MAYBE:**
-- Target: €160k total compensation
-- Tolerance: ±10% (€144k-€176k range)
-- **€144k-€160k** → MAYBE (within 10% below target)
-- **<€144k** → NO-GO (more than 10% below target)
-- **€160k+** → GO (meets or exceeds target)
+### Remote Europe (default)
 
-Example:
-- €151k → MAYBE (5.6% below, within tolerance)
-- €135k → NO-GO (15.6% below, outside tolerance)
-- €172k → GO (exceeds target)
+**10% Tolerance for MAYBE:**
+
+- Target: €160k total compensation
+- **€144k–€160k** → MAYBE (within 10% below target)
+- **<€144k** → NO-GO
+- **€160k+** → GO
+
+Example: €151k → MAYBE (5.6% below); €135k → NO-GO (15.6% below); €172k → GO.
+
+### Relocation to Zurich (CHF)
+
+- **≥300k CHF total comp** → GO
+- **270k–299k CHF** → MAYBE
+- **<270k CHF** → NO-GO
+
+Search for on-site or hybrid Zurich roles with strong engineering culture.
+
+### Relocation Anywhere (Visa Sponsorship, USD)
+
+Requirements: explicit visa sponsorship + total comp (base + equity + bonus):
+
+- **≥$400k USD total comp** → GO
+- **$360k–$399k USD** → MAYBE
+- **<$360k USD** → NO-GO
 
 ---
 
@@ -67,379 +74,72 @@ Example:
 
 ### Phase 1: Load State
 
-1. **Read tracking state:**
+1. Read `findings/job-search/tracking.md` — extract all URLs to build "already processed" set
+2. Read `findings/job-search/companies.md` — extract Active companies for career page searches
+3. Read `findings/job-search/profile.md` — note key terms: Go, Kotlin, Java, distributed systems, platform, AI
+4. Check Playwright availability (skip Playwright sources if unavailable):
 
-   ```text
-   Read findings/job-search/tracking.md
-   ```
+```bash
+SKILL_DIR=".claude/skills/job-discover/scripts"
+if [ -d "$SKILL_DIR/node_modules/playwright" ]; then
+  echo "✅ Playwright available"
+  PLAYWRIGHT_AVAILABLE=true
+else
+  echo "⚠️ Playwright not installed — run: mise run playwright:setup"
+  echo "   Skipping Playwright sources for this run."
+  PLAYWRIGHT_AVAILABLE=false
+fi
+```
 
-   Extract all URLs from GO, NO-GO, MAYBE tables to build "already processed" set.
-
-2. **Read watched companies:**
-
-   ```text
-   Read findings/job-search/companies.md
-   ```
-
-   Extract Active companies list for career page searches.
-
-3. **Read profile for search keywords:**
-
-   ```text
-   Read findings/job-search/profile.md
-   ```
-
-   Note key terms: Go, Kotlin, Java, distributed systems, platform, AI, remote, product.
+Read `references/search-sources.md` in full before starting Phase 2.
 
 ---
 
 ### Phase 2: Search Sources
 
-Run these searches and collect URLs:
-
----
-
-#### 🔌 JSearch API (LinkedIn, Indeed, Glassdoor)
-
-**Load API key and check:**
-
-```bash
-source .env.local 2>/dev/null || true
-if [ -z "$JSEARCH_API_KEY" ]; then
-  echo "⚠️ JSEARCH_API_KEY not set, skipping JSearch"
-else
-  echo "✅ JSearch API available"
-fi
-```text
-
-**If API key available, run searches:**
-
-##### Search 1: Go/Golang Remote Europe
-
-```bash
-curl -s "https://jsearch.p.rapidapi.com/search?query=golang%20engineer%20remote&page=1&num_pages=2&country=pl,de,uk,nl&remote_jobs_only=true" \
-  -H "X-RapidAPI-Key: $JSEARCH_API_KEY" \
-  -H "X-RapidAPI-Host: jsearch.p.rapidapi.com" | jq -r '.data[]? | "\(.employer_name) | \(.job_title) | \(.job_country // "Unknown") | \(.job_apply_link)"'
-```text
-
-##### Search 2: Distributed Systems Remote
-
-```bash
-curl -s "https://jsearch.p.rapidapi.com/search?query=distributed%20systems%20engineer%20remote&page=1&num_pages=2&remote_jobs_only=true" \
-  -H "X-RapidAPI-Key: $JSEARCH_API_KEY" \
-  -H "X-RapidAPI-Host: jsearch.p.rapidapi.com" | jq -r '.data[]? | "\(.employer_name) | \(.job_title) | \(.job_country // "Unknown") | \(.job_apply_link)"'
-```text
-
-##### Search 3: AI Infrastructure Remote
-
-```bash
-curl -s "https://jsearch.p.rapidapi.com/search?query=AI%20infrastructure%20engineer%20remote&page=1&num_pages=2&remote_jobs_only=true" \
-  -H "X-RapidAPI-Key: $JSEARCH_API_KEY" \
-  -H "X-RapidAPI-Host: jsearch.p.rapidapi.com" | jq -r '.data[]? | "\(.employer_name) | \(.job_title) | \(.job_country // "Unknown") | \(.job_apply_link)"'
-```text
-
-##### Search 4: Platform Engineer Remote Europe
-
-```bash
-curl -s "https://jsearch.p.rapidapi.com/search?query=platform%20engineer%20remote%20europe&page=1&num_pages=2&remote_jobs_only=true" \
-  -H "X-RapidAPI-Key: $JSEARCH_API_KEY" \
-  -H "X-RapidAPI-Host: jsearch.p.rapidapi.com" | jq -r '.data[]? | "\(.employer_name) | \(.job_title) | \(.job_country // "Unknown") | \(.job_apply_link)"'
-```text
-
-##### Search 5: Staff Engineer Remote
-
-```bash
-curl -s "https://jsearch.p.rapidapi.com/search?query=staff%20engineer%20remote&page=1&num_pages=2&remote_jobs_only=true&employment_types=FULLTIME" \
-  -H "X-RapidAPI-Key: $JSEARCH_API_KEY" \
-  -H "X-RapidAPI-Host: jsearch.p.rapidapi.com" | jq -r '.data[]? | "\(.employer_name) | \(.job_title) | \(.job_country // "Unknown") | \(.job_min_salary // "N/A")-\(.job_max_salary // "N/A") | \(.job_apply_link)"'
-```text
-
-##### Search 6: Kotlin Engineer Remote Europe
-
-```bash
-curl -s "https://jsearch.p.rapidapi.com/search?query=kotlin%20engineer%20remote&page=1&num_pages=2&country=pl,de,uk,nl&remote_jobs_only=true" \
-  -H "X-RapidAPI-Key: $JSEARCH_API_KEY" \
-  -H "X-RapidAPI-Host: jsearch.p.rapidapi.com" | jq -r '.data[]? | "\(.employer_name) | \(.job_title) | \(.job_country // "Unknown") | \(.job_apply_link)"'
-```text
-
-##### Search 7: Java Backend Engineer Remote (Product Companies)
-
-```bash
-curl -s "https://jsearch.p.rapidapi.com/search?query=java%20backend%20engineer%20remote%20product&page=1&num_pages=2&remote_jobs_only=true" \
-  -H "X-RapidAPI-Key: $JSEARCH_API_KEY" \
-  -H "X-RapidAPI-Host: jsearch.p.rapidapi.com" | jq -r '.data[]? | "\(.employer_name) | \(.job_title) | \(.job_country // "Unknown") | \(.job_apply_link)"'
-```text
-
-**JSearch API Parameters:**
-
-- `query` — Search terms
-- `page` — Page number (1-indexed)
-- `num_pages` — Number of pages to fetch
-- `country` — Country codes (pl, de, uk, nl, etc.)
-- `remote_jobs_only` — Filter to remote only
-- `employment_types` — FULLTIME, PARTTIME, CONTRACTOR
-- `date_posted` — all, today, 3days, week, month
-
-**Extract from response:**
-
-- `job_title` — Role title
-- `employer_name` — Company name
-- `job_apply_link` — Application URL
-- `job_city` / `job_country` — Location
-- `job_min_salary` / `job_max_salary` — Compensation
-- `job_description` — Full description
-- `job_posted_at_datetime_utc` — Posted date
-
-**JSearch jq filtering:**
-
-- Use `-r` flag for raw (non-JSON) output
-- Use `?` after `.data[]` for safe navigation (handles empty results)
-- Use `// "default"` for missing fields (e.g., `job_country // "Unknown"`)
-- Format as pipe-separated string for easy parsing
-- Include `job_country` to identify geographic restrictions early
-
----
-
-#### 🌍 Global Remote Boards
-
-##### Source 1: Hacker News Who's Hiring
-
-```text
-WebSearch: "site:news.ycombinator.com Who is Hiring 2026"
-```text
-
-Find current month's thread. Then:
-
-```text
-WebFetch the thread, prompt: "Extract job listings mentioning: Go, Golang, Kotlin, Java, distributed systems, platform, infrastructure, AI, remote, EMEA, Europe. Return company name and any URL or email for each."
-```text
-
-##### Source 2: RemoteOK
-
-```text
-WebFetch: https://remoteok.com/remote-dev-jobs
-Prompt: "Extract job listings for: Go, Golang, Kotlin, Java, Python, AI, ML, platform, infrastructure. Return job title, company, and listing URL for each."
-```text
-
-##### Source 3: We Work Remotely
-
-```text
-WebFetch: https://weworkremotely.com/categories/remote-back-end-programming-jobs
-Prompt: "Extract job listings mentioning: Go, Golang, Kotlin, Java, Python, AI, infrastructure, platform, distributed. Return job title, company, and listing URL."
-```text
-
-```text
-WebSearch: "site:weworkremotely.com golang OR go engineer 2026"
-WebSearch: "site:weworkremotely.com kotlin OR java backend engineer 2026"
-WebSearch: "site:weworkremotely.com AI infrastructure engineer 2026"
-```text
-
-##### Source 4: Arc.dev (Remote Tech Jobs)
-
-```text
-WebFetch: https://arc.dev/remote-jobs/golang
-Prompt: "Extract all job listings. Return job title, company, location requirements, and listing URL."
-```text
-
-```text
-WebFetch: https://arc.dev/remote-jobs/kotlin
-Prompt: "Extract all job listings. Return job title, company, location requirements, and listing URL."
-```text
-
-```text
-WebSearch: "site:arc.dev golang remote europe 2026"
-WebSearch: "site:arc.dev kotlin remote europe 2026"
-WebSearch: "site:arc.dev AI engineer remote 2026"
-```text
-
-##### Source 5: Wellfound (AngelList Talent)
-
-```text
-WebSearch: "site:wellfound.com golang engineer remote 2026"
-WebSearch: "site:wellfound.com kotlin engineer remote 2026"
-WebSearch: "site:wellfound.com java backend engineer remote product 2026"
-WebSearch: "site:wellfound.com AI infrastructure engineer remote 2026"
-WebSearch: "site:wellfound.com platform engineer remote europe 2026"
-```text
-
-##### Source 6: YC Work at a Startup
-
-```text
-WebFetch: https://www.workatastartup.com/jobs
-Prompt: "Extract job listings for: Go, Golang, Kotlin, Java, infrastructure, platform, AI, remote. Return company name, role, and listing URL."
-```text
-
-```text
-WebSearch: "site:workatastartup.com golang remote 2026"
-WebSearch: "site:workatastartup.com kotlin remote 2026"
-WebSearch: "site:workatastartup.com infrastructure engineer remote 2026"
-```text
-
----
-
-#### 🇪🇺 EU-Focused Boards
-
-##### Source 7: Landing.jobs (EU Tech)
-
-```text
-WebFetch: https://landing.jobs/jobs?keywords=golang&remote=true
-Prompt: "Extract job listings. Return company, role, location, and URL."
-```text
-
-```text
-WebFetch: https://landing.jobs/jobs?keywords=kotlin&remote=true
-Prompt: "Extract job listings. Return company, role, location, and URL."
-```text
-
-```text
-WebSearch: "site:landing.jobs golang remote 2026"
-WebSearch: "site:landing.jobs kotlin remote 2026"
-WebSearch: "site:landing.jobs platform engineer remote 2026"
-```text
-
-##### Source 8: SwissDevJobs (Switzerland + Remote EU)
-
-```text
-WebSearch: "site:swissdevjobs.ch golang remote 2026"
-WebSearch: "site:swissdevjobs.ch kotlin remote 2026"
-WebSearch: "site:swissdevjobs.ch java backend remote 2026"
-WebSearch: "site:swissdevjobs.ch infrastructure engineer remote 2026"
-```text
-
-##### Source 9: Berlin Startup Jobs
-
-```text
-WebSearch: "site:berlinstartupjobs.com golang remote 2026"
-WebSearch: "site:berlinstartupjobs.com AI engineer remote 2026"
-```text
-
-##### Source 10: EuroTechJobs
-
-```text
-WebSearch: "site:eurotechjobs.com golang remote 2026"
-WebSearch: "site:eurotechjobs.com platform engineer remote 2026"
-```text
-
----
-
-#### 🏢 Watched Company Careers
-
-**CRITICAL:** Don't just search - extract and triage specific URLs.
-
-For each company in Active list (from `companies.md`):
-
-1. **Search for roles:**
-
-   ```text
-   WebSearch: "[Company Name] careers engineering 2026"
-   WebSearch: "[Company Name] jobs golang OR infrastructure OR platform"
-   ```
-
-2. **Extract specific job URLs:**
-   - Look for direct job listing URLs (not just career page)
-   - Prioritize companies with green flags: remote-first, EU presence, Go stack
-   - If career page returned, use WebFetch to extract specific role URLs
-
-3. **Add to triage queue:**
-   - Collect URLs from watched companies
-   - Add to deduplication pool with job board URLs
-   - **Don't skip** - these are high-priority targets
-
-**Priority companies (triage first if found):**
-
-- Companies with "remote-first" or "distributed" in description
-- Companies with EU offices mentioned in companies.md
-- Companies with Go/Kubernetes in stack
-
----
-
-#### 🔍 General Web Search (Catch-all)
-
-**AI-focused (preferred):**
-
-```text
-WebSearch: "remote staff engineer golang AI europe 2026"
-WebSearch: "remote senior engineer distributed systems AI EMEA 2026"
-WebSearch: "remote platform engineer AI startup europe 2026"
-```text
-
-**Broader (any domain, geo+comp focused):**
-
-```text
-WebSearch: "golang engineer remote poland OR europe hiring 2026"
-WebSearch: "staff engineer remote europe €150k OR €160k OR €180k 2026"
-WebSearch: "senior engineer remote EMEA $180k OR $200k 2026"
-WebSearch: "distributed systems engineer remote europe 2026"
-WebSearch: "platform engineer remote worldwide 2026"
-WebSearch: "backend engineer remote europe high salary 2026"
-```text
-
-**Stack variations (catch non-Go but relevant):**
-
-```text
-WebSearch: "staff engineer remote europe kubernetes 2026"
-WebSearch: "infrastructure engineer remote poland 2026"
-WebSearch: "site reliability engineer remote europe 2026"
-```text
-
-**Kotlin/Java (interesting products only):**
-
-```text
-WebSearch: "kotlin engineer remote europe product 2026"
-WebSearch: "senior kotlin developer remote EMEA 2026"
-WebSearch: "java backend engineer remote europe startup 2026"
-WebSearch: "staff engineer kotlin remote 2026"
-```text
-
-**NOTE:** For Kotlin/Java results, prioritize:
-- Concrete products (not internal tooling/agencies)
-- Interesting domain (AI, dev tools, fintech product, etc.)
-- Strong engineering culture signals
+Run all searches defined in `references/search-sources.md`:
+
+- JSearch API (8 searches, if `$JSEARCH_API_KEY` available)
+- Global Remote Boards (Sources 1–6: HN, RemoteOK, WWR, Arc.dev, Wellfound, YC)
+- EU-Focused Boards (Sources 7–11: Landing.jobs, SwissDevJobs, Berlin, EuroTech, Zurich)
+- New Static Boards (Sources 12–15: Golang Cafe, Working Nomads, Remotive, Kube Careers)
+- ATS Direct APIs (Greenhouse, Lever, Ashby for watched companies — no API key needed)
+- Watched Company Careers
+- General Web Search (AI-focused, broader, stack variations, high-comp visa, Zurich)
+- Playwright Sources (Sources 16–18: Welcome to the Jungle, Levels.fyi, Himalayas) — if `$PLAYWRIGHT_AVAILABLE`
+
+Collect all discovered URLs into a candidate pool.
 
 ---
 
 ### Phase 3: Deduplicate & Prioritize
 
-1. **Collect all discovered URLs:**
-   - Job board URLs
-   - Watched company URLs (mark these as priority)
-
-2. **Check against "already processed" set** from tracking.md
-
-3. **Filter to only NEW URLs**
-
-4. **Prioritize for triage:**
+1. Filter to only NEW URLs (not in "already processed" set from tracking.md)
+2. Prioritize for triage:
    - Priority 1: Watched companies with green flags (remote-first, EU presence, Go stack)
-   - Priority 2: Job board listings from HN, YC, quality sources
-   - Priority 3: General search results
-
-5. If no new URLs found, report and exit
+   - Priority 2: High-comp relocation tiers (🌎 ≥$400k USD visa-sponsored, 🇨🇭 ≥300k CHF Zurich)
+   - Priority 3: Job board listings from HN, YC, quality sources
+   - Priority 4: General search results
+3. If no new URLs found, report count 0 and exit
 
 ---
 
 ### Phase 4: Parallel Triage
 
-**Triage order:**
-
-1. Start with Priority 1 URLs (watched companies with green flags)
-2. Then Priority 2-3 URLs
-3. Run max 3 triage agents at a time
+Triage order: Priority 1 → 2–3. Run max 3 triage agents at a time.
 
 For each new URL, spawn triage agent:
 
 ```text
-Use Task tool with:
+Use Task tool:
 - subagent_type: "general-purpose"
 - prompt: "Run /job-triage [URL]. Return the full triage result."
-- run_in_background: true (for parallel execution)
-```text
+- run_in_background: true
+```
 
-**Important:** Don't skip watched companies. If you found promising roles at Grafana Labs, Supabase, PostHog, etc., triage them even if they're career pages not specific job URLs.
+**Alternative (sequential):** Run `/job-triage` via Skill tool if parallel execution is problematic.
 
 Collect results as they complete.
-
-**Alternative (sequential):**
-If parallel execution problematic, run `/job-triage` sequentially using Skill tool.
 
 ---
 
@@ -449,42 +149,36 @@ For each triage result:
 
 1. Parse verdict (GO / NO-GO / MAYBE)
 2. Extract: Company, Role, URL, Notes/Reason
-3. Add row to appropriate table in tracking.md using Edit tool
+3. Add row to appropriate table in `findings/job-search/tracking.md` using Edit tool
 
-**Row format:**
+Row format:
 
 ```markdown
 | 2026-01-26 | Company | Role | URL | Notes/Reason |
-```text
+```
 
-Update stats section:
-
-- Increment Total Processed
-- Increment GO/NO-GO/MAYBE counters
+Update stats section: increment Total Processed, GO/NO-GO/MAYBE counters.
 
 ---
 
 ### Phase 6: Verify GO Listings (Automatic)
 
-**Always runs** — For each GO listing, spawn verification agent:
+Always runs. For each GO listing, spawn verification agent (max 2 at a time):
 
 ```text
-Use Task tool with:
+Use Task tool:
 - subagent_type: "general-purpose"
 - prompt: "Run /job-verify [URL]. Return the full verification result."
-- run_in_background: true (for parallel execution, max 2 at a time)
-```text
+- run_in_background: true
+```
 
-Wait for all verification agents to complete. Parse results:
+Wait for all agents. Parse results:
 
 - **VERIFIED** → Move to VERIFIED section (ready to apply)
-- **REJECTED** → Move to NO-GO with reason (verification failed)
+- **REJECTED** → Move to NO-GO with reason
 - **NEEDS-MANUAL** → Keep in GO with ⚠️ note (ask recruiter)
 
-**Skip with `--skip-verify`:**
-
-- Triage only, no verification
-- GO listings stay pending verification
+**Skip with `--skip-verify`:** GO listings stay pending verification.
 
 ---
 
@@ -505,11 +199,9 @@ Wait for all verification agents to complete. Parse results:
 
 ### VERIFIED (Ready to Apply)
 1. [Company] — [Role] — [URL] — [Key verification notes]
-2. ...
 
 ### NEEDS-MANUAL (Verification Unclear)
 1. [Company] — [Role] — [Question to ask recruiter]
-2. ...
 
 ### MAYBE (Manual Review)
 1. [Company] — [Role] — [Question]
@@ -518,32 +210,21 @@ Wait for all verification agents to complete. Parse results:
 - Run `/company-research [company]` on VERIFIED matches
 - Contact recruiters for NEEDS-MANUAL listings with specific questions
 - Check MAYBE listings from triage manually
-```text
+```
 
 ---
 
 ### Phase 8: Save Insights
 
-After each run, analyze patterns and update `findings/job-search/insights.md`:
+Analyze patterns and update `findings/job-search/insights.md`.
 
-**Extract insights from this run:**
+Extract from this run:
 
-1. **Compensation patterns observed:**
-   - Salary ranges by company stage
-   - Salary ranges by region/country
-   - Patterns: "€X stated" vs "market suggests €Y"
+1. **Compensation patterns:** Salary ranges by company stage and region; stated vs actual
+2. **Geographic patterns:** Regions hiring remote EU/Poland; common restrictions
+3. **Market observations:** Hot companies, emerging trends, failed sources
 
-2. **Geographic patterns:**
-   - Which regions actually hire remote EU/Poland?
-   - Common restrictions observed
-   - Entity patterns (US-only, EU entity, etc.)
-
-3. **Market observations:**
-   - Hot companies (multiple matching roles)
-   - Emerging patterns (new sources, stack trends)
-   - Failed approaches (sources with no results)
-
-**Update insights.md:**
+Add to discovery log:
 
 ```markdown
 ## 📅 Discovery Log
@@ -551,133 +232,25 @@ After each run, analyze patterns and update `findings/job-search/insights.md`:
 | Date | Source | Key Insight |
 |------|--------|-------------|
 | [today] | [source] | [insight] |
-```text
+```
 
-**Add to relevant sections:**
-
-- New comp data → Compensation Patterns
-- New geo restrictions → Geographic Patterns
-- New company learnings → Company Type Patterns
-- Trends → Market Observations
-
-**Example insight entry:**
+Example entries:
 
 ```markdown
 | 2026-01-28 | RemoteOK | Go/K8s roles averaging €90-120k EU, €160k+ only at Series C+ |
 | 2026-01-28 | JSearch | LinkedIn showing more "Remote EU" but 60% actually US-only on verification |
-```text
+```
 
 ---
 
 ## Error Handling
 
-### JSearch API Fails
-
-- If `$JSEARCH_API_KEY` not set → Skip JSearch, continue with other sources
-- If 429 (rate limited) → Note in output, use other sources
-- If 401/403 (auth error) → Check API key validity
-- If API down → Continue with web-based sources
-
-### WebFetch Fails
-
-- Note URL as MAYBE with "fetch failed, check manually"
-- Continue with other URLs
-
-### Rate Limiting
-
-- JSearch: Max 500 requests/month on free tier
-- If rate limited, pause and retry
-- Reduce parallel agents if needed
-
-### No New Listings
-
-```markdown
-## 🔍 Job Discovery Complete
-
-**Date:** [today]
-**Sources Searched:** [count]
-**New Listings Found:** 0
-
-All discovered listings already in tracking.md.
-Try again tomorrow or add new sources.
-```text
-
----
-
-## Search Optimization Tips
-
-### 🌍 Global Remote Boards
-
-**HN Who's Hiring**
-
-- New thread posted 1st of each month
-- Search for current month: "Who is Hiring January 2026"
-- Look for REMOTE, EMEA, Europe mentions
-- Keywords: golang, go, distributed, platform, AI
-
-**RemoteOK**
-
-- Filter by "dev" category
-- Sort by recent
-- Check "remote" tag verified
-- Good for startup roles
-
-**We Work Remotely**
-
-- High-quality remote-first companies
-- Filter: Back-End Programming
-- Often lists timezone requirements upfront
-
-**Arc.dev**
-
-- Developer-focused, vetted companies
-- Filter by language (golang)
-- Shows salary ranges often
-
-**Wellfound (AngelList)**
-
-- Best for startups, Series A-C
-- Filter: Remote, Engineering
-- Shows funding stage
-
-**YC Work at a Startup**
-
-- YC-backed companies only
-- High quality, good comp usually
-- Filter: Remote, Engineering
-
-### 🇪🇺 EU-Focused Boards
-
-**Landing.jobs**
-
-- EU tech focus, many remote roles
-- Filter: Remote, Technology
-- Good for EU-entity companies
-
-**SwissDevJobs**
-
-- Swiss companies + remote EU
-- High comp (Swiss market rates)
-- Often hire EU remote
-
-**Berlin Startup Jobs**
-
-- German startups, many remote
-- Good for EU-entity + remote combo
-- Filter: Remote, Engineering
-
-**EuroTechJobs**
-
-- Pan-European focus
-- Filter by country/remote
-- Mix of corporate and startup
-
-### 🏢 Company Careers
-
-- Check /careers, /jobs, jobs.company.com
-- Filter by Engineering/Product
-- Look for "Remote" in location
-- Check for EU office presence
+- **`$JSEARCH_API_KEY` not set** → Skip JSearch, continue with other sources
+- **429 rate limited** → Note in output, use other sources
+- **401/403 auth error** → Check API key validity
+- **API down** → Continue with web-based sources
+- **WebFetch fails** → Note URL as MAYBE with "fetch failed, check manually"
+- **No new listings** → Report count 0, suggest trying tomorrow or adding new sources
 
 ---
 
@@ -688,11 +261,19 @@ Try again tomorrow or add new sources.
 **Triage timeout:** 3 minutes per listing
 **Verify timeout:** 5 minutes per listing
 
-### Sources (13 total)
+### Flags
+
+- `--skip-verify` — Skip verification, triage only (faster, manual verify later)
+- `--quick` — Only search top 4 sources (HN, RemoteOK, WWR, YC)
+- `--playwright` — Force Playwright sources even if auto-detection fails; also triggers `mise run playwright:setup` if needed
+- `--no-playwright` — Skip Playwright sources (faster run, no browser needed)
+- Default: All 27 sources + automatic GO verification (Playwright sources included if installed)
+
+### Sources (27 total)
 
 **API-Based:**
 
-1. JSearch API (LinkedIn, Indeed, Glassdoor) — requires $JSEARCH_API_KEY
+1. JSearch API (LinkedIn, Indeed, Glassdoor) — requires `$JSEARCH_API_KEY`
 
 **Global Remote:**
 2. HN Who's Hiring
@@ -707,23 +288,36 @@ Try again tomorrow or add new sources.
 9. SwissDevJobs
 10. Berlin Startup Jobs
 11. EuroTechJobs
+12. Zurich On-Site/Hybrid (≥300k CHF)
+
+**New Static Boards:**
+13. Golang Cafe — Go-specific aggregator
+14. Working Nomads — Remote EU/devops/infra
+15. Remotive — Community-curated remote board
+16. Kube Careers — Remote Kubernetes/infra roles
+
+**ATS Direct APIs (watched companies):**
+
+- Greenhouse API (`boards-api.greenhouse.io/v1/boards/{token}/jobs`)
+- Lever API (`api.lever.co/v0/postings/{company}?mode=json`)
+- Ashby GraphQL (`jobs.ashbyhq.com/api/non-user-graphql`)
 
 **Custom:**
-12. Watched Company Careers
-13. General Web Search
+17. Watched Company Careers
+18. General Web Search
+19. High-Comp Visa-Sponsored Roles (≥$400k USD)
 
-### JSearch API Config
+**EU-Specific API Scrapers (no auth, direct API):**
+20. justjoin.it — Poland's largest IT board, PLN salaries, remote EU roles
+21. nofluffjobs.com — EU-focused (PL/DE/NL), EUR salaries on remote roles
 
-**Environment variable:** `JSEARCH_API_KEY`
-**Rate limit:** Free tier ~500 requests/month
-**Searches per run:** 7 (golang, distributed, AI infra, platform, staff, kotlin, java)
-**Pages per search:** 2
-
-### Flags
-
-- `--skip-verify` — Skip verification, triage only (faster, manual verify later)
-- `--quick` — Only search top 4 sources (HN, RemoteOK, WWR, YC)
-- Default: All sources + automatic verification on GO listings
+**Playwright (headless browser, requires install):**
+22. Welcome to the Jungle — EU-focused, premium quality
+23. Levels.fyi — Staff/principal targeting + comp data
+24. Himalayas — Remote-first, blocks direct HTTP
+25. theprotocol.it — Polish tech board, Cloudflare-protected, distinct from justjoin
+26. talent.io — EU-only server (needs EU proxy); high-quality remote EU roles
+27. (add more here as needed)
 
 ---
 
@@ -737,4 +331,5 @@ Try again tomorrow or add new sources.
 - `findings/job-search/tracking.md` — For deduplication
 - `findings/job-search/companies.md` — Watched companies
 - `findings/job-search/profile.md` — Search keywords
-- `findings/job-search/insights.md` — Existing insights (to avoid duplicates)
+- `findings/job-search/insights.md` — Existing insights (avoid duplicates)
+- `references/search-sources.md` — All search queries and source details

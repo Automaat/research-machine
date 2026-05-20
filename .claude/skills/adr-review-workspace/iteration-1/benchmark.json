@@ -1,0 +1,178 @@
+{
+  "metadata": {
+    "skill_name": "adr-review",
+    "skill_path": "/Users/marcin.skalski/sideprojects/research-machine/.claude/skills/adr-review",
+    "executor_model": "claude-opus-4-6",
+    "timestamp": "2026-03-04T12:00:00Z",
+    "evals_run": [1, 2, 3],
+    "runs_per_configuration": 1
+  },
+  "runs": [
+    {
+      "eval_id": 1,
+      "eval_name": "poor-adr-redux",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 8,
+        "failed": 0,
+        "total": 8,
+        "time_seconds": 68.1,
+        "tokens": 23707,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "Identifies missing decision drivers section", "passed": true, "evidence": "Phase 1 lists 'Decision Drivers'"},
+        {"text": "Notes problem statement is too vague or describes a solution not a problem", "passed": true, "evidence": "Phase 2 concern 1"},
+        {"text": "Suggests at least 2 additional alternatives", "passed": true, "evidence": "Lists 5 alternatives"},
+        {"text": "Challenges 'industry standard' as insufficient rationale", "passed": true, "evidence": "Phase 2 concern 3"},
+        {"text": "Flags missing negative consequences", "passed": true, "evidence": "Phase 1 and Phase 4"},
+        {"text": "Points out only 2 options considered", "passed": true, "evidence": "Phase 2 concern 2"},
+        {"text": "Follows phased review structure", "passed": true, "evidence": "Phase 1-4 structure"},
+        {"text": "Identifies anti-pattern (e.g., Rubber Stamp)", "passed": true, "evidence": "Phase 1: Rubber Stamp"}
+      ]
+    },
+    {
+      "eval_id": 1,
+      "eval_name": "poor-adr-redux",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.75,
+        "passed": 6,
+        "failed": 2,
+        "total": 8,
+        "time_seconds": 46.0,
+        "tokens": 17879,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "Identifies missing decision drivers section", "passed": true, "evidence": "Missing sections list"},
+        {"text": "Notes problem statement is too vague or describes a solution not a problem", "passed": true, "evidence": "Section 1"},
+        {"text": "Suggests at least 2 additional alternatives", "passed": true, "evidence": "Lists 6 alternatives"},
+        {"text": "Challenges 'industry standard' as insufficient rationale", "passed": true, "evidence": "Appeal to popularity"},
+        {"text": "Flags missing negative consequences", "passed": true, "evidence": "Section 4"},
+        {"text": "Points out only 2 options considered", "passed": true, "evidence": "Only two options"},
+        {"text": "Follows phased review structure", "passed": false, "evidence": "Flat numbered sections"},
+        {"text": "Identifies anti-pattern (e.g., Rubber Stamp)", "passed": false, "evidence": "Describes but doesn't name it"}
+      ]
+    },
+    {
+      "eval_id": 2,
+      "eval_name": "good-adr-events",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 6,
+        "failed": 0,
+        "total": 6,
+        "time_seconds": 78.4,
+        "tokens": 24212,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "Acknowledges ADR is well-structured", "passed": true, "evidence": "Phase 1: above-average quality"},
+        {"text": "Probes eventual consistency UX implications", "passed": true, "evidence": "Phase 2 concern 1"},
+        {"text": "Questions SQS message ordering guarantees", "passed": true, "evidence": "Phase 4 observation 1"},
+        {"text": "Raises team readiness / operational concerns", "passed": true, "evidence": "Phase 2 concern 2 + Phase 4"},
+        {"text": "Identifies at least 3 concrete improvements", "passed": true, "evidence": "5 suggestions listed"},
+        {"text": "Follows phased review structure", "passed": true, "evidence": "Phase 1-4 structure"}
+      ]
+    },
+    {
+      "eval_id": 2,
+      "eval_name": "good-adr-events",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.83,
+        "passed": 5,
+        "failed": 1,
+        "total": 6,
+        "time_seconds": 54.1,
+        "tokens": 19195,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "Acknowledges ADR is well-structured", "passed": true, "evidence": "Approve with minor suggestions"},
+        {"text": "Probes eventual consistency UX implications", "passed": true, "evidence": "Suggestion 1"},
+        {"text": "Questions SQS message ordering guarantees", "passed": true, "evidence": "Suggestion 4"},
+        {"text": "Raises team readiness / operational concerns", "passed": true, "evidence": "Suggestions 5-6"},
+        {"text": "Identifies at least 3 concrete improvements", "passed": true, "evidence": "8 suggestions"},
+        {"text": "Follows phased review structure", "passed": false, "evidence": "Flat structure"}
+      ]
+    },
+    {
+      "eval_id": 3,
+      "eval_name": "decent-adr-jwt",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 6,
+        "failed": 0,
+        "total": 6,
+        "time_seconds": 76.6,
+        "tokens": 22054,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "Flags missing confirmation section", "passed": true, "evidence": "Phase 1"},
+        {"text": "Probes token revocation strategy in depth", "passed": true, "evidence": "Phase 2 concern 1"},
+        {"text": "Questions key management and rotation", "passed": true, "evidence": "Phase 2 concern 2"},
+        {"text": "Suggests hybrid approach", "passed": true, "evidence": "Phase 2 concern 3"},
+        {"text": "Raises JWT-specific security concerns", "passed": true, "evidence": "Security-specific gaps"},
+        {"text": "Follows phased review structure", "passed": true, "evidence": "Phase 1-3 structure"}
+      ]
+    },
+    {
+      "eval_id": 3,
+      "eval_name": "decent-adr-jwt",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.67,
+        "passed": 4,
+        "failed": 2,
+        "total": 6,
+        "time_seconds": 55.9,
+        "tokens": 19033,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "Flags missing confirmation section", "passed": false, "evidence": "Not explicitly flagged"},
+        {"text": "Probes token revocation strategy in depth", "passed": true, "evidence": "Issue 1"},
+        {"text": "Questions key management and rotation", "passed": true, "evidence": "Issue 2"},
+        {"text": "Suggests hybrid approach", "passed": true, "evidence": "Question 5"},
+        {"text": "Raises JWT-specific security concerns", "passed": true, "evidence": "Issue 8"},
+        {"text": "Follows phased review structure", "passed": false, "evidence": "Flat structure"}
+      ]
+    }
+  ],
+  "run_summary": {
+    "with_skill": {
+      "pass_rate": {"mean": 1.0, "stddev": 0.0, "min": 1.0, "max": 1.0},
+      "time_seconds": {"mean": 74.4, "stddev": 4.4, "min": 68.1, "max": 78.4},
+      "tokens": {"mean": 23324, "stddev": 908, "min": 22054, "max": 24212}
+    },
+    "without_skill": {
+      "pass_rate": {"mean": 0.75, "stddev": 0.07, "min": 0.67, "max": 0.83},
+      "time_seconds": {"mean": 52.0, "stddev": 4.3, "min": 46.0, "max": 55.9},
+      "tokens": {"mean": 18702, "stddev": 558, "min": 17879, "max": 19195}
+    },
+    "delta": {
+      "pass_rate": "+0.25",
+      "time_seconds": "+22.4",
+      "tokens": "+4622"
+    }
+  },
+  "notes": [
+    "Skill achieves 100% pass rate across all 3 evals vs 75% baseline — primary gain is structured phased review format and anti-pattern identification",
+    "Content-level assertions (identifying gaps, suggesting alternatives) pass equally in both configurations — Claude is already good at this without the skill",
+    "The skill's differentiating value is: (1) phased interactive structure with pause points, (2) explicit anti-pattern naming, (3) MADR-specific structural checks",
+    "Skill runs take ~43% longer (74s vs 52s avg) and use ~25% more tokens — reasonable tradeoff for improved structure",
+    "Single run per config — variance data is limited. Consider 3 runs for more reliable statistics"
+  ]
+}

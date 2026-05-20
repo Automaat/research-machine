@@ -172,32 +172,38 @@ Simplified output for `--quick` flag:
 ## Section Guidelines
 
 ### 📸 Ocena Zdjęcia
+
 - Describe exactly what you see in the image
 - Note leaf color, texture, any visible problems
 - Comment on pot, soil, environment if visible
 - Be specific — "żółte liście przy podstawie" not just "problemy"
 
 ### 📊 Macierz Pielęgnacji
+
 - Use specific numbers (e.g., "co 7-10 dni", "6-8 godzin")
 - Include seasonal variations in Uwagi column
 - Cite source for each requirement
 
 ### 💊 Plan Leczenia
+
 - Actionable checkbox items
 - Start with most urgent actions
 - Include specific products with Polish availability
 
 ### 📅 Kalendarz Sezonowy
+
 - Polish season names (Wiosna, Lato, Jesień, Zima)
 - Focus on changes from baseline care
 - Include timing cues ("gdy temperatura >15°C")
 
 ### ⚠️ Częste Błędy
+
 - Common mistakes specific to this plant
 - Explain WHY it's a problem
 - Not generic plant advice
 
 ### 📚 Źródła
+
 - List every source consulted
 - Note what information came from each
 - Prioritize Tier 1 sources

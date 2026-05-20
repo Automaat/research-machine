@@ -1,0 +1,12 @@
+{
+  "eval_id": 2,
+  "config": "with_skill",
+  "expectations": [
+    {"text": "Acknowledges ADR is well-structured / high quality", "passed": true, "evidence": "Phase 1: 'well-structured ADR that covers all core MADR sections' and 'above-average structural quality'"},
+    {"text": "Probes eventual consistency UX implications", "passed": true, "evidence": "Phase 2 concern 1: detailed questions about user experience, optimistic acknowledgment, inventory double-booking"},
+    {"text": "Questions SQS message ordering guarantees", "passed": true, "evidence": "Phase 4 observation 1: 'SQS standard queues don't guarantee ordering' with FIFO throughput limits"},
+    {"text": "Raises team readiness / operational concerns for async patterns", "passed": true, "evidence": "Phase 2 concern 2 questions team's async experience, Phase 4 discusses DLQ processing ownership"},
+    {"text": "Identifies at least 3 concrete improvement suggestions despite overall quality", "passed": true, "evidence": "5 concrete suggestions listed in Suggested Improvements section"},
+    {"text": "Follows phased review structure (structural then deep then actionable)", "passed": true, "evidence": "Clear Phase 1-4 structure with summary assessment table and suggestions"}
+  ]
+}

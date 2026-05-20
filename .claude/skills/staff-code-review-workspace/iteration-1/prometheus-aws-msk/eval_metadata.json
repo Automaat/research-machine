@@ -1,0 +1,13 @@
+{
+  "eval_id": 2,
+  "eval_name": "prometheus-aws-msk",
+  "prompt": "review this PR https://github.com/prometheus/prometheus/pull/17600 — give me a thorough staff review",
+  "assertions": [
+    {"id": "security-analysis", "text": "Review discusses security implications (IAM roles, AWS permissions, credential handling)"},
+    {"id": "dependency-analysis", "text": "Review considers new AWS dependency implications"},
+    {"id": "conventional-comments", "text": "Review comments use conventional comment labels"},
+    {"id": "observability", "text": "Review discusses observability, metrics, or debuggability of new discovery mechanism"},
+    {"id": "verdict", "text": "Output includes a clear verdict"},
+    {"id": "structured-output", "text": "Output follows the defined structure with sections"}
+  ]
+}

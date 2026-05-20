@@ -1,0 +1,15 @@
+{
+  "eval_id": 1,
+  "eval_name": "poor-adr-redux",
+  "prompt": "hey can you review this ADR for me? it's at .claude/skills/adr-review-workspace/test-adrs/0002-frontend-state-management.md — we wrote it kind of quickly and I want to make sure it's solid before we present it to the team",
+  "assertions": [
+    {"text": "Identifies missing decision drivers section"},
+    {"text": "Notes problem statement is too vague or describes a solution not a problem"},
+    {"text": "Suggests at least 2 additional alternatives (e.g., Context API, Zustand, Jotai)"},
+    {"text": "Challenges 'industry standard' as insufficient rationale"},
+    {"text": "Flags missing negative consequences"},
+    {"text": "Points out only 2 options considered (should be 3+)"},
+    {"text": "Follows phased review structure (structural then deep then actionable)"},
+    {"text": "Identifies anti-pattern (e.g., Rubber Stamp)"}
+  ]
+}

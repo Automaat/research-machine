@@ -150,6 +150,7 @@ Uwagi z weryfikacji przepisu:
 ### Obliczanie Wartości Odżywczych
 
 Na porcję:
+
 1. Zsumuj wartości dla całego przepisu z danych USDA
 2. Podziel przez liczbę porcji
 3. Zaokrąglij do pełnych liczb
@@ -157,5 +158,6 @@ Na porcję:
 ### Priorytet Miar Metrycznych
 
 Zawsze metryczne najpierw, oryginalne w nawiasach:
+
 - ✅ `200g (1⅔ szklanki) mąki`
 - ❌ `1⅔ szklanki (200g) mąki`

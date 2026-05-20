@@ -9,6 +9,7 @@ Questions when Python might be needed.
 **Question:** Does this skill need to call external APIs or services?
 
 **Options:**
+
 - Yes, specific API (which?)
 - Yes, multiple APIs
 - No, web search is sufficient
@@ -23,6 +24,7 @@ Questions when Python might be needed.
 **Question:** What kind of data transformation is needed?
 
 **Options:**
+
 - Simple text extraction (Claude can do)
 - Complex parsing (JSON, XML, binary)
 - Computation/calculations
@@ -38,6 +40,7 @@ Questions when Python might be needed.
 **Question:** Does the data source require rate limiting or pagination?
 
 **Options:**
+
 - Yes, needs careful rate limiting
 - Yes, paginated results
 - No, single request sufficient

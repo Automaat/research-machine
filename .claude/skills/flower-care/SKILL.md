@@ -35,6 +35,7 @@ Multimodal plant analysis skill using Claude's vision capabilities. Identifies f
 ### Phase 1: Parse Arguments
 
 Extract from `$ARGUMENTS`:
+
 - **image-path:** Required — validate file exists
 - **--name:** Optional plant name hint
 - **--issue:** Optional specific problem
@@ -42,6 +43,7 @@ Extract from `$ARGUMENTS`:
 - **--quick:** Reduced research depth
 
 **Validation:**
+
 - If image path doesn't exist → error: "Nie znaleziono pliku: [path]. Sprawdź ścieżkę do zdjęcia."
 - Convert relative paths to absolute
 
@@ -52,8 +54,10 @@ Extract from `$ARGUMENTS`:
 iPhone photos often use HEIC format and can be very large. This phase ensures compatibility and performance.
 
 **Steps:**
+
 1. Check file format using `file` command
 2. If HEIC/HEIF or >2MB, convert using `sips`:
+
    ```bash
    # Convert HEIC to JPG
    sips -s format jpeg "[input]" --out "/tmp/plant-analysis.jpg"
@@ -64,9 +68,11 @@ iPhone photos often use HEIC format and can be very large. This phase ensures co
    # Check final size
    ls -la "/tmp/plant-analysis.jpg"
    ```
+
 3. Use converted file at `/tmp/plant-analysis.jpg` for Phase 2
 
 **Conversion rules:**
+
 - HEIC/HEIF → always convert to JPG
 - PNG/JPG >2MB → resize to max 2000px width
 - PNG/JPG ≤2MB → use original (no conversion needed)
@@ -79,6 +85,7 @@ iPhone photos often use HEIC format and can be very large. This phase ensures co
 Use **Read tool** on preprocessed image (`/tmp/plant-analysis.jpg` or original if no conversion needed).
 
 **Identify and document:**
+
 - Species identification: common name, botanical name, family
 - Confidence level: High/Medium/Low
 - Visual observations:
@@ -95,6 +102,7 @@ Use **Read tool** on preprocessed image (`/tmp/plant-analysis.jpg` or original i
 Load `diagnosis-guide.md` and match observations to conditions.
 
 **Urgency levels:**
+
 - 🔴 Critical/High — immediate action needed
 - 🟡 Medium — address within days
 - 🟢 Low — monitor and adjust
@@ -104,6 +112,7 @@ Load `diagnosis-guide.md` and match observations to conditions.
 ### Phase 4: Research Care Requirements
 
 **WebSearch queries (4-6 searches):**
+
 1. "[flower-name] care guide watering light humidity"
 2. "[flower-name] indoor/outdoor care tips"
 3. "[flower-name] common problems treatment"
@@ -112,11 +121,13 @@ Load `diagnosis-guide.md` and match observations to conditions.
 6. "[flower-name] propagation methods"
 
 **Target sources (priority order):**
+
 - **Tier 1:** RHS, Missouri Botanical Garden, UCANR
 - **Tier 2:** Gardening Know How, The Spruce, Houseplant Central
 - **Tier 3:** Reddit r/houseplants, forums (signal validation)
 
 **Extract:**
+
 - Watering frequency + method
 - Light requirements (hours, intensity, direction)
 - Humidity + temperature ranges
@@ -127,11 +138,13 @@ Load `diagnosis-guide.md` and match observations to conditions.
 ### Phase 5: Treatment Research (if issues detected)
 
 For each diagnosed issue, **WebSearch:**
+
 - "[issue] treatment [flower-name]"
 - "[issue] organic remedy plants"
 - "[issue] prevention indoor plants"
 
 **Build treatment plan:**
+
 - Immediate actions (today)
 - Short-term (this week)
 - Long-term prevention
@@ -155,6 +168,7 @@ Combine research into care matrix:
 ### Phase 7: Generate Seasonal Calendar
 
 Create month-by-month care adjustments:
+
 - **Wiosna (Spring):** Active growth, increase watering, start fertilizing
 - **Lato (Summer):** Peak care, watch for pests, humidity
 - **Jesień (Fall):** Reduce watering, stop fertilizing, dormancy prep
@@ -165,6 +179,7 @@ Create month-by-month care adjustments:
 ### Phase 8: Verification Checklist
 
 Before output, verify:
+
 - [ ] Plant identification confident (≥Medium)?
 - [ ] All care aspects covered (water/light/humidity/temp/soil/fertilizer)?
 - [ ] Issues diagnosed with treatment plan?
@@ -178,6 +193,7 @@ Before output, verify:
 Follow `output-template.md` format.
 
 **Translation rules:**
+
 - Section headers in Polish
 - Care instructions in Polish
 - Keep botanical names in Latin
@@ -192,6 +208,7 @@ Follow `output-template.md` format.
 2. **Notion workspace:** Create page with title `Plant: [flower-name]`
 
 **Update state:**
+
 - Append to `findings/plants/.plant-history`: `[date] [flower-name] [image-path]`
 - Keep under 200 lines (trim oldest if exceeded)
 
@@ -200,17 +217,20 @@ Follow `output-template.md` format.
 ## Configuration
 
 ### Defaults
+
 - Environment: indoor
 - Output language: Polish
 - Research depth: full (unless --quick)
 - Save locations: both local + Obsidian
 
 ### Thresholds
+
 - Identification confidence: report if <Medium
 - Issue urgency: Critical/High → treatment first in output
 - Source minimum: 3 sources before generating output
 
 ### Quick Mode
+
 - Skip Phase 5 (treatment research)
 - Skip Phase 7 (seasonal calendar)
 - Reduce WebSearch to 2-3 queries
@@ -221,25 +241,30 @@ Follow `output-template.md` format.
 ## Error Handling
 
 ### Image Not Found
+
 ```
 Error: Nie znaleziono pliku: [path]. Sprawdź ścieżkę do zdjęcia.
 ```
 
 ### Image Conversion Failed
+
 - If `sips` fails → try with `magick` (ImageMagick) as fallback
 - If both fail → error: "Nie udało się przetworzyć zdjęcia. Spróbuj z plikiem JPG/PNG."
 - Common issues: corrupted file, unsupported format, insufficient disk space
 
 ### Unidentifiable Plant
+
 - If `--name` provided → use that name for research
 - If no `--name` → error: "Nie udało się zidentyfikować rośliny. Użyj --name [nazwa]."
 
 ### WebSearch Fails
+
 - Log failure, continue with other sources
 - Minimum 2 sources required for output
 - If <2 sources → warn: "Ograniczone źródła — zalecana weryfikacja."
 
 ### No Issues Detected
+
 - Skip Phase 5
 - Generate healthy plant care guide
 - Include preventive tips instead of treatment

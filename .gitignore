@@ -6,5 +6,12 @@ node_modules/
 # Local secrets
 .env.local
 
+# Local Claude Code settings (machine-specific)
+.claude/settings.local.json
+
+# Backup files
+*.bak
+*.backup
+
 # Private career tracking
 career/

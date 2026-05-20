@@ -1,0 +1,14 @@
+{
+  "eval_id": 1,
+  "config": "without_skill",
+  "expectations": [
+    {"text": "Identifies missing decision drivers section", "passed": true, "evidence": "Missing sections list includes 'Decision Drivers'"},
+    {"text": "Notes problem statement is too vague or describes a solution not a problem", "passed": true, "evidence": "Section 1: 'Does not describe why state management is needed'"},
+    {"text": "Suggests at least 2 additional alternatives", "passed": true, "evidence": "Lists Zustand, Jotai, Recoil, React Context + useReducer, XState, Valtio"},
+    {"text": "Challenges 'industry standard' as insufficient rationale", "passed": true, "evidence": "'industry standard is an appeal to popularity, not an architectural argument'"},
+    {"text": "Flags missing negative consequences", "passed": true, "evidence": "'Only positive consequences listed. Every architectural decision has trade-offs'"},
+    {"text": "Points out only 2 options considered (should be 3+)", "passed": true, "evidence": "'Only two options considered'"},
+    {"text": "Follows phased review structure (structural then deep then actionable)", "passed": false, "evidence": "Uses flat numbered sections (Structural Issues 1-5, Minor Issues, Recommendations) rather than phased interactive structure"},
+    {"text": "Identifies anti-pattern (e.g., Rubber Stamp)", "passed": false, "evidence": "Says 'reads as a conclusion in search of justification' but doesn't name the anti-pattern explicitly"}
+  ]
+}

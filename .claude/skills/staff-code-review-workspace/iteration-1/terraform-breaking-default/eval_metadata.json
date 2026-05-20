@@ -1,0 +1,13 @@
+{
+  "eval_id": 1,
+  "eval_name": "terraform-breaking-default",
+  "prompt": "do a staff-level review of https://github.com/hashicorp/terraform-provider-azurerm/pull/31678",
+  "assertions": [
+    {"id": "breaking-change-awareness", "text": "Review identifies this as a breaking change and discusses migration/rollback implications"},
+    {"id": "conventional-comments", "text": "Review comments use conventional comment labels"},
+    {"id": "user-impact", "text": "Review discusses impact on existing users/consumers of the provider"},
+    {"id": "verdict", "text": "Output includes a clear verdict"},
+    {"id": "triage-pass", "text": "Output includes a triage assessment section"},
+    {"id": "structured-output", "text": "Output follows the defined structure with sections"}
+  ]
+}

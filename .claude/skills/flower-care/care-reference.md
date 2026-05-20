@@ -7,6 +7,7 @@ Quick reference for 20 common houseplants and flowers.
 ## Tropical Foliage
 
 ### Monstera deliciosa (Monstera)
+
 | Aspekt | Wymagania |
 |--------|-----------|
 | 💧 Podlewanie | Co 7-10 dni, gdy wierzchnia warstwa sucha |
@@ -19,6 +20,7 @@ Quick reference for 20 common houseplants and flowers.
 ---
 
 ### Ficus elastica (Figowiec sprężysty)
+
 | Aspekt | Wymagania |
 |--------|-----------|
 | 💧 Podlewanie | Co 7-14 dni, dobrze osuszony |
@@ -31,6 +33,7 @@ Quick reference for 20 common houseplants and flowers.
 ---
 
 ### Epipremnum aureum (Pothos/Epipremnum)
+
 | Aspekt | Wymagania |
 |--------|-----------|
 | 💧 Podlewanie | Co 7-10 dni |
@@ -43,6 +46,7 @@ Quick reference for 20 common houseplants and flowers.
 ---
 
 ### Philodendron (Filodendron)
+
 | Aspekt | Wymagania |
 |--------|-----------|
 | 💧 Podlewanie | Co 7-10 dni |
@@ -55,6 +59,7 @@ Quick reference for 20 common houseplants and flowers.
 ---
 
 ### Calathea (Kalatea)
+
 | Aspekt | Wymagania |
 |--------|-----------|
 | 💧 Podlewanie | Utrzymuj wilgotne, nie mokre |
@@ -69,6 +74,7 @@ Quick reference for 20 common houseplants and flowers.
 ## Succulents & Cacti
 
 ### Aloe vera (Aloes)
+
 | Aspekt | Wymagania |
 |--------|-----------|
 | 💧 Podlewanie | Co 2-3 tygodnie |
@@ -81,6 +87,7 @@ Quick reference for 20 common houseplants and flowers.
 ---
 
 ### Echeveria
+
 | Aspekt | Wymagania |
 |--------|-----------|
 | 💧 Podlewanie | Co 2-3 tygodnie |
@@ -93,6 +100,7 @@ Quick reference for 20 common houseplants and flowers.
 ---
 
 ### Crassula ovata (Grubosz/Drzewko szczęścia)
+
 | Aspekt | Wymagania |
 |--------|-----------|
 | 💧 Podlewanie | Co 2-3 tygodnie |
@@ -105,6 +113,7 @@ Quick reference for 20 common houseplants and flowers.
 ---
 
 ### Sansevieria (Sansewieria/Wężownica)
+
 | Aspekt | Wymagania |
 |--------|-----------|
 | 💧 Podlewanie | Co 2-4 tygodnie |
@@ -119,6 +128,7 @@ Quick reference for 20 common houseplants and flowers.
 ## Flowering Plants
 
 ### Phalaenopsis (Storczyk Falenopsis)
+
 | Aspekt | Wymagania |
 |--------|-----------|
 | 💧 Podlewanie | Co 7-10 dni, namaczanie |
@@ -131,6 +141,7 @@ Quick reference for 20 common houseplants and flowers.
 ---
 
 ### Spathiphyllum (Skrzydłokwiat)
+
 | Aspekt | Wymagania |
 |--------|-----------|
 | 💧 Podlewanie | Gdy lekko przywędnie |
@@ -143,6 +154,7 @@ Quick reference for 20 common houseplants and flowers.
 ---
 
 ### Anthurium (Anturium)
+
 | Aspekt | Wymagania |
 |--------|-----------|
 | 💧 Podlewanie | Co 7-10 dni |
@@ -155,6 +167,7 @@ Quick reference for 20 common houseplants and flowers.
 ---
 
 ### Begonia
+
 | Aspekt | Wymagania |
 |--------|-----------|
 | 💧 Podlewanie | Gdy wierzch suchy |
@@ -167,6 +180,7 @@ Quick reference for 20 common houseplants and flowers.
 ---
 
 ### Cyclamen (Cyklamen)
+
 | Aspekt | Wymagania |
 |--------|-----------|
 | 💧 Podlewanie | Od spodu, umiarkowanie |
@@ -179,6 +193,7 @@ Quick reference for 20 common houseplants and flowers.
 ---
 
 ### African Violet (Fiołek afrykański)
+
 | Aspekt | Wymagania |
 |--------|-----------|
 | 💧 Podlewanie | Od spodu, ciepłą wodą |
@@ -193,6 +208,7 @@ Quick reference for 20 common houseplants and flowers.
 ## Herbs & Edibles
 
 ### Basil (Bazylia)
+
 | Aspekt | Wymagania |
 |--------|-----------|
 | 💧 Podlewanie | Codziennie/co 2 dni |
@@ -205,6 +221,7 @@ Quick reference for 20 common houseplants and flowers.
 ---
 
 ### Mint (Mięta)
+
 | Aspekt | Wymagania |
 |--------|-----------|
 | 💧 Podlewanie | Utrzymuj wilgotne |
@@ -217,6 +234,7 @@ Quick reference for 20 common houseplants and flowers.
 ---
 
 ### Rosemary (Rozmaryn)
+
 | Aspekt | Wymagania |
 |--------|-----------|
 | 💧 Podlewanie | Co 1-2 tyg, dobrze osuszony |
@@ -231,6 +249,7 @@ Quick reference for 20 common houseplants and flowers.
 ## Outdoor Favorites
 
 ### Rosa (Róża)
+
 | Aspekt | Wymagania |
 |--------|-----------|
 | 💧 Podlewanie | 2-3x w tyg, głęboko |
@@ -243,6 +262,7 @@ Quick reference for 20 common houseplants and flowers.
 ---
 
 ### Hydrangea (Hortensja)
+
 | Aspekt | Wymagania |
 |--------|-----------|
 | 💧 Podlewanie | Obfite, 2-3x w tyg |
@@ -257,36 +277,43 @@ Quick reference for 20 common houseplants and flowers.
 ## Universal Care Rules
 
 ### Watering Guidelines
+
 - **Test palcem:** włóż palec 2-3 cm w ziemię
 - **Succulents:** niech całkowicie wyschnie
 - **Tropikalne:** górna warstwa sucha
 - **Kwitnące:** lekko wilgotne stale
 
 ### Light Interpretation
+
 - **Pełne słońce:** 6+ godzin bezpośredniego światła
 - **Jasne pośrednie:** blisko okna, bez bezpośredniego słońca
 - **Średnie:** środek pokoju z dużymi oknami
 - **Niskie:** daleko od okien, północna ekspozycja
 
 ### Seasonal Adjustments
+
 - **Wiosna/Lato:** więcej wody, nawożenie aktywne
 - **Jesień:** zmniejszaj podlewanie, stop nawożenie
 - **Zima:** minimum wody, zero nawozu, uważaj na przeciągi
 
 ### Emergency Signs
+
 🔴 **Natychmiast reaguj:**
+
 - Gnijące korzenie/łodygi
 - Masowe opadanie liści
 - Widoczne szkodniki
 - Pleśń na podłożu
 
 🟡 **W tym tygodniu:**
+
 - Żółknące liście
 - Więdnięcie
 - Brązowe plamy
 - Wyciąganie
 
 🟢 **Monitoruj:**
+
 - Brązowe końcówki
 - Powolny wzrost
 - Bladnięcie koloru

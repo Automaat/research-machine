@@ -1,0 +1,12 @@
+{
+  "eval_id": 2,
+  "run_type": "without_skill",
+  "expectations": [
+    {"text": "Review discusses security implications (IAM roles, AWS permissions, credential handling)", "passed": false, "evidence": "No dedicated security section. Mentions IAM permissions only in Documentation section context. No credential handling analysis."},
+    {"text": "Review considers new AWS dependency implications", "passed": false, "evidence": "No dependency analysis section. go.mod changes not discussed."},
+    {"text": "Review comments use conventional comment labels", "passed": false, "evidence": "Uses 'Critical Issues'/'Design & Architecture Issues'/'Code Quality Issues' severity labels instead of conventional comments"},
+    {"text": "Review discusses observability, metrics, or debuggability of new discovery mechanism", "passed": false, "evidence": "No observability discussion. Doesn't mention metrics, logging adequacy, or debuggability."},
+    {"text": "Output includes a clear verdict", "passed": true, "evidence": "Has 'Verdict' section with Must Fix/Should Fix/Nice to Have categories"},
+    {"text": "Output follows the defined structure with sections", "passed": false, "evidence": "Uses different structure: Summary, Critical Issues, Design & Architecture, Code Quality, Testing Assessment, Documentation, Verdict"}
+  ]
+}

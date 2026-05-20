@@ -1,0 +1,13 @@
+{
+  "eval_id": 0,
+  "eval_name": "k8s-api-graduation",
+  "prompt": "review this PR: https://github.com/kubernetes/kubernetes/pull/137174",
+  "assertions": [
+    {"id": "triage-pass", "text": "Output includes a triage assessment section answering the 6 mental model questions"},
+    {"id": "conventional-comments", "text": "Review comments use conventional comment labels (blocking:, issue:, suggestion:, nit:, praise:, question:, thought:)"},
+    {"id": "verdict", "text": "Output includes a clear verdict (APPROVE, APPROVE_WITH_COMMENTS, or REQUEST_CHANGES)"},
+    {"id": "architectural-analysis", "text": "Review discusses API graduation lifecycle, feature gate implications, or backward compatibility"},
+    {"id": "cross-team-impact", "text": "Review considers impact on other teams or API consumers"},
+    {"id": "structured-output", "text": "Output follows the defined structure with sections: Triage Assessment, Review Summary, and dimension-specific sections"}
+  ]
+}

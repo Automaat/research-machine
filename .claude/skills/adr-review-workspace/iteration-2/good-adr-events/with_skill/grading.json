@@ -1,0 +1,12 @@
+{
+  "eval_id": 2,
+  "config": "with_skill",
+  "expectations": [
+    {"text": "Acknowledges ADR is well-structured", "passed": true, "evidence": "Phase 1: 'well-structured ADR that covers all core MADR sections'"},
+    {"text": "Probes eventual consistency UX implications", "passed": true, "evidence": "Phase 2 concern 1: 'what the customer actually sees'"},
+    {"text": "Questions SQS message ordering guarantees", "passed": true, "evidence": "Phase 4: 'FIFO vs standard queue tradeoff... deserves explicit decision'"},
+    {"text": "Raises team readiness / operational concerns", "passed": true, "evidence": "Phase 4: idempotency strategy, monitoring transition, message schema evolution"},
+    {"text": "Identifies at least 3 concrete improvements", "passed": true, "evidence": "4 suggestions in Phase 5"},
+    {"text": "Follows phased review structure", "passed": true, "evidence": "Phase 1-5 structure with pause point"}
+  ]
+}

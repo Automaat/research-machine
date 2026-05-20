@@ -1,0 +1,14 @@
+{
+  "eval_id": 1,
+  "config": "with_skill",
+  "expectations": [
+    {"text": "Identifies missing decision drivers section", "passed": true, "evidence": "Phase 1 lists 'Decision Drivers — no articulation of what forces shaped this choice'"},
+    {"text": "Notes problem statement is too vague or describes a solution not a problem", "passed": true, "evidence": "Phase 2 concern 1: 'We need state management for our React app is not a problem statement — it's a solution category'"},
+    {"text": "Suggests at least 2 additional alternatives", "passed": true, "evidence": "Lists React Context + useReducer, Zustand, Jotai/Recoil, TanStack Query, and 'Do nothing'"},
+    {"text": "Challenges 'industry standard' as insufficient rationale", "passed": true, "evidence": "Phase 2 concern 3: 'Industry standard and most developers know it is not architectural rationale'"},
+    {"text": "Flags missing negative consequences", "passed": true, "evidence": "Phase 1: 'Negative consequences — only positive consequences listed' and Phase 4 details specific missing negatives"},
+    {"text": "Points out only 2 options considered (should be 3+)", "passed": true, "evidence": "Phase 2 concern 2: 'Only two options considered, and the rejected one has zero analysis'"},
+    {"text": "Follows phased review structure (structural then deep then actionable)", "passed": true, "evidence": "Clearly labeled Phase 1 (Structural), Phase 2 (Top 3 Concerns), Phase 3 (Wait), Phase 4 (Additional), and Suggested Improvements"},
+    {"text": "Identifies anti-pattern (e.g., Rubber Stamp)", "passed": true, "evidence": "Phase 1: 'shows signs of the Rubber Stamp anti-pattern'"}
+  ]
+}

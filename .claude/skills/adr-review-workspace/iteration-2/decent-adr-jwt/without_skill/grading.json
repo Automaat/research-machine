@@ -1,0 +1,12 @@
+{
+  "eval_id": 3,
+  "config": "without_skill",
+  "expectations": [
+    {"text": "Flags missing confirmation/validation section", "passed": false, "evidence": "Suggests adding a Token Lifecycle section and Key Management section but doesn't explicitly flag missing MADR confirmation section"},
+    {"text": "Probes token revocation strategy in depth", "passed": true, "evidence": "Issue 1 (High Priority): detailed questions about TTL, refresh token storage, denylist, rotation"},
+    {"text": "Questions key management and rotation procedures", "passed": true, "evidence": "Issue 2 (High Priority): HSM/KMS/Vault, rotation cadence, JWKS endpoint, compromise playbook"},
+    {"text": "Suggests hybrid approach (Auth0 for SSO + self-issued JWT for API)", "passed": true, "evidence": "Question 5: 'Has the team considered a hybrid approach — self-issued JWT for service-to-service, with an option to plug in an external IdP for end-user SSO later?'"},
+    {"text": "Raises JWT-specific security concerns (algorithm confusion, audience validation)", "passed": true, "evidence": "Issue 8: algorithm confusion attacks, aud validation, iss validation"},
+    {"text": "Follows phased review structure (structural then deep then actionable)", "passed": false, "evidence": "Uses flat structure: Overall Assessment, Strengths, Issues and Gaps, Suggestions, Questions"}
+  ]
+}

@@ -9,6 +9,7 @@ Core questions for all skill types.
 **Question:** When would you invoke this skill? What triggers its use?
 
 **Options:**
+
 - Daily/scheduled task
 - On-demand when I need [specific thing]
 - As part of another workflow
@@ -23,6 +24,7 @@ Core questions for all skill types.
 **Question:** What information do you provide when invoking the skill?
 
 **Options:**
+
 - URL or link
 - Search query or topic
 - File path
@@ -39,6 +41,7 @@ Core questions for all skill types.
 **Question:** What should the skill produce?
 
 **Options:**
+
 - Markdown document (saved to file)
 - Structured data (JSON)
 - Summary in chat (no file)
@@ -54,6 +57,7 @@ Core questions for all skill types.
 **Question:** How do you know the output is good? What makes it fail?
 
 **Options:**
+
 - Completeness (covers all X)
 - Accuracy (verified information)
 - Format (specific structure required)

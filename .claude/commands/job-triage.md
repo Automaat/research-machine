@@ -134,6 +134,7 @@ These are dealbreakers regardless of comp or geo:
 #### SOFT CRITERIA (MAYBE if geo + comp match)
 
 **COMPENSATION TOLERANCE (10% Rule):**
+
 - **€160k+** → GO (meets or exceeds target)
 - **€144k-€160k** → MAYBE (within 10% tolerance below target)
 - **<€144k** → NO-GO (more than 10% below target)

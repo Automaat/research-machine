@@ -28,6 +28,7 @@ Parse from `$ARGUMENTS`:
 ### Phase 1: Parse Request
 
 Extract:
+
 - Skill name from arguments
 - Type hint if provided
 - Any description in user message
@@ -50,12 +51,14 @@ Analyze user's description to determine type:
 ### Phase 3: Gather Requirements
 
 Load questions from `questions/`:
+
 - `base-questions.md` — Always ask (3-4 questions)
 - `{type}-questions.md` — Type-specific (2-3 questions)
 
 Ask 5-7 total questions via AskUserQuestion tool.
 
 **Question categories:**
+
 1. Purpose and trigger ("When would you use this?")
 2. Inputs ("What information do you provide?")
 3. Outputs ("What should it produce?")
@@ -67,6 +70,7 @@ Store answers for template customization.
 ### Phase 4: Assess Python Need
 
 **Python warranted ONLY if:**
+
 - External API calls (not web search)
 - Complex computation Claude can't do
 - Binary/structured format parsing
@@ -92,6 +96,7 @@ Load selected patterns for template generation.
 ### Phase 6: Generate Skill
 
 **6a. Create directory:**
+
 ```
 .claude/skills/[skill-name]/
 ```
@@ -99,6 +104,7 @@ Load selected patterns for template generation.
 **6b. Generate SKILL.md:**
 
 Load `templates/skill-base.md`, customize with:
+
 - User's answers
 - Detected type
 - Selected patterns
@@ -145,7 +151,9 @@ Write all files, then show:
 
 ## How to Use
 ```
+
 /[skill-name] [example-args]
+
 ```
 
 ## Next Steps
@@ -161,6 +169,7 @@ Write all files, then show:
 ### Research Skills
 
 Include:
+
 - Phase for multi-source search (WebSearch patterns)
 - Phase for synthesis/deduplication
 - State management for incremental runs
@@ -169,6 +178,7 @@ Include:
 ### Automation Skills
 
 Include:
+
 - State file patterns (.last-run, .processed)
 - Conditional skip logic
 - Incremental processing
@@ -177,6 +187,7 @@ Include:
 ### Tool Skills
 
 Include:
+
 - Clear input/output contract
 - Validation of inputs
 - Structured output format
@@ -185,6 +196,7 @@ Include:
 ### Simple Skills
 
 Include:
+
 - Minimal phases (2-3)
 - Focused scope
 - Direct execution

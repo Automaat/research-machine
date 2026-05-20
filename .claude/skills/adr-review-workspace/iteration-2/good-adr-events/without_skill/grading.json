@@ -1,0 +1,12 @@
+{
+  "eval_id": 2,
+  "config": "without_skill",
+  "expectations": [
+    {"text": "Acknowledges ADR is well-structured / high quality", "passed": true, "evidence": "'well-structured, clearly written ADR' with 'Approve with minor suggestions' verdict"},
+    {"text": "Probes eventual consistency UX implications", "passed": true, "evidence": "Suggestion 1: 'What will the user see after placing an order?'"},
+    {"text": "Questions SQS message ordering guarantees", "passed": true, "evidence": "Suggestion 4: 'SQS standard queues do not guarantee ordering' with FIFO throughput discussion"},
+    {"text": "Raises team readiness / operational concerns for async patterns", "passed": true, "evidence": "Suggestion 5 about DLQ processing ownership, Suggestion 6 about observability gap"},
+    {"text": "Identifies at least 3 concrete improvement suggestions despite overall quality", "passed": true, "evidence": "8 numbered suggestions provided"},
+    {"text": "Follows phased review structure (structural then deep then actionable)", "passed": false, "evidence": "Uses flat structure: Overall Assessment, Strengths, Suggestions, Questions. No interactive phases or pause points"}
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "eval_id": 3,
+  "eval_name": "decent-adr-jwt",
+  "prompt": "review .claude/skills/adr-review-workspace/test-adrs/0003-api-authentication.md — our security lead wrote this and I want to make sure we haven't missed anything before accepting it",
+  "assertions": [
+    {"text": "Flags missing confirmation/validation section"},
+    {"text": "Probes token revocation strategy in depth"},
+    {"text": "Questions key management and rotation procedures"},
+    {"text": "Suggests hybrid approach (Auth0 for SSO + self-issued JWT for API)"},
+    {"text": "Raises JWT-specific security concerns (algorithm confusion, audience validation)"},
+    {"text": "Follows phased review structure (structural then deep then actionable)"}
+  ]
+}
