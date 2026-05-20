@@ -9,6 +9,7 @@ Visual symptom → cause → treatment reference for plant health diagnosis.
 ### 🔵 Overwatering (Przelanie)
 
 **Visual Signs:**
+
 - Yellow lower/inner leaves (older leaves first)
 - Soft, mushy stems
 - Mold or white fungus on soil surface
@@ -19,12 +20,14 @@ Visual symptom → cause → treatment reference for plant health diagnosis.
 **Urgency:** 🔴 High
 
 **Confirmation Tests:**
+
 - Soil moist/wet 2+ inches down
 - Pot feels heavy
 - Sour/rotting smell from soil = root rot starting
 - Roots brown/black and mushy when checked
 
 **Treatment:**
+
 1. Stop watering immediately
 2. Move to brighter (indirect) light to speed evaporation
 3. Check drainage holes — ensure not blocked
@@ -38,6 +41,7 @@ Visual symptom → cause → treatment reference for plant health diagnosis.
    - Don't water for 5-7 days
 
 **Prevention:**
+
 - Always check soil moisture before watering
 - Use pots with drainage holes
 - Empty saucers after watering
@@ -48,6 +52,7 @@ Visual symptom → cause → treatment reference for plant health diagnosis.
 ### 🟤 Underwatering (Przesuszenie)
 
 **Visual Signs:**
+
 - Wilting despite recent watering
 - Crispy, brown leaf edges/tips
 - Dry, cracked soil pulling from pot edges
@@ -58,11 +63,13 @@ Visual symptom → cause → treatment reference for plant health diagnosis.
 **Urgency:** 🟡 Medium
 
 **Confirmation Tests:**
+
 - Soil dry several inches down
 - Pot extremely light when lifted
 - Soil hydrophobic (water runs through without absorbing)
 
 **Treatment:**
+
 1. **Mild case:** Water thoroughly until drains from bottom
 2. **Severe/hydrophobic soil:**
    - Bottom water: place pot in basin of water for 30-45 min
@@ -72,6 +79,7 @@ Visual symptom → cause → treatment reference for plant health diagnosis.
 4. Move away from direct heat sources
 
 **Prevention:**
+
 - Set watering schedule reminders
 - Check soil 1-2x per week
 - Use self-watering pots for chronic under-waterers
@@ -84,6 +92,7 @@ Visual symptom → cause → treatment reference for plant health diagnosis.
 ### 💡 Low Light (Niedobór Światła)
 
 **Visual Signs:**
+
 - Leggy, stretched growth toward light
 - Pale, washed-out leaf color
 - Small new leaves
@@ -95,6 +104,7 @@ Visual symptom → cause → treatment reference for plant health diagnosis.
 **Urgency:** 🟢 Low
 
 **Treatment:**
+
 1. Move closer to light source
 2. Rotate plant 1/4 turn weekly
 3. Clean dusty leaves to maximize light absorption
@@ -102,6 +112,7 @@ Visual symptom → cause → treatment reference for plant health diagnosis.
 5. Prune leggy growth to encourage bushier shape
 
 **Prevention:**
+
 - Research plant's light needs before placement
 - South/west windows = bright light
 - North/east windows = low-medium light
@@ -112,6 +123,7 @@ Visual symptom → cause → treatment reference for plant health diagnosis.
 ### ☀️ Light Burn (Poparzenie Słoneczne)
 
 **Visual Signs:**
+
 - Bleached/white patches on leaves
 - Brown, crispy spots (not on edges)
 - Faded leaf color on sun-facing side
@@ -121,6 +133,7 @@ Visual symptom → cause → treatment reference for plant health diagnosis.
 **Urgency:** 🟡 Medium
 
 **Treatment:**
+
 1. Move away from direct sun immediately
 2. Don't remove damaged leaves yet (still photosynthesizing)
 3. Increase watering slightly (sun stress = more water use)
@@ -128,6 +141,7 @@ Visual symptom → cause → treatment reference for plant health diagnosis.
 5. Remove severely damaged leaves after plant stabilizes
 
 **Prevention:**
+
 - Acclimate plants gradually to brighter spots
 - Use sheer curtains for harsh afternoon sun
 - Move sensitive plants back from windows in summer
@@ -139,6 +153,7 @@ Visual symptom → cause → treatment reference for plant health diagnosis.
 ### 🕷️ Spider Mites (Przędziorki)
 
 **Visual Signs:**
+
 - Fine webbing on undersides of leaves
 - Tiny dots (mites) on leaf undersides
 - Stippled, bronzed leaf appearance
@@ -148,6 +163,7 @@ Visual symptom → cause → treatment reference for plant health diagnosis.
 **Urgency:** 🔴 High (spread fast)
 
 **Treatment:**
+
 1. Isolate plant immediately
 2. Shower plant with strong water spray
 3. Wipe leaves with damp cloth
@@ -156,6 +172,7 @@ Visual symptom → cause → treatment reference for plant health diagnosis.
 6. Repeat treatment 3-4 times
 
 **Prevention:**
+
 - Regular leaf cleaning
 - Mist plants regularly
 - Quarantine new plants for 2 weeks
@@ -166,6 +183,7 @@ Visual symptom → cause → treatment reference for plant health diagnosis.
 ### 🪲 Mealybugs (Wełnowce)
 
 **Visual Signs:**
+
 - White, cottony masses in leaf axils
 - Sticky residue (honeydew) on leaves
 - Sooty mold growing on honeydew
@@ -175,6 +193,7 @@ Visual symptom → cause → treatment reference for plant health diagnosis.
 **Urgency:** 🔴 High
 
 **Treatment:**
+
 1. Isolate plant
 2. Remove visible bugs with cotton swab dipped in rubbing alcohol
 3. Spray entire plant with neem oil or insecticidal soap
@@ -182,6 +201,7 @@ Visual symptom → cause → treatment reference for plant health diagnosis.
 5. Repeat weekly for 3-4 weeks
 
 **Prevention:**
+
 - Inspect new plants thoroughly
 - Regular cleaning of leaves
 - Avoid overfertilizing (attracts pests)
@@ -191,6 +211,7 @@ Visual symptom → cause → treatment reference for plant health diagnosis.
 ### 🦟 Fungus Gnats (Ziemiórki)
 
 **Visual Signs:**
+
 - Small black flies hovering around soil
 - Flies visible when plant is watered/disturbed
 - Larvae in top inch of soil (white, translucent)
@@ -199,6 +220,7 @@ Visual symptom → cause → treatment reference for plant health diagnosis.
 **Urgency:** 🟡 Medium (annoying but rarely fatal)
 
 **Treatment:**
+
 1. Let soil dry out completely between waterings
 2. Use yellow sticky traps near soil
 3. Apply thin layer of sand/diatomaceous earth on soil
@@ -206,6 +228,7 @@ Visual symptom → cause → treatment reference for plant health diagnosis.
 5. Bottom water instead of top water
 
 **Prevention:**
+
 - Never overwater
 - Allow soil to dry between waterings
 - Use well-draining soil
@@ -216,6 +239,7 @@ Visual symptom → cause → treatment reference for plant health diagnosis.
 ### 🐚 Scale Insects (Tarczniki)
 
 **Visual Signs:**
+
 - Brown/tan bumps on stems and leaves
 - Bumps don't move but can be scraped off
 - Sticky honeydew residue
@@ -225,6 +249,7 @@ Visual symptom → cause → treatment reference for plant health diagnosis.
 **Urgency:** 🔴 High
 
 **Treatment:**
+
 1. Isolate plant
 2. Scrape off scale with fingernail or soft brush
 3. Wipe affected areas with rubbing alcohol
@@ -232,6 +257,7 @@ Visual symptom → cause → treatment reference for plant health diagnosis.
 5. Repeat every 7-10 days for a month
 
 **Prevention:**
+
 - Quarantine new plants
 - Regular inspection of stems and leaf undersides
 - Keep plants healthy (stressed plants attract pests)
@@ -241,6 +267,7 @@ Visual symptom → cause → treatment reference for plant health diagnosis.
 ### 🪰 Aphids (Mszyce)
 
 **Visual Signs:**
+
 - Clusters of small green/black/white insects
 - Usually on new growth, undersides of leaves
 - Sticky honeydew
@@ -250,12 +277,14 @@ Visual symptom → cause → treatment reference for plant health diagnosis.
 **Urgency:** 🟡 Medium
 
 **Treatment:**
+
 1. Spray off with strong water jet
 2. Apply insecticidal soap or neem oil
 3. Introduce ladybugs (outdoor plants)
 4. Repeat treatment every few days until gone
 
 **Prevention:**
+
 - Regular inspection of new growth
 - Remove heavily infested leaves
 - Avoid overfertilizing with nitrogen
@@ -267,6 +296,7 @@ Visual symptom → cause → treatment reference for plant health diagnosis.
 ### 🍄 Powdery Mildew (Mączniak Prawdziwy)
 
 **Visual Signs:**
+
 - White, powdery coating on leaves
 - Usually starts on upper leaf surfaces
 - Leaves may curl or distort
@@ -275,6 +305,7 @@ Visual symptom → cause → treatment reference for plant health diagnosis.
 **Urgency:** 🟡 Medium
 
 **Treatment:**
+
 1. Improve air circulation
 2. Remove affected leaves
 3. Apply fungicide or neem oil
@@ -282,6 +313,7 @@ Visual symptom → cause → treatment reference for plant health diagnosis.
 5. Avoid wetting leaves when watering
 
 **Prevention:**
+
 - Good air circulation
 - Don't crowd plants
 - Water at soil level, not leaves
@@ -292,6 +324,7 @@ Visual symptom → cause → treatment reference for plant health diagnosis.
 ### 🟤 Root Rot (Zgnilizna Korzeni)
 
 **Visual Signs:**
+
 - Wilting despite moist soil
 - Yellow/brown leaves
 - Soft, mushy stem base
@@ -302,6 +335,7 @@ Visual symptom → cause → treatment reference for plant health diagnosis.
 **Urgency:** 🔴 Critical
 
 **Treatment:**
+
 1. Remove from pot immediately
 2. Wash all soil from roots
 3. Cut away ALL brown/black/mushy roots with sterile scissors
@@ -312,6 +346,7 @@ Visual symptom → cause → treatment reference for plant health diagnosis.
 8. Trim back foliage proportionally to root loss
 
 **Prevention:**
+
 - Never overwater
 - Use pots with drainage holes
 - Use well-draining soil mix
@@ -322,6 +357,7 @@ Visual symptom → cause → treatment reference for plant health diagnosis.
 ### 🔴 Leaf Spot (Plamistość Liści)
 
 **Visual Signs:**
+
 - Brown/black spots with defined borders
 - Yellow halo around spots
 - Spots may have concentric rings
@@ -330,6 +366,7 @@ Visual symptom → cause → treatment reference for plant health diagnosis.
 **Urgency:** 🟡 Medium
 
 **Treatment:**
+
 1. Remove affected leaves
 2. Improve air circulation
 3. Avoid wetting leaves when watering
@@ -337,6 +374,7 @@ Visual symptom → cause → treatment reference for plant health diagnosis.
 5. Dispose of fallen leaves
 
 **Prevention:**
+
 - Water at soil level
 - Good air circulation
 - Don't crowd plants
@@ -349,6 +387,7 @@ Visual symptom → cause → treatment reference for plant health diagnosis.
 ### 🟡 Nitrogen Deficiency
 
 **Visual Signs:**
+
 - Older/lower leaves turning uniformly yellow
 - Yellowing starts from leaf tips inward
 - Stunted, slow growth
@@ -357,6 +396,7 @@ Visual symptom → cause → treatment reference for plant health diagnosis.
 **Urgency:** 🟡 Medium
 
 **Treatment:**
+
 1. Apply balanced fertilizer
 2. For quick fix: diluted coffee grounds in water
 3. Check soil pH (affects nutrient uptake)
@@ -366,6 +406,7 @@ Visual symptom → cause → treatment reference for plant health diagnosis.
 ### 🟤 Iron Deficiency (Chloroza)
 
 **Visual Signs:**
+
 - New leaves yellow with green veins (interveinal chlorosis)
 - Affects youngest leaves first
 - Veins stay dark green while leaf blade yellows
@@ -373,6 +414,7 @@ Visual symptom → cause → treatment reference for plant health diagnosis.
 **Urgency:** 🟡 Medium
 
 **Treatment:**
+
 1. Check soil pH — often too alkaline
 2. Apply chelated iron supplement
 3. Use acidifying fertilizer for acid-loving plants
@@ -382,6 +424,7 @@ Visual symptom → cause → treatment reference for plant health diagnosis.
 ### 🟣 Phosphorus Deficiency
 
 **Visual Signs:**
+
 - Purple/reddish tinge on leaves
 - Dark green leaves that may curl
 - Poor root development
@@ -390,6 +433,7 @@ Visual symptom → cause → treatment reference for plant health diagnosis.
 **Urgency:** 🟢 Low
 
 **Treatment:**
+
 1. Apply fertilizer with higher phosphorus (middle number)
 2. Bone meal for organic option
 3. Check soil temperature (cold soil blocks P uptake)
@@ -401,12 +445,14 @@ Visual symptom → cause → treatment reference for plant health diagnosis.
 ### 🌡️ Temperature Stress
 
 **Cold Damage:**
+
 - Blackened/mushy leaves
 - Sudden leaf drop
 - Wilting
 - Growth stops
 
 **Heat Stress:**
+
 - Wilting during hot periods
 - Leaf scorch
 - Flower drop
@@ -415,6 +461,7 @@ Visual symptom → cause → treatment reference for plant health diagnosis.
 **Urgency:** 🟡 Medium
 
 **Treatment:**
+
 1. Move away from cold drafts/hot radiators
 2. Maintain consistent temperature
 3. Don't place near AC vents or exterior doors
@@ -425,6 +472,7 @@ Visual symptom → cause → treatment reference for plant health diagnosis.
 ### 💨 Low Humidity (Suche Powietrze)
 
 **Visual Signs:**
+
 - Brown, crispy leaf tips and edges
 - Leaves curling
 - Flower buds dropping before opening
@@ -433,6 +481,7 @@ Visual symptom → cause → treatment reference for plant health diagnosis.
 **Urgency:** 🟢 Low
 
 **Treatment:**
+
 1. Group plants together (creates microclimate)
 2. Place on pebble tray with water
 3. Use room humidifier

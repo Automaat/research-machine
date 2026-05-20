@@ -1,0 +1,12 @@
+{
+  "name": "job-discover-scrapers",
+  "version": "1.0.0",
+  "description": "Playwright scrapers for JS-heavy job boards",
+  "type": "module",
+  "scripts": {
+    "install-browsers": "npx playwright install chromium --with-deps"
+  },
+  "dependencies": {
+    "playwright": "^1.50.0"
+  }
+}

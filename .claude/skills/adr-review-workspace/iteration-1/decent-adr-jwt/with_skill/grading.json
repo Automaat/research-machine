@@ -1,0 +1,12 @@
+{
+  "eval_id": 3,
+  "config": "with_skill",
+  "expectations": [
+    {"text": "Flags missing confirmation/validation section", "passed": true, "evidence": "Phase 1: 'Confirmation — No criteria for validating the implementation matches the decision'"},
+    {"text": "Probes token revocation strategy in depth", "passed": true, "evidence": "Phase 2 concern 1: detailed questions about TTL, refresh token storage, revocation list, incident response"},
+    {"text": "Questions key management and rotation procedures", "passed": true, "evidence": "Phase 2 concern 2: 'Who maintains the signing key infrastructure (HSM, key vault, rotation schedule)?'"},
+    {"text": "Suggests hybrid approach (Auth0 for SSO + self-issued JWT for API)", "passed": true, "evidence": "Phase 2 concern 3: 'self-issue JWTs for service-to-service auth while federating enterprise SSO through an external IdP'"},
+    {"text": "Raises JWT-specific security concerns (algorithm confusion, audience validation)", "passed": true, "evidence": "Security-specific gaps section: algorithm confusion attacks, audience validation, clock skew tolerance"},
+    {"text": "Follows phased review structure (structural then deep then actionable)", "passed": true, "evidence": "Clear Phase 1 (Structural), Phase 2 (Top 3 Concerns), Phase 3 (Additional Observations) with summary table"}
+  ]
+}

@@ -1,0 +1,127 @@
+\documentclass{resume} % Use the custom resume.cls style
+
+\usepackage[left=0.13in,top=0.1in,right=0.13 in,bottom=0.1in]{geometry} % Document margins
+\newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}} 
+\newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
+\name{Marcin Skalski} % Your name
+% You can merge both of these into a single line, if you do not have a website.
+\address{+48 509 581 588 \\ Cracow, Poland} 
+\address{\href{mailto:skalskimarcin33@gmail.com}{skalskimarcin33@gmail.com} \\ \href{https://www.linkedin.com/in/skalskimarcin/}{LinkedIn} \\
+\href{https://github.com/Automaat}{Github} 
+% \href{https://mskalski.dev/}{Blog}
+} 
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	OBJECTIVE
+%----------------------------------------------------------------------------------------
+% \begin{rSection}{OBJECTIVE}
+% {Software Engineer with 2+ years of experience in XXX, seeking full-time XXX roles.}
+% \end{rSection}
+%----------------------------------------------------------------------------------------
+% TECHINICAL STRENGTHS	
+%----------------------------------------------------------------------------------------
+\begin{rSection}{SKILLS}
+
+\begin{tabular}{ @{} >{\bfseries}l @{\hspace{5ex}} l }
+Technologies &  Golang, Java, Python, SQL, Git, Envoy, MongoDB, Kafka, Elastic, OpenTelemetry, Prometheus, Grafana
+\\
+Infrastructure & Docker, Kubernetes, Terraform, AWS, GCP, Puppet\\
+AI Skills & Claude Code, Copilot, Whisper, basic LLM knowlage \\
+Concepts & Service Mesh, distributed computing, microservices, performance tuning\\
+Soft Skills & Precise communication, leadership, proactivity, team building\\
+\end{tabular}\\
+\end{rSection}
+
+\begin{rSection}{EXPERIENCE}
+
+\textbf{Senior Software Engineer - Kuma Service Mesh} \hfill Sep 2022 - Now\\
+Kong Inc. \hfill \textit{Cracow, Poland}
+ \begin{itemize}
+    \itemsep -2pt {} 
+     \item Core contributor to CNCF Kuma (open source) and Kong Mesh (enterprise). Building SaaS Service Mesh platform from ground up.
+     \item Driving Mesh Perf initiative - continuous performance testing infrastructure, benchmarking, regression detection of Mesh.
+     \item Led MeshMetric policy development - unified metrics collection with OpenTelemetry, application metrics scraping, dynamic configuration without proxy restarts.
+     \item Owner of Kuma documentation - strategy, information architecture, quality standards.
+     \item Driving community growth and product marketing - KubeCon speaker, Kuma community calls host, CNCF Slack maintainer.
+ \end{itemize}
+
+\textbf{Team Leader - Service Mesh} \hfill May 2021 - Sep 2022\\
+Allegro Sp. z o.o. \hfill \textit{Cracow, Poland}
+ \begin{itemize}
+    \itemsep -2pt {} 
+     \item Rebuild one of the most important teams in Allegro from scratch. Leading team of 5 people responsible for service-to-service communication ($>$1500 services and $\sim$2 million RPS), microservice SDK ($>$1000 usages, Java + Spring) and developers efficiency.
+     \item Being on call for mission critical services and coordinating company-wide incidents.
+     \item Created several for developers like services connections map and httpie  plugin that uses Consul for service discovery.
+     \item Worked on redesigning and simplifying deployment process in Allegro, and prepared guide for migrations at scale.
+ \end{itemize}
+ 
+\textbf{Software Engineer - Notifications} \hfill Dec 2018 - May 2021\\
+Allegro Sp. z o.o. \hfill \textit{Cracow, Poland}
+ \begin{itemize}
+    \itemsep -2pt {} 
+     \item Improved performance of our batch notification sending mechanism. Increasing throughput by 800\% (from 500 RPS to 4000 RPS). 
+     \item Improved stability and performance of our main notification service by rewriting main service logic to a highly concurrent approach. Migrated queue from MongoDB to Kafka with delay topics. This reduced response times from our service by 30\% and reduced the number of incidents to almost zero.
+     % \item I have redesigned and implemented a new notification templates sync mechanism based on GitHub actions. Which let our clients preserve their old git-flow and saved their time.
+ \end{itemize} 
+ 
+\textbf{Software Engineer - User profiles} \hfill Jul 2015 - Dec 2018\\
+Sabre Poland \hfill \textit{Cracow, Poland}
+ \begin{itemize}
+    \itemsep -2pt {} 
+     % \item Worked on modern REST API for Sabre corporate travel booking services.
+     \item Worked on one of the Sabre core services that manage more than 200 million airline user's profiles. 
+ \end{itemize}
+
+\end{rSection} 
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{PROJECTS}
+\vspace{-1em}
+% \item \textbf{Pethero} {Application that will help pet owners find the best pet sitters in their area. The project was part of Dragon’s Cave startup preaccelerator, organized by \#OMGKRK. \href{https://www.youtube.com/watch?v=acm4DJaHq0g}{Startup pitch}}
+\item \textbf{Whisper Hotkey} {macOS voice-to-text app using local Whisper models - Rust, whisper.cpp, global hotkey triggers with 100\% offline transcription \href{https://github.com/Automaat/whisper-hotkey}{Github repo}}
+\end{rSection} 
+
+%----------------------------------------------------------------------------------------
+\begin{rSection}{Extra-Curricular Activities} 
+\begin{itemize}
+    \item Founder member of AI enablement Guild in Kong
+    \item Speaker at KubeCon, 4Developers, and Allegro Tech Meeting. Led conference track as a showrunner
+    \item Proactively looking for performance improvements of Allegro technical platform, by creating and analysing global dashboards and looking for outliers. Thanks to this, Found and tuned a couple of services. Working on performance of our microservice SDK.
+    \item A member of Allegro hiring squad. I have conducted more than 100 systems design and technical interviews. Redesigning systems design interview for frontend developers and of systemic tool for recruiters calibration. Conducting behavioural interviews.
+    \item Prepared and conducted highly acclaimed Systems Design workshops, during which we were designing URL shortener service. \href{https://www.meetup.com/allegrotech/events/282421464/}{Link to meetup}
+\end{itemize}
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Education}
+
+{\bf Bachelor and Master of Computer Science}, AGH University of Science and Technology in Cracow \hfill {2013-2018}\\
+% Master thesis: "Performance comparison o eBPF metric exporters and their influence on system"
+Bachelor thesis: "Predicting song popularity score using LSTM networks"
+%Minor in Linguistics \smallskip \\
+%Member of Eta Kappa Nu \\
+%Member of Upsilon Pi Epsilon \\
+
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+% \begin{rSection}{Leadership} 
+% \begin{itemize}
+%     \item Sample section
+% \end{itemize}
+
+
+% \end{rSection}
+
+
+\end{document}

@@ -9,6 +9,7 @@ Additional questions for research-type skills.
 **Question:** Where should the skill search for information?
 
 **Options:**
+
 - General web search
 - Specific sites (provide list)
 - APIs (which ones?)
@@ -24,6 +25,7 @@ Additional questions for research-type skills.
 **Question:** How should multiple sources be combined?
 
 **Options:**
+
 - Aggregate all findings (comprehensive)
 - Find consensus (common across sources)
 - Compare/contrast (show differences)
@@ -38,6 +40,7 @@ Additional questions for research-type skills.
 **Question:** Will you run this skill repeatedly for incremental updates?
 
 **Options:**
+
 - One-time research
 - Daily/weekly recurring
 - On-demand but tracks history

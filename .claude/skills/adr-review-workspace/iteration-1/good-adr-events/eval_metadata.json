@@ -1,0 +1,13 @@
+{
+  "eval_id": 2,
+  "eval_name": "good-adr-events",
+  "prompt": "I need a second pair of eyes on our event-driven architecture ADR before the review meeting tomorrow. File is .claude/skills/adr-review-workspace/test-adrs/0001-use-event-driven-architecture.md",
+  "assertions": [
+    {"text": "Acknowledges ADR is well-structured / high quality"},
+    {"text": "Probes eventual consistency UX implications"},
+    {"text": "Questions SQS message ordering guarantees"},
+    {"text": "Raises team readiness / operational concerns for async patterns"},
+    {"text": "Identifies at least 3 concrete improvement suggestions despite overall quality"},
+    {"text": "Follows phased review structure (structural then deep then actionable)"}
+  ]
+}

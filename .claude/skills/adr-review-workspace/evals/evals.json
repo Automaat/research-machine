@@ -1,0 +1,23 @@
+{
+  "skill_name": "adr-review",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "hey can you review this ADR for me? it's at .claude/skills/adr-review-workspace/test-adrs/0002-frontend-state-management.md — we wrote it kind of quickly and I want to make sure it's solid before we present it to the team",
+      "expected_output": "Should identify major structural gaps (missing decision drivers, weak problem statement, only 2 options, no negative consequences, no confirmation). Should probe the 'industry standard' justification and ask about React Context, Zustand, Jotai as missing alternatives. Should flag the ADR as needing significant work before it's ready for team review.",
+      "files": [".claude/skills/adr-review-workspace/test-adrs/0002-frontend-state-management.md"]
+    },
+    {
+      "id": 2,
+      "prompt": "I need a second pair of eyes on our event-driven architecture ADR before the review meeting tomorrow. File is .claude/skills/adr-review-workspace/test-adrs/0001-use-event-driven-architecture.md",
+      "expected_output": "Should acknowledge this is a well-structured ADR. Should still find substantive things to probe: eventual consistency implications for UX, SQS message ordering guarantees, what happens when DLQ fills up, whether the 6-week timeline is realistic given team's limited async experience. Should note the ADR is strong but could benefit from addressing a few deeper questions.",
+      "files": [".claude/skills/adr-review-workspace/test-adrs/0001-use-event-driven-architecture.md"]
+    },
+    {
+      "id": 3,
+      "prompt": "review .claude/skills/adr-review-workspace/test-adrs/0003-api-authentication.md — our security lead wrote this and I want to make sure we haven't missed anything before accepting it",
+      "expected_output": "Should identify missing confirmation section, note the token revocation complexity deserves more detail, ask about key management and rotation procedures, probe the 10k service accounts cost comparison more deeply, and question whether a hybrid approach (Auth0 for enterprise SSO + self-issued JWT for API) was considered.",
+      "files": [".claude/skills/adr-review-workspace/test-adrs/0003-api-authentication.md"]
+    }
+  ]
+}

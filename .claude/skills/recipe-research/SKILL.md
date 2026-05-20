@@ -17,12 +17,14 @@ Research recipes from multiple sources, convert to metric, verify cooking scienc
 ### Phase 1: Parse Arguments
 
 Extract from `$ARGUMENTS`:
+
 - **Dish name:** Required (e.g., "beef bourguignon", "chocolate chip cookies")
 - **--servings N:** Optional, default 4
 - **--dietary:** Optional additions (vegan, gf, df, keto) — stacks with vegetarian default
 - **--classic:** Skip vegetarian default, research traditional version
 
 Examples:
+
 - `beef bourguignon` → searches "vegetarian beef bourguignon mushroom"
 - `pad thai --dietary gf` → "vegetarian gluten-free pad thai"
 - `coq au vin --classic` → "coq au vin chicken" (traditional)
@@ -43,6 +45,7 @@ Query patterns (auto-add "vegetarian" unless --classic):
 ```
 
 From search results extract:
+
 - Ingredient lists with quantities
 - Step-by-step instructions
 - Cook times and temperatures
@@ -52,12 +55,14 @@ From search results extract:
 ### Phase 3: Recipe Synthesis
 
 Analyze across sources to identify:
+
 - **Consensus ingredients** — appearing in 3+ sources
 - **Best techniques** — from most detailed/authoritative source
 - **Timing consensus** — average cook times, note outliers
 - **Variations** — notable differences between sources and why
 
 Create synthesized "best of" recipe combining:
+
 - Most complete ingredient list
 - Clearest technique instructions
 - Most reliable timings
@@ -67,6 +72,7 @@ Create synthesized "best of" recipe combining:
 Read `metric-conversions.md` KB for reference.
 
 Convert ALL measurements:
+
 - Volume → weight in grams (accounting for ingredient density)
 - Fahrenheit → Celsius
 - Inches → centimeters
@@ -75,6 +81,7 @@ Convert ALL measurements:
 Format: `200g (1⅔ cups) flour`
 
 **Critical:** Different ingredients have different densities:
+
 - 1 cup flour ≈ 120g
 - 1 cup sugar ≈ 200g
 - 1 cup butter ≈ 227g
@@ -107,10 +114,12 @@ Task tool:
 ### Phase 6: Nutritional Analysis
 
 WebSearch queries for nutrition:
+
 - "USDA [ingredient] nutrition per 100g" for main ingredients
 - Calculate per-serving based on total yield
 
 Report:
+
 - Calories
 - Protein (g)
 - Carbohydrates (g)
@@ -122,6 +131,7 @@ Report:
 Follow `output-template.md` format exactly. **Write entire recipe in Polish.**
 
 Include:
+
 - Recipe header with timing and difficulty
 - Nutrition table
 - Ingredients in metric (original in parentheses)
@@ -136,12 +146,14 @@ Include:
 ### Phase 8: Save Output
 
 Save to **both** locations:
+
 1. `findings/recipes/[dish-name-slugified].md` — local archive
 2. Create Notion page with title `Recipe: [dish-name]` in workspace
 
 Create directories if needed.
 
 Use workspace conventions:
+
 - Emojis for visual scanning
 - Bullet points over paragraphs
 - Tags: #recipe #[cuisine] #[dietary-tags]
@@ -157,6 +169,7 @@ Use workspace conventions:
 ## Quality Checklist
 
 Before saving, verify:
+
 - [ ] All measurements in metric with original in parentheses
 - [ ] Temperatures in Celsius
 - [ ] Nutrition calculated

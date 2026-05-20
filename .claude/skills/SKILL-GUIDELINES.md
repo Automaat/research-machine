@@ -77,6 +77,7 @@ Structure complex skills as numbered phases:
 ```
 
 **Benefits:**
+
 - Clear execution order
 - Easy to skip phases conditionally
 - Debugging clarity
@@ -104,6 +105,7 @@ Format: `YYYY-MM-DD` (single line)
 Format: One identifier per line (URLs, IDs, etc.)
 
 **Pattern:**
+
 1. Read state at start
 2. Filter against already-processed items
 3. Update state only on successful completion
@@ -168,12 +170,14 @@ Domain-specific reference files:
 ## Python Integration (Optional)
 
 **Use Python ONLY when:**
+
 - External API calls required
 - Complex data transformation
 - Computation Claude can't do directly
 - Parsing binary/structured formats
 
 **DO NOT use Python for:**
+
 - Simple text processing
 - Web searches (use WebSearch tool)
 - File operations (use Read/Write tools)
@@ -246,6 +250,7 @@ cd .claude/skills/[skill-name]/scripts && uv run python script.py --input "..."
 ```
 
 Parse JSON output and continue.
+
 ```
 
 ---
@@ -271,6 +276,7 @@ Search pattern: `site:arxiv.org LLM {date_range}`
 ```
 
 **Bad:**
+
 ```markdown
 Search relevant sources for the topic.
 ```
@@ -302,6 +308,7 @@ Search relevant sources for the topic.
 ### Simple Skill (No Python)
 
 See: `ai-daily-digest/SKILL.md`
+
 - Web research with WebSearch
 - State management with files
 - Clear phase workflow
@@ -309,6 +316,7 @@ See: `ai-daily-digest/SKILL.md`
 ### Research Skill with Sub-Agents
 
 See: `recipe-research/SKILL.md`
+
 - Multi-source aggregation
 - Verification sub-agent
 - Structured output
@@ -316,6 +324,7 @@ See: `recipe-research/SKILL.md`
 ### Question-Driven Generation
 
 See: `claude-md-gen/SKILL.md`
+
 - Type detection logic
 - Targeted questions
 - Template-based output

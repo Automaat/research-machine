@@ -117,21 +117,25 @@ Group stories into narrative themes based on content similarity:
 2. Generate content:
 
 **Editorial opening (This Week in AI):**
+
 - 2-3 sentences capturing the week's narrative
 - Reference the biggest story
 - Set the tone (exciting, concerning, transformative, etc.)
 
 **Themed sections:**
+
 - 1-2 sentence context for the theme
 - Each story: enhanced summary (expand beyond original 1-liner)
 - Append `| *{Mon DD}*` date to each story
 - "Why this matters" analysis after each theme's stories
 
 **Quick Hits:**
+
 - 1-line per story (title + brief summary + source)
 - For overflow that didn't fit themes
 
 **Looking Ahead:**
+
 - 2-3 bullet points on trends to watch based on this week's stories
 - Forward-looking, not summary
 

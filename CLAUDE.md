@@ -5,7 +5,7 @@
 Personal knowledge management using Notion with PARA organization.
 Technical and personal knowledge through Capture → Process → Connect workflow.
 
-**System:** Notion workspace with wikilinks and MOCs
+**System:** Obsidian vault at `~/Documents/Obsidian Vault/` + Notion via MCP
 **Structure:** PARA (Projects, Areas, Resources, Archives)
 **Primary Use:** Technical research, knowledge synthesis, pattern discovery
 

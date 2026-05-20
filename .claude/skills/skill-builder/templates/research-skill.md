@@ -66,6 +66,7 @@ site:{source2} {topic}
 ```
 
 Collect:
+
 - {Data point 1}
 - {Data point 2}
 - {Data point 3}
@@ -86,11 +87,13 @@ Collect:
 ### Phase 5: Save
 
 **Write output:**
+
 ```text
 ./findings/{skill-name}/{topic}-{date}.md
 ```
 
 **Update state:**
+
 ```text
 ./findings/{skill-name}/.last-run → today's date
 ./findings/{skill-name}/.covered-items → append new URLs

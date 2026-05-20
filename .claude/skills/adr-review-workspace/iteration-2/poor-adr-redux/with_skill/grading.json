@@ -1,0 +1,14 @@
+{
+  "eval_id": 1,
+  "config": "with_skill",
+  "expectations": [
+    {"text": "Identifies missing decision drivers section", "passed": true, "evidence": "Phase 1: 'Missing: decision drivers'"},
+    {"text": "Notes problem statement is too vague or describes a solution not a problem", "passed": true, "evidence": "Phase 2 concern 1: 'solution category, not an architectural problem'"},
+    {"text": "Suggests at least 2 additional alternatives", "passed": true, "evidence": "Lists Context+useReducer, Zustand, Jotai/Recoil, TanStack Query"},
+    {"text": "Challenges 'industry standard' as insufficient rationale", "passed": true, "evidence": "Phase 2 concern 3: 'not architectural rationale'"},
+    {"text": "Flags missing negative consequences", "passed": true, "evidence": "Phase 4: 'No negative consequences listed'"},
+    {"text": "Points out only 2 options considered", "passed": true, "evidence": "Phase 2 concern 2: 'Two options with no analysis'"},
+    {"text": "Follows phased review structure", "passed": true, "evidence": "Phase 1-5 structure"},
+    {"text": "Identifies anti-pattern (e.g., Rubber Stamp)", "passed": true, "evidence": "Phase 4: 'Shows strong signs of the Rubber Stamp anti-pattern'"}
+  ]
+}

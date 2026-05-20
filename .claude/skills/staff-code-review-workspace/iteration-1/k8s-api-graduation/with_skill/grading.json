@@ -1,0 +1,12 @@
+{
+  "eval_id": 0,
+  "run_type": "with_skill",
+  "expectations": [
+    {"text": "Output includes a triage assessment section answering the 6 mental model questions", "passed": true, "evidence": "Has 'Triage Assessment' section with all 6 questions explicitly answered: 'Does this need to exist?', 'Does it solve the right problem?', 'Can it handle failure?', 'Is it understandable?', 'Does it fit the bigger picture?', 'Are the right stakeholders aware?'"},
+    {"text": "Review comments use conventional comment labels", "passed": true, "evidence": "Uses praise:, suggestion:, thought:, nit: labels consistently throughout"},
+    {"text": "Output includes a clear verdict", "passed": true, "evidence": "Verdict: APPROVE_WITH_COMMENTS with blocking/non-blocking counts"},
+    {"text": "Review discusses API graduation lifecycle, feature gate implications, or backward compatibility", "passed": true, "evidence": "Discusses API graduation from v1alpha1 to v1beta1, deprecation headers, backward compat preservation, KEP process"},
+    {"text": "Review considers impact on other teams or API consumers", "passed": true, "evidence": "Mentions sig/api-machinery, sig/node, sig/scheduling, sig/instrumentation involvement and cross-team awareness"},
+    {"text": "Output follows the defined structure with sections", "passed": true, "evidence": "Has all defined sections: Triage Assessment, Review Summary, Architecture & Design, Reliability & Operations, Security & Dependencies, Cross-Cutting Observations, What's Done Well"}
+  ]
+}

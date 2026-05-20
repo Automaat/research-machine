@@ -1,0 +1,78 @@
+[
+  {
+    "query": "hey can you take a look at this ADR we wrote for switching our payment gateway? it's in docs/decisions/0014-payment-gateway-migration.md. we have a meeting about it tomorrow and I want to make sure it holds up",
+    "should_trigger": true
+  },
+  {
+    "query": "I just pushed an ADR for our new caching strategy to the repo — can you review it and tell me if we missed anything? the file is at docs/adr/0007-caching-layer.md",
+    "should_trigger": true
+  },
+  {
+    "query": "we're debating whether to use gRPC or REST for our internal service communication. I wrote up a decision record in docs/architecture/decisions/0003-internal-api-protocol.md — can you poke holes in it?",
+    "should_trigger": true
+  },
+  {
+    "query": "I need to review this MADR before our architecture review board meeting. It's about migrating from PostgreSQL to CockroachDB. File is at decisions/0021-database-migration.md",
+    "should_trigger": true
+  },
+  {
+    "query": "check if this architecture decision document is any good — my tech lead wrote it and I'm not sure the alternatives analysis is thorough enough. Path: docs/adr/0009-event-sourcing.md",
+    "should_trigger": true
+  },
+  {
+    "query": "our team just wrote their first ADR ever and they're nervous about presenting it. can you review docs/decisions/0001-use-kubernetes.md and give them constructive feedback on structure and content?",
+    "should_trigger": true
+  },
+  {
+    "query": "I inherited this codebase and found a bunch of decision records in docs/adr/. Can you review 0012-authentication-strategy.md? I think the decision might be outdated and want to know if we should supersede it",
+    "should_trigger": true
+  },
+  {
+    "query": "we documented our decision to adopt GraphQL federation in an ADR but the consequences section feels weak. can you review it critically? the decision was already accepted but we might reopen it. file: docs/decisions/0018-graphql-federation.md",
+    "should_trigger": true
+  },
+  {
+    "query": "is this ADR good enough to merge? I'm the reviewer on this PR and it adds docs/adr/0005-ci-cd-pipeline.md. The author chose GitHub Actions over CircleCI and I want to make sure the reasoning is solid",
+    "should_trigger": true
+  },
+  {
+    "query": "can you help me write a new ADR for our decision to adopt TypeScript? I haven't started writing it yet, I just need help creating one from scratch",
+    "should_trigger": false
+  },
+  {
+    "query": "I need to set up an ADR template for our repo — can you create a MADR template file in docs/decisions/template.md?",
+    "should_trigger": false
+  },
+  {
+    "query": "review this PR for me — it's got some Go code changes to our API handler. here's the link: github.com/myorg/myrepo/pull/234",
+    "should_trigger": false
+  },
+  {
+    "query": "can you review the architecture of our microservices system? I don't have any documentation, I just want you to look at the code in src/ and tell me what you think about the overall design",
+    "should_trigger": false
+  },
+  {
+    "query": "I need to do a code review on this pull request that refactors our authentication middleware. There are changes across 8 files. PR #567",
+    "should_trigger": false
+  },
+  {
+    "query": "help me understand what decision records are and when I should write them — I'm new to the concept and my team lead mentioned we should start using them",
+    "should_trigger": false
+  },
+  {
+    "query": "can you review our API documentation in docs/api-reference.md? I want to make sure the endpoint descriptions are accurate and the examples work",
+    "should_trigger": false
+  },
+  {
+    "query": "we need to decide between Kafka and RabbitMQ for our messaging layer. can you research the tradeoffs and help me think through the decision? no ADR written yet",
+    "should_trigger": false
+  },
+  {
+    "query": "review the technical design doc at docs/design/user-notification-system.md — it's a design document not an ADR, more of a detailed implementation spec with sequence diagrams",
+    "should_trigger": false
+  },
+  {
+    "query": "I have an RFC in docs/rfcs/0003-api-versioning.md that outlines a proposal for API versioning. can you review this RFC and provide feedback on the approach?",
+    "should_trigger": false
+  }
+]

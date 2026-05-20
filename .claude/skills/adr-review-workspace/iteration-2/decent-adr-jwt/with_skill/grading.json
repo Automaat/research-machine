@@ -1,0 +1,12 @@
+{
+  "eval_id": 3,
+  "config": "with_skill",
+  "expectations": [
+    {"text": "Flags missing confirmation section", "passed": true, "evidence": "Phase 1: 'Missing: confirmation criteria'"},
+    {"text": "Probes token revocation strategy in depth", "passed": true, "evidence": "Phase 2 concern 1: revocation list vs short TTLs vs introspection"},
+    {"text": "Questions key management and rotation", "passed": true, "evidence": "Phase 4: 'Signing key storage isn't addressed — where do the RS256 private keys live?'"},
+    {"text": "Suggests hybrid approach", "passed": false, "evidence": "Not explicitly suggested in this iteration — focuses on cost validation instead"},
+    {"text": "Raises JWT-specific security concerns", "passed": true, "evidence": "Phase 4: scope/claims design, token size limits, key storage"},
+    {"text": "Follows phased review structure", "passed": true, "evidence": "Phase 1-5 structure"}
+  ]
+}

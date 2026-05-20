@@ -1,0 +1,12 @@
+{
+  "eval_id": 0,
+  "run_type": "without_skill",
+  "expectations": [
+    {"text": "Output includes a triage assessment section answering the 6 mental model questions", "passed": false, "evidence": "No triage assessment section. Goes directly to Summary then Architecture & Design."},
+    {"text": "Review comments use conventional comment labels", "passed": false, "evidence": "Uses 'Medium Severity'/'Low Severity' labels instead of conventional comments format"},
+    {"text": "Output includes a clear verdict", "passed": true, "evidence": "Has 'Verdict: Approve with minor suggestions' at end"},
+    {"text": "Review discusses API graduation lifecycle, feature gate implications, or backward compatibility", "passed": true, "evidence": "Discusses v1alpha1/v1beta1 types, deprecation, conversion layer absence, backward compatibility"},
+    {"text": "Review considers impact on other teams or API consumers", "passed": false, "evidence": "No explicit cross-team impact analysis. Mentions no SIGs or consumer impact."},
+    {"text": "Output follows the defined structure with sections", "passed": false, "evidence": "Uses different structure: Summary, Architecture & Design, Issues & Concerns, Test Coverage, Verdict"}
+  ]
+}

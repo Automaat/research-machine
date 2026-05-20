@@ -20,6 +20,7 @@ For recurring skills that track history.
 Single line: `2026-01-29`
 
 **Usage:**
+
 - Exists → date range from last run to today
 - Missing → default past 7 days
 
@@ -30,6 +31,7 @@ Single line: `2026-01-29`
 One identifier per line (URLs, IDs).
 
 **Usage:**
+
 - Filter new items against list
 - Append new items after success
 - Keep last 500 lines (cleanup)

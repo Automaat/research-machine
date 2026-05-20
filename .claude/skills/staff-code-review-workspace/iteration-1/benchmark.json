@@ -1,0 +1,180 @@
+{
+  "metadata": {
+    "skill_name": "staff-code-review",
+    "skill_path": "/Users/marcin.skalski/sideprojects/research-machine/.claude/skills/staff-code-review",
+    "timestamp": "2026-03-04T12:00:00Z",
+    "evals_run": [0, 1, 2],
+    "runs_per_configuration": 1
+  },
+  "runs": [
+    {
+      "eval_id": 0,
+      "eval_name": "K8s API Graduation",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 6,
+        "failed": 0,
+        "total": 6,
+        "time_seconds": 180.5,
+        "tokens": 53869,
+        "tool_calls": 23,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "Output includes a triage assessment section answering the 6 mental model questions", "passed": true, "evidence": "Has Triage Assessment with all 6 questions"},
+        {"text": "Review comments use conventional comment labels", "passed": true, "evidence": "Uses praise:, suggestion:, thought:, nit:"},
+        {"text": "Output includes a clear verdict", "passed": true, "evidence": "APPROVE_WITH_COMMENTS"},
+        {"text": "Review discusses API graduation lifecycle", "passed": true, "evidence": "Discusses v1alpha1→v1beta1, KEP process, deprecation"},
+        {"text": "Review considers impact on other teams", "passed": true, "evidence": "Mentions SIG involvement and cross-team awareness"},
+        {"text": "Output follows the defined structure", "passed": true, "evidence": "All defined sections present"}
+      ]
+    },
+    {
+      "eval_id": 0,
+      "eval_name": "K8s API Graduation",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.33,
+        "passed": 2,
+        "failed": 4,
+        "total": 6,
+        "time_seconds": 163.4,
+        "tokens": 57582,
+        "tool_calls": 23,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "Output includes a triage assessment section answering the 6 mental model questions", "passed": false, "evidence": "No triage assessment section"},
+        {"text": "Review comments use conventional comment labels", "passed": false, "evidence": "Uses severity labels instead"},
+        {"text": "Output includes a clear verdict", "passed": true, "evidence": "Approve with minor suggestions"},
+        {"text": "Review discusses API graduation lifecycle", "passed": true, "evidence": "Discusses types, deprecation, conversion layer"},
+        {"text": "Review considers impact on other teams", "passed": false, "evidence": "No cross-team analysis"},
+        {"text": "Output follows the defined structure", "passed": false, "evidence": "Different structure used"}
+      ]
+    },
+    {
+      "eval_id": 1,
+      "eval_name": "Terraform Breaking Default",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 6,
+        "failed": 0,
+        "total": 6,
+        "time_seconds": 108.0,
+        "tokens": 44238,
+        "tool_calls": 10,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "Review identifies breaking change and discusses migration", "passed": true, "evidence": "Identifies breaking-change, discusses migration path"},
+        {"text": "Review comments use conventional comment labels", "passed": true, "evidence": "Uses blocking:, suggestion:, thought:, nit:, praise:"},
+        {"text": "Review discusses impact on existing users", "passed": true, "evidence": "Discusses 4-surface config confusion, 18-month maintainability"},
+        {"text": "Output includes a clear verdict", "passed": true, "evidence": "APPROVE_WITH_COMMENTS"},
+        {"text": "Output includes a triage assessment section", "passed": true, "evidence": "Full triage with 6 questions"},
+        {"text": "Output follows the defined structure", "passed": true, "evidence": "All defined sections present"}
+      ]
+    },
+    {
+      "eval_id": 1,
+      "eval_name": "Terraform Breaking Default",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.5,
+        "passed": 3,
+        "failed": 3,
+        "total": 6,
+        "time_seconds": 101.5,
+        "tokens": 31209,
+        "tool_calls": 12,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "Review identifies breaking change and discusses migration", "passed": true, "evidence": "Discusses breaking change and migration"},
+        {"text": "Review comments use conventional comment labels", "passed": false, "evidence": "Uses severity labels instead"},
+        {"text": "Review discusses impact on existing users", "passed": true, "evidence": "Discusses user-facing docs gaps"},
+        {"text": "Output includes a clear verdict", "passed": true, "evidence": "Approve with minor suggestions"},
+        {"text": "Output includes a triage assessment section", "passed": false, "evidence": "No triage assessment"},
+        {"text": "Output follows the defined structure", "passed": false, "evidence": "Different structure"}
+      ]
+    },
+    {
+      "eval_id": 2,
+      "eval_name": "Prometheus AWS MSK",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 6,
+        "failed": 0,
+        "total": 6,
+        "time_seconds": 169.4,
+        "tokens": 60600,
+        "tool_calls": 20,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "Review discusses security implications", "passed": true, "evidence": "Discusses AccessKey typing, IAM permissions, credential test"},
+        {"text": "Review considers new AWS dependency implications", "passed": true, "evidence": "Notes scoped dependency, no new non-AWS deps"},
+        {"text": "Review comments use conventional comment labels", "passed": true, "evidence": "Uses blocking:, issue:, suggestion:, thought:, nit:, praise:"},
+        {"text": "Review discusses observability", "passed": true, "evidence": "Discusses metrics gap, no-op mskMetrics, silent error swallowing"},
+        {"text": "Output includes a clear verdict", "passed": true, "evidence": "APPROVE_WITH_COMMENTS"},
+        {"text": "Output follows the defined structure", "passed": true, "evidence": "All defined sections present"}
+      ]
+    },
+    {
+      "eval_id": 2,
+      "eval_name": "Prometheus AWS MSK",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.17,
+        "passed": 1,
+        "failed": 5,
+        "total": 6,
+        "time_seconds": 383.9,
+        "tokens": 51029,
+        "tool_calls": 40,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "Review discusses security implications", "passed": false, "evidence": "No dedicated security section"},
+        {"text": "Review considers new AWS dependency implications", "passed": false, "evidence": "No dependency analysis"},
+        {"text": "Review comments use conventional comment labels", "passed": false, "evidence": "Uses severity labels"},
+        {"text": "Review discusses observability", "passed": false, "evidence": "No observability discussion"},
+        {"text": "Output includes a clear verdict", "passed": true, "evidence": "Has Verdict section"},
+        {"text": "Output follows the defined structure", "passed": false, "evidence": "Different structure"}
+      ]
+    }
+  ],
+  "run_summary": {
+    "with_skill": {
+      "pass_rate": {"mean": 1.0, "stddev": 0.0, "min": 1.0, "max": 1.0},
+      "time_seconds": {"mean": 152.6, "stddev": 37.8, "min": 108.0, "max": 180.5},
+      "tokens": {"mean": 52902, "stddev": 8201, "min": 44238, "max": 60600}
+    },
+    "without_skill": {
+      "pass_rate": {"mean": 0.33, "stddev": 0.17, "min": 0.17, "max": 0.5},
+      "time_seconds": {"mean": 216.3, "stddev": 148.3, "min": 101.5, "max": 383.9},
+      "tokens": {"mean": 46607, "stddev": 13793, "min": 31209, "max": 57582}
+    },
+    "delta": {
+      "pass_rate": "+0.67",
+      "time_seconds": "-63.7",
+      "tokens": "+6295"
+    }
+  },
+  "notes": [
+    "Verdict assertion passes in both configurations (100%) — non-discriminating. Both with-skill and baseline produce a verdict.",
+    "Format-related assertions (conventional comments, structured output, triage pass) are the primary differentiators — baseline never produces these formats.",
+    "Substance assertions (architectural analysis, security, observability) show mixed results: baseline catches some (e.g., K8s backward compat) but misses others (security, observability in Prometheus).",
+    "With-skill reviews are faster on average (152s vs 216s) despite producing more structured output. The Prometheus baseline was an outlier at 384s (40 tool calls vs 20 for with-skill).",
+    "Token usage is comparable (~53K with-skill vs ~47K baseline). The skill doesn't significantly increase token consumption.",
+    "Both configurations found the same critical issues (nil pointer deref in Prometheus, duplicated validation in Terraform), suggesting the skill doesn't sacrifice depth for structure."
+  ]
+}

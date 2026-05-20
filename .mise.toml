@@ -4,8 +4,12 @@
 
 [tasks.lint]
 description = "Lint markdown files"
-run = "markdownlint-cli2 '**/*.md'"
+run = "markdownlint-cli2 '**/*.md' '#**/node_modules/**'"
 
 [tasks."lint:fix"]
 description = "Fix markdown lint issues"
-run = "markdownlint-cli2 --fix '**/*.md'"
+run = "markdownlint-cli2 --fix '**/*.md' '#**/node_modules/**'"
+
+[tasks."playwright:setup"]
+description = "Install Playwright deps and Chromium browser for job scraping"
+run = "cd .claude/skills/job-discover/scripts && npm install && npx playwright install chromium"

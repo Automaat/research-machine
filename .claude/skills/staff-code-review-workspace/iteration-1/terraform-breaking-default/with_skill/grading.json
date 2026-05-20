@@ -1,0 +1,12 @@
+{
+  "eval_id": 1,
+  "run_type": "with_skill",
+  "expectations": [
+    {"text": "Review identifies this as a breaking change and discusses migration/rollback implications", "passed": true, "evidence": "Identifies breaking-change label, discusses migration path extensively, three-tier env var precedence, 5.0 upgrade guide"},
+    {"text": "Review comments use conventional comment labels", "passed": true, "evidence": "Uses blocking:, suggestion:, thought:, nit:, praise: labels consistently"},
+    {"text": "Review discusses impact on existing users/consumers of the provider", "passed": true, "evidence": "Discusses user confusion with four config surfaces, migration path for legacy env var users, 18-month maintainability concern"},
+    {"text": "Output includes a clear verdict", "passed": true, "evidence": "Verdict: APPROVE_WITH_COMMENTS with 2 blocking, 5 non-blocking"},
+    {"text": "Output includes a triage assessment section", "passed": true, "evidence": "Full triage assessment with all 6 mental model questions answered"},
+    {"text": "Output follows the defined structure with sections", "passed": true, "evidence": "Has Triage Assessment, Review Summary, Blocking Issues, Architecture & Design, Reliability & Operations, Security & Dependencies, Cross-Cutting Observations, What's Done Well"}
+  ]
+}
